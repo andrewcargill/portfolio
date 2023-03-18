@@ -61,6 +61,13 @@
   display: flex;
 }
 
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
 /* A Class that sits inside each main content section*/
 .text-border {
   width: 100%;
@@ -70,6 +77,7 @@
   margin: .5% 0 .5% 0;
   font-size: 3vw;
   overflow: auto;
+
 }
 
 /* Footer*/

@@ -1,6 +1,6 @@
-import logo from './logo.svg';
+
 import './App.css';
-import {image} from './media/images/pic.jpg';
+import test from './media/images/pic.jpg';
 
 function App() {
   return (
@@ -40,7 +40,7 @@ function App() {
 
           <div id="image">
             <div className="text-border right-margin-desktop">
-            <img src={image} alt="Logo" />
+            <img id="main-pic" src={test} alt="Logo" />
             </div>
           </div>
         </div>
