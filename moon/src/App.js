@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import {image} from './media/images/pic.jpg';
 
 function App() {
   return (
@@ -13,32 +14,16 @@ function App() {
         <div id="main-content">
           <div id="header-text">
             <div className="text-border left-margin-desktop">
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
-              this is some text. 
+            What do you say to me. You didnt say in words. 
+            What do you say to me. You didnt say in words. 
+            What do you say to me. You didnt say in words. 
+            What do you say to me. You didnt say in words. 
+            What do you say to me. You didnt say in words. 
+            What do you say to me. You didnt say in words. 
+            What do you say to me. You didnt say in words. 
+            What do you say to me. You didnt say in words. 
+            What do you say to me. You didnt say in words. 
+      
             </div>
           </div>
 
@@ -55,7 +40,7 @@ function App() {
 
           <div id="image">
             <div className="text-border right-margin-desktop">
-                image
+            <img src={image} alt="Logo" />
             </div>
           </div>
         </div>
