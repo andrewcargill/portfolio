@@ -1,13 +1,11 @@
 
-.app {
-  
-}
-
+/* main container */
 #main {
   padding: 0 1% 0 1%;
   background-color: #898989;
 }
 
+/* header */
 #header {
   height: 10vh;
   display: flex;
@@ -25,6 +23,7 @@
 
 }
 
+/* main page content*/
 #main-content {
   display: flex;
   flex-direction: column;
@@ -38,14 +37,6 @@
   width: 100%;
   order: 1;
   height: 30%;
-}
-
-.text-border {
-  width: 100%;
-  background-color: #d3d3d3;
-  padding: 10px;
-  border-radius: 20px;
-  margin: .5% 0 .5% 0;
 }
 
 #action-button {
@@ -69,6 +60,16 @@
   display: flex;
 }
 
+/* A Class that sits inside each main content section*/
+.text-border {
+  width: 100%;
+  background-color: #d3d3d3;
+  padding: 10px;
+  border-radius: 20px;
+  margin: .5% 0 .5% 0;
+}
+
+/* Footer*/
 #footer {
   height: 10vh;
   display: flex;
