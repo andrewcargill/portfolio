@@ -53,6 +53,7 @@
   order: 3;
   width: 100%;
   height: 10%;
+  display: flex;
 }
 
 #bottom-text {
@@ -60,6 +61,7 @@
   order: 4;
   height: 10%;
   width: 100%;
+  display: flex;
 }
 
 #image {
@@ -67,9 +69,10 @@
   width: 100%;
   order: 2;
   height: 50%;
+  display: flex;
 }
 
-#bottom-content {
+#footer {
   background-color: aqua;
   height: 10vh;
 }

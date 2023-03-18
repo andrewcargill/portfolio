@@ -17,11 +17,24 @@ function App() {
             </div>
           </div>
 
-          <div id="action-button">action button</div>
-          <div id="bottom-text">bottom text</div>
-          <div id="image">image</div>
+          <div id="action-button">
+            <div className="text-border">
+                Button
+            </div>
+          </div>
+          <div id="bottom-text">
+            <div className="text-border">
+                Bottom Text
+            </div>
+          </div>
+
+          <div id="image">
+            <div className="text-border">
+                image
+            </div>
+          </div>
         </div>
-        <div id="bottom-content">bottom</div>
+        <div id="footer">footer</div>
       </div>
     </div>
   );
