@@ -5,11 +5,15 @@ function App() {
   return (
     <div className="App">
       <div id="main">
-        <div id="header">header</div>
+        <div id="header">
+          <div id="logo">X</div>
+          <div id="center-image">I</div>
+          <div id="nav">N</div>
+        </div>
         <div id="main-content">
-          <div id="left-top">left top</div>
-          <div id="left-middle">left middle</div>
-          <div id="left-bottom">left bottom</div>
+          <div id="header-text">left top</div>
+          <div id="action-button">left middle</div>
+          <div id="bottom-text">left bottom</div>
           <div id="image">image</div>
         </div>
         <div id="bottom-content">bottom</div>
