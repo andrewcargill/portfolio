@@ -135,6 +135,10 @@ img {
     height: 50%
 }
 
+#shop-pic {
+  width: 5vw;
+  height: auto;
+}
 
 
 #buy-tagline {

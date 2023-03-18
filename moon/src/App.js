@@ -1,6 +1,8 @@
 
 import './App.css';
 import test from './media/images/pic.jpg';
+import shop from './media/images/shop.png';
+
 
 function App() {
   return (
@@ -27,16 +29,19 @@ function App() {
 
           <div id="action-button">
             <div className="text-border-buy left-margin-desktop">
-                <div id="buy-button">
-                  <div id="buy-basket"><FontAwesomeIcon icon="fa-solid fa-cart-shopping" />B</div>
-                  <div id="buy text">Enquire</div>
-                </div>
+                <button id="buy-button">
+                  <div id="buy-basket">
+                  <img id="shop-pic" src={shop} alt="Logo" />
+                  </div>
+                  <div id="buy text">email me</div>
+                </button>
+             
                 <div id="buy-tagline">
                   It doesn't have to cost the world to bring your ideas
                   to life. Get the web working for you today!
                 </div>
             </div>
-          </div>
+            </div>
           <div id="bottom-text">
             <div className="text-border-white left-margin-desktop">
                 Bottom Text
