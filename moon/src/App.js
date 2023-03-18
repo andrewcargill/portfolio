@@ -34,7 +34,11 @@ function App() {
             </div>
           </div>
         </div>
-        <div id="footer">footer</div>
+        <div id="footer">
+            <div className="text-border">
+                Footer
+            </div>
+        </div>
       </div>
     </div>
   );
