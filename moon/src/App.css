@@ -74,3 +74,51 @@
   height: 10vh;
   display: flex;
 }
+
+@media screen and (min-width: 900px) {
+
+
+
+  #main-content {
+    justify-content: end;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  #header-text {
+    display: flex;
+    width: 50%;
+    order: 1;
+    height: 50%;
+  }
+
+  #action-button {
+    order: 2;
+    width: 50%;
+    height: 25%;
+    display: flex;
+  }
+
+  #bottom-text {
+    order: 3;
+    height: 25%;
+    width: 50%;
+    display: flex;
+  }
+
+  #image {
+    width: 50%;
+    order: 4;
+    height: 100%;
+    display: flex;
+  }
+
+  /*Margin fixes*/
+  .left-margin-desktop {
+    margin-right: .5%;
+  }
+
+  .right-margin-desktop {
+    margin-left: .5%;
+  }
+}

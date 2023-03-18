@@ -12,24 +12,24 @@ function App() {
         </div>
         <div id="main-content">
           <div id="header-text">
-            <div className="text-border">
+            <div className="text-border left-margin-desktop">
               this is some text
             </div>
           </div>
 
           <div id="action-button">
-            <div className="text-border">
+            <div className="text-border left-margin-desktop">
                 Button
             </div>
           </div>
           <div id="bottom-text">
-            <div className="text-border">
+            <div className="text-border left-margin-desktop">
                 Bottom Text
             </div>
           </div>
 
           <div id="image">
-            <div className="text-border">
+            <div className="text-border right-margin-desktop">
                 image
             </div>
           </div>
