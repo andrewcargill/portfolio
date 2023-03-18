@@ -13,7 +13,32 @@ function App() {
         <div id="main-content">
           <div id="header-text">
             <div className="text-border left-margin-desktop">
-              this is some text
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
+              this is some text. 
             </div>
           </div>
 
