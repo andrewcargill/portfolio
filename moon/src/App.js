@@ -26,12 +26,19 @@ function App() {
           </div>
 
           <div id="action-button">
-            <div className="text-border left-margin-desktop">
-                Button
+            <div className="text-border-buy left-margin-desktop">
+                <div id="buy-button">
+                  <div id="buy-basket"><FontAwesomeIcon icon="fa-solid fa-cart-shopping" />B</div>
+                  <div id="buy text">Enquire</div>
+                </div>
+                <div id="buy-tagline">
+                  It doesn't have to cost the world to bring your ideas
+                  to life. Get the web working for you today!
+                </div>
             </div>
           </div>
           <div id="bottom-text">
-            <div className="text-border left-margin-desktop">
+            <div className="text-border-white left-margin-desktop">
                 Bottom Text
             </div>
           </div>

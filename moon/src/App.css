@@ -107,7 +107,47 @@ img {
 .text-border {
   width: 100%;
   background-color: #d3d3d3;
-  padding: 10px;
+  border-radius: 20px;
+  margin: .5% 0 .5% 0;
+  font-size: 5vw;
+  overflow: auto;
+}
+
+/* Buy Section */
+.text-border-buy {
+  width: 100%;
+  background-color: #d3d3d3;
+  border-radius: 20px;
+  margin: .5% 0 .5% 0;
+  font-size: 5vw;
+  overflow: auto;
+}
+
+#buy-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 20px;
+    margin: 10px;
+    width: auto;
+    height: 50%
+}
+
+
+
+#buy-tagline {
+    width: auto;
+    height: 50%;
+    font-size: 2vw;
+    margin: 10px;
+    text-align: center;
+}
+
+.text-border-white {
+  width: 100%;
+  background-color: white;
   border-radius: 20px;
   margin: .5% 0 .5% 0;
   font-size: 5vw;
