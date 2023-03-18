@@ -1,8 +1,22 @@
+body {
+  font-family: "HelveticaNeue Bold", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 400;
+}
 
 /* main container */
 #main {
   padding: 0 1% 0 1%;
   background-color: #898989;
+}
+
+/*LOGO*/
+#logo {
+  font-size: xx-large;
+  font-weight: 900;
+}
+
+#logo p {
+  line-height: 0;
 }
 
 /* header */
@@ -21,7 +35,13 @@
   height: 70%;
   width: 20%;
   border-radius: 20px;
+}
 
+.header-element1 {
+  padding: 1%;
+  height: 70%;
+  width: 20%;
+  border-radius: 20px;
 }
 
 /* main page content*/
@@ -34,6 +54,9 @@
 }
 
 #header-text {
+  text-transform: uppercase;
+  letter-spacing: .1vw;
+  text-align: justify;
   display: flex;
   width: 100%;
   order: 1;
@@ -75,11 +98,18 @@ img {
   padding: 10px;
   border-radius: 20px;
   margin: .5% 0 .5% 0;
-  font-size: 3vw;
+  font-size: 5vw;
   overflow: auto;
-
 }
 
+.content-no-background {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  margin: .5% 0 .5% 0;
+  font-size: 5vw;
+  overflow: auto;
+}
 /* Footer*/
 #footer {
   height: 10vh;
@@ -87,8 +117,6 @@ img {
 }
 
 @media screen and (min-width: 900px) {
-
-
 
   #main-content {
     justify-content: end;
@@ -101,6 +129,11 @@ img {
     width: 50%;
     order: 1;
     height: 50%;
+  }
+
+  /* Main Text */
+  .content-no-background {
+    font-size: 3vw;
   }
 
   #action-button {

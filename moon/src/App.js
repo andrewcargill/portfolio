@@ -7,23 +7,19 @@ function App() {
     <div className="App">
       <div id="main">
         <div id="header">
-          <div id="logo" className="header-element">X</div>
+          <div id="logo" className="header-element1">
+            <p>Andy</p>
+            <p>design</p>
+          </div>
           <div id="center-image" className="header-element">I</div>
           <div id="nav" className="header-element">N</div>
         </div>
         <div id="main-content">
           <div id="header-text">
-            <div className="text-border left-margin-desktop">
-            What do you say to me. You didnt say in words. 
-            What do you say to me. You didnt say in words. 
-            What do you say to me. You didnt say in words. 
-            What do you say to me. You didnt say in words. 
-            What do you say to me. You didnt say in words. 
-            What do you say to me. You didnt say in words. 
-            What do you say to me. You didnt say in words. 
-            What do you say to me. You didnt say in words. 
-            What do you say to me. You didnt say in words. 
-      
+            <div className="content-no-background left-margin-desktop">
+            In a world gone a little crazy I think it's absolutly the
+            right time to have a new stunningly custom website made for your business,
+             hobby or interest group.
             </div>
           </div>
 
