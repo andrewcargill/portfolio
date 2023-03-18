@@ -6,14 +6,19 @@ function App() {
     <div className="App">
       <div id="main">
         <div id="header">
-          <div id="logo">X</div>
-          <div id="center-image">I</div>
-          <div id="nav">N</div>
+          <div id="logo" className="header-element">X</div>
+          <div id="center-image" className="header-element">I</div>
+          <div id="nav" className="header-element">N</div>
         </div>
         <div id="main-content">
-          <div id="header-text">left top</div>
-          <div id="action-button">left middle</div>
-          <div id="bottom-text">left bottom</div>
+          <div id="header-text">
+            <div className="text-border">
+              this is some text
+            </div>
+          </div>
+
+          <div id="action-button">action button</div>
+          <div id="bottom-text">bottom text</div>
           <div id="image">image</div>
         </div>
         <div id="bottom-content">bottom</div>
