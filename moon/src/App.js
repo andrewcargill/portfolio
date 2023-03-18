@@ -11,7 +11,9 @@ function App() {
             <p>Andy</p>
             <p>design</p>
           </div>
-          <div id="center-image" className="header-element">I</div>
+          <div id="center-image" className="header-element2">
+            <h2>you need a website!</h2>
+          </div>
           <div id="nav" className="header-element">N</div>
         </div>
         <div id="main-content">

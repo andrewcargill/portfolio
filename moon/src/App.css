@@ -37,6 +37,18 @@ body {
   border-radius: 20px;
 }
 
+.header-element2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
+  height: 70%;
+  width: 20%;
+  border-radius: 20px;
+  margin: 2%;
+  font-size: auto;
+}
+
 .header-element1 {
   padding: 1%;
   height: 70%;
