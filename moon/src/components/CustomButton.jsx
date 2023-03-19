@@ -8,7 +8,7 @@ class CustomButton extends React.Component {
     render(){
         return(
         <div className={styles.all}>
-            <div id={styles.container}>
+            <div id={styles.container} className="btn">
                 <div>
                 <h1>Button Module</h1>
                 </div>

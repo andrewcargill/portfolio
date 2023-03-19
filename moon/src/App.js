@@ -1,9 +1,12 @@
 
 import React from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 import './App.css';
-import CustomButton from './components/Button';
+import CustomButton from './components/CustomButton';
 import test from './media/images/pic.jpg';
 import shop from './media/images/shop.png';
+import { Button } from 'react-bootstrap';
 
 function sayHello() {
   alert('You clicked me!');
@@ -54,7 +57,7 @@ function App() {
           </div>
           <div id="bottom-text">
             <div className="text-border-white left-margin-desktop">
-                Bottom Text
+            <button className='btn'>Bottom Text</button>
             </div>
           </div>
 
