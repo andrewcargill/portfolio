@@ -25,7 +25,7 @@ function App() {
             <h2>you need a website!</h2>
           </div>
           <div id="nav" className="header-element-right">
-            <CustomButton />
+            <CustomButton textOne="CLICK" textTwo="!!" />
             
           </div>
         </div>

@@ -5,6 +5,7 @@ import styles from "../styles/CustomButton.module.css";
 class CustomButton extends React.Component {
     constructor(props){
         super(props)
+
     }
     render(){
         return(
@@ -13,10 +14,10 @@ class CustomButton extends React.Component {
                 className={styles.btn}
                 >
                 <div>
-                <h1>Button Module</h1>
+                <h1>{this.props.textOne}</h1>
                 </div>
                 <div>
-                <h2>Only this</h2>
+                <h2>{this.props.textTwo}</h2>
                 </div>
             </button>
         </div>
