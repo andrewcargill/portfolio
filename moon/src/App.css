@@ -29,12 +29,9 @@ body {
 }
 
 /* Header content containers*/
-.header-element {
-  background-color: white;
-  border: 2px solid;
-  height: 70%;
-  width: 20%;
-  border-radius: 20px;
+.header-element-right {
+  background-color: green;
+  width: 40%;
 }
 
 .header-element2 {

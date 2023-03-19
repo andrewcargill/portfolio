@@ -1,19 +1,26 @@
 import React from "react";
 import styles from "../styles/CustomButton.module.css";
 
-class Button extends React.Component {
+class CustomButton extends React.Component {
     constructor(props){
         super(props)
     }
     render(){
         return(
-        <div>
-            <h1 className={styles.color}>Button Module</h1>
+        <div className={styles.all}>
+            <div id={styles.container}>
+                <div>
+                <h1>Button Module</h1>
+                </div>
+                <div>
+                <h2>Only this</h2>
+                </div>
+            </div>
         </div>
 
         );
     }
 };
 
-export default Button;
+export default CustomButton;
 
