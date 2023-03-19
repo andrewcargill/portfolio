@@ -1,6 +1,7 @@
 
 import React from 'react';
 import './App.css';
+import Button from './components/Button';
 import test from './media/images/pic.jpg';
 import shop from './media/images/shop.png';
 
@@ -20,7 +21,9 @@ function App() {
           <div id="center-image" className="header-element2">
             <h2>you need a website!</h2>
           </div>
-          <div id="nav" className="header-element">N</div>
+          <div id="nav" className="header-element">
+            <Button />
+          </div>
         </div>
         <div id="main-content">
           <div id="header-text">
