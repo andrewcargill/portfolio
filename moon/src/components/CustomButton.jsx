@@ -1,3 +1,4 @@
+
 import React from "react";
 import styles from "../styles/CustomButton.module.css";
 
@@ -7,16 +8,19 @@ class CustomButton extends React.Component {
     }
     render(){
         return(
-        <div className={styles.all}>
-            <div id={styles.container} className="btn">
+        <div>
+            <button
+                className={styles.btn}
+                >
                 <div>
                 <h1>Button Module</h1>
                 </div>
                 <div>
                 <h2>Only this</h2>
                 </div>
-            </div>
+            </button>
         </div>
+            
 
         );
     }

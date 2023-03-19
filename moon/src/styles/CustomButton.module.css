@@ -1,5 +1,4 @@
-
-#container {
+.btn {
     color: black;
     border: 2px solid;
     height: 70%;
@@ -9,8 +8,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-};
-
+  }
+  
+  .btn:hover {
+    color: white;
+    background-color: black;
+  }
 
 
 
