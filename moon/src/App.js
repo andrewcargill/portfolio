@@ -1,6 +1,5 @@
 
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import './App.css';
 import CustomButton from './components/Button';
 import test from './media/images/pic.jpg';
@@ -24,7 +23,7 @@ function App() {
           </div>
           <div id="nav" className="header-element-right">
             <CustomButton />
-            <Button variant="primary">Hello</Button>
+            
           </div>
         </div>
         <div id="main-content">
