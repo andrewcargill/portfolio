@@ -3,9 +3,9 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import './App.css';
-import CustomButton from './components/CustomButton';
 import test from './media/images/pic.jpg';
 import shop from './media/images/shop.png';
+import CustomBtn from './styles/CustomButton.module.css'
 
 function sayHello() {
   alert('You clicked me!');
@@ -21,12 +21,13 @@ function App() {
             <p>design</p>
           </div>
           <div id="center-image" className="header-element2">
+            <button className={CustomBtn.btn}>
             <h2>you need a website!</h2>
+            </button>
           </div>
 
           <div id="nav" className="header-element-right">
-            <CustomButton textOne="CLICK" textTwo="!!" />
-            
+            <button className={CustomBtn.white}>Images</button>
           </div>
         </div>
         <div id="main-content">
@@ -40,7 +41,7 @@ function App() {
 
           <div id="action-button">
             <div className="text-border-buy left-margin-desktop box-shadow">
-                <button id="buy-button"
+                <button className={CustomBtn.white}
                   onClick={sayHello}>
                   <div id="buy-basket">
                     <img id="shop-pic" src={shop} alt="Logo" />

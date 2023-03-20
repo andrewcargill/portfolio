@@ -1,6 +1,7 @@
 .btn {
     color: black;
-    border: 2px solid;
+    background-color: #898989;
+    border: 2px solid black;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
@@ -9,10 +10,28 @@
     font-size: 3vw;
   }
   
-  .btn:hover {
-    color: white;
-    background-color: black;
-  }
+.btn:hover {
+  color: white;
+  background-color: black;
 
+}
+
+.white {
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 3vw;
+}
+
+.white:hover {
+color: white;
+background-color: black;
+
+}
 
 

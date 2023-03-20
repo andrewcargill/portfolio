@@ -21,7 +21,6 @@ body {
 
 /* header */
 #header {
-  background-color: blue;
   height: 10vh;
   display: flex;
   flex-direction: row;
@@ -33,7 +32,6 @@ body {
 .header-element-right {
   display: flex;
   align-items: stretch;
-  background-color: aqua;
   height: 100%;
   width: 40%;
 }

@@ -11,7 +11,7 @@ class CustomButton extends React.Component {
         return(
         <div>
             <button
-                className={styles.btn}
+                className={styles.dark-btn}
                 >
                 <div>
                 {this.props.textOne}
