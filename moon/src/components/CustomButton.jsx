@@ -14,10 +14,10 @@ class CustomButton extends React.Component {
                 className={styles.btn}
                 >
                 <div>
-                <h1>{this.props.textOne}</h1>
+                {this.props.textOne}
                 </div>
                 <div>
-                <h2>{this.props.textTwo}</h2>
+                {this.props.textTwo}
                 </div>
             </button>
         </div>

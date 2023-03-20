@@ -6,7 +6,6 @@ import './App.css';
 import CustomButton from './components/CustomButton';
 import test from './media/images/pic.jpg';
 import shop from './media/images/shop.png';
-import { Button } from 'react-bootstrap';
 
 function sayHello() {
   alert('You clicked me!');
@@ -24,6 +23,7 @@ function App() {
           <div id="center-image" className="header-element2">
             <h2>you need a website!</h2>
           </div>
+
           <div id="nav" className="header-element-right">
             <CustomButton textOne="CLICK" textTwo="!!" />
             
@@ -56,8 +56,10 @@ function App() {
             </div>
           </div>
           <div id="bottom-text">
-            <div className="text-border-white left-margin-desktop">
-            <button className='btn'>Bottom Text</button>
+            <div id="bottom-text-content" className="text-border-white left-margin-desktop">
+            
+              TEXT
+            
             </div>
           </div>
 
