@@ -74,6 +74,7 @@ body {
   width: 100%;
   order: 1;
   height: auto;
+  max-height: 30%;
 }
 
 #action-button {
@@ -198,7 +199,7 @@ button {
     display: flex;
     width: 50%;
     order: 1;
-    max-height: 400px;
+    max-height: 50%;
   }
 
   /* Main Text */
@@ -211,14 +212,14 @@ button {
     width: 50%;
     height: 25%;
     display: flex;
-    max-height: 150px;
+    max-height: 25%;
   }
 
   #bottom-text {
     order: 3;
     height: 25%;
     width: 50%;
-    max-height: 150px;
+    max-height: 25%;
     display: flex;
 
   }
@@ -239,3 +240,19 @@ button {
     margin-left: 1%;
   }
 }
+
+
+/*
+1024 x 600
+1280 x 800
+375 x 667
+360 x 740
+540 x 720
+280 x 653
+914 x 412
+1024 x 600
+1280 x 800
+
+
+
+*/
