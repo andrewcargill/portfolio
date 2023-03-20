@@ -5,7 +5,13 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import './App.css';
 import test from './media/images/pic.jpg';
 import shop from './media/images/shop.png';
-import CustomBtn from './styles/CustomButton.module.css'
+import CustomBtn from './styles/CustomButton.module.css';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCheckSquare, faCoffee, faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+library.add(faCheckSquare, faCoffee, faCartShopping)
+
 
 function sayHello() {
   alert('You clicked me!');
@@ -33,6 +39,7 @@ function App() {
         <div id="main-content">
           <div id="header-text">
             <div className="content-no-background left-margin-desktop">
+            <FontAwesomeIcon icon="check-square" />
             In a world gone a little crazy I think it's absolutly the
             right time to have a new stunningly custom website made for your business,
              hobby or interest group. > > > > 
@@ -44,7 +51,7 @@ function App() {
                 <button className={CustomBtn.white}
                   onClick={sayHello}>
                   <div id="buy-basket">
-                    <img id="shop-pic" src={shop} alt="Logo" />
+                  <FontAwesomeIcon icon="cart-shopping" />
                   </div>
                   <div id="buy text">email me
                   </div>
