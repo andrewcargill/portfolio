@@ -234,7 +234,7 @@ button {
   
 }
 
-@media screen and (min-width: 1028px) {
+@media screen and (min-width: 1024px) {
 
   #main-content {
     justify-content: flex-start;
