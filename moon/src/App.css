@@ -58,6 +58,7 @@ body {
 /* main page content*/
 #main-content {
   display: flex;
+  font-weight: 500;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -73,6 +74,9 @@ body {
   order: 1;
   height: auto;
   max-height: 30%;
+  transform: scale(1,1.4);
+  font-size: min(max(10px, 4vw), 20px);
+  
 }
 
 #action-button {
@@ -171,7 +175,6 @@ button {
   padding: 10px;
   border-radius: 20px;
   margin: 1% 0 1% 0;
-  font-size: 20px;
   overflow: auto;
 }
 /* Footer*/
@@ -185,7 +188,53 @@ button {
   box-shadow: 0 0 15px 2px whitesmoke;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 768px) {
+  #main-content {
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #header-text {
+    display: flex;
+    width: 100%;
+    order: 1;
+    max-height: 20%;
+    font-size: 2.7vw;
+  }
+
+  #image {
+    width: 100%;
+    order: 2;
+    height: 60%;
+    display: flex;
+  }
+
+  .content-no-background {
+    padding: 20px 0 68px 0;
+  }
+
+  #action-button {
+    order: 3;
+    width: 50%;
+    height: 20%;
+    display: flex;
+    max-height: 25%;
+  }
+
+  #bottom-text {
+    order: 4;
+    height: 20%;
+    width: 50%;
+    max-height: 25%;
+    display: flex;
+
+  }
+
+  
+}
+
+@media screen and (min-width: 1028px) {
 
   #main-content {
     justify-content: flex-start;
@@ -198,11 +247,11 @@ button {
     width: 50%;
     order: 1;
     max-height: 50%;
+    font-size: 1.8vw;
   }
 
-  /* Main Text */
   .content-no-background {
-    font-size: 3vw;
+    padding: 68px 0 68px 0;
   }
 
   #action-button {
@@ -225,7 +274,8 @@ button {
   #image {
     width: 50%;
     order: 4;
-    height: 100%;
+    height: 100vh;
+    min-height: 60%;
     display: flex;
   }
 
@@ -241,15 +291,10 @@ button {
 
 
 /*
-1024 x 600
-1280 x 800
-375 x 667
-360 x 740
-540 x 720
-280 x 653
-914 x 412
-1024 x 600
-1280 x 800
+912 z 1368
+1024 z 600
+1280 z 800
+
 
 
 

@@ -28,18 +28,17 @@ function App() {
           </div>
           <div id="center-image" className="header-element2">
             <button className={CustomBtn.btn}>
-            <h2>you need a website!</h2>
+          you need!
             </button>
           </div>
 
           <div id="nav" className="header-element-right">
-            <button className={CustomBtn.white}>Images</button>
+            <button className={CustomBtn.btn}>Images</button>
           </div>
         </div>
         <div id="main-content">
           <div id="header-text">
             <div className="content-no-background left-margin-desktop">
-            <FontAwesomeIcon icon="check-square" />
             In a world gone a little crazy I think it's absolutly the
             right time to have a new stunningly custom website made for your business,
              hobby or interest group. > > > > 
