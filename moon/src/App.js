@@ -3,14 +3,16 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import './App.css';
-import test from './media/images/pic.jpg';
+import test from './media/images/false.png';
 import logo from './media/images/flodhus.png';
 import CustomBtn from './styles/CustomButton.module.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCheckSquare, faCoffee, faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import video from './media/video/advert.mp4';
+import { faArrowDown, faCheckSquare, faCoffee, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-library.add(faCheckSquare, faCoffee, faCartShopping)
+
+library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping)
 
 
 function sayHello() {
@@ -40,7 +42,7 @@ function App() {
             <div className="content-no-background left-margin-desktop">
             In a world gone a little crazy I think it's absolutly the
             right time to have a new stunningly custom website made for your business,
-             hobby or interest group. > > > > 
+             hobby or interest group. <FontAwesomeIcon icon="arrow-down" /> <FontAwesomeIcon icon="arrow-down" /> <FontAwesomeIcon icon="arrow-down" />
             </div>
           </div>
 
@@ -64,7 +66,7 @@ function App() {
           <div id="bottom-text">
             <div id="bottom-text-content" className="text-border-white left-margin-desktop">
             
-              TEXT
+              <video src={video} autoPlay muted/>
             
             </div>
           </div>

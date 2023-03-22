@@ -42,10 +42,10 @@ background-color: black;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
   font-size: 3vw;
   font-weight: 800;
 }
+
 
 .light:hover {
 color: white;

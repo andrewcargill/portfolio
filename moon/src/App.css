@@ -123,6 +123,10 @@ body {
   height: 40%;
 }
 
+.contact-button div {
+  padding: 5px;
+}
+
 #buy-tagline {
     width: auto;
     height: 50%;
