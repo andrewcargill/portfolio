@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import './App.css';
 import test from './media/images/pic.jpg';
-import shop from './media/images/shop.png';
+import logo from './media/images/flodhus.png';
 import CustomBtn from './styles/CustomButton.module.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCheckSquare, faCoffee, faCartShopping } from '@fortawesome/free-solid-svg-icons';
@@ -23,8 +23,7 @@ function App() {
       <div id="main">
         <div id="header">
           <div id="logo" className="header-element1">
-            <p>andy</p>
-            <p>design</p>
+            <img id="logo-image" src={logo} alt="" />
           </div>
           <div id="center-image" className="header-element2">
             <button className={CustomBtn.btn}>

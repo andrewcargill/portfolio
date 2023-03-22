@@ -10,10 +10,11 @@ body {
 }
 
 /*LOGO*/
-#logo {
-  font-size: 4vw;
-  font-weight: 900;
+
+#logo-image {
+  width: 100px ;
 }
+
 
 
 /* header */
@@ -47,7 +48,8 @@ body {
 }
 
 .header-element1 {
-  padding: 1%;
+  background-color: beige;
+  
   height: 70%;
   width: 20%;
   border-radius: 20px;
@@ -176,6 +178,11 @@ body {
 
 /* medium devices */
 @media screen and (min-width: 768px) {
+  
+  #logo-image {
+    width: 150px ;
+  }
+
   #main-content {
     justify-content: flex-start;
     flex-direction: row;
