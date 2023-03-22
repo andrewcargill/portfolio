@@ -47,12 +47,12 @@ function App() {
 
           <div id="action-button">
             <div className="text-border-buy left-margin-desktop box-shadow">
-                <button className={CustomBtn.white}
+                <button className={`${CustomBtn.light} contact-button`}
                   onClick={sayHello}>
                   <div id="buy-basket">
                   <FontAwesomeIcon icon="cart-shopping" />
                   </div>
-                  <div id="buy text">email me
+                  <div id="buy text">Contact
                   </div>
                 </button>
              

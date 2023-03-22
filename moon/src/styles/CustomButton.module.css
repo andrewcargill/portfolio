@@ -34,4 +34,34 @@ background-color: black;
 
 }
 
+.light {
+  color: black;
+  background-color: #d3d3d3;
+  border: 2px solid black;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 3vw;
+  font-weight: 800;
+}
 
+.light:hover {
+color: white;
+background-color: black;
+
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  background-color: #d3d3d3;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 10px;
+  margin: 10px;
+  width: 90%;
+  height: 40%;
+}
