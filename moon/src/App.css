@@ -12,14 +12,14 @@ body {
 /*LOGO*/
 
 #logo-image {
-  width: 100px ;
+  width: 20vw ;
+  max-width: 80px;
 }
 
 
 
 /* header */
 #header {
-  background-color: aqua;
   height: 10vh;
   display: flex;
   flex-direction: row;
@@ -48,8 +48,6 @@ body {
 }
 
 .header-element1 {
-  background-color: beige;
-  
   height: 70%;
   width: 20%;
   border-radius: 20px;
@@ -180,7 +178,8 @@ body {
 @media screen and (min-width: 768px) {
   
   #logo-image {
-    width: 150px ;
+    width: 10vw ;
+    max-width: 200px;
   }
 
   #main-content {
@@ -190,7 +189,7 @@ body {
   }
 
   #buy-tagline {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   #header-text {
