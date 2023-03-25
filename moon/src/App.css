@@ -183,6 +183,27 @@ video {
   box-shadow: 0 0 15px 2px whitesmoke;
 }
 
+/* Screen Height adjustments*/
+@media screen and (max-height: 950px) and (max-width: 1000px) {
+  #main-content {
+    height: 110vh;
+  }
+} 
+
+@media screen and (max-height: 800px) and (max-width: 1000px) {
+  #main-content {
+    height: 100vh;
+  }
+} 
+
+@media screen and (max-height: 599px  ) {
+  #main-content {
+    height: 200vh;
+  }
+} 
+
+
+
 
 /* medium devices */
 @media screen and (min-width: 768px) {

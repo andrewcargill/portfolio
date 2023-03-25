@@ -28,13 +28,13 @@ function App() {
             <img id="logo-image" src={logo} alt="" />
           </div>
           <div id="center-image" className="header-element2">
-            <button className={CustomBtn.btn}>
+            <button className={CustomBtn.light}>
           you need!
             </button>
           </div>
 
           <div id="nav" className="header-element-right">
-            <button className={CustomBtn.btn}>Images</button>
+            <button className={CustomBtn.white}>Images</button>
           </div>
         </div>
         <div id="main-content">
@@ -66,13 +66,14 @@ function App() {
           <div id="bottom-text">
             <div id="bottom-text-content" className="text-border-white left-margin-desktop">
             
-              <video src={video} autoPlay muted loop/>
+            <video src={video} autoPlay muted loop/>
             
             </div>
           </div>
 
           <div id="image">
             <div className="text-border right-margin-desktop">
+            
             <img id="main-pic" src={test} alt="Logo" />
             </div>
           </div>
