@@ -12,15 +12,15 @@ body {
 /*LOGO*/
 
 #logo-image {
-  width: 20vw ;
-  max-width: 80px;
+  width: 20vw;
+  max-width: 60px;
 }
 
 
 
 /* header */
 #header {
-  height: 10vh;
+  height: 90px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -210,7 +210,7 @@ video {
   
   #logo-image {
     width: 10vw ;
-    max-width: 200px;
+    max-width: 130px;
   }
 
   #main-content {
