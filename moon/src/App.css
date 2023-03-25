@@ -16,11 +16,9 @@ body {
   max-width: 60px;
 }
 
-
-
 /* header */
 #header {
-  height: 90px;
+  height: 10vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
