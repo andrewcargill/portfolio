@@ -45,7 +45,8 @@ function App() {
 
           <div id="action-button">
             <div className="text-border-buy left-margin-desktop box-shadow">
-                <button className={`${CustomBtn.light} contact-button`}
+              <div className='contact-button'>
+                <button className={CustomBtn.light}
                   onClick={sayHello}>
                   <div id="buy-basket">
                   <FontAwesomeIcon icon="cart-shopping" />
@@ -53,11 +54,12 @@ function App() {
                   <div id="buy text">Contact
                   </div>
                 </button>
+              </div>
              
-                <div id="buy-tagline">
-                  It doesn't have to cost the world to bring your ideas
-                  to life. Get the web working for you today!
-                </div>
+              <div id="buy-tagline">
+                It doesn't have to cost the world to bring your ideas
+                to life. Get the web working for you today!
+              </div>
             </div>
           </div>
           <div id="bottom-text">

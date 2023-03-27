@@ -102,19 +102,32 @@ body {
 }
 
 /* Buy Section */
-#contact-button {
-  margin: 10px;
-  width: 90%;
-  height: 40%;
+.text-border-buy {
+  background-color: #d3d3d3;
+  width: 100%;
+  background-color: ;
+  border-radius: 20px;
+  margin: 1% 0 1% 0;
+  font-size: 2vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .contact-button div {
   padding: 5px;
 }
 
+.contact-button {
+  background-color: pink;
+  margin: 10px;
+  width: 90%;
+  height: 100%;
+}
+
 #buy-tagline {
+    background-color: orange;
     width: auto;
-    height: 50%;
     font-size: 14px;
     margin: 10px;
     text-align: center;
@@ -154,18 +167,6 @@ video {
   display: flex;
 }
 
-.text-border-buy {
-  background-color: #d3d3d3;
-  width: 100%;
-  background-color: ;
-  border-radius: 20px;
-  margin: 1% 0 1% 0;
-  font-size: 5vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .content-no-background {
   width: 100%;
   padding: 10px;
@@ -197,6 +198,10 @@ video {
   #main-content {
     background-color: aqua;
     height: 100vh;
+  }
+
+  #buy-tagline{
+    font-size: 2.5vw;
   }
 } 
 
@@ -253,6 +258,12 @@ video {
   .content-no-background {
     padding: 25px 0 1px 0;
     overflow: visible;
+  }
+
+  .text-border-buy {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   #action-button {

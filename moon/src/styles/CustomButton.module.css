@@ -44,6 +44,7 @@ background-color: black;
   align-items: center;
   font-size: 3vw;
   font-weight: 800;
+  width: 100%;
 }
 
 .light:hover {
