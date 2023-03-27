@@ -120,16 +120,18 @@ body {
 
 .contact-button {
   /* background-color: pink; */
+  display: flex;
   margin: 10px;
   width: 90%;
   height: 100%;
+  padding: 10px;
 }
 
 #buy-tagline {
     /* background-color: orange; */
     width: auto;
-    font-size: 14px;
-    margin: 10px;
+    font-size: 12px;
+    margin: 12px;
     text-align: center;
 }
 
@@ -192,6 +194,10 @@ video {
     letter-spacing: 0;
     transform: scale(1,1);
   }
+
+  .text-border-buy {
+    padding: 22px;
+  }
 } 
 
 @media screen and (max-height: 800px) and (max-width: 1000px) {
@@ -236,8 +242,12 @@ video {
     flex-wrap: wrap;
   }
 
+  .text-border-buy {
+    padding: 10px;
+  }
+
   #buy-tagline {
-    font-size: 18px;
+    font-size: 12px;
   }
 
   #header-text {
@@ -289,7 +299,7 @@ video {
 @media screen and (min-width: 1024px) {
 
   #main-content {
-    /* background-color: yellow; */
+    /* background-color: violet; */
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
@@ -311,12 +321,20 @@ video {
     padding: 68px 0 68px 0;
   }
 
+  .text-border-buy {
+    padding: 22px;
+  }
+
   #action-button {
     order: 2;
     width: 50%;
     height: 25%;
     display: flex;
     max-height: 25%;
+  }
+
+  #buy-tagline {
+    font-size: 2vh;
   }
 
   #bottom-text {
