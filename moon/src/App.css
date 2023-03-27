@@ -18,6 +18,7 @@ body {
 
 /* header */
 #header {
+  background-color: red;
   height: 10vh;
   display: flex;
   flex-direction: row;
@@ -184,7 +185,14 @@ video {
 /* Screen Height adjustments*/
 @media screen and (max-height: 950px) and (max-width: 1000px) {
   #main-content {
+    background-color: blue;
     height: 110vh;
+  }
+
+  #header-text {
+    font-size: min(max(8px, 4vw), 15px);
+    letter-spacing: 0;
+    transform: scale(1,1);
   }
 } 
 
@@ -194,9 +202,19 @@ video {
   }
 } 
 
+/* mobile Landscape*/
 @media screen and (max-height: 599px  ) {
   #main-content {
+    background-color: green;
     height: 200vh;
+  }
+
+  #header {
+    height: 60px;
+  }
+
+  #footer {
+    height: 70px;
   }
 } 
 
@@ -208,10 +226,11 @@ video {
   
   #logo-image {
     width: 10vw ;
-    max-width: 130px;
+    max-width: 66px;
   }
 
   #main-content {
+    background-color: pink;
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
@@ -237,7 +256,8 @@ video {
   }
 
   .content-no-background {
-    padding: 20px 0 68px 0;
+    padding: 25px 0 1px 0;
+    overflow: visible;
   }
 
   #action-button {
@@ -246,6 +266,7 @@ video {
     height: 20%;
     display: flex;
     max-height: 25%;
+    padding-right: 10px;
   }
 
   #bottom-text {
@@ -255,6 +276,7 @@ video {
     max-height: 25%;
     display: flex;
     flex: 2;
+    padding-left: 10px;
   }
   
 }
