@@ -18,7 +18,7 @@ body {
 
 /* MAIN SECTIONS OF WEBSITE*/
 #header {
-  background-color: red;
+  /* background-color: red; */
   height: 5vh;
   display: flex;
   flex-direction: row;
@@ -27,7 +27,7 @@ body {
 }
 
 #main-content {
-  background-color: brown;
+  /* background-color: brown; */
   display: flex;
   font-weight: 500;
   flex-direction: column;
@@ -78,7 +78,7 @@ body {
 }
 
 .header-element-right {
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -119,14 +119,14 @@ body {
 }
 
 .contact-button {
-  background-color: pink;
+  /* background-color: pink; */
   margin: 10px;
   width: 90%;
   height: 100%;
 }
 
 #buy-tagline {
-    background-color: orange;
+    /* background-color: orange; */
     width: auto;
     font-size: 14px;
     margin: 10px;
@@ -183,7 +183,7 @@ video {
 /* Screen Height adjustments*/
 @media screen and (max-height: 950px) and (max-width: 1000px) {
   #main-content {
-    background-color: blue;
+    /* background-color: blue; */
     height: 110vh;
   }
 
@@ -196,7 +196,7 @@ video {
 
 @media screen and (max-height: 800px) and (max-width: 1000px) {
   #main-content {
-    background-color: aqua;
+    /* background-color: aqua; */
     height: 100vh;
   }
 
@@ -208,7 +208,7 @@ video {
 /* mobile Landscape*/
 @media screen and (max-height: 599px  ) {
   #main-content {
-    background-color: green;
+    /* background-color: green; */
     height: 200vh;
   }
 
@@ -230,7 +230,7 @@ video {
   }
 
   #main-content {
-    background-color: pink;
+    /* background-color: pink; */
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
@@ -289,7 +289,7 @@ video {
 @media screen and (min-width: 1024px) {
 
   #main-content {
-    background-color: yellow;
+    /* background-color: yellow; */
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
@@ -344,4 +344,6 @@ video {
     margin-left: 1%;
   }
 }
+
+
 
