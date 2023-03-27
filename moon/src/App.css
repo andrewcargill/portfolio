@@ -5,7 +5,7 @@ body {
 
 /* main container */
 #main {
-  padding: 0 2% 0 2%;
+  padding: 1% 2% 0 2%;
   background-color: #898989;
 }
 
@@ -65,13 +65,6 @@ body {
 
 /*HEADER*/
 /* Header content containers*/
-.header-element-right {
-  display: flex;
-  align-items: stretch;
-  height: 100%;
-  width: 40%;
-}
-
 .header-element2 {
   display: flex;
   justify-content: center;
@@ -84,10 +77,15 @@ body {
   font-size: auto;
 }
 
-.header-element1 {
-  height: 70%;
-  width: 20%;
-  border-radius: 20px;
+.header-element-right {
+  background-color: lightcoral;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: ;
+  height: 100%;
+  width: 80%;
 }
 
 /* MAIN CONTENT */
@@ -100,7 +98,6 @@ body {
   order: 1;
   height: auto;
   max-height: 30%;
-  transform: scale(1,1.4);
   font-size: min(max(10px, 4vw), 20px);
 }
 
@@ -285,6 +282,10 @@ video {
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
+  }
+
+  .header-element-right {
+    width: 50%;
   }
 
   #header-text {

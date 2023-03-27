@@ -27,14 +27,11 @@ function App() {
           <div id="logo" className="header-element1">
             <img id="logo-image" src={logo} alt="" />
           </div>
-          <div id="center-image" className="header-element2">
-            <button className={CustomBtn.light}>
-          you need!
-            </button>
-          </div>
-
           <div id="nav" className="header-element-right">
-            <button className={CustomBtn.white}>Images</button>
+            <button className={CustomBtn.white}>Tutorials</button>
+            <button className={CustomBtn.white}>Work</button>
+            <button className={CustomBtn.white}>CV</button>
+
           </div>
         </div>
         <div id="main-content">

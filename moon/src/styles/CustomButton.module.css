@@ -24,8 +24,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  font-size: 3vw;
+  font-size: 20px;
+  width: 25vw;
 }
 
 .white:hover {
@@ -46,7 +46,6 @@ background-color: black;
   font-weight: 800;
 }
 
-
 .light:hover {
 color: white;
 background-color: black;
@@ -61,7 +60,16 @@ button {
   align-items: center;
   border: 1px solid;
   border-radius: 10px;
-  margin: 10px;
-  width: 90%;
-  height: 40%;
+  width: auto;
+  height: auto;
+}
+
+
+
+/*Screen Sizes*/
+
+@media screen and (min-width: 1024px) {
+  .white {
+    width: 10vw;
+  }
 }
