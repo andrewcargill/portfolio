@@ -121,15 +121,15 @@ body {
 .contact-button {
   /* background-color: pink; */
   display: flex;
-  margin: 10px;
-  width: 90%;
+  margin: 0;
+  width: 40%;
   height: 100%;
-  padding: 10px;
+  padding: 10px 5px 10px 5px;
 }
 
 #buy-tagline {
     /* background-color: orange; */
-    width: auto;
+    width: 50%;
     font-size: 12px;
     margin: 12px;
     text-align: center;
@@ -247,6 +247,7 @@ video {
   }
 
   #buy-tagline {
+    width: auto;
     font-size: 12px;
   }
 
@@ -256,6 +257,12 @@ video {
     order: 1;
     max-height: 20%;
     font-size: 2.7vw;
+  }
+
+  .contact-button {
+    width: 90%;
+    margin: 0;
+    padding: 0;
   }
 
   #image {

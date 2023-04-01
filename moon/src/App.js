@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <div id="main">
-        //Header
+        {/* Header */}
         <div id="header">
           <div id="logo" className="header-element1">
             <img id="logo-image" src={logo} alt="" />
@@ -32,10 +32,9 @@ function App() {
             <button className={CustomBtn.white}>Tutorials</button>
             <button className={CustomBtn.white}>Work</button>
             <button className={CustomBtn.white}>CV</button>
-
           </div>
         </div>
-        //Main Content
+        {/* Main Content */}
         <div id="main-content">
           <div id="header-text">
             <div className="content-no-background left-margin-desktop">
@@ -44,10 +43,10 @@ function App() {
              hobby or interest group. <FontAwesomeIcon icon="arrow-down" /> <FontAwesomeIcon icon="arrow-down" /> <FontAwesomeIcon icon="arrow-down" />
             </div>
           </div>
-        //Action Container
+        {/* Action Section */}
           <div id="action-button">
             <div className="text-border-buy left-margin-desktop box-shadow">
-              // Button
+              {/* Button */}
               <div className='contact-button'>
                 <button className={CustomBtn.light}
                   onClick={sayHello}>
@@ -58,14 +57,14 @@ function App() {
                   </div>
                 </button>
               </div>
-              //Text
+              {/* Text */}
               <div id="buy-tagline">
                 It doesn't have to cost the world to bring your ideas
                 to life. Get the web working for you today!
               </div>
             </div>
           </div>
-          //Text / Sub Video
+          {/* Sub info - Video */}
           <div id="bottom-text">
             <div id="bottom-text-content" className="text-border-white left-margin-desktop">
             
@@ -73,7 +72,7 @@ function App() {
             
             </div>
           </div>
-          //Image
+          {/* Main image */}
           <div id="image">
             <div className="text-border right-margin-desktop">
             
@@ -81,7 +80,7 @@ function App() {
             </div>
           </div>
         </div>
-        //Footer
+        {/* Footer */}
         <div id="footer">
             <div className="text-border">
                 Footer
