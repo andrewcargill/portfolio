@@ -83,7 +83,46 @@ function App() {
         {/* Footer */}
         <div id="footer">
             <div className="text-border">
-                Footer
+              {/* Button 1 */}
+            <button className={CustomBtn.light}
+                  onClick={sayHello}>
+              <div id="buy-basket">
+                  <FontAwesomeIcon icon="cart-shopping" />
+              </div>
+              
+              <div id="buy text">B1
+              </div>
+            </button>
+              {/* Button 2 */}
+            <button className={CustomBtn.light}
+                  onClick={sayHello}>
+              <div id="buy-basket">
+                  <FontAwesomeIcon icon="cart-shopping" />
+              </div>
+
+              <div id="buy text">B2
+              </div>
+            </button>
+              {/* Button 3 */}
+            <button className={CustomBtn.light}
+                  onClick={sayHello}>
+              <div id="buy-basket">
+                  <FontAwesomeIcon icon="cart-shopping" />
+              </div>
+
+              <div id="buy text">B3
+              </div>
+            </button>
+              {/* Button 4 */}
+            <button className={CustomBtn.light}
+                  onClick={sayHello}>
+              <div id="buy-basket">
+                  <FontAwesomeIcon icon="cart-shopping" />
+              </div>
+
+              <div id="buy text">B4
+              </div>
+            </button>
             </div>
         </div>
       </div>
