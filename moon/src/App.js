@@ -23,6 +23,7 @@ function App() {
   return (
     <div className="App">
       <div id="main">
+        //Header
         <div id="header">
           <div id="logo" className="header-element1">
             <img id="logo-image" src={logo} alt="" />
@@ -34,6 +35,7 @@ function App() {
 
           </div>
         </div>
+        //Main Content
         <div id="main-content">
           <div id="header-text">
             <div className="content-no-background left-margin-desktop">
@@ -42,9 +44,10 @@ function App() {
              hobby or interest group. <FontAwesomeIcon icon="arrow-down" /> <FontAwesomeIcon icon="arrow-down" /> <FontAwesomeIcon icon="arrow-down" />
             </div>
           </div>
-
+        //Action Container
           <div id="action-button">
             <div className="text-border-buy left-margin-desktop box-shadow">
+              // Button
               <div className='contact-button'>
                 <button className={CustomBtn.light}
                   onClick={sayHello}>
@@ -55,13 +58,14 @@ function App() {
                   </div>
                 </button>
               </div>
-             
+              //Text
               <div id="buy-tagline">
                 It doesn't have to cost the world to bring your ideas
                 to life. Get the web working for you today!
               </div>
             </div>
           </div>
+          //Text / Sub Video
           <div id="bottom-text">
             <div id="bottom-text-content" className="text-border-white left-margin-desktop">
             
@@ -69,7 +73,7 @@ function App() {
             
             </div>
           </div>
-
+          //Image
           <div id="image">
             <div className="text-border right-margin-desktop">
             
@@ -77,6 +81,7 @@ function App() {
             </div>
           </div>
         </div>
+        //Footer
         <div id="footer">
             <div className="text-border">
                 Footer
