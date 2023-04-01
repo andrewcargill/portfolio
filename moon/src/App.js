@@ -82,6 +82,7 @@ function App() {
         </div>
         {/* Footer */}
         <div id="footer">
+      
             <div className="text-border">
               {/* Button 1 */}
             <button className={CustomBtn.light}
@@ -123,6 +124,7 @@ function App() {
               <div id="buy text">B4
               </div>
             </button>
+            
             </div>
         </div>
       </div>
