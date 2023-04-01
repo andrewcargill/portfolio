@@ -15,6 +15,8 @@ import {
  
 } from "@fortawesome/free-solid-svg-icons";
 
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping,);
@@ -100,7 +102,7 @@ function App() {
             {/* Button 2 */}
             <button className={CustomBtn.footer} onClick={sayHello}>
               <div id="buy-basket">
-                <FontAwesomeIcon icon="cart-shopping" />
+                <FontAwesomeIcon icon={faFacebook} />
               </div>
 
               <div id="buy text">B2</div>
