@@ -55,6 +55,26 @@ background-color: black;
 
 }
 
+.footer {
+  color: black;
+  background-color: #898989;
+  border: 2px solid black;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 800;
+  width: 50%;
+  transition: 0.9s;
+}
+
+.footer:hover {
+color: white;
+background-color: black;
+
+}
+
 button {
   display: flex;
   flex-direction: row;
@@ -68,8 +88,13 @@ button {
 }
 
 
-
 /*Screen Sizes*/
+
+@media screen and (min-width: 768px) {
+  .footer {
+    width: 20%;
+  }
+}
 
 @media screen and (min-width: 1024px) {
   .white {
