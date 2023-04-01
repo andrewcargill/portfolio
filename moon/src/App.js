@@ -15,7 +15,12 @@ import {
  
 } from "@fortawesome/free-solid-svg-icons";
 
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import {  
+  faInstagramSquare,
+  faLinkedin,
+  faGithubSquare,
+  faSpotify
+} from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -93,35 +98,35 @@ function App() {
             {/* Button 1 */}
             <button className={CustomBtn.footer} onClick={sayHello}>
               <div id="buy-basket">
-              <FontAwesomeIcon icon={["fab", "github"]} />
+              <FontAwesomeIcon icon={faInstagramSquare} />
 
               </div>
 
-              <div id="buy text">B1</div>
+              <div id="buy text"> Instagram</div>
             </button>
             {/* Button 2 */}
             <button className={CustomBtn.footer} onClick={sayHello}>
               <div id="buy-basket">
-                <FontAwesomeIcon icon={faFacebook} />
+              <FontAwesomeIcon icon={faLinkedin} />
               </div>
 
-              <div id="buy text">B2</div>
+              <div id="buy text"> LinkedIn</div>
             </button>
             {/* Button 3 */}
             <button className={CustomBtn.footer} onClick={sayHello}>
               <div id="buy-basket">
-                <FontAwesomeIcon icon="cart-shopping" />
+              <FontAwesomeIcon icon={faSpotify} />
               </div>
 
-              <div id="buy text">B3</div>
+              <div id="buy text"> Spotify</div>
             </button>
             {/* Button 4 */}
             <button className={CustomBtn.footer} onClick={sayHello}>
               <div id="buy-basket">
-                <FontAwesomeIcon icon="cart-shopping" />
+              <FontAwesomeIcon icon={faGithubSquare} />
               </div>
 
-              <div id="buy text">B4</div>
+              <div id="buy text"> GitHub</div>
             </button>
           {/* </div> */}
         </div>

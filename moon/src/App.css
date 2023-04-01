@@ -239,7 +239,7 @@ video {
   }
 
   #main-content {
-    background-color: pink;
+    /* background-color: pink; */
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
