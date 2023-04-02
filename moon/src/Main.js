@@ -24,6 +24,7 @@ import {
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
+import HomeContent from "./components/HomeContent";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
@@ -31,7 +32,7 @@ function sayHello() {
   alert("You clicked me!");
 }
 
-const Home = () => {
+const Main = () => {
   const navigate = useNavigate();
   const handleClickAbout = () => navigate("/about");
   const handleClickExample = () => navigate("/example");
@@ -65,56 +66,10 @@ const Home = () => {
             </button>
           </div>
         </div>
+
         {/* START OF Main Content */}
-        <div id="main-content">
-          <div id="header-text">
-            <div className="content-no-background left-margin-desktop">
-              {/* In a world gone a little crazy I think it's absolutly the right
-              time to have a new stunningly custom website made for your
-              business, hobby or interest group. */}
-              Welcome to my world where creativity and technology collide. I am
-              a full-stack engineer with a background in media, art and
-              teaching. So step into my world, and let's explore the endless
-              possibilities together. <FontAwesomeIcon icon="arrow-down" />{" "}
-              <FontAwesomeIcon icon="arrow-down" />{" "}
-              <FontAwesomeIcon icon="arrow-down" />
-            </div>
-          </div>
-          {/* Action Section */}
-          <div id="action-button">
-            <div className="text-border-buy left-margin-desktop box-shadow">
-              {/* Button */}
-              <div className="contact-button">
-                <button className={CustomBtn.light} onClick={sayHello}>
-                  <div id="buy-basket">
-                    <FontAwesomeIcon icon="cart-shopping" />
-                  </div>
-                  <div>Contact</div>
-                </button>
-              </div>
-              {/* Text */}
-              <div id="buy-tagline">
-                It doesn't have to cost the world to bring your ideas to life.
-                Get the web working for you today!
-              </div>
-            </div>
-          </div>
-          {/* Sub info - Video */}
-          <div id="bottom-text">
-            <div
-              id="bottom-text-content"
-              className="text-border-white left-margin-desktop"
-            >
-              <video src={video} autoPlay muted loop />
-            </div>
-          </div>
-          {/* Main image */}
-          <div id="image">
-            <div className="text-border right-margin-desktop">
-              <img id="main-pic" src={test} alt="Logo" />
-            </div>
-          </div>
-        </div>
+        <HomeContent />
+
 
         {/* END OF MAIN CONTENT */}
 
@@ -186,4 +141,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Main;
