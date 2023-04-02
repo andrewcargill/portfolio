@@ -65,7 +65,7 @@ const Home = () => {
             </button>
           </div>
         </div>
-        {/* Main Content */}
+        {/* START OF Main Content */}
         <div id="main-content">
           <div id="header-text">
             <div className="content-no-background left-margin-desktop">
@@ -115,6 +115,9 @@ const Home = () => {
             </div>
           </div>
         </div>
+
+        {/* END OF MAIN CONTENT */}
+
         {/* Footer */}
         <div id="footer">
           {/* <div className="text-border"> */}
