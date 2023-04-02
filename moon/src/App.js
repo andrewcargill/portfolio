@@ -66,7 +66,7 @@ function App() {
                   <div id="buy-basket">
                     <FontAwesomeIcon icon="cart-shopping" />
                   </div>
-                  <div id="buy text">Contact</div>
+                  <div>Contact</div>
                 </button>
               </div>
               {/* Text */}
@@ -99,10 +99,8 @@ function App() {
             <button className={CustomBtn.footer} onClick={sayHello}>
               <div id="buy-basket">
               <FontAwesomeIcon icon={faInstagramSquare} />
-
               </div>
-
-              <div id="buy text"> Instagram</div>
+              <div className={CustomBtn.footerLabel}> Instagram</div>
             </button>
             {/* Button 2 */}
             <button className={CustomBtn.footer} onClick={sayHello}>
@@ -110,7 +108,7 @@ function App() {
               <FontAwesomeIcon icon={faLinkedin} />
               </div>
 
-              <div id="buy text"> LinkedIn</div>
+              <div className={CustomBtn.footerLabel}> LinkedIn</div>
             </button>
             {/* Button 3 */}
             <button className={CustomBtn.footer} onClick={sayHello}>
@@ -118,21 +116,21 @@ function App() {
               <FontAwesomeIcon icon={faSpotify} />
               </div>
 
-              <div id="buy text"> Spotify</div>
+              <div className={CustomBtn.footerLabel}> Spotify</div>
             </button>
             {/* Button 4 */}
             <button className={CustomBtn.footer} onClick={sayHello}>
               <div id="buy-basket">
               <FontAwesomeIcon icon={faGithubSquare} />
               </div>
-              <div id="buy text"> GitHub</div>
+              <div className={CustomBtn.footerLabel}> GitHub</div>
             </button>
             {/* Button 5 */}
             <button className={CustomBtn.footer} onClick={sayHello}>
               <div id="buy-basket">
               <FontAwesomeIcon icon={faGithubSquare} />
               </div>
-              <div id="buy text"> GitHub</div>
+              <div className={CustomBtn.footerLabel}> GitHub</div>
             </button>
           {/* </div> */}
         </div>
