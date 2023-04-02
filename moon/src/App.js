@@ -125,7 +125,13 @@ function App() {
               <div id="buy-basket">
               <FontAwesomeIcon icon={faGithubSquare} />
               </div>
-
+              <div id="buy text"> GitHub</div>
+            </button>
+            {/* Button 5 */}
+            <button className={CustomBtn.footer} onClick={sayHello}>
+              <div id="buy-basket">
+              <FontAwesomeIcon icon={faGithubSquare} />
+              </div>
               <div id="buy text"> GitHub</div>
             </button>
           {/* </div> */}

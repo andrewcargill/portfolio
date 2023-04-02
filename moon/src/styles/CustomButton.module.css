@@ -27,6 +27,9 @@
   font-size: 20px;
   width: 25vw;
   transition: 0.5s;
+  text-transform: uppercase;
+  font-weight: 500;
+
 }
 
 .white:hover {
@@ -70,8 +73,7 @@ background-color: black;
 }
 
 .footer:hover {
-color: white;
-background-color: black;
+background-color: white;
 
 }
 
@@ -92,18 +94,24 @@ button {
 
 @media screen and (min-width: 768px) {
   .footer {
-    width: 20%;
+    width: 15%;
+    height: 70%;
     font-size: 2vw;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .white {
-    width: 10vw;
+    width: 32%;
+    margin: 2%;
   }
 
   .light {
     font-size: 2.4vh;
+  }
+
+  .footer {
+    margin-top: 1%;
   }
 
 }
