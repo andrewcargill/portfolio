@@ -19,13 +19,13 @@ import {
   faLinkedin,
   faGithubSquare,
   faSpotify,
+  faCodepen,
 } from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 
-
-library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping);
+library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
 function sayHello() {
   alert("You clicked me!");
@@ -33,8 +33,11 @@ function sayHello() {
 
 const Home = () => {
   const navigate = useNavigate();
-  const handleClickAbout = () => navigate('/about');
-  const handleClickExample = () => navigate('/example');
+  const handleClickAbout = () => navigate("/about");
+  const handleClickExample = () => navigate("/example");
+  const handleClickSocial = (url) => {
+    window.open(url);
+  };
 
   return (
     <div className="App">
@@ -42,13 +45,24 @@ const Home = () => {
         {/* Header */}
         <div id="header">
           <div id="logo" className="header-element1">
-            <img type='button' onClick={handleClickExample} id="logo-image" src={logo} alt="" />
+            <img
+              type="button"
+              onClick={handleClickExample}
+              id="logo-image"
+              src={logo}
+              alt=""
+            />
           </div>
           <div id="nav" className="header-element-right">
-            
-            <button  className={CustomBtn.white}>Tutorials</button>
+            <button className={CustomBtn.white}>Tutorials</button>
             <button className={CustomBtn.white}>Work</button>
-            <button type='button' onClick={handleClickAbout} className={CustomBtn.white}>About</button>
+            <button
+              type="button"
+              onClick={handleClickAbout}
+              className={CustomBtn.white}
+            >
+              About
+            </button>
           </div>
         </div>
         {/* Main Content */}
@@ -105,14 +119,24 @@ const Home = () => {
         <div id="footer">
           {/* <div className="text-border"> */}
           {/* Button 1 */}
-          <button className={CustomBtn.footer} onClick={sayHello}>
+          <button
+            className={CustomBtn.footer}
+            onClick={() =>
+              handleClickSocial("https://instagram.com/andycargill01")
+            }
+          >
             <div id="buy-basket">
               <FontAwesomeIcon icon={faInstagramSquare} />
             </div>
             <div className={CustomBtn.footerLabel}> Instagram</div>
           </button>
           {/* Button 2 */}
-          <button className={CustomBtn.footer} onClick={sayHello}>
+          <button
+            className={CustomBtn.footer}
+            onClick={() =>
+              handleClickSocial("https://www.linkedin.com/in/andycargill01/")
+            }
+          >
             <div id="buy-basket">
               <FontAwesomeIcon icon={faLinkedin} />
             </div>
@@ -120,7 +144,10 @@ const Home = () => {
             <div className={CustomBtn.footerLabel}> LinkedIn</div>
           </button>
           {/* Button 3 */}
-          <button className={CustomBtn.footer} onClick={sayHello}>
+          <button
+            className={CustomBtn.footer}
+            onClick={() => handleClickSocial("https://spotfiy.com")}
+          >
             <div id="buy-basket">
               <FontAwesomeIcon icon={faSpotify} />
             </div>
@@ -128,24 +155,32 @@ const Home = () => {
             <div className={CustomBtn.footerLabel}> Spotify</div>
           </button>
           {/* Button 4 */}
-          <button className={CustomBtn.footer} onClick={sayHello}>
+          <button
+            className={CustomBtn.footer}
+            onClick={() =>
+              handleClickSocial("https://github.com/andrewcargill")
+            }
+          >
             <div id="buy-basket">
               <FontAwesomeIcon icon={faGithubSquare} />
             </div>
             <div className={CustomBtn.footerLabel}> GitHub</div>
           </button>
           {/* Button 5 */}
-          <button className={CustomBtn.footer} onClick={sayHello}>
+          <button
+            className={CustomBtn.footer}
+            onClick={() => handleClickSocial("https://codepen.io/andyc01")}
+          >
             <div id="buy-basket">
-              <FontAwesomeIcon icon={faGithubSquare} />
+              <FontAwesomeIcon icon={faCodepen} />
             </div>
-            <div className={CustomBtn.footerLabel}> GitHub</div>
+            <div className={CustomBtn.footerLabel}> Codepen</div>
           </button>
           {/* </div> */}
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Home;
