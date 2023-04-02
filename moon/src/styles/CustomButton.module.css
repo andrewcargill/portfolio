@@ -28,13 +28,14 @@
   width: 25vw;
   transition: 0.5s;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 800;
 
 }
 
 .white:hover {
 color: white;
 background-color: black;
+transition: 0.5s;
 
 }
 

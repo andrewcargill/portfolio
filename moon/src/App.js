@@ -42,7 +42,7 @@ function App() {
           <div id="nav" className="header-element-right">
             <button className={CustomBtn.white}>Tutorials</button>
             <button className={CustomBtn.white}>Work</button>
-            <button className={CustomBtn.white}>CV</button>
+            <button className={CustomBtn.white}>About</button>
           </div>
         </div>
         {/* Main Content */}
