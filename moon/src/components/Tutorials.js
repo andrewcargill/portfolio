@@ -2,7 +2,7 @@ import React from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import test from "../media/images/false.png";
+import test from "../media/images/teach.jpeg";
 import CustomBtn from "../styles/CustomButton.module.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import video from "../media/video/advert.mp4";
@@ -18,6 +18,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ContactSubContentDark from "./SubContent/ContactSubContentDark";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
@@ -37,24 +38,7 @@ function Tutorials() {
             </div>
           </div>
           {/* Action Section */}
-          <div id="action-button">
-            <div className="text-border-buy left-margin-desktop box-shadow">
-              {/* Button */}
-              <div className="contact-button">
-                <button className={CustomBtn.light} onClick={sayHello}>
-                  <div id="buy-basket">
-                    <FontAwesomeIcon icon="cart-shopping" />
-                  </div>
-                  <div>Contact</div>
-                </button>
-              </div>
-              {/* Text */}
-              <div id="buy-tagline">
-                It doesn't have to cost the world to bring your ideas to life.
-                Get the web working for you today!
-              </div>
-            </div>
-          </div>
+          <ContactSubContentDark />
           {/* Sub info - Video */}
           <div id="bottom-text">
             <div

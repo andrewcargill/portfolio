@@ -39,6 +39,36 @@ transition: 0.5s;
 
 }
 
+.crazy {
+  color: black;
+  background-color: #d3d3d3;
+  border: 2px solid black;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 800;
+  width: 100%;
+  transition: 0.9s;
+
+}
+
+.crazy:hover {
+color: white;
+background-color: red;
+  background-image:
+    linear-gradient(
+      to right, 
+      red, 
+      #f06d06, 
+      rgb(255, 255, 0), 
+      green
+    );
+transition: 0.5s;
+
+}
+
 .light {
   color: black;
   background-color: #d3d3d3;
@@ -107,6 +137,7 @@ button {
     font-size: 25px;
   }
 
+
   .footerLabel {
     display: inline;
   }
@@ -120,6 +151,10 @@ button {
   }
 
   .light {
+    font-size: 2.4vh;
+  }
+
+  .crazy {
     font-size: 2.4vh;
   }
 

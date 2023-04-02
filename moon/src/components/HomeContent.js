@@ -18,6 +18,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ContactSubContent from "./SubContent/ContactSubContent";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
@@ -42,24 +43,7 @@ function HomeContent() {
             </div>
           </div>
           {/* Action Section */}
-          <div id="action-button">
-            <div className="text-border-buy left-margin-desktop box-shadow">
-              {/* Button */}
-              <div className="contact-button">
-                <button className={CustomBtn.light} onClick={sayHello}>
-                  <div id="buy-basket">
-                    <FontAwesomeIcon icon="cart-shopping" />
-                  </div>
-                  <div>Contact</div>
-                </button>
-              </div>
-              {/* Text */}
-              <div id="buy-tagline">
-                It doesn't have to cost the world to bring your ideas to life.
-                Get the web working for you today!
-              </div>
-            </div>
-          </div>
+          <ContactSubContent />
           {/* Sub info - Video */}
           <div id="bottom-text">
             <div
