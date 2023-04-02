@@ -2,11 +2,9 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./App.css";
-import test from "./media/images/false.png";
 import logo from "./media/images/flodhus.png";
 import CustomBtn from "./styles/CustomButton.module.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import video from "./media/video/advert.mp4";
 import {
   faArrowDown,
   faCheckSquare,
@@ -25,12 +23,10 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 import HomeContent from "./components/HomeContent";
+import Tutorials from "./components/Tutorials";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
-function sayHello() {
-  alert("You clicked me!");
-}
 
 const Main = () => {
   const navigate = useNavigate();
@@ -68,7 +64,8 @@ const Main = () => {
         </div>
 
         {/* START OF Main Content */}
-        <HomeContent />
+        {/* <HomeContent /> */}
+        <Tutorials />
 
 
         {/* END OF MAIN CONTENT */}
