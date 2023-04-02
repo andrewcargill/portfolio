@@ -49,9 +49,11 @@ function App() {
         <div id="main-content">
           <div id="header-text">
             <div className="content-no-background left-margin-desktop">
-              In a world gone a little crazy I think it's absolutly the right
+              {/* In a world gone a little crazy I think it's absolutly the right
               time to have a new stunningly custom website made for your
-              business, hobby or interest group.{" "}
+              business, hobby or interest group. */}
+              Welcome to my world where creativity and technology collide. I am a full-stack engineer with a background in music, art and teaching. So step into my world, and let's explore the endless possibilities together.
+              {" "}
               <FontAwesomeIcon icon="arrow-down" />{" "}
               <FontAwesomeIcon icon="arrow-down" />{" "}
               <FontAwesomeIcon icon="arrow-down" />
