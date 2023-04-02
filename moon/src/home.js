@@ -22,6 +22,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router-dom";
 
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping);
@@ -30,20 +31,24 @@ function sayHello() {
   alert("You clicked me!");
 }
 
-function Home() {
+const Home = () => {
+  const navigate = useNavigate();
+  const handleClickAbout = () => navigate('/about');
+  const handleClickExample = () => navigate('/example');
+
   return (
     <div className="App">
       <div id="main">
         {/* Header */}
         <div id="header">
           <div id="logo" className="header-element1">
-            <img id="logo-image" src={logo} alt="" />
+            <img type='button' onClick={handleClickExample} id="logo-image" src={logo} alt="" />
           </div>
           <div id="nav" className="header-element-right">
             
-            <button className={CustomBtn.white}>Tutorial</button>
+            <button  className={CustomBtn.white}>Tutorials</button>
             <button className={CustomBtn.white}>Work</button>
-            <button className={CustomBtn.white}>About</button>
+            <button type='button' onClick={handleClickAbout} className={CustomBtn.white}>About</button>
           </div>
         </div>
         {/* Main Content */}
