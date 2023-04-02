@@ -3,6 +3,10 @@ body {
   font-weight: 400;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* main container */
 #main {
   padding: 1% 2% 0 2%;

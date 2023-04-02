@@ -12,25 +12,25 @@ import {
   faCheckSquare,
   faCoffee,
   faCartShopping,
- 
 } from "@fortawesome/free-solid-svg-icons";
 
-import {  
+import {
   faInstagramSquare,
   faLinkedin,
   faGithubSquare,
-  faSpotify
+  faSpotify,
 } from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping,);
+
+library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping);
 
 function sayHello() {
   alert("You clicked me!");
 }
 
-function Page() {
+function Home() {
   return (
     <div className="App">
       <div id="main">
@@ -40,7 +40,8 @@ function Page() {
             <img id="logo-image" src={logo} alt="" />
           </div>
           <div id="nav" className="header-element-right">
-            <button className={CustomBtn.white}>Tutorials</button>
+            
+            <button className={CustomBtn.white}>Tutorial</button>
             <button className={CustomBtn.white}>Work</button>
             <button className={CustomBtn.white}>About</button>
           </div>
@@ -52,9 +53,10 @@ function Page() {
               {/* In a world gone a little crazy I think it's absolutly the right
               time to have a new stunningly custom website made for your
               business, hobby or interest group. */}
-              Welcome to my world where creativity and technology collide. I am a full-stack engineer with a background in music, art and teaching. So step into my world, and let's explore the endless possibilities together.
-              {" "}
-              <FontAwesomeIcon icon="arrow-down" />{" "}
+              Welcome to my world where creativity and technology collide. I am
+              a full-stack engineer with a background in media, art and
+              teaching. So step into my world, and let's explore the endless
+              possibilities together. <FontAwesomeIcon icon="arrow-down" />{" "}
               <FontAwesomeIcon icon="arrow-down" />{" "}
               <FontAwesomeIcon icon="arrow-down" />
             </div>
@@ -97,43 +99,43 @@ function Page() {
         {/* Footer */}
         <div id="footer">
           {/* <div className="text-border"> */}
-            {/* Button 1 */}
-            <button className={CustomBtn.footer} onClick={sayHello}>
-              <div id="buy-basket">
+          {/* Button 1 */}
+          <button className={CustomBtn.footer} onClick={sayHello}>
+            <div id="buy-basket">
               <FontAwesomeIcon icon={faInstagramSquare} />
-              </div>
-              <div className={CustomBtn.footerLabel}> Instagram</div>
-            </button>
-            {/* Button 2 */}
-            <button className={CustomBtn.footer} onClick={sayHello}>
-              <div id="buy-basket">
+            </div>
+            <div className={CustomBtn.footerLabel}> Instagram</div>
+          </button>
+          {/* Button 2 */}
+          <button className={CustomBtn.footer} onClick={sayHello}>
+            <div id="buy-basket">
               <FontAwesomeIcon icon={faLinkedin} />
-              </div>
+            </div>
 
-              <div className={CustomBtn.footerLabel}> LinkedIn</div>
-            </button>
-            {/* Button 3 */}
-            <button className={CustomBtn.footer} onClick={sayHello}>
-              <div id="buy-basket">
+            <div className={CustomBtn.footerLabel}> LinkedIn</div>
+          </button>
+          {/* Button 3 */}
+          <button className={CustomBtn.footer} onClick={sayHello}>
+            <div id="buy-basket">
               <FontAwesomeIcon icon={faSpotify} />
-              </div>
+            </div>
 
-              <div className={CustomBtn.footerLabel}> Spotify</div>
-            </button>
-            {/* Button 4 */}
-            <button className={CustomBtn.footer} onClick={sayHello}>
-              <div id="buy-basket">
+            <div className={CustomBtn.footerLabel}> Spotify</div>
+          </button>
+          {/* Button 4 */}
+          <button className={CustomBtn.footer} onClick={sayHello}>
+            <div id="buy-basket">
               <FontAwesomeIcon icon={faGithubSquare} />
-              </div>
-              <div className={CustomBtn.footerLabel}> GitHub</div>
-            </button>
-            {/* Button 5 */}
-            <button className={CustomBtn.footer} onClick={sayHello}>
-              <div id="buy-basket">
+            </div>
+            <div className={CustomBtn.footerLabel}> GitHub</div>
+          </button>
+          {/* Button 5 */}
+          <button className={CustomBtn.footer} onClick={sayHello}>
+            <div id="buy-basket">
               <FontAwesomeIcon icon={faGithubSquare} />
-              </div>
-              <div className={CustomBtn.footerLabel}> GitHub</div>
-            </button>
+            </div>
+            <div className={CustomBtn.footerLabel}> GitHub</div>
+          </button>
           {/* </div> */}
         </div>
       </div>
@@ -141,4 +143,4 @@ function Page() {
   );
 }
 
-export default Page;
+export default Home;

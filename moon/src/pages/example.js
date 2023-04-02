@@ -2,7 +2,7 @@ import React from "react";
 import { Nav, NavLink, NavMenu } 
     from "../components/NavbarElements";
 
-const Home = () => {
+const Example = () => {
   return (
 
     <>
@@ -26,4 +26,4 @@ const Home = () => {
   );
 };
   
-export default Home;
+export default Example;
