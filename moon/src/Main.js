@@ -35,16 +35,15 @@ const Main = () => {
 
   const handleOnClick = (props) => {
     setMainContent(props)
-    console.log('------------andy Line 37 mainContent', mainContent);
   }
 
+  {/* Render Content */}
   const renderContent = () => {
-    console.log({mainContent})
     switch (mainContent) {
         case "home":
             return(
                 <div>
-                    <HomeContent />
+                    <HomeContent navClick={handleOnClick} />
                 </div>
             );
         case "tuition":
@@ -68,13 +67,13 @@ const Main = () => {
         default:
             return (
                 <div>
-                    <HomeContent />
+                    <HomeContent navClick={handleOnClick} />
                 </div>
             );
     }
     
 }
-
+  {/* Social media Links */}
   const handleClickSocial = (url) => {
     window.open(url);
   };
@@ -82,6 +81,7 @@ const Main = () => {
   return (
     <div className="App">
       <div id="main">
+
         {/* Header */}
         <div id="header">
           <div id="logo" className="header-element1">
@@ -111,8 +111,7 @@ const Main = () => {
           </div>
         </div>
 
-        {/* START OF Main Content */}
-        {/* <HomeContent /> */}
+        {/* Main Content */}
         {renderContent()}
 
 

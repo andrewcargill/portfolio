@@ -22,18 +22,23 @@ import ContactSubContent from "./SubContent/ContactSubContent";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
-function sayHello() {
-  alert("You clicked me!");
-}
 
-function HomeContent() {
+function HomeContent({ navClick }) {
+
+  const onClick = (value) => {
+    navClick(value);
+  }
+
+          
     return(
          <div id="main-content">
           <div id="header-text">
             <div className="content-no-background left-margin-desktop">
-              {/* In a world gone a little crazy I think it's absolutly the right
-              time to have a new stunningly custom website made for your
-              business, hobby or interest group. */}
+              
+            <button onClick={() =>
+            onClick("tuition")
+          } >Tutorials</button>
+
               Welcome to my world where creativity and technology collide. I am
               a full-stack engineer with a background in media, art and
               teaching. So step into my world, and let's explore the endless
@@ -43,7 +48,7 @@ function HomeContent() {
             </div>
           </div>
           {/* Action Section */}
-          <ContactSubContent />
+          <ContactSubContent navSubClick={navClick}/>
           {/* Sub info - Video */}
           <div id="bottom-text">
             <div

@@ -7,6 +7,7 @@ import {
   faCheckSquare,
   faCoffee,
   faCartShopping,
+  faPrescriptionBottleMedical,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping);
@@ -17,14 +18,23 @@ function sayHello() {
   alert("You clicked me!");
 }
 
-function ContactSubContent() {
+function ContactSubContent(props) {
+
+    const navClick = (value) => {
+      console.log('------------andy Line 24 ', );
+      
+      props.navSubClick(value);
+    }
+
 
     return(
         <div id="action-button">
             <div className="text-border-buy left-margin-desktop box-shadow">
             {/* Button */}
             <div className="contact-button">
-                <button className={CustomBtn.light} onClick={sayHello}>
+                <button className={CustomBtn.light} 
+                onClick={() => navClick('about')}
+                >
                 <div id="buy-basket">
                     <FontAwesomeIcon icon="cart-shopping" />
                 </div>
