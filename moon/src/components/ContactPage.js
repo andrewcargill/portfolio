@@ -25,7 +25,7 @@ library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 function ContactPage({ navClick }) {
     return(
          <div id="main-content">
-          <div id="header-text">
+          <div id="header-text" className="fade-in">
             <div className="content-no-background left-margin-desktop">
               Here are some ways of contacting me! <FontAwesomeIcon icon="arrow-down" />{" "}
               <FontAwesomeIcon icon="arrow-down" />{" "}

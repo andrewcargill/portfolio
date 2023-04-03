@@ -49,7 +49,7 @@ const Main = () => {
 
         {/* Header */}
         <div id="header">
-          <div id="logo" className="header-element1">
+          <div id="logo" className="header-element1 slide-down">
             <img
               type="button"
               onClick={() =>
@@ -64,15 +64,15 @@ const Main = () => {
             <button onClick={() =>
               handleOnClick("tuition")
             } 
-            className={CustomBtn.white}>Tutorials</button>
+            className={`slide-down ${CustomBtn.white}`}>Tutorials</button>
             <button onClick={() =>
               handleOnClick("work")
             }
-              className={CustomBtn.white}>Work</button>
+            className={`slide-down ${CustomBtn.white}`}>Work</button>
             <button onClick={() =>
               handleOnClick("about")
             }
-              className={CustomBtn.white}>About</button>
+            className={`slide-down ${CustomBtn.white}`}>About</button>
           </div>
         </div>
 

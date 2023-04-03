@@ -25,7 +25,7 @@ function HomeContent({ navClick }) {
 
     return(
          <div id="main-content">
-          <div id="header-text">
+          <div id="header-text" className="fade-in">
             <div className="content-no-background left-margin-desktop">
               Welcome to my world where creativity and technology collide. I am
               a full-stack engineer with a background in media, art and

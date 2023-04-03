@@ -21,7 +21,7 @@ function ContactSubContent(props) {
 
 
     return(
-        <div id="action-button">
+        <div id="action-button" className="slide-left">
             <div className="text-border-buy left-margin-desktop box-shadow">
             {/* Button */}
             <div className="contact-button">
