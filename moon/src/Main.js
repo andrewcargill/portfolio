@@ -135,7 +135,7 @@ const Main = () => {
           </button>
           {/* Button 5 */}
           <button
-            className={`zoom-in shake ${CustomBtn.footer}`}
+            className={`fade-in-scale ${CustomBtn.footer}`}
             onClick={() => handleClickSocial("https://codepen.io/andyc01")}
           >
             <div id="buy-basket">
