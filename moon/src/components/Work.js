@@ -22,11 +22,7 @@ import ContactSubContent from "./SubContent/ContactSubContent";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
-function sayHello() {
-  alert("You clicked me!");
-}
-
-function Work() {
+function Work({ navClick }) {
     return(
          <div id="main-content">
           <div id="header-text">
@@ -37,7 +33,7 @@ function Work() {
             </div>
           </div>
           {/* Action Section */}
-          <ContactSubContent />
+          <ContactSubContent navSubClick={navClick} />
           {/* Sub info - Video */}
           <div id="bottom-text">
             <div

@@ -3,6 +3,7 @@ import HomeContent from "./HomeContent";
 import Tutorials from "./Tutorials";
 import Work from "./Work";
 import About from "./About";
+import ContactPage from "./ContactPage";
 
 export const renderContent = (mainContent, handleOnClick) => {
   switch (mainContent) {
@@ -15,19 +16,25 @@ export const renderContent = (mainContent, handleOnClick) => {
     case "tuition":
       return (
         <div>
-          <Tutorials />
+          <Tutorials navClick={handleOnClick}/>
         </div>
       );
     case "work":
       return (
         <div>
-          <Work />
+          <Work navClick={handleOnClick}/>
         </div>
       );
     case "about":
       return (
         <div>
-          <About />
+          <About navClick={handleOnClick}/>
+        </div>
+      );
+    case "contact":
+      return (
+        <div>
+          <ContactPage navClick={handleOnClick}/>
         </div>
       );
     default:

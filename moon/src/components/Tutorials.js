@@ -18,15 +18,11 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ContactSubContentDark from "./SubContent/ContactSubContentDark";
+import ContactSubContent from "./SubContent/ContactSubContent";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
-function sayHello() {
-  alert("You clicked me!");
-}
-
-function Tutorials() {
+function Tutorials({ navClick }) {
     return(
          <div id="main-content">
           <div id="header-text">
@@ -38,7 +34,7 @@ function Tutorials() {
             </div>
           </div>
           {/* Action Section */}
-          <ContactSubContentDark />
+          <ContactSubContent navSubClick={navClick} />
           {/* Sub info - Video */}
           <div id="bottom-text">
             <div

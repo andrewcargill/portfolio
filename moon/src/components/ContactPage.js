@@ -3,6 +3,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import test from "../media/images/false.png";
+import CustomBtn from "../styles/CustomButton.module.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import video from "../media/video/advert.mp4";
 import {
@@ -21,22 +22,17 @@ import ContactSubContent from "./SubContent/ContactSubContent";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
-function HomeContent({ navClick }) {
-
+function ContactPage({ navClick }) {
     return(
          <div id="main-content">
           <div id="header-text">
             <div className="content-no-background left-margin-desktop">
-              Welcome to my world where creativity and technology collide. I am
-              a full-stack engineer with a background in media, art and
-              teaching. So step into my world, and let's explore the endless
-              possibilities together. <FontAwesomeIcon icon="arrow-down" />{" "}
+              Here are some ways of contacting me! <FontAwesomeIcon icon="arrow-down" />{" "}
               <FontAwesomeIcon icon="arrow-down" />{" "}
               <FontAwesomeIcon icon="arrow-down" />
             </div>
           </div>
           {/* Action Section */}
-          <ContactSubContent navSubClick={navClick}/>
           {/* Sub info - Video */}
           <div id="bottom-text">
             <div
@@ -56,4 +52,4 @@ function HomeContent({ navClick }) {
     );
 }
 
-export default HomeContent;
+export default ContactPage;

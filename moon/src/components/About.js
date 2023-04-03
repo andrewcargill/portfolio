@@ -26,7 +26,7 @@ function sayHello() {
   alert("You clicked me!");
 }
 
-function About() {
+function About({ navClick }) {
     return(
          <div id="main-content">
           <div id="header-text">
@@ -38,7 +38,7 @@ function About() {
           </div>
 
           {/* Action Section */}
-          <ContactSubContent />
+          <ContactSubContent navSubClick={navClick} />
           
           {/* Sub info - Video */}
           <div id="bottom-text">

@@ -13,16 +13,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping);
 
 
-
-function sayHello() {
-  alert("You clicked me!");
-}
-
 function ContactSubContent(props) {
 
     const navClick = (value) => {
-      console.log('------------andy Line 24 ', );
-      
       props.navSubClick(value);
     }
 
@@ -33,7 +26,7 @@ function ContactSubContent(props) {
             {/* Button */}
             <div className="contact-button">
                 <button className={CustomBtn.light} 
-                onClick={() => navClick('about')}
+                onClick={() => navClick('contact')}
                 >
                 <div id="buy-basket">
                     <FontAwesomeIcon icon="cart-shopping" />
