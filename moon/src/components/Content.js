@@ -1,5 +1,3 @@
-// Content.js
-
 import React from "react";
 import HomeContent from "./HomeContent";
 import Tutorials from "./Tutorials";

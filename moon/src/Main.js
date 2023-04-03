@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./App.css";
+import { renderContent } from "./components/Content";
 import logo from "./media/images/flodhus.png";
 import CustomBtn from "./styles/CustomButton.module.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -31,48 +32,12 @@ library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
 const Main = () => {
 
-  const [mainContent, setMainContent] = useState('');
+  const [mainContent, setMainContent] = useState('home');
 
   const handleOnClick = (props) => {
     setMainContent(props)
   }
 
- {/* Render Content */}
- const renderContent = () => {
-  switch (mainContent) {
-      case "home":
-          return(
-              <div>
-                  <HomeContent navClick={handleOnClick} />
-              </div>
-          );
-      case "tuition":
-          return (
-              <div>
-                  <Tutorials />
-              </div>
-          );
-      case "work":
-          return (
-              <div>
-                  <Work />
-              </div>
-          );
-      case "about":
-          return (
-              <div>
-                  <About />
-              </div>
-          );
-      default:
-          return (
-              <div>
-                  <HomeContent navClick={handleOnClick} />
-              </div>
-          );
-  }
-    
-}
   {/* Social media Links */}
   const handleClickSocial = (url) => {
     window.open(url);
@@ -112,7 +77,7 @@ const Main = () => {
         </div>
 
         {/* Main Content */}
-        {renderContent()}
+        {renderContent(mainContent, handleOnClick)}
 
 
         {/* END OF MAIN CONTENT */}
