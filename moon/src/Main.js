@@ -37,40 +37,40 @@ const Main = () => {
     setMainContent(props)
   }
 
-  {/* Render Content */}
-  const renderContent = () => {
-    switch (mainContent) {
-        case "home":
-            return(
-                <div>
-                    <HomeContent navClick={handleOnClick} />
-                </div>
-            );
-        case "tuition":
-            return (
-                <div>
-                    <Tutorials />
-                </div>
-            );
-        case "work":
-            return (
-                <div>
-                    <Work />
-                </div>
-            );
-        case "about":
-            return (
-                <div>
-                    <About />
-                </div>
-            );
-        default:
-            return (
-                <div>
-                    <HomeContent navClick={handleOnClick} />
-                </div>
-            );
-    }
+ {/* Render Content */}
+ const renderContent = () => {
+  switch (mainContent) {
+      case "home":
+          return(
+              <div>
+                  <HomeContent navClick={handleOnClick} />
+              </div>
+          );
+      case "tuition":
+          return (
+              <div>
+                  <Tutorials />
+              </div>
+          );
+      case "work":
+          return (
+              <div>
+                  <Work />
+              </div>
+          );
+      case "about":
+          return (
+              <div>
+                  <About />
+              </div>
+          );
+      default:
+          return (
+              <div>
+                  <HomeContent navClick={handleOnClick} />
+              </div>
+          );
+  }
     
 }
   {/* Social media Links */}
