@@ -33,7 +33,7 @@ function Work({ navClick }) {
             </div>
           </div>
           {/* Action Section */}
-          <ContactSubContent navSubClick={navClick} />
+          <ContactSubContent navSubClick={navClick} text="Let's start hanging out!" />
           {/* Sub info - Video */}
           <div id="bottom-text">
             <div

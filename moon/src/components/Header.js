@@ -29,7 +29,7 @@ const Header = ({ handleOnClick }) => {
         </button>
         <button
           onClick={() => handleOnClick("about")}
-          className={`slide-down ${CustomBtn.white}`}
+          className={`slide-right ${CustomBtn.white}`}
         >
           About
         </button>

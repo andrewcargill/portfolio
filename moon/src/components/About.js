@@ -19,6 +19,7 @@ import {
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContactSubContent from "./SubContent/ContactSubContent";
+import HeaderText from "./SubContent/HeaderText";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
@@ -29,16 +30,13 @@ function sayHello() {
 function About({ navClick }) {
     return(
          <div id="main-content">
-          <div id="header-text">
-            <div className="content-no-background left-margin-desktop">
-              I owned my own company for the past 15 years. Building systems and a lot of tuition of students. <FontAwesomeIcon icon="arrow-down" />{" "}
-              <FontAwesomeIcon icon="arrow-down" />{" "}
-              <FontAwesomeIcon icon="arrow-down" />
-            </div>
-          </div>
+          <HeaderText text="
+          I've owned a few companies over the years; The first was a music production 
+          company in the UK and the present is a farm and tech company in the North of Sweden. Oh how the years take you on adventures!
+          " />
 
           {/* Action Section */}
-          <ContactSubContent navSubClick={navClick} />
+          <ContactSubContent navSubClick={navClick} text="Let's 'ave a chat!" />
           
           {/* Sub info - Video */}
           <div id="bottom-text">

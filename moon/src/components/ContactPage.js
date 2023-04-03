@@ -19,19 +19,17 @@ import {
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContactSubContent from "./SubContent/ContactSubContent";
+import HeaderText from "./SubContent/HeaderText";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
 function ContactPage({ navClick }) {
     return(
          <div id="main-content">
-          <div id="header-text" className="fade-in">
-            <div className="content-no-background left-margin-desktop">
-              Here are some ways of contacting me! <FontAwesomeIcon icon="arrow-down" />{" "}
-              <FontAwesomeIcon icon="arrow-down" />{" "}
-              <FontAwesomeIcon icon="arrow-down" />
-            </div>
-          </div>
+          <HeaderText text ="
+          Oh my! I don't really use email anymore, only for the boring stuff.
+           I check all my socials regularly or you can SMS/ WhatsApp me on +46 76 149 4455
+          " />
           {/* Action Section */}
           {/* Sub info - Video */}
           <div id="bottom-text">

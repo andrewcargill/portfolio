@@ -18,31 +18,22 @@ import {
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContactSubContent from "./SubContent/ContactSubContent";
+import HeaderText from "./SubContent/HeaderText";
+import BottomText from "./SubContent/BottomText";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
 function Tutorials({ navClick }) {
     return(
          <div id="main-content">
-          <div id="header-text">
-            <div className="content-no-background left-margin-desktop">
-              At the moment I'm working with Umeå Kommun in teaching students how to 
-              work with the main building blocks of coding! HTML, CSS and JS. <FontAwesomeIcon icon="arrow-down" />{" "}
-              <FontAwesomeIcon icon="arrow-down" />{" "}
-              <FontAwesomeIcon icon="arrow-down" />
-            </div>
-          </div>
+          {/* HeaderText */}
+          <HeaderText text="Wow. I love to teach! It's been a passion for over 20 years. It started in music education and now I'm
+          starting up programming!
+          "/>
           {/* Action Section */}
-          <ContactSubContent navSubClick={navClick} />
-          {/* Sub info - Video */}
-          <div id="bottom-text">
-            <div
-              id="bottom-text-content"
-              className="text-border-white left-margin-desktop"
-            >
-              <video src={video} autoPlay muted loop />
-            </div>
-          </div>
+          <ContactSubContent navSubClick={navClick} text="I'm not genius.. But shout me anyway." />
+          {/* Bottom Text - Video */}
+          <BottomText video={video} />
           {/* Main image */}
           <div id="image">
             <div className="text-border right-margin-desktop">

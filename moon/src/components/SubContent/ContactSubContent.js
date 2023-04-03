@@ -36,8 +36,7 @@ function ContactSubContent(props) {
             </div>
             {/* Text */}
             <div id="buy-tagline">
-                It doesn't have to cost the world to bring your ideas to life.
-                Get the web working for you today!
+                {props.text}
             </div>
             </div>
       </div>
