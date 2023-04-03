@@ -90,6 +90,38 @@ a {
   animation: fade-in 1s ease-in forwards;
 }
 
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-in-scale {
+  animation: fadeInScale 1s ease-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px) rotate(-5deg); }
+  75% { transform: translateX(5px) rotate(5deg); }
+  100% { transform: translateX(0); }
+}
+
+.zoom-in {
+  animation: fadeIn 2s ease, zoomIn 1s ease;
+  animation-fill-mode: both;
+}
+
+.shake {
+  animation: shake 1s ease-in-out 2;
+}
+
+
 /* Effect CSS */
 
 

@@ -87,7 +87,7 @@ const Main = () => {
           {/* <div className="text-border"> */}
           {/* Button 1 */}
           <button
-            className={CustomBtn.footer}
+            className={`fade-in-scale ${CustomBtn.footer}`}
             onClick={() =>
               handleClickSocial("https://instagram.com/andycargill01")
             }
@@ -99,7 +99,7 @@ const Main = () => {
           </button>
           {/* Button 2 */}
           <button
-            className={CustomBtn.footer}
+            className={`zoom-in shake ${CustomBtn.footer}`}
             onClick={() =>
               handleClickSocial("https://www.linkedin.com/in/andycargill01/")
             }
@@ -112,7 +112,7 @@ const Main = () => {
           </button>
           {/* Button 3 */}
           <button
-            className={CustomBtn.footer}
+            className={`fade-in-scale ${CustomBtn.footer}`}
             onClick={() => handleClickSocial("https://spotfiy.com")}
           >
             <div id="buy-basket">
@@ -123,7 +123,7 @@ const Main = () => {
           </button>
           {/* Button 4 */}
           <button
-            className={CustomBtn.footer}
+            className={`fade-in-scale ${CustomBtn.footer}`}
             onClick={() =>
               handleClickSocial("https://github.com/andrewcargill")
             }
@@ -135,7 +135,7 @@ const Main = () => {
           </button>
           {/* Button 5 */}
           <button
-            className={CustomBtn.footer}
+            className={`zoom-in shake ${CustomBtn.footer}`}
             onClick={() => handleClickSocial("https://codepen.io/andyc01")}
           >
             <div id="buy-basket">
