@@ -17,12 +17,14 @@ function Image({ images }) {
       <div className="text-border right-margin-desktop image-container">
         <img
           id="main-pic"
-          src={images[index]}
-          alt="Slide"
+          src={images[index].src}
+          alt={images[index].alt}
           className="image-fade"
-          key={images[index]}
+          key={images[index].src}
         />
+        
       </div>
+     
     </div>
   );
 }
