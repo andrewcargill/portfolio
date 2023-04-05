@@ -19,19 +19,21 @@ import {
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContactSubContent from "./SubContent/ContactSubContent";
+import AutoHeaderText from "./SubContent/AutoHeaderText";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
 function Work({ navClick }) {
     return(
-         <div id="main-content">
-          <div id="header-text">
-            <div className="content-no-background left-margin-desktop">
-              Work examples! <FontAwesomeIcon icon="arrow-down" />{" "}
-              <FontAwesomeIcon icon="arrow-down" />{" "}
-              <FontAwesomeIcon icon="arrow-down" />
-            </div>
-          </div>
+          <div id="main-content"> 
+          <AutoHeaderText text="
+          WORK!
+          "
+          maxFont="7vh"
+          minFont="30px"
+          calFont="2vw"
+          />
+
           {/* Action Section */}
           <ContactSubContent navSubClick={navClick} text="Let's start hanging out!" />
           {/* Sub info - Video */}

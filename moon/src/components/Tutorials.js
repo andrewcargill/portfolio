@@ -29,8 +29,12 @@ function Tutorials({ navClick }) {
          <div id="main-content">
           {/* HeaderText */}
           <AutoHeaderText text="Wow. I love to teach! It's been a passion for over 20 years. It started in music education and now I'm
-          starting up programming!
-          "/>
+          starting up programming!" 
+          maxFont="3vh"
+          minFont="15px"
+          calFont="1.3vw"
+
+          />
           {/* Action Section */}
           <ContactSubContent navSubClick={navClick} text="I'm not genius.. But shout me anyway." />
           {/* Bottom Text - Video */}

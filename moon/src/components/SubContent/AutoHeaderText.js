@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function AutoHeaderText({ text }) {
+function AutoHeaderText({ text, maxFont, minFont, calFont}) {
+    console.log('------------andy Line 5 maxFont', text);
+    
   const [fontSize, setFontSize] = useState(1.8); // initial font size in vw units
 
   useEffect(() => {
@@ -28,7 +30,7 @@ function AutoHeaderText({ text }) {
       <style>{`
         #header-text {
           
-          font-size: min(max(15px, calc(1vw * ${fontSize})), 3vw);
+          font-size: min(max(${minFont}, calc(${calFont} * ${fontSize})), ${maxFont});
         }
       `}</style>
     </div>
