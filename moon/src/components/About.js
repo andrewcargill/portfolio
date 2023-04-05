@@ -20,6 +20,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContactSubContent from "./SubContent/ContactSubContent";
 import HeaderText from "./SubContent/HeaderText";
+import AutoHeaderText from "./SubContent/AutoHeaderText";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
@@ -30,10 +31,14 @@ function sayHello() {
 function About({ navClick }) {
     return(
          <div id="main-content">
-          <HeaderText text="
+          <AutoHeaderText text="
           I've owned a few companies over the years; The first was a music production 
           company in the UK and the present is a farm and tech company in the North of Sweden. Oh how the years take you on adventures!
-          " />
+          "
+          maxFont="4vh"
+          minFont="15px"
+          calFont="1vw"
+           />
 
           {/* Action Section */}
           <ContactSubContent navSubClick={navClick} text="Let's 'ave a chat!" />

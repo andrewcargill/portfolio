@@ -3,6 +3,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import test from "../media/images/false.png";
+import test2 from "../media/images/image001.PNG";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import video from "../media/video/advert.mp4";
 import {
@@ -27,6 +28,8 @@ library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
 function HomeContent({ navClick }) {
 
+  const images = ["../media/images/false.png", "../media/images/image001.PNG"];
+
     return(
          <div id="main-content">
           <AutoHeaderText text="
@@ -44,7 +47,8 @@ function HomeContent({ navClick }) {
           {/* Sub info - Video */}
           <BottomText video={video} />
           {/* Main image */}
-          <Image test={test} />
+          {/* <Image test={test} /> */}
+          <Image images={[test, test2]} />
         </div>
     );
 }

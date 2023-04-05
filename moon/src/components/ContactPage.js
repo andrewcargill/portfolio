@@ -20,16 +20,21 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContactSubContent from "./SubContent/ContactSubContent";
 import HeaderText from "./SubContent/HeaderText";
+import AutoHeaderText from "./SubContent/AutoHeaderText";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
 function ContactPage({ navClick }) {
     return(
          <div id="main-content">
-          <HeaderText text ="
+          <AutoHeaderText text ="
           Oh my! I don't really use email anymore, only for the boring stuff.
            I check all my socials regularly or you can SMS/ WhatsApp me on +46 76 149 4455
-          " />
+          " 
+          maxFont="3vh"
+          minFont="15px"
+          calFont="1.3vw"
+          />
           {/* Action Section */}
           {/* Sub info - Video */}
           <div id="bottom-text">
