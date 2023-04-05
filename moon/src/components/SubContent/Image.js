@@ -19,6 +19,7 @@ function Image({ images }) {
           src={images[index]}
           alt="Slide"
           className="image-fade"
+          key={images[index]}
         />
       </div>
     </div>

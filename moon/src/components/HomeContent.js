@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import test from "../media/images/false.png";
 import test2 from "../media/images/image001.PNG";
+import test3 from "../media/images/pic.jpg";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import video from "../media/video/advert.mp4";
 import {
@@ -48,7 +49,7 @@ function HomeContent({ navClick }) {
           <BottomText video={video} />
           {/* Main image */}
           {/* <Image test={test} /> */}
-          <Image images={[test, test2]} />
+          <Image images={[test, test2, test3]} />
         </div>
     );
 }
