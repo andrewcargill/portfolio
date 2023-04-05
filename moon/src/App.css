@@ -37,7 +37,7 @@ a {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
-  height: 70vh;
+  height: 80vh;
 }
 
 #action-button {
@@ -226,8 +226,8 @@ a {
   width: 100%;
   order: 1;
   height: auto;
-  max-height: 30%;
-  font-size: min(max(10px, 4vw), 20px);
+  max-height: 40%;
+  /* font-size: min(max(10px, 4vw), 20px); */
 }
 
 /* Buy Section */
@@ -319,7 +319,7 @@ video {
   }
 
   #header-text {
-    font-size: min(max(8px, 4vw), 15px);
+    /* font-size: min(max(8px, 4vw), 15px); */
     letter-spacing: 0;
     transform: scale(1,1);
   }
@@ -386,7 +386,7 @@ video {
     width: 100%;
     order: 1;
     max-height: 20%;
-    font-size: 2.7vw;
+    /* font-size: 2.7vw; */
   }
 
   .contact-button {
@@ -464,7 +464,7 @@ video {
     width: 50%;
     order: 1;
     max-height: 50%;
-    font-size: 1.8vw;
+    /* font-size: 1.8vw; */
   }
 
   .content-no-background {
@@ -517,7 +517,7 @@ video {
 
 @media screen and (min-width: 1024px) {
   #header-text{
-    font-size: 1.5vw;
+    /* font-size: 3vw; */
   }
 }
 

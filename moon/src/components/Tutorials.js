@@ -20,6 +20,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContactSubContent from "./SubContent/ContactSubContent";
 import HeaderText from "./SubContent/HeaderText";
 import BottomText from "./SubContent/BottomText";
+import AutoHeaderText from "./SubContent/AutoHeaderText";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
@@ -27,7 +28,7 @@ function Tutorials({ navClick }) {
     return(
          <div id="main-content">
           {/* HeaderText */}
-          <HeaderText text="Wow. I love to teach! It's been a passion for over 20 years. It started in music education and now I'm
+          <AutoHeaderText text="Wow. I love to teach! It's been a passion for over 20 years. It started in music education and now I'm
           starting up programming!
           "/>
           {/* Action Section */}
