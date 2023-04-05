@@ -5,6 +5,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import test from "../media/images/false.png";
 import test2 from "../media/images/image001.PNG";
 import test3 from "../media/images/pic.jpg";
+import ImagePlaylist from "../media/images/MainImagePlaylist";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import video from "../media/video/advert.mp4";
 import {
@@ -29,8 +30,12 @@ library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
 function HomeContent({ navClick }) {
 
-  const images = ["../media/images/false.png", "../media/images/image001.PNG"];
-
+  const allImages = [
+    require("../media/images/false.png"),
+    require("../media/images/pic.jpg"),
+    require("../media/images/image001.PNG")
+  ];
+  
     return(
          <div id="main-content">
           <AutoHeaderText text="
@@ -49,7 +54,7 @@ function HomeContent({ navClick }) {
           <BottomText video={video} />
           {/* Main image */}
           {/* <Image test={test} /> */}
-          <Image images={[test, test2, test3]} />
+          <Image images={ImagePlaylist} />
         </div>
     );
 }

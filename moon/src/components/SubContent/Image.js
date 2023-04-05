@@ -3,7 +3,8 @@ import "../../styles/Image.css";
 
 function Image({ images }) {
   const [index, setIndex] = useState(0);
-
+  console.log('------------andy Line 6 {images}', {images});
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % images.length);
