@@ -9,9 +9,6 @@ a {
 
 /* main container */
 #main {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   padding: 1% 2% 0 2%;
   background-color: #898989;
 }
