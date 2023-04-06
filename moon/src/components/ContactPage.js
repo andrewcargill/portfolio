@@ -27,9 +27,9 @@ function ContactPage({ navClick }) {
           text="
           Contact ME! Go on! Go On!.
           "
-          maxFont="3vh"
+          maxFont="8vh"
           minFont="15px"
-          calFont="3vw"
+          calFont="50px"
           containerId={css.AutoHeaderContainer}
         />
       </div>
