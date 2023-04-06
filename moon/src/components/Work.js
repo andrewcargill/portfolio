@@ -23,7 +23,7 @@ function Work({ navClick }) {
   return (
     <div id="main-content-container">
       {/* Header Text Container*/}
-      <div id="header-text" className="fade-in">
+      <div id="header-text-container" className="fade-in">
         {/* Auto Header Text Component */}
         <AutoHeaderText
           text="

@@ -29,9 +29,9 @@ function sayHello() {
 
 function About({ navClick }) {
   return (
-    <div id="main-content-container-container-container-container">
+    <div id="main-content-container">
       {/* Header Text Container*/}
-      <div id="header-text" className="fade-in">
+      <div id="header-text-container" className="fade-in">
         <AutoHeaderText
           text="
           I've owned a few companies over the years; The first was a music production 
@@ -44,7 +44,7 @@ function About({ navClick }) {
       </div>
 
       {/* Sub-Section Container Top */}
-      <div id="action-button" className="slide-left">
+      <div id="subcontent-container-top" className="slide-left">
         {/* Contact Button Component */}
         <ContactSubContent
           navSubClick={navClick}
@@ -52,7 +52,7 @@ function About({ navClick }) {
         />
       </div>
       {/* Sub-Section Container Bottom */}
-      <div id="bottom-text" className="slide-up">
+      <div id="subcontent-container-bottom" className="slide-up">
         {/* Sub-Section Video Component */}
         <BottomText video={video} />
       </div>

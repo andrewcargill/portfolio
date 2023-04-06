@@ -9,10 +9,10 @@ function AutoHeaderText({ text, maxFont, minFont, calFont}) {
   useEffect(() => {
     // adjust font size on window resize
     const handleResize = () => {
-      const containerHeight = document.getElementById("header-text").offsetHeight;
-      const containerWidth = document.getElementById("header-text").offsetWidth;
-      const textHeight = document.getElementById("header-text-text").offsetHeight;
-      const textWidth = document.getElementById("header-text-text").offsetWidth;
+      const containerHeight = document.getElementById("header-text-container").offsetHeight;
+      const containerWidth = document.getElementById("header-text-container").offsetWidth;
+      const textHeight = document.getElementById("header-text-container-text").offsetHeight;
+      const textWidth = document.getElementById("header-text-container-text").offsetWidth;
       const newFontSize = Math.min(containerHeight / textHeight, containerWidth / textWidth) * 1.8;
       setFontSize(newFontSize);
     };
@@ -23,12 +23,12 @@ function AutoHeaderText({ text, maxFont, minFont, calFont}) {
 
   return (
     <div>
-      <div className="content-no-background left-margin-desktop" id="header-text-text">
+      <div className="content-no-background left-margin-desktop" id="header-text-container-text">
         {text} <FontAwesomeIcon icon="arrow-down" /> <FontAwesomeIcon icon="arrow-down" />{" "}
         <FontAwesomeIcon icon="arrow-down" />
       </div>
       <style>{`
-        #header-text {
+        #header-text-container {
           
           font-size: min(max(${minFont}, calc(${calFont} * ${fontSize})), ${maxFont});
         }

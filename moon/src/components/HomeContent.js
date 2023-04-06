@@ -24,7 +24,7 @@ function HomeContent({ navClick }) {
   return (
     <div id="main-content-container">
       {/* Header Text Container*/}
-      <div id="header-text" className="fade-in">
+      <div id="header-text-container" className="fade-in">
         {/* Auto Header Text Component */}
         <AutoHeaderText
           text="
@@ -40,7 +40,7 @@ function HomeContent({ navClick }) {
       </div>
 
       {/* Sub-Section Container Top */}
-      <div id="action-button" className="slide-left">
+      <div id="subcontent-container-top" className="slide-left">
         {/* Contact Button Component */}
         <ContactSubContent
           navSubClick={navClick}
@@ -49,7 +49,7 @@ function HomeContent({ navClick }) {
       </div>
 
       {/* Sub-Section Container Bottom */}
-      <div id="bottom-text" className="slide-up">
+      <div id="subcontent-container-bottom" className="slide-up">
         {/* Sub-Section Video Component */}
         <BottomText video={video} />
       </div>

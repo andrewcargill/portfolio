@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function HeaderText({ text }) {
   return (
-    <div id="header-text" className="fade-in">
+    <div id="header-text-container" className="fade-in">
       <div className="content-no-background left-margin-desktop">
         {text}  <FontAwesomeIcon icon="arrow-down" />{" "}
           <FontAwesomeIcon icon="arrow-down" />{" "}
