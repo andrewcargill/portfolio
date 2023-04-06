@@ -1,0 +1,79 @@
+.container1 {
+    background-color: red;
+}
+
+
+/* Container for AutoHeaderText*/
+#AutoHeaderContainer {
+    text-transform: uppercase;
+    letter-spacing: .1vw;
+    text-align: justify;
+    display: flex;
+    width: 100%;
+    order: 1;
+    height: auto;
+    max-height: 40%;
+    /* font-size: min(max(10px, 4vw), 20px); */
+  }
+
+/* Containers for main content and image*/
+.border {
+    width: 100%;
+    background-color: #d3d3d3;
+    border-radius: 20px;
+    margin: 1% 0 1% 0;
+    font-size: 20px;
+    overflow: auto;
+}
+
+
+.halfPageContainer {
+    width: 100%;
+    order: 2;
+    height: 50%;
+    display: flex;
+}
+
+/* medium devices */
+@media screen and (min-width: 768px) {
+
+    /* Container for AutoHeaderText*/
+    #AutoHeaderContainer {
+        display: flex;
+        width: 100%;
+        order: 1;
+        max-height: 20%;
+        /* font-size: 2.7vw; */
+      }
+
+    /* Containers for main content and image*/
+    .halfPageContainer {
+        width: 100%;
+        order: 2;
+        height: 60%;
+        display: flex;
+    }
+}
+
+/* larger devices */
+@media screen and (min-width: 1024px) {
+
+    /* Container for AutoHeaderText*/
+    #AutoHeaderContainer {
+        display: flex;
+        width: 50%;
+        order: 1;
+        max-height: 50%;
+        /* font-size: 1.8vw; */
+      }
+
+    /* Containers for main content and image*/
+    .halfPageContainer {
+        width: 50%;
+        order: 4;
+        height: 100vh;
+        min-height: 60%;
+        display: flex;
+    }
+
+}
