@@ -5,6 +5,7 @@ import Work from "./Work";
 import About from "./About";
 import ContactPage from "./ContactPage";
 
+
 export const renderContent = (mainContent, handleOnClick) => {
   switch (mainContent) {
     case "home":

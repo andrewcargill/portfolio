@@ -12,9 +12,7 @@ import {
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
 
-import {
-  faCodepen,
-} from "@fortawesome/free-brands-svg-icons";
+import { faCodepen } from "@fortawesome/free-brands-svg-icons";
 
 import AutoHeaderText from "./SubContent/AutoHeaderText";
 import ImageGallery from "./SubContent/ImageGallery";
@@ -22,21 +20,27 @@ import ImageGallery from "./SubContent/ImageGallery";
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
 function Work({ navClick }) {
-    return(
-          <div id="main-content"> 
-          <AutoHeaderText text="
+  return (
+    <div id="main-content">
+      {/* Header Text Container*/}
+      <div id="header-text" className="fade-in">
+        {/* Auto Header Text Component */}
+        <AutoHeaderText
+          text="
           WORK!
           "
           maxFont="7vh"
           minFont="30px"
           calFont="2vw"
-          />
+        />
+      </div>
 
-          <ImageGallery images={ImagePlaylist}/>
-
-          
-        </div>
-    );
+      {/* Half Page Content Container */}
+      
+        <ImageGallery images={ImagePlaylist} />
+      
+    </div>
+  );
 }
 
 export default Work;

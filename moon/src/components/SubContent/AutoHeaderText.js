@@ -22,7 +22,7 @@ function AutoHeaderText({ text, maxFont, minFont, calFont}) {
   }, []);
 
   return (
-    <div id="header-text" className="fade-in">
+    <div>
       <div className="content-no-background left-margin-desktop" id="header-text-text">
         {text} <FontAwesomeIcon icon="arrow-down" /> <FontAwesomeIcon icon="arrow-down" />{" "}
         <FontAwesomeIcon icon="arrow-down" />

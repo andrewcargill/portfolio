@@ -3,8 +3,8 @@ import "../../styles/Image.css";
 
 function Image({ images }) {
   const [index, setIndex] = useState(0);
-  console.log('------------andy Line 6 {images}', {images});
-  
+  console.log("------------andy Line 6 {images}", { images });
+
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -13,18 +13,14 @@ function Image({ images }) {
   }, [images.length]);
 
   return (
-    <div id="image" className="slide-right">
-      <div className="text-border right-margin-desktop image-container">
-        <img
-          id="main-pic"
-          src={images[index].src}
-          alt={images[index].alt}
-          className="image-fade"
-          key={images[index].src}
-        />
-        
-      </div>
-     
+    <div className="text-border right-margin-desktop image-container">
+      <img
+        id="main-pic"
+        src={images[index].src}
+        alt={images[index].alt}
+        className="image-fade"
+        key={images[index].src}
+      />
     </div>
   );
 }

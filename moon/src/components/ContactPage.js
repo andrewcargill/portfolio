@@ -13,46 +13,55 @@ import {
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
 
-import {
-  faCodepen,
-} from "@fortawesome/free-brands-svg-icons";
+import { faCodepen } from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContactSubContent from "./SubContent/ContactSubContent";
-import HeaderText from "./SubContent/HeaderText";
 import AutoHeaderText from "./SubContent/AutoHeaderText";
+import BottomText from "./SubContent/BottomText";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
 function ContactPage({ navClick }) {
-    return(
-         <div id="main-content">
-          <AutoHeaderText text ="
-          Oh my! I don't really use email anymore, only for the boring stuff.
-           I check all my socials regularly or you can SMS/ WhatsApp me on +46 76 149 4455
-          " 
+  return (
+    <div id="main-content">
+      {/* Header Text Container */}
+      <div id="header-text" className="fade-in">
+        {/* Auto Header Text Component */}
+        <AutoHeaderText
+          text="
+          Contact ME! Go on! Go On!.
+          "
           maxFont="3vh"
           minFont="15px"
-          calFont="1.3vw"
-          />
-          {/* Action Section */}
-          {/* Sub info - Video */}
-          <div id="bottom-text">
-            <div
-              id="bottom-text-content"
-              className="text-border-white left-margin-desktop"
-            >
-              <video src={video} autoPlay muted loop />
-            </div>
-          </div>
-          {/* Main image */}
-          <div id="image">
-            <div className="text-border right-margin-desktop">
-              <img id="main-pic" src={test} alt="Logo" />
-            </div>
-          </div>
+          calFont="1.2vw"
+        />
+      </div>
+
+
+       {/* Sub-Section Container Top */}
+       <div id="action-button" className="slide-left">
+        {/* Contact Button Component */}
+        <ContactSubContent
+          navSubClick={navClick}
+          text="Looking for some tuition or a new website?"
+        />
+      </div>
+
+      {/* Sub-Section Container Bottom */}
+      <div id="bottom-text" className="slide-up">
+        {/* Sub-Section Video Component */}
+        <BottomText video={video} />
+      </div>
+
+      {/* Main image */}
+      <div id="image">
+        <div className="text-border right-margin-desktop">
+          <img id="main-pic" src={test} alt="Logo" />
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 
 export default ContactPage;
