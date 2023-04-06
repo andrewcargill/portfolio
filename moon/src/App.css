@@ -287,6 +287,17 @@ video {
   overflow: auto;
 }
 
+.gallery-text-border {
+  width: 100%;
+  background-color: #d3d3d3;
+  border-radius: 20px;
+  margin: 1% 0 1% 0;
+  font-size: 20px;
+  overflow: auto;
+  height: 70vh;
+}
+
+
 /* Containers */
 .text-border-white {
   width: 100%;

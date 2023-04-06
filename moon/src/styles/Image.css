@@ -34,4 +34,16 @@
   opacity: 1;
 }
 
+.border {
+  width: 100%;
+  background-color: #d3d3d3 !important;
+  border-radius: 20px;
+  margin: 1% 0 1% 0;
+  font-size: 20px;
+  overflow: auto;
+  height: 70vh;
+}
+
+
+
 

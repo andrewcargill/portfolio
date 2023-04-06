@@ -9,6 +9,9 @@ function ImageGallery({ images }) {
         <div className={css.gallery}>
           {images.map((image, index) => (
             <div key={index} className={css.thumbnailWrapper}>
+              <div className={css.thumbnailOverlay}>
+                <p className={css.caption}>{image.caption}</p>
+              </div>
               <img
                 src={image.src}
                 alt={image.alt}
