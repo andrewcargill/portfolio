@@ -2,12 +2,21 @@
     background-color: red;
 }
 
+#mainContentContainer {
+    background-color: brown;
+    display: flex;
+    font-weight: 500;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 80vh;
+  }
 
 /* Container for AutoHeaderText*/
 #AutoHeaderContainer {
     text-transform: uppercase;
     letter-spacing: .1vw;
-    text-align: justify;
+    /* text-align: justify; */
     display: flex;
     width: 100%;
     order: 1;
@@ -27,11 +36,23 @@
 }
 
 
-.halfPageContainer {
+.halfPageContainer1 {
     width: 100%;
     order: 2;
-    height: 50%;
+    height: 40%;
     display: flex;
+}
+
+.halfPageContainer2 {
+    width: 100%;
+    order: 3;
+    height: 40%;
+    display: flex;
+}
+
+/* Contact text information*/
+.contactText {
+    margin: 20px;
 }
 
 /* medium devices */
@@ -47,9 +68,18 @@
       }
 
     /* Containers for main content and image*/
-    .halfPageContainer {
-        width: 100%;
+    .halfPageContainer1 {
+        width: 50%;
+        order: 3;
+        padding-right: 1%;
+        height: 60%;
+        display: flex;
+    }
+
+    .halfPageContainer2 {
+        width: 50%;
         order: 2;
+        padding-left: 1%;
         height: 60%;
         display: flex;
     }
@@ -61,18 +91,22 @@
     /* Container for AutoHeaderText*/
     #AutoHeaderContainer {
         display: flex;
-        width: 50%;
-        order: 1;
-        max-height: 50%;
+        max-height: 20%;
         /* font-size: 1.8vw; */
       }
 
     /* Containers for main content and image*/
-    .halfPageContainer {
-        width: 50%;
-        order: 4;
-        height: 100vh;
-        min-height: 60%;
+    .halfPageContainer1 {
+
+
+        min-height: 50%;
+        display: flex;
+    }
+
+    .halfPageContainer2 {
+
+  
+        min-height: 50%;
         display: flex;
     }
 
