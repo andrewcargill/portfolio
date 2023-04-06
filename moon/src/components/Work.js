@@ -21,7 +21,7 @@ library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
 function Work({ navClick }) {
   return (
-    <div id="main-content">
+    <div id="main-content-container">
       {/* Header Text Container*/}
       <div id="header-text" className="fade-in">
         {/* Auto Header Text Component */}

@@ -1,10 +1,6 @@
 import React from "react";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import test from "../media/images/false.png";
-import test2 from "../media/images/image001.PNG";
-import test3 from "../media/images/pic.jpg";
 import ImagePlaylist from "../media/images/MainImagePlaylist";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import video from "../media/video/advert.mp4";
@@ -16,10 +12,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import { faCodepen } from "@fortawesome/free-brands-svg-icons";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContactSubContent from "./SubContent/ContactSubContent";
-import HeaderText from "./SubContent/HeaderText";
 import BottomText from "./SubContent/BottomText";
 import Image from "./SubContent/Image";
 import AutoHeaderText from "./SubContent/AutoHeaderText";
@@ -27,14 +20,9 @@ import AutoHeaderText from "./SubContent/AutoHeaderText";
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
 function HomeContent({ navClick }) {
-  const allImages = [
-    require("../media/images/false.png"),
-    require("../media/images/pic.jpg"),
-    require("../media/images/image001.PNG"),
-  ];
 
   return (
-    <div id="main-content">
+    <div id="main-content-container">
       {/* Header Text Container*/}
       <div id="header-text" className="fade-in">
         {/* Auto Header Text Component */}

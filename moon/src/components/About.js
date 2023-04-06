@@ -29,7 +29,7 @@ function sayHello() {
 
 function About({ navClick }) {
   return (
-    <div id="main-content">
+    <div id="main-content-container-container-container-container">
       {/* Header Text Container*/}
       <div id="header-text" className="fade-in">
         <AutoHeaderText

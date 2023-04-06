@@ -30,7 +30,7 @@ a {
   align-items: center;
 }
 
-#main-content {
+#main-content-container {
   /* background-color: brown; */
   display: flex;
   font-weight: 500;
@@ -324,7 +324,7 @@ video {
 
 /* Screen Height adjustments*/
 @media screen and (max-height: 950px) and (max-width: 1000px) {
-  #main-content {
+  #main-content-container {
     /* background-color: blue; */
     height: 110vh;
   }
@@ -341,7 +341,7 @@ video {
 } 
 
 @media screen and (max-height: 800px) and (max-width: 1000px) {
-  #main-content {
+  #main-content-container {
     /* background-color: aqua; */
     height: 100vh;
   }
@@ -353,7 +353,7 @@ video {
 
 /* mobile Landscape*/
 @media screen and (max-height: 599px  ) {
-  #main-content {
+  #main-content-container {
     /* background-color: green; */
     height: 200vh;
   }
@@ -376,7 +376,7 @@ video {
     max-width: 66px;
   }
 
-  #main-content {
+  #main-content-container {
     /* background-color: pink; */
     justify-content: flex-start;
     flex-direction: row;
@@ -459,7 +459,7 @@ video {
     height: 10vh;
   }
   
-  #main-content {
+  #main-content-container {
     /* background-color: violet; */
     justify-content: center;
     flex-direction: column;
