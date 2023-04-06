@@ -55,7 +55,7 @@ function ContactPage({ navClick }) {
       </div>
 
       {/* Main image */}
-      <div id="image">
+      <div id="half-page-container">
         <div className="text-border right-margin-desktop">
           <img id="main-pic" src={test} alt="Logo" />
         </div>

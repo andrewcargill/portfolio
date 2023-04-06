@@ -4,7 +4,7 @@ import css from "../../styles/Work.module.css";
 
 function ImageGallery({ images }) {
   return (
-    <div id="image" className="slide-right">
+    <div id="half-page-container" className="slide-right">
       <div className="text-border right-margin-desktop image-container">
         <div className={css.gallery}>
           {images.map((image, index) => (
