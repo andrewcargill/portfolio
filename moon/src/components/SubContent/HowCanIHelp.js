@@ -13,7 +13,7 @@ function HowCanIHelp({ video }) {
           Learn different things about coding and it's applications.
         </div>
         <div className={styles.text}>
-          <button>Read More</button>
+          <button className={styles.helpButton}>Read More</button>
         </div>
       </div>
     </div>

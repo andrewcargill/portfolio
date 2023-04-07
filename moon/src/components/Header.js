@@ -19,13 +19,13 @@ const Header = ({ handleOnClick }) => {
           onClick={() => handleOnClick("tuition")}
           className={`slide-down ${CustomBtn.white}`}
         >
-          Tutorials
+          UX DESIGN
         </button>
         <button
           onClick={() => handleOnClick("work")}
           className={`slide-down ${CustomBtn.white}`}
         >
-          Work
+          My Work
         </button>
         <button
           onClick={() => handleOnClick("about")}
