@@ -108,4 +108,11 @@
         display: flex;
     }
 
+    p {
+        background-color: black;
+        color: white;
+        border-radius: 6px;
+        font-size: 2vw;
+    }
+
 }

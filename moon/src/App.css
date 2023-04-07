@@ -1,6 +1,7 @@
 body {
   font-family: "HelveticaNeue Bold", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   font-weight: 400;
+  background-color: #898989;
 }
 
 a {
@@ -13,7 +14,7 @@ a {
   flex-direction: column;
   justify-content: flex-start;
   padding: 1% 2% 0 2%;
-  background-color: #898989;
+  
 }
 
 
@@ -485,9 +486,9 @@ video {
     /* font-size: 1.8vw; */
   }
 
-  .content-no-background {
+  /* .content-no-background {
     padding: 68px 0 68px 0;
-  }
+  } */
 
   .text-border-buy {
     padding: 22px;
