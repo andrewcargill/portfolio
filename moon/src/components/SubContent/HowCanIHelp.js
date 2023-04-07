@@ -1,10 +1,13 @@
 import React from "react";
 import styles from "../../styles/HowCanIHelp.module.css";
+import image from "../../media/images/demo.png"
 
 function HowCanIHelp({ video }) {
   return (
     <div className={styles.border}>
-      <p>How can I help</p>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   );
 }
