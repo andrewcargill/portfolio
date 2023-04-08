@@ -10,7 +10,7 @@ function HowCanIHelp({ video }) {
       </div>
       <div className={styles.left}>
         <div className={styles.text}>
-          Learn different things about coding and it's applications.
+          Resources. ReactJS Components. Lessons for teaching code to students and more!
         </div>
         <div className={styles.text}>
           <button className={styles.helpButton}>Read More</button>

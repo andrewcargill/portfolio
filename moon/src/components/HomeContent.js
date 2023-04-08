@@ -45,7 +45,7 @@ function HomeContent({ navClick }) {
         {/* Contact Button Component */}
         <ContactSubContent
           navSubClick={navClick}
-          text="Looking for some tuition or a new website?"
+          text="Coding, Audio, UX Design... Give me a call!"
         />
       </div>
 
