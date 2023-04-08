@@ -5,7 +5,7 @@ import image from "../../media/images/tutorials_thumbnail.png";
 function HowCanIHelp({ video }) {
   return (
     <div className={styles.border}>
-      <div className={image}>
+      <div className={styles.thumb}>
         <img src={image} alt="" />
       </div>
       <div className={styles.left}>

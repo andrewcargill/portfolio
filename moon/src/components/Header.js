@@ -19,7 +19,7 @@ const Header = ({ handleOnClick }) => {
           onClick={() => handleOnClick("tuition")}
           className={`slide-down ${CustomBtn.white}`}
         >
-          UX DESIGN
+          Services
         </button>
         <button
           onClick={() => handleOnClick("work")}

@@ -3,12 +3,14 @@
     background-color: white;
     border-radius: 20px;
     margin: 1% 0 1% 0;
-    padding: 30px 15px 30px 15px;
-    font-size: 5vw;
+    padding: 18px 15px 18px 15px;
+    flex-direction: row;
+    font-size: 20px;
     overflow: auto;
     display: flex;
     justify-content: space-between;
   }
+
 
   #thumb {
     width: 50%;

@@ -35,7 +35,7 @@ function HomeContent({ navClick }) {
           together.
           "
           maxFont="3vh"
-          minFont="20px"
+          minFont="15px"
           calFont="1.2vw"
         />
       </div>
