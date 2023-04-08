@@ -52,14 +52,14 @@ a {
   order: 3;
   width: 100%;
   min-height: 20vh;
-  height: 20vw;
+  height: 30vw;
   display: flex;
 }
 
 #subcontent-container-bottom {
   order: 4;
   min-height: 17vh;
-  height: 20vw;
+  height: 30vw;
   width: 100%;
   display: flex;
   /* flex: 3; */
