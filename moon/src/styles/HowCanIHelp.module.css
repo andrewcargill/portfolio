@@ -3,9 +3,9 @@
     background-color: white;
     border-radius: 20px;
     margin: 1% 0 1% 0;
-    padding: 18px 15px 18px 15px;
+    /* padding: 18px 15px 18px 15px; */
+    padding: 3% 2.5% 3% 2.5%;
     flex-direction: row;
-    font-size: 20px;
     overflow: auto;
     display: flex;
     justify-content: space-between;

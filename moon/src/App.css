@@ -51,14 +51,14 @@ a {
 #subcontent-container-top {
   order: 3;
   width: 100%;
-  min-height: 15vh;
+  min-height: 20vh;
   height: 20vw;
   display: flex;
 }
 
 #subcontent-container-bottom {
   order: 4;
-  min-height: 15vh;
+  min-height: 17vh;
   height: 20vw;
   width: 100%;
   display: flex;
@@ -68,7 +68,7 @@ a {
 #half-page-container {
   width: 100%;
   order: 2;
-  min-height: 50vh;
+  min-height: 40vh;
   height: 60vw;
   display: flex;
 }
@@ -79,6 +79,12 @@ a {
 /* EFFECTS*/
 
 /* Effect Classes*/
+
+.element {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* add a soft shadow effect */
+}
+
 .slide-left {
   animation-name: slide-in;
   animation-duration: 1s;
