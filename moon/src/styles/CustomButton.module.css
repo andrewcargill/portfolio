@@ -157,11 +157,14 @@ button {
   .white {
     width: 32%;
     margin: 2%;
+    height: 3vw;
     font-size: 20px;
   }
 
   .light {
     font-size: 2.4vh;
+    min-height: 7vh;
+    height: 4vw;
   }
 
   .crazy {
