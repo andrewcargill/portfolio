@@ -22,7 +22,7 @@ a {
 /* MAIN SECTIONS OF WEBSITE*/
 #header {
   /* background-color: red; */
-  height: 5vh;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

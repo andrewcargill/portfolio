@@ -26,6 +26,8 @@
   align-items: center;
   font-size: 10px;
   width: 25vw;
+  min-height: 6vh;
+  height: 6vw;
   transition: 0.5s;
   text-transform: uppercase;
   font-weight: 800;
