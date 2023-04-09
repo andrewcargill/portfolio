@@ -457,7 +457,8 @@ video {
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-    max-height: 80vh;
+    min-height: 80vh;
+    height: 43vw;
   }
 
   .header-element-right {
@@ -497,13 +498,13 @@ video {
 
   #subcontent-container-bottom {
     order: 3;
-    height: 25%;
     width: 50%;
-    max-height: 25vh;
     padding-left: 0;
-    min-height: 11vw;
+    padding-top: 1%;
+    min-height: 1vw;
     height: 19vh;
     display: flex;
+    flex: 0;
   }
 
   #half-page-container {

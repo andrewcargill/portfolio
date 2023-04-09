@@ -77,4 +77,10 @@ img {
     height: 7vh;
   }
 
+  img {
+    border-radius: 10px;
+    width: 60%;
+    object-fit: contain;
+  }
+
 }
