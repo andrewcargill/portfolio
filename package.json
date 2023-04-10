@@ -16,7 +16,7 @@
   },
 
   
-    "homepage": "{https://github.com/andrewcargill/portfolio}",
+    "homepage": "https://andrewcargill.github.io/portfolio/",
     "scripts": {
       "predeploy": "npm run build",
       "deploy": "gh-pages -d build"
