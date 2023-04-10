@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/portfolio/moon/static/css/main.eb7bb57c.css",
-    "main.js": "/portfolio/moon/static/js/main.a32f67b4.js",
-    "static/js/787.5d3682f3.chunk.js": "/portfolio/moon/static/js/787.5d3682f3.chunk.js",
-    "static/media/advert.mp4": "/portfolio/moon/static/media/advert.26e01a1d60d4c1eea907.mp4",
-    "static/media/false.png": "/portfolio/moon/static/media/false.fae0a730bfa7202b4f99.png",
-    "static/media/false3.png": "/portfolio/moon/static/media/false3.2e627cb90aa881076d20.png",
-    "static/media/false2.png": "/portfolio/moon/static/media/false2.4737bc57f8748fdaed6e.png",
-    "static/media/teach.jpeg": "/portfolio/moon/static/media/teach.b5087c690136e2678ef3.jpeg",
-    "static/media/tutorials_thumbnail.png": "/portfolio/moon/static/media/tutorials_thumbnail.db4ad78b43a86cbcf9d3.png",
-    "static/media/flodhus.png": "/portfolio/moon/static/media/flodhus.9ae02b802dca69a414c4.png",
-    "index.html": "/portfolio/moon/index.html",
-    "main.eb7bb57c.css.map": "/portfolio/moon/static/css/main.eb7bb57c.css.map",
-    "main.a32f67b4.js.map": "/portfolio/moon/static/js/main.a32f67b4.js.map",
-    "787.5d3682f3.chunk.js.map": "/portfolio/moon/static/js/787.5d3682f3.chunk.js.map"
+    "main.css": "/portfolio/static/css/main.eb7bb57c.css",
+    "main.js": "/portfolio/static/js/main.64866766.js",
+    "static/js/787.5d3682f3.chunk.js": "/portfolio/static/js/787.5d3682f3.chunk.js",
+    "static/media/advert.mp4": "/portfolio/static/media/advert.26e01a1d60d4c1eea907.mp4",
+    "static/media/false.png": "/portfolio/static/media/false.fae0a730bfa7202b4f99.png",
+    "static/media/false3.png": "/portfolio/static/media/false3.2e627cb90aa881076d20.png",
+    "static/media/false2.png": "/portfolio/static/media/false2.4737bc57f8748fdaed6e.png",
+    "static/media/teach.jpeg": "/portfolio/static/media/teach.b5087c690136e2678ef3.jpeg",
+    "static/media/tutorials_thumbnail.png": "/portfolio/static/media/tutorials_thumbnail.db4ad78b43a86cbcf9d3.png",
+    "static/media/flodhus.png": "/portfolio/static/media/flodhus.9ae02b802dca69a414c4.png",
+    "index.html": "/portfolio/index.html",
+    "main.eb7bb57c.css.map": "/portfolio/static/css/main.eb7bb57c.css.map",
+    "main.64866766.js.map": "/portfolio/static/js/main.64866766.js.map",
+    "787.5d3682f3.chunk.js.map": "/portfolio/static/js/787.5d3682f3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eb7bb57c.css",
-    "static/js/main.a32f67b4.js"
+    "static/js/main.64866766.js"
   ]
 }
