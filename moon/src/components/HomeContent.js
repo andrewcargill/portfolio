@@ -34,9 +34,9 @@ function HomeContent({ navClick }) {
           step into my world, and let's explore the endless possibilities
           together.
           "
-          maxFont="3vh"
-          minFont="15px"
-          calFont="1.2vw"
+          maxFont="30px"
+          minFont="18px"
+          calFont="1.2vh"
         />
       </div>
 
