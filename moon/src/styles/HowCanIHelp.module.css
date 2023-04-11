@@ -53,14 +53,10 @@ img {
   width: 60%;
 }
 
-  .text {
-    font-size: 1.8vw;
-  }
+.text {
+  
+}
 
-
-.border {
-
-} 
 }
 
 @media screen and (min-width: 1024px) {
@@ -71,9 +67,6 @@ img {
     padding: 2.5% 2.5% 2.5% 2.5%;
   }
 
-  .text{
-    font-size: 1.4vw;
-  }
 
   .helpButton {
     min-height: 3vw;
