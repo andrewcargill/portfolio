@@ -164,8 +164,8 @@ button {
 
   .light {
     /* font-size: 2.4vh; */
-    min-height: 7vh;
-    height: 4vw;
+    min-height: 3vw;
+    height: 7vh;
   }
 
   .crazy {
