@@ -79,6 +79,7 @@ transition: 0.5s;
   flex-direction: row;
   align-items: center;
   font-size: var(--button-font-size);
+  height: var(--tutor-button-height);
   font-weight: 800;
   width: 100%;
   /* min-height: 8vh;
@@ -141,11 +142,11 @@ button {
     font-size: 25px;
   }
 
-  .light {
+  /* .light {
     font-size: 2.7vw;
     min-height: 1vh;
     height: var(--tutor-button-height);
-  }
+  } */
 
 
   .footerLabel {

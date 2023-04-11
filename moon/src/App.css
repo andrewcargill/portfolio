@@ -149,11 +149,10 @@ a {
 
 #subcontent-container-bottom {
   order: 4;
-  width: 48%;
+  width: 60%;
   min-height: var(--sub-section-container-min-height);
   height: var(--sub-section-container-height);
   display: flex;
-  flex: 2;
   padding: var(--virticle-padding);
   padding-left: 10px;
 }
@@ -373,7 +372,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 7% 2.5% 7% 2.5%;
+  padding: 4%;
 }
 
 .contact-button div {
@@ -390,7 +389,7 @@ a {
 .contact-button {
   /* background-color: pink; */
   display: flex;
-  width: 90%;
+  width: 100%;
   margin: 0;
   padding: 0;
   height: 40%;
@@ -493,6 +492,37 @@ video {
 }
 
 @media screen and (min-width: 1024px) {
+
+  :root {
+    --main-padding-top: 0;
+    --virticle-padding: 0 0 12px 0;
+
+    --button-radius-small: 17px;
+    --medium-container-radius: 20px;
+    --border-radius-small: 25px;
+    --image-border-radius: 20px;
+    --long-button-radius: 15px;
+
+    --half-page-container-height: 78vh;
+    --half-page-container-min-height: 30vw;
+
+    --sub-section-container-height: 1vw;
+    --sub-section-container-min-height: 20vh;
+
+    --learn-image-size: 30%;
+
+    --sub-text-more: 2.2vw;
+    --sub-text-less: 2.4vw;
+    --button-font-size: 3.3vw;
+
+    --tutor-button-height: 50px;
+    --sub-button-border: 4px solid black;
+    --footer-header-buttons: 4px solid black;
+    --headline-line-height: 2;
+    --spinner-size: 80px;
+    --spinner-thickness: 80px;
+  }
+
   #header-text-container {
     /* display: flex; */
     width: 50%;
@@ -511,8 +541,8 @@ video {
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-    min-height: 80vh;
-    height: 43vw;
+    min-height: 0;
+    height: 80vh;
   }
 
   .header-element-right {
@@ -530,10 +560,10 @@ video {
   #subcontent-container-top {
     order: 2;
     width: 50%;
-    height: 25vh;
     display: flex;
-    min-height: 11vw;
-    height: 19vh;
+    min-height: var(--sub-section-container-height);
+    height: var(--sub-section-container-min-height);
+    padding: var(--virticle-padding);
     padding-right: 0;
   }
 
@@ -546,17 +576,17 @@ video {
     width: 50%;
     padding-left: 0;
     padding-top: 1%;
-    min-height: 14vw;
-    height: 19vh;
+    min-height: var(--sub-section-container-min-height);
+    height: var(--sub-section-container-height);
     display: flex;
-    flex: 0;
+
   }
 
   #half-page-container {
     width: 50%;
     order: 4;
-    height: 75vh;
-    min-height: 50%;
+    height: var(--half-page-container-height);
+    min-height: var(--half-page-container-min-height);
     display: flex;
   }
 
