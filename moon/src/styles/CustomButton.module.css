@@ -144,7 +144,7 @@ button {
   .light {
     font-size: 2.7vw;
     min-height: 1vh;
-    height: 9vw;
+    height: var(--tutor-button-height);
   }
 
 
