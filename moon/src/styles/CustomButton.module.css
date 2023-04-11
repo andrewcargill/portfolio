@@ -20,7 +20,7 @@
   color: black;
   background-color: #898989;
   border: 2px solid black;
-  border-radius: 15px;
+  border-radius: var( --button-radius-small);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -74,16 +74,15 @@ transition: 0.5s;
 .light {
   color: black;
   background-color: #d3d3d3;
-  border: 2px solid black;
-  border-radius: 15px;
+  border-radius: var(--long-button-radius);
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 8vw;
+  font-size: 3vw;
   font-weight: 800;
   width: 100%;
-  min-height: 8vh;
-  height: 9vw;
+  /* min-height: 8vh;
+  height: 9vw; */
   transition: 0.9s;
 }
 
@@ -97,7 +96,7 @@ background-color: black;
   color: black;
   background-color: #898989;
   border: 2px solid black;
-  border-radius: 15px;
+  border-radius: var( --button-radius-small);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -119,10 +118,10 @@ button {
   background-color: #d3d3d3;
   justify-content: center;
   align-items: center;
-  border: 1px solid;
-  border-radius: 10px;
+  border: var(--sub-button-border);
+  border-radius: var( --long-button-radius);
   width: auto;
-  height: auto;
+  height: var(--tutor-button-height);
 }
 
 .footerLabel {

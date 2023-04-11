@@ -1,9 +1,7 @@
 .border {
   width: 100%;
   background-color: white;
-  border-radius: 20px;
-  margin: 1% 0 1% 0;
-  /* padding: 18px 15px 18px 15px; */
+  border-radius: var(--medium-container-radius);
   padding: 4% 2.5% 4% 2.5%;
   flex-direction: row;
   overflow: auto;
@@ -19,14 +17,14 @@
 }
 
 img {
-  border-radius: 10px;
+  border-radius: var(--image-border-radius);
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
 .left {
-  width: 65%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -34,7 +32,6 @@ img {
 
 .helpButton {
   width: 100%;
-  height: 8vw;
   font-weight: 800;
   background-color: white;
   transition: 0.9s;
@@ -46,7 +43,7 @@ img {
 }
 
 .text {
-  font-size: 2.1vw;
+  font-size: var(--sub-text);
 }
 
 @media screen and (min-width: 768px) {
