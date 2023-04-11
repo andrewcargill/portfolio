@@ -8,16 +8,16 @@
   --image-border-radius: 10px;
   --long-button-radius: 10px;
 
-  --sub-section-container-height: 14vw;
-  --sub-section-container-min-height: 14vh;
+  --sub-section-container-height: 0;
+  --sub-section-container-min-height: 130px;
 
-  --sub-text-more: 2.2vw;
+  --sub-text-more: 2.4vw;
   --sub-text-less: 2.4vw;
   --button-font-size: 3.3vw;
   --learn-image-size: 33%;
 
   --tutor-button-height: 30px;
-  --sub-button-border: 1px solid;
+  --sub-button-border: 2px solid;
   --headline-line-height: 1;
   --spinner-size: 80px;
   --spinner-thickness: 80px;
@@ -158,8 +158,8 @@ a {
 #half-page-container {
   width: 100%;
   order: 2;
-  height: 41vh;
-  min-height: 51vw;
+  height: 50vh;
+  min-height: 87vw;
   display: flex;
   padding: var(--virticle-padding);
 }
@@ -465,9 +465,9 @@ video {
     --image-border-radius: 15px;
     --long-button-radius: 10px;
   
-    --sub-section-container-height: 15vw;
-    --sub-section-container-min-height: 15vh;
-    --learn-image-size: 25%;
+    /* --sub-section-container-height: 50px;
+    --sub-section-container-min-height: 0; */
+    --learn-image-size: 35%;
   
     --sub-text-more: 2.2vw;
     --sub-text-less: 2.4vw;
