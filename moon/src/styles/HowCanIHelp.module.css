@@ -2,7 +2,7 @@
   width: 100%;
   background-color: white;
   border-radius: var(--medium-container-radius);
-  padding: 4% 2.5% 4% 2.5%;
+  padding: 4%;
   flex-direction: row;
   overflow: auto;
   display: flex;
@@ -33,6 +33,7 @@ img {
   width: 100%;
   font-weight: 800;
   background-color: white;
+  color: black;
   transition: 0.9s;
 }
 
@@ -56,6 +57,10 @@ img {
     font-size: 1.8vw;
   }
 
+
+.border {
+
+} 
 }
 
 @media screen and (min-width: 1024px) {

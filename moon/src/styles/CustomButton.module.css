@@ -19,7 +19,7 @@
 .white {
   color: black;
   background-color: #898989;
-  border: 2px solid black;
+  border: var(--footer-header-buttons);
   border-radius: var( --button-radius-small);
   display: flex;
   flex-direction: row;
@@ -95,7 +95,7 @@ background-color: black;
 .footer {
   color: black;
   background-color: #898989;
-  border: 2px solid black;
+  border: var(--footer-header-buttons);
   border-radius: var( --button-radius-small);
   display: flex;
   flex-direction: row;
