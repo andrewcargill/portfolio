@@ -14,8 +14,17 @@ function Image({ images }) {
   return (
     <div className="text-border right-margin-desktop image-container">
       <div className="spinner-container">
-        <div className="spinner">
-          
+        <div>
+        <div className="spinner"> 
+        </div>
+        <div className="spinner"> 
+        </div>
+        </div>
+        <div>
+        <div className="spinner"> 
+        </div>
+        <div className="spinner"> 
+        </div>
         </div>
       </div>
       <img

@@ -11,8 +11,8 @@
   --tutor-button-height: 30px;
   --sub-button-border: 1px solid;
   --headline-line-height: 1;
-  --spinner-size: 40vw;
-  --spinner-thickness: 10vw;
+  --spinner-size: 80px;
+  --spinner-thickness: 80px;
 }
 
 /*! start */
@@ -34,13 +34,15 @@
 .spinner {
   width: var(--spinner-size);
   height: 80px;
+  padding: 10px;
+  margin: 10px;
   position: relative;
 }
 
 .spinner::before,
 .spinner::after {
   content: "";
-  font-size: 60px;
+  font-size: 10px;
   text-align: center;
   position: absolute;
   top: 0;
@@ -53,18 +55,18 @@
   border-radius: var(--button-radius-small);
   color: white;
   background-color: black;
-  transform-origin: center center;
-  animation: spin 1s linear 0s 3 alternate-reverse;
+  /* transform-origin: center center; */
+  animation: spin 1s linear 0s 2 forwards;
   opacity: 1;
 }
 
-.spinner::before {
+/* .spinner::before {
   transform: rotate(45deg);
 }
 
 .spinner::after {
   transform: rotate(-45deg);
-} 
+}  */
 
 @keyframes spin {
   to {
