@@ -78,7 +78,7 @@ transition: 0.5s;
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 3vw;
+  font-size: var(--button-font-size);
   font-weight: 800;
   width: 100%;
   /* min-height: 8vh;
@@ -117,6 +117,7 @@ button {
   flex-direction: row;
   background-color: #d3d3d3;
   justify-content: center;
+  font-size: var(--button-font-size);
   align-items: center;
   border: var(--sub-button-border);
   border-radius: var( --long-button-radius);
