@@ -15,7 +15,7 @@ function HowCanIHelp({ video }) {
           Resources. ReactJS Components. Lessons for teaching code to students and more!
         </div>
         <div className={styles.text}>
-          <button className={styles.helpButton}>Read More</button>
+          <button className={styles.helpButton}>Boom!</button>
         </div>
       </div>
     </div>

@@ -78,10 +78,11 @@ transition: 0.5s;
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: var(--button-font-size);
+  font-size: 3em;
   height: var(--tutor-button-height);
   font-weight: 800;
   width: 100%;
+  min-height: 50px;
   /* min-height: 8vh;
   height: 9vw; */
   transition: 0.9s;
@@ -152,6 +153,10 @@ button {
   .footerLabel {
     display: inline;
   }
+
+  .light {
+    font-size: var(--button-font-size);
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -164,8 +169,8 @@ button {
 
   .light {
     /* font-size: 2.4vh; */
-    min-height: 3vw;
-    height: 7vh;
+    min-height: 70px;
+    height: 1vh;
   }
 
   .crazy {
