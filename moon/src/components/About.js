@@ -16,6 +16,7 @@ import ContactSubContent from "./SubContent/ContactSubContent";
 import Image from "./SubContent/Image";
 import AutoHeaderText from "./SubContent/AutoHeaderText";
 import HowCanIHelp from "./SubContent/HowCanIHelp";
+import AboutContent from "./SubContent/AboutContent";
 
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
@@ -29,14 +30,12 @@ function About({ navClick }) {
         {/* Auto Header Text Component */}
         <AutoHeaderText
           text="
-          Welcome to my world where creativity and technology collide. I am a
-          full-stack engineer with a background in media, art and teaching. So
-          step into my world, and let's explore the endless possibilities
-          together.
+          I am a
+          full-stack engineer with a background in media, art and teaching.
           "
-          maxFont="26px"
-          minFont="15px"
-          calFont="2em"
+          maxFont="36px"
+          minFont="10px"
+          calFont="19vh"
           // calFont="1.2vh"
         />
       </div>
@@ -51,15 +50,15 @@ function About({ navClick }) {
       </div>
 
       {/* Sub-Section Container Bottom */}
-      <div id="subcontent-container-bottom" className="slide-up">
+      <div id="subcontent-container-bottom" className="">
         {/* Sub-Section Video Component */}
         <HowCanIHelp />
       </div>
 
       {/* Half Page Content Container */}
-      <div id="half-page-container" className="slide-right">
+      <div id="half-page-container" className="fade-in">
         {/* Image Component */}
-        <Image images={ImagePlaylist} />
+        <AboutContent images={ImagePlaylist} />
       </div>
     </div>
   );

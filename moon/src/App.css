@@ -353,7 +353,8 @@ a {
   display: flex;
   width: 100%;
   order: 1;
-  height: 30%;
+  height: 156px;
+  /* height: 30%; */
   padding: var(--virticle-padding);
 
   /* font-size: min(max(10px, 4vw), 20px); */
@@ -482,7 +483,7 @@ video {
     --half-page-container-height: 53vh;
     --half-page-container-min-height: 68vw;
 
-    --sub-section-container-height: ;
+    --sub-section-container-height: 10em;
     --sub-section-container-min-height: 190px;
 
     --learn-image-size: 10em;

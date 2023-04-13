@@ -7,11 +7,21 @@ function AutoHeaderText({ text, maxFont, minFont, calFont, containerId, textId }
   useEffect(() => {
     // adjust font size on window resize
     const handleResize = () => {
-      const containerHeight = document.getElementById(containerId).offsetHeight;
-      const containerWidth = document.getElementById(containerId).offsetWidth;
-      const textHeight = document.getElementById(textId).offsetHeight;
-      const textWidth = document.getElementById(textId).offsetWidth;
-      const newFontSize = Math.min(containerHeight / textHeight, containerWidth / textWidth) * 1.8;
+      const container = document.getElementById(containerId);
+      const textEl = document.getElementById(textId);
+      const containerHeight = container.offsetHeight;
+      const containerWidth = container.offsetWidth;
+      const textHeight = textEl.offsetHeight;
+      const textWidth = textEl.offsetWidth;
+      const containerAspectRatio = containerWidth / containerHeight;
+      const textAspectRatio = textWidth / textHeight;
+      let newFontSize;
+      if (containerAspectRatio >= textAspectRatio) {
+        newFontSize = Math.min(containerHeight / textHeight, containerWidth / textWidth) * 1.3;
+      } else {
+        newFontSize = Math.min(containerHeight / textWidth * textAspectRatio, containerWidth / textHeight / textAspectRatio) * 20;
+        // newFontSize = Math.min(containerHeight / textWidth * textAspectRatio, containerWidth / textHeight / textAspectRatio) * 1.8;
+      }
       setFontSize(newFontSize);
     };
     window.addEventListener("resize", handleResize);

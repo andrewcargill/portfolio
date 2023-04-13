@@ -3,9 +3,9 @@ import css from "../../styles/Work.module.css";
 
 function ImageGallery({ images }) {
   return (
-    <div id="half-page-container" className="slide-right">
-      <div className={`${css.border} right-margin-desktop image-container`}>
-
+    
+      // <div className={`${css.border} right-margin-desktop image-container`}>
+<div className="text-border right-margin-desktop image-container">
       {/* <div className="gallery-text-border right-margin-desktop image-container"> */}
         <div className={css.gallery}>
           {images.map((image, index) => (
@@ -22,7 +22,7 @@ function ImageGallery({ images }) {
             </div>
           ))}
         </div>
-      </div>
+      
     </div>
   );
 }

@@ -1,10 +1,9 @@
 import React from "react";
-import ImagePlaylist from "../media/images/MainImagePlaylist";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-
+import ImagePlaylist from "../media/images/MainImagePlaylist";
 import { library } from "@fortawesome/fontawesome-svg-core";
-
+import video from "../media/video/advert.mp4";
 import {
   faArrowDown,
   faCheckSquare,
@@ -13,13 +12,17 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import { faCodepen } from "@fortawesome/free-brands-svg-icons";
-
+import ContactSubContent from "./SubContent/ContactSubContent";
+import Image from "./SubContent/Image";
 import AutoHeaderText from "./SubContent/AutoHeaderText";
+import HowCanIHelp from "./SubContent/HowCanIHelp";
 import ImageGallery from "./SubContent/ImageGallery";
+
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
 function Work({ navClick }) {
+
   return (
     <div id="main-content-container">
       {/* Header Text Container*/}
@@ -27,18 +30,35 @@ function Work({ navClick }) {
         {/* Auto Header Text Component */}
         <AutoHeaderText
           text="
-          WORK!
+          Take a look around at some of my project work.
           "
-          maxFont="7vh"
-          minFont="30px"
-          calFont="2vw"
+          maxFont="100px"
+          minFont="15px"
+          calFont="1.1em"
+          // calFont="1.2vh"
         />
       </div>
 
+      {/* Sub-Section Container Top */}
+      <div id="subcontent-container-top" className="slide-left">
+        {/* Contact Button Component */}
+        <ContactSubContent
+          navSubClick={navClick}
+          text="Coding, Audio, UX Design... Give me a call!"
+        />
+      </div>
+
+      {/* Sub-Section Container Bottom */}
+      <div id="subcontent-container-bottom" className="slide-up">
+        {/* Sub-Section Video Component */}
+        <HowCanIHelp />
+      </div>
+
       {/* Half Page Content Container */}
-      
+      <div id="half-page-container" className="slide-right">
+        {/* Image Component */}
         <ImageGallery images={ImagePlaylist} />
-      
+      </div>
     </div>
   );
 }

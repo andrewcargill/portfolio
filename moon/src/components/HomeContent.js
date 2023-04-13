@@ -31,9 +31,10 @@ function HomeContent({ navClick }) {
           text="
           Welcome to my world where creativity and full stack engineering collide.
           "
-          maxFont="100px"
+          maxFont="35px"
           minFont="15px"
-          calFont="2em"
+          calFont="0.4"
+          lineSpacing="1"
           // calFont="1.2vh"
         />
       </div>
