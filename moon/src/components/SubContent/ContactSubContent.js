@@ -13,6 +13,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping);
 
 function ContactSubContent(props) {
+  console.log('contact props:', props.navSubClick)
+
   const navClick = (value) => {
     props.navSubClick(value);
   };

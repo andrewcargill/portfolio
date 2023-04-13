@@ -2,7 +2,14 @@ import React from "react";
 import styles from "../../styles/Learn.module.css";
 import image from "../../media/images/tutorials_thumbnail.png";
 
-function Learn({ video }) {
+function Learn(props) {
+  console.log('Learn props:', props.navSubClick);
+
+  const navClick = (value) => {
+    props.navSubClick(value);
+    
+  };
+
   return (
     <div className={styles.border}>
       {/* <div className={styles.thumb}> */}
@@ -12,14 +19,15 @@ function Learn({ video }) {
       {/* </div> */}
       <div className={styles.left}>
         <div className={styles.text}>
-          Resources. ReactJS Components. Lessons for teaching code to students and more!
+          HTML | CSS | Javascript | Scratch
         </div>
         <div className={styles.text}>
-          <button className={styles.helpButton}>Boom!</button>
+          <button className={styles.helpButton} onClick={() => navClick("tuition")}>Boom!</button>
         </div>
       </div>
     </div>
   );
 }
 
-export default Learn;
+export default 
+Learn;

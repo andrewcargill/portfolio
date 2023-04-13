@@ -53,7 +53,7 @@ function About({ navClick }) {
       {/* Sub-Section Container Bottom */}
       <div id="subcontent-container-bottom" className="">
         {/* Sub-Section Video Component */}
-        <Learn />
+        <Learn navSubClick={navClick}/>
       </div>
 
       {/* Half Page Content Container */}
