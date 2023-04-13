@@ -16,7 +16,7 @@ const Header = ({ handleOnClick }) => {
       </div>
       <div id="nav" className="header-element-right">
         <button
-          onClick={() => handleOnClick("tuition")}
+          onClick={() => handleOnClick("services")}
           className={`slide-down ${CustomBtn.white}`}
         >
           Services

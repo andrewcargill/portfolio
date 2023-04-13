@@ -16,11 +16,12 @@ import ContactSubContent from "./SubContent/ContactSubContent";
 import Image from "./SubContent/Image";
 import AutoHeaderText from "./SubContent/AutoHeaderText";
 import HowCanIHelp from "./SubContent/HowCanIHelp";
+import ServicesContent from "./SubContent/ServicesContent";
 
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
-function About({ navClick }) {
+function Services({ navClick }) {
 
   return (
     <div id="main-content-container">
@@ -29,15 +30,11 @@ function About({ navClick }) {
         {/* Auto Header Text Component */}
         <AutoHeaderText
           text="
-          Welcome to my world where creativity and technology collide. I am a
-          full-stack engineer with a background in media, art and teaching. So
-          step into my world, and let's explore the endless possibilities
-          together.
+          You can hire me to be part of your project.
           "
-          maxFont="26px"
+          maxFont="100px"
           minFont="15px"
           calFont="2em"
-          // calFont="1.2vh"
         />
       </div>
 
@@ -59,10 +56,10 @@ function About({ navClick }) {
       {/* Half Page Content Container */}
       <div id="half-page-container" className="slide-right">
         {/* Image Component */}
-        <Image images={ImagePlaylist} />
+        <ServicesContent images={ImagePlaylist} />
       </div>
     </div>
   );
 }
 
-export default About;
+export default Services;

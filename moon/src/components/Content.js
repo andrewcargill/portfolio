@@ -4,6 +4,7 @@ import Tutorials from "./Tutorials";
 import Work from "./Work";
 import About from "./About";
 import ContactPage from "./ContactPage";
+import Services from "./Services";
 
 
 export const renderContent = (mainContent, handleOnClick) => {
@@ -18,6 +19,12 @@ export const renderContent = (mainContent, handleOnClick) => {
       return (
         <div>
           <Tutorials navClick={handleOnClick}/>
+        </div>
+      );
+    case "services":
+      return (
+        <div>
+          <Services navClick={handleOnClick}/>
         </div>
       );
     case "work":

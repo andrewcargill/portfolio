@@ -1,7 +1,9 @@
 import React from "react";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import ImagePlaylist from "../media/images/MainImagePlaylist";
+import test from "../media/images/false.png";
+import CustomBtn from "../styles/CustomButton.module.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import video from "../media/video/advert.mp4";
 import {
@@ -12,32 +14,32 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import { faCodepen } from "@fortawesome/free-brands-svg-icons";
-import ContactSubContent from "./SubContent/ContactSubContent";
-import Image from "./SubContent/Image";
-import AutoHeaderText from "./SubContent/AutoHeaderText";
-import HowCanIHelp from "./SubContent/HowCanIHelp";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ContactSubContent from "./SubContent/ContactSubContent";
+import HeaderText from "./SubContent/HeaderText";
+import AutoHeaderText from "./SubContent/AutoHeaderText";
+import BottomText from "./SubContent/BottomText";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
-function About({ navClick }) {
+function sayHello() {
+  alert("You clicked me!");
+}
 
+function About({ navClick }) {
   return (
     <div id="main-content-container">
       {/* Header Text Container*/}
       <div id="header-text-container" className="fade-in">
-        {/* Auto Header Text Component */}
         <AutoHeaderText
           text="
-          Welcome to my world where creativity and technology collide. I am a
-          full-stack engineer with a background in media, art and teaching. So
-          step into my world, and let's explore the endless possibilities
-          together.
+          I've owned a few companies over the years; The first was a music production 
+          company in the UK and the present is a farm and tech company in the North of Sweden. Oh how the years take you on adventures!
           "
-          maxFont="26px"
+          maxFont="4vh"
           minFont="15px"
-          calFont="2em"
-          // calFont="1.2vh"
+          calFont="1vw"
         />
       </div>
 
@@ -46,20 +48,21 @@ function About({ navClick }) {
         {/* Contact Button Component */}
         <ContactSubContent
           navSubClick={navClick}
-          text="Coding, Audio, UX Design... Give me a call!"
+          text="Looking for some tuition or a new website?"
         />
       </div>
-
       {/* Sub-Section Container Bottom */}
       <div id="subcontent-container-bottom" className="slide-up">
         {/* Sub-Section Video Component */}
-        <HowCanIHelp />
+        <BottomText video={video} />
       </div>
 
       {/* Half Page Content Container */}
-      <div id="half-page-container" className="slide-right">
-        {/* Image Component */}
-        <Image images={ImagePlaylist} />
+
+      <div id="half-page-container">
+        <div className="text-border right-margin-desktop">
+          <img id="main-pic" src={test} alt="Logo" />
+        </div>
       </div>
     </div>
   );

@@ -546,7 +546,7 @@ video {
     --tutor-button-height: 10em;
     --sub-button-border: 3px solid black;
     --footer-header-buttons: 3px solid black;
-    --headline-line-height: 2;
+    --headline-line-height: 1.5;
     --spinner-thickness: 150px;
   }
 
