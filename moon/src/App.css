@@ -528,7 +528,7 @@ video {
 
   :root {
     --main-padding-top: 0;
-    --virticle-padding: 0 0 12px 0;
+    --virticle-padding: 0 0 20px 0;
 
     --button-radius-small: 17px;
     --medium-container-radius: 20px;
@@ -553,6 +553,8 @@ video {
     --footer-header-buttons: 3px solid black;
     --headline-line-height: 1.2;
     --spinner-thickness: 150px;
+
+    --padding-left-column: 22px;
   }
 
   .spinner {
@@ -567,6 +569,8 @@ video {
     width: 50%;
     min-height: 12vw;
     height: 22vh;
+    padding-right: var(--padding-left-column);
+    /* margin-right: 22px; */
     /* height: auto;
     order: 1;
     max-height: 30%; */
@@ -594,6 +598,19 @@ video {
     width: 50%;
   }
 
+  /* # Adjusts header button margins */
+
+  .header-element-right button:first-child {
+    margin-left: 0;
+  }
+
+  .header-element-right button:nth-child(3) {
+    margin-right: 0;
+  }
+  .header-element-right button {
+    margin-top: 1%;
+  }
+
   /* .content-no-background {
     padding: 68px 0 68px 0;
   } */
@@ -609,18 +626,18 @@ video {
     min-height: var(--sub-section-container-height);
     height: var(--sub-section-container-min-height);
     padding: var(--virticle-padding);
-    padding-right: 0;
+    padding-right: var(--padding-left-column);
   }
 
 
   #subcontent-container-bottom {
     order: 3;
     width: 50%;
-    padding-left: 0;
-    padding-top: 1%;
+    padding-right: var(--padding-left-column);
     min-height: var(--sub-section-container-min-height);
     height: var(--sub-section-container-height);
     display: flex;
+    padding-left: 0;
 
   }
 
@@ -632,12 +649,4 @@ video {
     display: flex;
   }
 
-  /*Margin fixes*/
-  .left-margin-desktop {
-    margin-right: 1%;
-  }
-
-  .right-margin-desktop {
-    margin-left: 1%;
-  }
 }
