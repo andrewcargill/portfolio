@@ -32,9 +32,10 @@ function Work({ navClick }) {
           text="
           Take a look around at some of my project work.
           "
-          maxFont="100px"
+          maxFont="35px"
           minFont="15px"
-          calFont="1.1em"
+          calFont="0.4"
+          lineSpacing="1"
           // calFont="1.2vh"
         />
       </div>

@@ -354,6 +354,10 @@ a {
   width: 100%;
   order: 1;
   height: 156px;
+  display: flex;
+  flex-wrap: inherit;
+  align-content: space-around;
+  
   /* height: 30%; */
   padding: var(--virticle-padding);
 
@@ -547,7 +551,7 @@ video {
     --tutor-button-height: 10em;
     --sub-button-border: 3px solid black;
     --footer-header-buttons: 3px solid black;
-    --headline-line-height: 1.5;
+    --headline-line-height: 1.2;
     --spinner-thickness: 150px;
   }
 
@@ -560,9 +564,9 @@ video {
   }
 
   #header-text-container {
-    /* display: flex; */
     width: 50%;
-    height: auto;
+    min-height: 12vw;
+    height: 22vh;
     /* height: auto;
     order: 1;
     max-height: 30%; */
@@ -583,7 +587,7 @@ video {
   }
 
   .content-no-background {
-    min-height: 100px;
+    /* height: 300px; */
   }
 
   .header-element-right {

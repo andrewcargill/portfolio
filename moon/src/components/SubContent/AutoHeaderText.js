@@ -21,11 +21,11 @@ function AutoHeaderText({
       const containerHeight = container.offsetHeight;
       const containerWidth = container.offsetWidth;
       const containerArea = containerHeight * containerWidth;
-      const textLength = text.length;
+      const textLength = text.length + (lineSpacing * 2) + 10;
       // const textHeight = (textLength * fontSize) / containerWidth;
       // const textWidth = containerWidth / fontSize;
       // const textArea = textHeight * textLength;
-      let RawFontSize = Math.sqrt(containerArea / textLength) * 2.5 * lineSpacing;
+      let RawFontSize = Math.sqrt(containerArea / textLength) * 2.5;
       let newFontSize = 0;
       // newFontSize = Math.min(newFontSize, maxFont);
       // newFontSize = Math.max(newFontSize, minFont);
