@@ -30,7 +30,7 @@ function Work({ navClick }) {
         {/* Auto Header Text Component */}
         <AutoHeaderText
           text="
-          Take a look around at some of my project work.
+          Take a look around my digital assets.
           "
           maxFont="35px"
           minFont="15px"

@@ -32,9 +32,10 @@ function Services({ navClick }) {
           text="
           You can hire me to be part of your project.
           "
-          maxFont="100px"
+          maxFont="35px"
           minFont="15px"
-          calFont="2em"
+          calFont="0.4"
+          lineSpacing="1"
         />
       </div>
 
