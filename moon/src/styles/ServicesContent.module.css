@@ -1,5 +1,10 @@
 #contentContainer{
-    margin: 10px;
+    padding: 10px;
+}
+
+.dropDown{
+  padding: 10px;
+  border-radius: 0;
 }
 
 .container {
@@ -13,6 +18,11 @@
     transition: height 0.3s ease;
   }
   
+  .bgroundImage {
+    background: url('../media/images/pic.jpg') no-repeat center center/cover;
+  }
+
+
   .container:hover {
     height: 150px;
   }
