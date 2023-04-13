@@ -15,7 +15,7 @@ import { faCodepen } from "@fortawesome/free-brands-svg-icons";
 import ContactSubContent from "./SubContent/ContactSubContent";
 import Image from "./SubContent/Image";
 import AutoHeaderText from "./SubContent/AutoHeaderText";
-import HowCanIHelp from "./SubContent/HowCanIHelp";
+import Learn from "./SubContent/Learn";
 import ServicesContent from "./SubContent/ServicesContent";
 
 
@@ -51,7 +51,7 @@ function Services({ navClick }) {
       {/* Sub-Section Container Bottom */}
       <div id="subcontent-container-bottom" className="slide-up">
         {/* Sub-Section Video Component */}
-        <HowCanIHelp />
+        <Learn />
       </div>
 
       {/* Half Page Content Container */}

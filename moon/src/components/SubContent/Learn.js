@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "../../styles/HowCanIHelp.module.css";
+import styles from "../../styles/Learn.module.css";
 import image from "../../media/images/tutorials_thumbnail.png";
 
-function HowCanIHelp({ video }) {
+function Learn({ video }) {
   return (
     <div className={styles.border}>
       {/* <div className={styles.thumb}> */}
@@ -22,4 +22,4 @@ function HowCanIHelp({ video }) {
   );
 }
 
-export default HowCanIHelp;
+export default Learn;
