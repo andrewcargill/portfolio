@@ -25,7 +25,7 @@ const Header = ({ handleOnClick }) => {
           onClick={() => handleOnClick("work")}
           className={`slide-down ${CustomBtn.white}`}
         >
-          My Work
+          Portfolio
         </button>
         <button
           onClick={() => handleOnClick("about")}

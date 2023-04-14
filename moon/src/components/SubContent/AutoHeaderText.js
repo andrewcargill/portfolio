@@ -22,13 +22,8 @@ function AutoHeaderText({
       const containerWidth = container.offsetWidth;
       const containerArea = containerHeight * containerWidth;
       const textLength = text.length + (lineSpacing * 2) + 10;
-      // const textHeight = (textLength * fontSize) / containerWidth;
-      // const textWidth = containerWidth / fontSize;
-      // const textArea = textHeight * textLength;
       let RawFontSize = Math.sqrt(containerArea / textLength) * 2.5;
       let newFontSize = 0;
-      // newFontSize = Math.min(newFontSize, maxFont);
-      // newFontSize = Math.max(newFontSize, minFont);
       newFontSize = RawFontSize * calFont;
       console.log(`
 Container dimensions:
@@ -53,8 +48,7 @@ newFontSize: ${newFontSize}
   return (
     <div>
       <div className="content-no-background left-margin-desktop" id={textId}>
-        {text} <FontAwesomeIcon icon="arrow-down" /> <FontAwesomeIcon icon="arrow-down" />{" "}
-        <FontAwesomeIcon icon="arrow-down" />
+        {text} 
       </div>
       <style>{`
         #${containerId} {

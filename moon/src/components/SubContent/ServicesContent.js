@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import css from "../../styles/ServicesContent.module.css";
 import DropDownGenerator from "./DropDownGenerator";
+import ServicesDropdownContent from "./ServicesDropdownContent";
 
 function ServicesContent() {
   const [activeDropdownId, setActiveDropdownId] = useState(null);
@@ -98,7 +99,10 @@ function ServicesContent() {
   return (
     <div className={`text-border right-margin-desktop image-container ${css.bgroundImage}`}>
       <div id={css.contentContainer}>
-        {dropdownItems.map(({ id, title, content }) => (
+        <div>
+          <h1>Full-Stack Web Development Solutions</h1>
+        </div>
+        {ServicesDropdownContent.map(({ id, title, content }) => (
          <div className={css.dropDown}>
          <DropDownGenerator
             key={id}
@@ -112,6 +116,24 @@ function ServicesContent() {
         ))}
         
       </div>
+      {/* <div id={css.contentContainer}>
+        <div>
+          <h1>Full-Stack Web Development Solutions</h1>
+        </div>
+        {dropdownItems.map(({ id, title, content }) => (
+         <div className={css.dropDown}>
+         <DropDownGenerator
+            key={id}
+            id={id}
+            title={title}
+            content={content}
+            activeDropdownId={activeDropdownId}
+            setActiveDropdownId={setActiveDropdownId}
+            
+          /></div>
+        ))}
+        
+      </div> */}
     </div>
   );
 }

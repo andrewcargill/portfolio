@@ -30,7 +30,10 @@ function Services({ navClick }) {
         {/* Auto Header Text Component */}
         <AutoHeaderText
           text="
-          You can hire me to be part of your project.
+          Whether 
+          you need coding expertise, UX design and web development, website review and 
+          planning, or teaching services, I can help. My services are tailored to meet 
+          your unique needs and goals.
           "
           maxFont="35px"
           minFont="15px"

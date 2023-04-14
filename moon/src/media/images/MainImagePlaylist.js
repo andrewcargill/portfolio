@@ -1,38 +1,66 @@
 const ImagePlaylist = [
     {
-      src: require("../images/false.png"),
+      src: require("../images/forest1.png"),
       alt: "Alt text for false.png",
+      caption: "Timber Company Website",
+      highlight:
+        <div>
+          
+            Django custom API with customer login and enquiry system.
+            UX Designed and built with HTML/ CSS.
+            <br/>
+            <a href="www.home.com" >Live website</a>
+            
+          
+        </div>
+    },
+    {
+      src: require("../images/false1.png"),
+      alt: "Alt text for pic.jpg",
       caption: "Fashion House Website",
-      highlight: "HTML/CSS/PYTHON"
+      highlight:
+      <div>
+          
+          Single Page HTML/CSS UX Designed website. Full responsive web application.
+            <br/>
+            <a href="www.home.com" >Live website</a>
+            
+          
+        </div>
     },
     {
-      src: require("../images/false3.png"),
-      alt: "Alt text for pic.jpg",
-      caption: "Music Quiz",
-      highlight: "JAVASCRIPT"
-    },
-    {
-      src: require("../images/false2.png"),
+      src: require("../images/scratch2.png"),
       alt: "Alt text for image001.PNG",
-      caption: "Timber Company with custom API",
-      highlight: "ReactJS and Django"
+      caption: "Scratch Teaching Aids",
+      highlight:
+      <div>
+        visit my repository where you will find a number of teaching templates for students starting out in programming.
+        <br/>
+            <a href="www.home.com" >Live website</a>
+      </div>
     },
     {
-      src: require("../images/false.png"),
+      src: require("../images/hangman1.png"),
       alt: "Alt text for false.png",
-      caption: "ReactJS and Django Site",
+      caption: "Pure Python Hangman",
       highlight: "HTML/CSS/PYTHON"
     },
     {
-      src: require("../images/false3.png"),
+      src: require("../images/superhero2.png"),
       alt: "Alt text for pic.jpg",
-      caption: "Caption for pic.jpg",
+      caption: "SuperHero Chat",
       highlight: "HTML/CSS/PYTHON"
     },
     {
-      src: require("../images/false2.png"),
+      src: require("../images/quiz1.png"),
       alt: "Alt text for image001.PNG",
-      caption: "Caption for image001.PNG",
+      caption: "Javascript Music Quiz",
+      highlight: "HTML/CSS/PYTHON"
+    },
+    {
+      src: require("../images/autoText1.png"),
+      alt: "Alt text for image001.PNG",
+      caption: "Text Auto-sizing for ReactJS",
       highlight: "HTML/CSS/PYTHON"
     },
     
