@@ -3,6 +3,9 @@ import CustomBtn from "../styles/CustomButton.module.css";
 import logo from "../media/images/flodhus.png";
 
 const Header = ({ handleOnClick }) => {
+
+
+
   return (
     <div id="header">
       <div id="logo" className="header-element1 slide-left">
@@ -16,7 +19,7 @@ const Header = ({ handleOnClick }) => {
       </div>
       <div id="nav" className="header-element-right">
         <button
-          onClick={() => handleOnClick("tuition")}
+          onClick={() => handleOnClick("services")}
           className={`slide-down ${CustomBtn.white}`}
         >
           Services
@@ -25,7 +28,7 @@ const Header = ({ handleOnClick }) => {
           onClick={() => handleOnClick("work")}
           className={`slide-down ${CustomBtn.white}`}
         >
-          My Work
+          Portfolio
         </button>
         <button
           onClick={() => handleOnClick("about")}

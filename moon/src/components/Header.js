@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import CustomBtn from "../styles/CustomButton.module.css";
 import logo from "../media/images/flodhus.png";
+import style from "../styles/Header.module.css";
 
 const Header = ({ handleOnClick }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div id="header">
       <div id="logo" className="header-element1 slide-left">
+        {/* Logo */}
         <img
           type="button"
           onClick={() => handleOnClick("home")}
@@ -14,7 +22,46 @@ const Header = ({ handleOnClick }) => {
           alt=""
         />
       </div>
-      <div id="nav" className="header-element-right">
+
+      {/* Mobile Dropdown menu */}
+      <div id={style.navMobile} className="header-element-right">
+        <div>
+          <button
+            onClick={toggleMenu}
+            id={style.menuButton}
+            className={CustomBtn.white}
+          >
+            Menu
+          </button>
+          {isMenuOpen && (
+            <div id={style.dropDownItems}>
+              <button
+                onClick={() => handleOnClick("services")}
+                className={`slide-right ${CustomBtn.white}`}
+              >
+                Services
+              </button>
+
+              <button
+                onClick={() => handleOnClick("work")}
+                className={`slide-right ${CustomBtn.white}`}
+              >
+                Portfolio
+              </button>
+
+              <button
+                onClick={() => handleOnClick("about")}
+                className={`slide-right ${CustomBtn.white}`}
+              >
+                About
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Tablet & desktop menu */}
+      <div id={style.navLarge} className="header-element-right">
         <button
           onClick={() => handleOnClick("services")}
           className={`slide-down ${CustomBtn.white}`}
