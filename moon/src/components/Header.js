@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import CustomBtn from "../styles/CustomButton.module.css";
 import logo from "../media/images/flodhus.png";
 import style from "../styles/Header.module.css";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faBars, faCompass, faX } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+library.add(faBars, faCompass, faX);
 
 const Header = ({ handleOnClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,9 +14,15 @@ const Header = ({ handleOnClick }) => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     const menuButton = document.getElementById(style.menuButton);
-  menuButton.style.display = isMenuOpen ? 'flex' : 'none';
-    
+    menuButton.style.display = isMenuOpen ? "flex" : "none";
   };
+
+  const handleNavClick = () => {
+    setIsMenuOpen(false);
+    const menuButton = document.getElementById(style.menuButton);
+    menuButton.style.display = "block";
+  };
+
 
   return (
     <div id="header">
@@ -34,27 +45,36 @@ const Header = ({ handleOnClick }) => {
             id={style.menuButton}
             className={CustomBtn.menuButton}
           >
-            Menu
+            <FontAwesomeIcon icon={faX} />
           </button>
-          
+
           {isMenuOpen && (
             <div id={style.dropDownItems}>
               <button
-                onClick={() => handleOnClick("services")}
+                onClick={() => {
+                  handleOnClick("services");
+                  handleNavClick();
+                }}
                 className={`slide-right ${CustomBtn.whiteMobile}`}
               >
                 Services
               </button>
 
               <button
-                onClick={() => handleOnClick("work")}
+                onClick={() => {
+                  handleOnClick("work");
+                  handleNavClick();
+                }}
                 className={`slide-right ${CustomBtn.whiteMobile}`}
               >
                 Portfolio
               </button>
 
               <button
-                onClick={() => handleOnClick("about")}
+                onClick={() => {
+                  handleOnClick("about");
+                  handleNavClick();
+                }}
                 className={`slide-right ${CustomBtn.whiteMobile}`}
               >
                 About

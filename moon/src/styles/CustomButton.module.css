@@ -12,13 +12,23 @@
   
 .btn:hover {
   color: black;
-  background-color: white;
+
+
 }
 
 .menuButton {
-  background-color: white;
+  background-color: #898989;
   color: black;
-  opacity: 70%;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 3.2vw;
+}
+
+
+.menuButton:hover {
+  color: white;
+  background-color: black;
+  transition: 0.5s;
 }
 
 .menuButton:hover {
@@ -65,8 +75,11 @@ transition: 0.5s;
   transition: 0.5s;
   text-transform: uppercase;
   font-weight: 800;
-
+  margin-bottom: 5px;
+  
 }
+
+
 
 .whiteMobile:hover {
 color: white;
