@@ -127,7 +127,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   padding: var(--virticle-padding);
 }
 
@@ -316,16 +316,11 @@ a {
 
 /*HEADER*/
 /* Header content containers*/
-.header-element2 {
+
+.header-element-left {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid;
-  height: 100%;
-  width: 20%;
-  border-radius: 20px;
-  margin: 2%;
-  font-size: auto;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 /*LOGO*/
@@ -336,7 +331,6 @@ a {
 }
 
 .header-element-right {
-  /* background-color: lightcoral; */
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;

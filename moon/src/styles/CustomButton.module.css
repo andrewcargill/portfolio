@@ -11,9 +11,18 @@
   }
   
 .btn:hover {
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: white;
+}
 
+.menuButton {
+  background-color: white;
+  color: black;
+  opacity: 70%;
+}
+
+.menuButton:hover {
+  opacity: 100%;
 }
 
 .white {
@@ -35,6 +44,31 @@
 }
 
 .white:hover {
+color: white;
+background-color: black;
+transition: 0.5s;
+
+}
+
+.whiteMobile {
+  color: black;
+  background-color: #898989;
+  border: var(--footer-header-buttons);
+  border-radius: var( --button-radius-small);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 3.2vw;
+  width: 80vw;
+  min-height: 6vh;
+  height: 6vw;
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-weight: 800;
+
+}
+
+.whiteMobile:hover {
 color: white;
 background-color: black;
 transition: 0.5s;

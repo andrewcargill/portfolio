@@ -8,11 +8,14 @@ const Header = ({ handleOnClick }) => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    const menuButton = document.getElementById(style.menuButton);
+  menuButton.style.display = isMenuOpen ? 'flex' : 'none';
+    
   };
 
   return (
     <div id="header">
-      <div id="logo" className="header-element1 slide-left">
+      <div id="logo" className="header-element-left slide-left">
         {/* Logo */}
         <img
           type="button"
@@ -29,29 +32,30 @@ const Header = ({ handleOnClick }) => {
           <button
             onClick={toggleMenu}
             id={style.menuButton}
-            className={CustomBtn.white}
+            className={CustomBtn.menuButton}
           >
             Menu
           </button>
+          
           {isMenuOpen && (
             <div id={style.dropDownItems}>
               <button
                 onClick={() => handleOnClick("services")}
-                className={`slide-right ${CustomBtn.white}`}
+                className={`slide-right ${CustomBtn.whiteMobile}`}
               >
                 Services
               </button>
 
               <button
                 onClick={() => handleOnClick("work")}
-                className={`slide-right ${CustomBtn.white}`}
+                className={`slide-right ${CustomBtn.whiteMobile}`}
               >
                 Portfolio
               </button>
 
               <button
                 onClick={() => handleOnClick("about")}
-                className={`slide-right ${CustomBtn.white}`}
+                className={`slide-right ${CustomBtn.whiteMobile}`}
               >
                 About
               </button>
