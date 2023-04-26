@@ -45,7 +45,7 @@ const Header = ({ handleOnClick }) => {
             id={style.menuButton}
             className={CustomBtn.menuButton}
           >
-            <FontAwesomeIcon icon={faX} />
+            menu
           </button>
 
           {isMenuOpen && (

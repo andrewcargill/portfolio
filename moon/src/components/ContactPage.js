@@ -14,6 +14,7 @@ import {
 
 import { faCodepen } from "@fortawesome/free-brands-svg-icons";
 import AutoHeaderText from "./SubContent/AutoHeaderText";
+import ContactForm from "./SubContent/ContactForm";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
@@ -49,6 +50,11 @@ function ContactPage({ navClick }) {
     
           <p>Drop me a message via my social media or give me a call/ SMS on (+46)76 149 4455</p>
           
+          <div>
+          <ContactForm />
+          </div>
+
+
           <h3>Languages</h3>
           <p>We can chat in Swedish or English! (Whatever's your pleasure)</p>
           <h3>Areas of expertise</h3>
