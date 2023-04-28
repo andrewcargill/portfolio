@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CustomBtn from "../styles/CustomButton.module.css";
-import logo from "../media/images/flodhus.png";
+import logo from "../media/images/ac01.png";
 import style from "../styles/Header.module.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faBars, faCompass, faX } from "@fortawesome/free-solid-svg-icons";
@@ -35,6 +35,7 @@ const Header = ({ handleOnClick }) => {
           src={logo}
           alt=""
         />
+
       </div>
 
       {/* Mobile Dropdown menu */}

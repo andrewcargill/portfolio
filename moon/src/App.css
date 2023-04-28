@@ -318,6 +318,7 @@ a {
 /* Header content containers*/
 
 .header-element-left {
+  
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -326,8 +327,9 @@ a {
 /*LOGO*/
 
 #logo-image {
-  width: 20vw;
-  max-width: 66px;
+  width: 15vw;
+  /* max-width: 66px; */
+  border-radius: 0;
 }
 
 .header-element-right {
