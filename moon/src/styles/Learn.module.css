@@ -22,7 +22,7 @@ img {
   object-fit: contain;
 }
 
-.left {
+#left {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -42,8 +42,8 @@ img {
   color: white;
 }
 
-.text {
-  font-size: var(--sub-text-more);
+#text {
+  /* font-size: var(--sub-text-more); */
   text-align: justify;
 }
 
