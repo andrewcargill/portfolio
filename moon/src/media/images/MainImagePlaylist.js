@@ -10,8 +10,6 @@ const ImagePlaylist = [
             UX Designed and built with HTML/ CSS.
             <br/>
             <a href="www.home.com" >Live website</a>
-            
-          
         </div>
     },
     {
