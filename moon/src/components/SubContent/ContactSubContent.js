@@ -33,9 +33,9 @@ function ContactSubContent(props) {
       </div>
       {/* Text */}
       <div id="buy-tagline">
-        <div className="contact-text">
+        
         <AutoHeaderText 
-        text="Coding, Audio, UX Design... Give me a call!"
+        text="Website design and production"
         maxFont="10px"
         minFont="10px"
         containerId="buy-tagline"
@@ -43,7 +43,7 @@ function ContactSubContent(props) {
         calFont="0.45"
         lineSpacing="1"
         />
-        </div>
+       
         
         </div>
     </div>
