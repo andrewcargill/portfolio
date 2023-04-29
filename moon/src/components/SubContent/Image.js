@@ -7,7 +7,7 @@ function Image({ images }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
+    }, 12000);
     return () => clearInterval(interval);
   }, [images.length]);
   
