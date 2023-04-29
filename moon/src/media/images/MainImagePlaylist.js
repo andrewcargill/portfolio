@@ -61,6 +61,12 @@ const ImagePlaylist = [
       caption: "Text Auto-sizing for ReactJS",
       highlight: "HTML/CSS/PYTHON"
     },
+    {
+      src: require("../images/autoText1.png"),
+      alt: "Alt text for image001.PNG",
+      caption: "Plug-in Hybrid Journey Calculator",
+      highlight: "JAVASCRIPT"
+    },
     
   ];
   

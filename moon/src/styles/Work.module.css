@@ -24,14 +24,13 @@ p {
 }
 
 .thumbnailWrapper {
- 
   width: 50%; 
   height: auto;
   overflow: hidden;
 }  
 
 .thumbnail {
-  
+  border-radius: 28px;
   width: 100%; 
 height: 100%;
 object-fit: cover;
@@ -68,7 +67,7 @@ padding: 10%;
   font-size: 12px;
   font-weight: bold;
   text-align: center;
-  margin: 0;
+  margin: 5px;
   padding: 5px;
 }
 
@@ -104,8 +103,21 @@ padding: 10%;
     overflow: hidden;
   }  
 
+  .thumbnail {
+    border-radius: 60px;
+  }
+
 }
 
 @media screen and (min-width: 1024px) {
 
+  .thumbnailWrapper {
+    width: 30%; 
+    height: auto;
+    overflow: hidden;
+  }  
+
+  .thumbnail {
+    border-radius: 40px;
+  }
 }

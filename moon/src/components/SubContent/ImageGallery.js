@@ -36,6 +36,10 @@ function ImageGallery({ images }) {
               className={`${css.title} ${
                 hoveredIndex === index ? css.hideCaption : ""
               }`}
+              style={{
+                transition: "opacity 0.9s ease",
+                opacity: hoveredIndex === index ? 0 : 1,
+              }}
             >
               {image.caption}
             </div>
