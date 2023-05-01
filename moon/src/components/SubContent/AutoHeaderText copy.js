@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChampagneGlasses } from "@fortawesome/free-solid-svg-icons";
 
 function AutoHeaderText({ text, maxFont, minFont, calFont, containerId, textId }) {
   const [fontSize, setFontSize] = useState(1.8); // initial font size in vw units
@@ -15,6 +16,7 @@ function AutoHeaderText({ text, maxFont, minFont, calFont, containerId, textId }
       const textWidth = textEl.offsetWidth;
       const containerAspectRatio = containerWidth / containerHeight;
       const textAspectRatio = textWidth / textHeight;
+      console.log(containerId);
       let newFontSize;
       if (containerAspectRatio >= textAspectRatio) {
         newFontSize = Math.min(containerHeight / textHeight, containerWidth / textWidth) * 1.3;
