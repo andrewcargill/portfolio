@@ -12,8 +12,7 @@
 }
 
 p {
-    background-color: black;
-    color: white;
+    color: black;
     border-radius: 6px;
     font-size: 3vw;
 }
@@ -52,8 +51,8 @@ padding: 2%;
 }
 
 .thumbnailOverlay {
-  border: solid black 6px;
-  border-radius: 15px;
+  border: var(--footer-header-buttons);
+  border-radius: 28px;
   position: absolute;
   top: 0;
   left: 0;
@@ -68,10 +67,26 @@ padding: 2%;
 }
 
 .thumbnailWrapper:hover .thumbnailOverlay {
-  opacity: 1;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .caption {
+  background-color: red;
+  width: 80%;
+  height: 70%;
   font-size: 12px;
   font-weight: bold;
   text-align: center;
@@ -90,13 +105,15 @@ padding: 2%;
   text-transform: uppercase;
   
   transform: translateX(-50%);
-  background-color: #898989;
+  /* background-color: #898989; */
+  background-color: white;
   padding: 10px;
   font-size: 15px;
+  font-weight: 800;
   line-height: 1.2;
   text-align: left;
   width: 90%;
-  height: 10vh;
+  height: 6vh;
 }
 
 .border {
@@ -127,7 +144,7 @@ padding: 2%;
 
   .title {
     height: 5vh;
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .thumbnailWrapper {
@@ -135,6 +152,11 @@ padding: 2%;
     height: auto;
     overflow: hidden;
   }  
+
+  .thumbnailOverlay {
+    border-radius: 31px;
+    border: var(--footer-header-buttons);
+  }
 
   .thumbnail {
     border-radius: 31px;
@@ -153,15 +175,23 @@ padding: 2%;
     height: auto;
   }
 
+  .thumbnailOverlay {
+    border: var(--footer-header-buttons);
+    border-radius: 60px;
+  }
+
   .border {
+
     height: 100%;
   }
 
   .title {
-    font-size: xx-large;
+    font-size: x-large;
     border-radius: var(--button-radius-small);
     top: 10%;
     height: 6vh;
+    min-height: 50px;
+    border: black solid 4px;
   }
 
   .thumbnailWrapper {
@@ -171,7 +201,7 @@ padding: 2%;
   }  
 
   .thumbnail {
-    border-radius: 30px;
-    height: 50vh;
+    border-radius: 60px;
+    height: 60vh;
   }
 }
