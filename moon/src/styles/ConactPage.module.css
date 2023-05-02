@@ -1,3 +1,7 @@
+p {
+    background-color: transparent;
+    color: black;
+}
 .container1 {
     background-color: red;
 }
@@ -10,19 +14,6 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     height: auto;
-  }
-
-/* Container for AutoHeaderText*/
-#AutoHeaderContainer {
-    text-transform: uppercase;
-    letter-spacing: .1vw;
-    /* text-align: justify; */
-    display: flex;
-    width: 100%;
-    order: 1;
-    height: auto;
-    max-height: 40%;
-    /* font-size: min(max(10px, 4vw), 20px); */
   }
 
 /* Containers for main content and image*/
@@ -39,7 +30,7 @@
 .halfPageContainer1 {
     width: 100%;
     order: 2;
-    height: 30%;
+    height: 30vh;
     display: flex;
 }
 

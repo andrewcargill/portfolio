@@ -37,7 +37,7 @@ function ContactPage({ navClick }) {
          
         <AutoHeaderText 
              text="
-             Lets have a chat! You can reach me via my social media below.
+             You can reach me via my social media below.
              "
              containerId={styles.contactText}
              textId={styles.text}
@@ -45,8 +45,10 @@ function ContactPage({ navClick }) {
              minFont="15px"
              calFont=".45"
              lineSpacing="1"
+           
           />
-          
+          <div>
+           </div>
           </div>
         </div>
       </div>
