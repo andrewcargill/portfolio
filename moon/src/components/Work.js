@@ -25,11 +25,11 @@ library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 function Work({ navClick }) {
 
   return (
-    <div id="main-content-container">
+    <div id={styles.mainContentContainer}>
       
 
       {/* Half Page Content Container */}
-      <div id={styles.Container} className="slide-right">
+      <div id={styles.container} className="slide-right">
         {/* Image Component */}
         <ImageGallery images={ImagePlaylist} />
       </div>
