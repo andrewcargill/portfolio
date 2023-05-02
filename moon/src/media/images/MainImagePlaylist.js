@@ -1,3 +1,9 @@
+import CustomBtn from "../../styles/CustomButton.module.css"
+
+const handleClickSocial = (url) => {
+  window.open(url);
+};
+
 const ImagePlaylist = [
     {
       src: require("../images/forest1.png"),
@@ -9,6 +15,13 @@ const ImagePlaylist = [
             Django custom API with customer login and enquiry system.
             UX Designed and built with HTML/ CSS.
             <br/>
+            <button 
+              className={CustomBtn.fotter}
+              onClick={ () =>
+                handleClickSocial("https://parazker.com/proyectos/")
+              }
+              >BUTTON</button>
+
             <a href="www.home.com" >Live website</a>
         </div>
     },
