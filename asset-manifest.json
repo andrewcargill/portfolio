@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.398f727b.css",
+    "main.js": "/portfolio/static/js/main.6509f1e8.js",
+    "static/js/787.5d3682f3.chunk.js": "/portfolio/static/js/787.5d3682f3.chunk.js",
+    "static/media/advert.mp4": "/portfolio/static/media/advert.26e01a1d60d4c1eea907.mp4",
+    "static/media/pic.jpg": "/portfolio/static/media/pic.279f72bce27e0b41fac4.jpg",
+    "static/media/forest1.png": "/portfolio/static/media/forest1.1287a3ef83a7b8b1e5c3.png",
+    "static/media/scratch2.png": "/portfolio/static/media/scratch2.c61b8af8f4207ae6b0f2.png",
+    "static/media/quiz1.png": "/portfolio/static/media/quiz1.9a5fee6f01ed09519042.png",
+    "static/media/false.png": "/portfolio/static/media/false.fae0a730bfa7202b4f99.png",
+    "static/media/autoText1.png": "/portfolio/static/media/autoText1.f1c6923909da832865f8.png",
+    "static/media/false1.png": "/portfolio/static/media/false1.bb1f2359ff3c55d5749d.png",
+    "static/media/superhero2.png": "/portfolio/static/media/superhero2.c9c11f91acdcfb83443b.png",
+    "static/media/hangman1.png": "/portfolio/static/media/hangman1.20076769f5c76e1ae919.png",
+    "static/media/tutorials_thumbnail.png": "/portfolio/static/media/tutorials_thumbnail.db4ad78b43a86cbcf9d3.png",
+    "static/media/flodhus.png": "/portfolio/static/media/flodhus.9ae02b802dca69a414c4.png",
+    "index.html": "/portfolio/index.html",
+    "main.398f727b.css.map": "/portfolio/static/css/main.398f727b.css.map",
+    "main.6509f1e8.js.map": "/portfolio/static/js/main.6509f1e8.js.map",
+    "787.5d3682f3.chunk.js.map": "/portfolio/static/js/787.5d3682f3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.398f727b.css",
+    "static/js/main.6509f1e8.js"
+  ]
+}
