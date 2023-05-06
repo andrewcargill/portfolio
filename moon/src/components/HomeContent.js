@@ -46,6 +46,7 @@ function HomeContent({ navClick }) {
           navSubClick={navClick}
          
         />
+        THIS IS ME!
       </div>
 
       {/* Sub-Section Container Bottom */}
