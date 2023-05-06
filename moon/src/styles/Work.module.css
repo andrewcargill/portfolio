@@ -95,6 +95,7 @@ padding: 2%;
 }
 
 .title {
+  background-color: #898989;
   display: flex;
   align-items: center;
   position: absolute;
@@ -106,7 +107,6 @@ padding: 2%;
   
   transform: translateX(-50%);
   /* background-color: #898989; */
-  background-color: white;
   padding: 10px;
   font-size: 15px;
   font-weight: 800;
