@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { Howl } from "howler";
-import kickAudio from "../../media/audio/kick.wav";
-import snareAudio from "../../media/audio/snare.wav";
-import hihatAudio from "../../media/audio/hi-hat.wav";
+import kicker from "../../media/audio/kick.wav";
+import snare from "../../media/audio/snare.wav";
+import hihat from "../../media/audio/hi-hat.wav";
 import style from "../../styles/DrumMachine.module.css";
 
-const kick = new Howl({ src: [kickAudio] });
-const snare = new Howl({ src: [snareAudio] });
-const hihat = new Howl({ src: [hihatAudio] });
+const kick = new Howl({ src: [kicker] });
+const snareDrum = new Howl({ src: [snare] });
+const hiHat = new Howl({ src: [hihat] });
 
 const DrumMachine = () => {
-  const [kickSteps, setKickSteps] = useState(Array(4).fill(false));
-  const [snareSteps, setSnareSteps] = useState(Array(4).fill(false));
-  const [hihatSteps, setHihatSteps] = useState(Array(4).fill(false));
+  const [kickSteps, setKickSteps] = useState(Array(8).fill(false));
+  const [snareSteps, setSnareSteps] = useState(Array(8).fill(false));
+  const [hihatSteps, setHihatSteps] = useState(Array(8).fill(false));
   const [playing, setPlaying] = useState(false);
   const [intervalId, setIntervalId] = useState(null);
 
@@ -42,12 +42,12 @@ const DrumMachine = () => {
           kick.play();
         }
         if (snareSteps[step]) {
-          snare.play();
+          snareDrum.play();
         }
         if (hihatSteps[step]) {
-          hihat.play();
+          hiHat.play();
         }
-        step = (step + 1) % 4;
+        step = (step + 1) % 8;
       }, 250);
       setIntervalId(id);
       return () => clearInterval(id);
