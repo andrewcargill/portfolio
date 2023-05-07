@@ -1,36 +1,58 @@
 import React, { useState, useEffect } from "react";
 import { Howl } from "howler";
-import kicker from "../../media/audio/kick.wav";
+import kickAudio from "../../media/audio/kick.wav";
+import snareAudio from "../../media/audio/snare.wav";
+import hihatAudio from "../../media/audio/hi-hat.wav";
 import style from "../../styles/DrumMachine.module.css";
 
-const kick = new Howl({ src: [kicker] });
+const kick = new Howl({ src: [kickAudio] });
+const snare = new Howl({ src: [snareAudio] });
+const hihat = new Howl({ src: [hihatAudio] });
 
 const DrumMachine = () => {
   const [kickSteps, setKickSteps] = useState(Array(4).fill(false));
+  const [snareSteps, setSnareSteps] = useState(Array(4).fill(false));
+  const [hihatSteps, setHihatSteps] = useState(Array(4).fill(false));
   const [playing, setPlaying] = useState(false);
   const [intervalId, setIntervalId] = useState(null);
 
-  const toggleStep = (index) => {
+  const toggleKickStep = (index) => {
     const newKickSteps = [...kickSteps];
     newKickSteps[index] = !newKickSteps[index];
     setKickSteps(newKickSteps);
   };
 
-  useEffect(() => {
-    let step = 0;
-    const playStep = () => {
-      if (kickSteps[step]) {
-        kick.play();
-      }
-      step = (step + 1) % 4;
-    };
+  const toggleSnareStep = (index) => {
+    const newSnareSteps = [...snareSteps];
+    newSnareSteps[index] = !newSnareSteps[index];
+    setSnareSteps(newSnareSteps);
+  };
 
+  const toggleHihatStep = (index) => {
+    const newHihatSteps = [...hihatSteps];
+    newHihatSteps[index] = !newHihatSteps[index];
+    setHihatSteps(newHihatSteps);
+  };
+
+  useEffect(() => {
     if (playing) {
-      const id = setInterval(playStep, 250);
+      let step = 0;
+      const id = setInterval(() => {
+        if (kickSteps[step]) {
+          kick.play();
+        }
+        if (snareSteps[step]) {
+          snare.play();
+        }
+        if (hihatSteps[step]) {
+          hihat.play();
+        }
+        step = (step + 1) % 4;
+      }, 250);
       setIntervalId(id);
       return () => clearInterval(id);
     }
-  }, [kickSteps, playing]);
+  }, [kickSteps, snareSteps, hihatSteps, playing]);
 
   const playSequence = () => {
     setPlaying(true);
@@ -56,7 +78,29 @@ const DrumMachine = () => {
             <button
               key={`kick-${index}`}
               className={`${style.step} ${step ? style.active : ""}`}
-              onClick={() => toggleStep(index)}
+              onClick={() => toggleKickStep(index)}
+            ></button>
+          ))}
+        </div>
+        <div className="instrument">
+          <div>Snare</div>
+          {snareSteps.map((step, index) => (
+            <button
+              key={`snare-${index}`}
+              className={`${style.step} ${step ? style.active : ""}`}
+              onClick={() => toggleSnareStep(index)}
+            ></button>
+          ))}
+        </div>
+        <div className="instrument">
+          <div>Hi-hat</div>
+          {hihatSteps.map((step, index) => (
+           
+
+            <button
+              key={`snare-${index}`}
+              className={`${style.step} ${step ? style.active : ""}`}
+              onClick={() => toggleHihatStep(index)}
             ></button>
           ))}
         </div>
