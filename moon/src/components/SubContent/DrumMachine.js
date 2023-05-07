@@ -1,97 +1,68 @@
 import React, { useState, useEffect } from "react";
-import styles from "../../styles/DrumMachine.module.css";
-import kick from "../../media/audio/boo.wav";
-import snare from "../../media/audio/snare.wav";
+import { Howl } from "howler";
+import kicker from "../../media/audio/kick.wav";
+import style from "../../styles/DrumMachine.module.css";
 
-function DrumMachine() {
-  const [tempo, setTempo] = useState(120);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [currentStep, setCurrentStep] = useState(0);
-  const [kickSequencerSteps, setKickSequencerSteps] = useState([1, 0, 0, 0, 1, 0, 0, 0]); // An example of kick sequencer steps
-  const [snareSequencerSteps, setSnareSequencerSteps] = useState([0, 0, 0, 0, 0, 0, 0, 0]); // An example of snare sequencer steps
+const kick = new Howl({ src: [kicker] });
 
-  const togglePlay = () => {
-    setIsPlaying(!isPlaying);
-    setCurrentStep(0);
-  };
+const DrumMachine = () => {
+  const [kickSteps, setKickSteps] = useState(Array(4).fill(false));
+  const [playing, setPlaying] = useState(false);
+  const [intervalId, setIntervalId] = useState(null);
 
-  const handleTempoChange = (event) => {
-    setTempo(event.target.value);
-  };
-
-  const toggleKickStep = (index) => {
-    const newSteps = [...kickSequencerSteps];
-    newSteps[index] = newSteps[index] ? 0 : 1;
-    setKickSequencerSteps(newSteps);
-  };
-
-  const toggleSnareStep = (index) => {
-    const newSteps = [...snareSequencerSteps];
-    newSteps[index] = newSteps[index] ? 0 : 1;
-    setSnareSequencerSteps(newSteps);
-  };
-
-  const playStep = (step, drum) => {
-    if (step === 0) {
-      return;
-    }
-    const audio = new Audio(drum === "kick" ? kick : snare);
-    audio.currentTime = 0;
-    audio.play();
+  const toggleStep = (index) => {
+    const newKickSteps = [...kickSteps];
+    newKickSteps[index] = !newKickSteps[index];
+    setKickSteps(newKickSteps);
   };
 
   useEffect(() => {
-    let intervalId;
-    if (isPlaying) {
-      const intervalTime = (60 / tempo) * 1000;
-      intervalId = setInterval(() => {
-        playStep(kickSequencerSteps[currentStep], "kick");
-        playStep(snareSequencerSteps[currentStep], "snare");
-        setCurrentStep((currentStep + 1) % 8);
-      }, intervalTime);
+    let step = 0;
+    const playStep = () => {
+      if (kickSteps[step]) {
+        kick.play();
+      }
+      step = (step + 1) % 4;
+    };
+
+    if (playing) {
+      const id = setInterval(playStep, 250);
+      setIntervalId(id);
+      return () => clearInterval(id);
     }
-    return () => clearInterval(intervalId);
-  }, [isPlaying, currentStep, kickSequencerSteps, snareSequencerSteps, tempo]);
+  }, [kickSteps, playing]);
+
+  const playSequence = () => {
+    setPlaying(true);
+  };
+
+  const stopSequence = () => {
+    setPlaying(false);
+    clearInterval(intervalId);
+  };
 
   return (
     <div>
-      <div className={styles.sequencer}>
-        <div className={styles.row}>
-          {kickSequencerSteps.map((step, index) => (
-            <button
-              key={index}
-              className={step ? styles.active : ""}
-              onClick={() => toggleKickStep(index)}
-            ></button>
-          ))}
-        </div>
-        <div className={styles.row}>
-          {snareSequencerSteps.map((step, index) => (
-            <button
-              key={index}
-              className={step ? styles.active : ""}
-              onClick={() => toggleSnareStep(index)}
-            ></button>
-          ))}
-        </div>
-      </div>
-      <div className={styles["drum-buttons"]}>
-        <button className={styles.kick} onClick={() => playStep(1, "kick")}></button>
-        <button className={styles.snare} onClick={() => playStep(1, "snare")}></button>
-      </div>
-      <button className={styles.toggle} onClick={togglePlay}>
-        {isPlaying ? "Stop" : "Play"}
+      <button onClick={playSequence} disabled={playing}>
+        Play
       </button>
-
-      <input
-  type="number"
-  value={tempo}
-  onChange={handleTempoChange}
-  min="1"
-  max="300"
-/>
+      <button onClick={stopSequence} disabled={!playing}>
+        Stop
+      </button>
+      <div className={style.instrumentLine}>
+        <div className="instrument">
+          <div>Kick</div>
+          {kickSteps.map((step, index) => (
+            <button
+              key={`kick-${index}`}
+              className={`${style.step} ${step ? style.active : ""}`}
+              onClick={() => toggleStep(index)}
+            ></button>
+          ))}
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default DrumMachine;
