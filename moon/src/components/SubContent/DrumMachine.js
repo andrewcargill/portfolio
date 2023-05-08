@@ -21,8 +21,10 @@ const DrumMachine = () => {
   const [synthSteps, setSynthSteps] = useState(Array(16).fill(false));
   const [playing, setPlaying] = useState(false);
   const [intervalId, setIntervalId] = useState(null);
-
   const [currentStep, setCurrentStep] = useState(null);
+  const [kickMuted, setKickMuted] = useState(false);
+  const [snareMuted, setSnareMuted] = useState(false);
+  const [hihatMuted, setHithatMuted] = useState(false);
 
   const toggleKickStep = (index) => {
     const newKickSteps = [...kickSteps];
@@ -55,16 +57,18 @@ const DrumMachine = () => {
   };
 
   useEffect(() => {
+    console.log("snare muted", snareMuted);
+    console.log("kick drum", kickMuted);
     if (playing) {
       let step = 0;
       const id = setInterval(() => {
-        if (kickSteps[step]) {
+        if (kickSteps[step] && !kickMuted) {
           kick.play();
         }
-        if (snareSteps[step]) {
+        if (snareSteps[step] && !snareMuted) {
           snareDrum.play();
         }
-        if (hihatSteps[step]) {
+        if (hihatSteps[step] && !hihatMuted) {
           hiHat.play();
         }
         if (bassSteps[step]) {
@@ -79,7 +83,10 @@ const DrumMachine = () => {
       setIntervalId(id);
       return () => clearInterval(id);
     }
-  }, [kickSteps, snareSteps, hihatSteps, bassSteps, synthSteps, playing]);
+  }, [kickSteps, snareSteps, hihatSteps, 
+    bassSteps, synthSteps, playing,
+    kickMuted, snareMuted, hihatMuted
+  ]);
 
   const playSequence = () => {
     setPlaying(true);
@@ -99,39 +106,62 @@ const DrumMachine = () => {
         Stop
       </button>
       <div className={style.instrumentLine}>
-        <div className="instrument">
+      <div className="instrument">
           <div>Kick</div>
           {kickSteps.map((step, index) => (
             <button
               key={`kick-${index}`}
               className={`${style.step} ${
-                step ? style.active : ""
-              } ${index === currentStep ? style.current : ""} ${
+                step && !kickMuted ? style.active : ""
+              } ${
+                index === currentStep && !kickMuted ? style.current : ""
+              } ${
                 index % 8 < 4 ? style.blue : style.black
               }`}
               onClick={() => toggleKickStep(index)}
             ></button>
           ))}
+          <button onClick={() => setKickMuted(!kickMuted)}>
+            {kickMuted ? "Unmute Kick" : "Mute Kick"}
+          </button>
         </div>
         <div className="instrument">
           <div>Snare</div>
           {snareSteps.map((step, index) => (
             <button
-              key={`snare-${index}`}
-              className={`${style.step} ${step ? style.active : ""} ${index % 8 < 4 ? style.blue : style.black}`}
-              onClick={() => toggleSnareStep(index)}
-            ></button>
+            key={`snare-${index}`}
+            className={`${style.step} ${
+              step && !snareMuted ? style.active : ""
+            } ${
+              index === currentStep && !snareMuted ? style.current : ""
+            } ${
+              index % 8 < 4 ? style.blue : style.black
+            }`}
+            onClick={() => toggleSnareStep(index)}
+          ></button>
           ))}
+          <button onClick={() => setSnareMuted(!snareMuted)}>
+            {snareMuted ? "Unmute Snr" : "Mute Snr"}
+          </button>
         </div>
         <div className="instrument">
           <div>Hi-hat</div>
           {hihatSteps.map((step, index) => (
             <button
-              key={`snare-${index}`}
-              className={`${style.step} ${step ? style.active : ""} ${index % 8 < 4 ? style.blue : style.black}`}
+              key={`hihat-${index}`}
+              className={`${style.step} ${
+                step && !hihatMuted ? style.active : ""
+              } ${
+                index === currentStep && !hihatMuted ? style.current : ""
+              } ${
+                index % 8 < 4 ? style.blue : style.black
+              }`}
               onClick={() => toggleHihatStep(index)}
             ></button>
           ))}
+          <button onClick={() => setHithatMuted(!hihatMuted)}>
+            {hihatMuted ? "Unmute Hats" : "Mute Hats"}
+          </button>
         </div>
         <div className="instrument">
           <div>Bass</div>
