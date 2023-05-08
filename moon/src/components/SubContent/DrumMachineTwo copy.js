@@ -4,7 +4,7 @@ import kickSound from "../../media/audio/kick.wav";
 import snare from "../../media/audio/snare.wav";
 import hihat from "../../media/audio/hi-hat.wav";
 import bassSound from "../../media/audio/bass1.wav";
-import synthSound from "../../media/audio/synth2.wav";
+import synthSound from "../../media/audio/synth1.wav";
 import style from "../../styles/DrumMachine.module.css";
 
 const kick = new Howl({ src: [kickSound] });
@@ -13,12 +13,12 @@ const hiHat = new Howl({ src: [hihat] });
 const bass = new Howl({ src: [bassSound] });
 const synth = new Howl({ src: [synthSound] });
 
-const DrumMachine = () => {
-  const [kickSteps, setKickSteps] = useState(Array(16).fill(false));
-  const [snareSteps, setSnareSteps] = useState(Array(16).fill(false));
-  const [hihatSteps, setHihatSteps] = useState(Array(16).fill(false));
-  const [bassSteps, setBassSteps] = useState(Array(16).fill(false));
-  const [synthSteps, setSynthSteps] = useState(Array(16).fill(false));
+const DrumMachineTwo = () => {
+  const [kickSteps, setKickSteps] = useState(Array(8).fill(false));
+  const [snareSteps, setSnareSteps] = useState(Array(8).fill(false));
+  const [hihatSteps, setHihatSteps] = useState(Array(8).fill(false));
+  const [bassSteps, setBassSteps] = useState(Array(8).fill(false));
+  const [synthSteps, setSynthSteps] = useState(Array(8).fill(false));
   const [playing, setPlaying] = useState(false);
   const [intervalId, setIntervalId] = useState(null);
 
@@ -71,7 +71,7 @@ const DrumMachine = () => {
         if (synthSteps[0] && step === 0) {
           synth.play();
         }
-        step = (step + 1) % 16;
+        step = (step + 1) % 8;
       }, 250);
       setIntervalId(id);
       return () => clearInterval(id);
@@ -130,7 +130,7 @@ const DrumMachine = () => {
           <div>Bass</div>
             <button
               key={`bass-0`}
-              className={`${style.step} ${bassSteps[0] ? style.active : ""}`}
+              className={`${style.step} ${0 ? style.active : ""}`}
               onClick={() => toggleBassStep(0)}
             ></button>
         </div>
@@ -138,7 +138,7 @@ const DrumMachine = () => {
           <div>Synth</div>
             <button
               key={`synth-0`}
-              className={`${style.step} ${synthSteps[0] ? style.active : ""}`}
+              className={`${style.step} ${0 ? style.active : ""}`}
               onClick={() => toggleSynthStep(0)}
             ></button>
         </div>
@@ -147,4 +147,4 @@ const DrumMachine = () => {
   );
 };
 
-export default DrumMachine;
+export default DrumMachineTwo;

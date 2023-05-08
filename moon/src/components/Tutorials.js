@@ -17,6 +17,7 @@ import Image from "./SubContent/Image";
 import AutoHeaderText from "./SubContent/AutoHeaderText";
 import Learn from "./SubContent/Learn";
 import DrumMachine from "./SubContent/DrumMachine";
+import DrumMachineTwo from "./SubContent/DrumMachineTwo";
 
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
@@ -59,6 +60,7 @@ function Tutorials({ navClick }) {
       <div id="half-page-container" className="slide-right">
         {/* Image Component */}
         <DrumMachine />
+        <DrumMachineTwo />
       </div>
     </div>
   );
