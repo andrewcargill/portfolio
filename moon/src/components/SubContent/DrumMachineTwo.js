@@ -10,12 +10,11 @@ const synth = new Howl({
   volume: 0.5 
 });
 
-
-
 const DrumMachineTwo = () => {
   const [kickSteps, setKickSteps] = useState(Array(16).fill(false));
   const [playing, setPlaying] = useState(false);
   const [intervalId, setIntervalId] = useState(null);
+  const [currentStep, setCurrentStep] = useState(0);
 
   const toggleKickStep = (index) => {
     const newKickSteps = [...kickSteps];
@@ -23,15 +22,13 @@ const DrumMachineTwo = () => {
     setKickSteps(newKickSteps);
   };
 
-
   useEffect(() => {
-
     const handleKeyDown = (event) => {
-      if (event.key === 's') {
+      if (event.key === "s") {
         synth.play();
       }
     };
-    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener("keydown", handleKeyDown);
 
     if (playing) {
       let step = 0;
@@ -39,7 +36,7 @@ const DrumMachineTwo = () => {
         if (kickSteps[step]) {
           kick.play();
         }
-        
+        setCurrentStep(step);
         step = (step + 1) % 16;
       }, 250);
       setIntervalId(id);
@@ -47,9 +44,8 @@ const DrumMachineTwo = () => {
     }
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener("keydown", handleKeyDown);
     };
-
   }, [kickSteps, playing]);
 
   const playSequence = () => {
@@ -75,12 +71,15 @@ const DrumMachineTwo = () => {
           {kickSteps.map((step, index) => (
             <button
               key={`kick-${index}`}
-              className={`${style.step} ${step ? style.active : ""}`}
+              className={`${style.step} ${
+                step ? style.active : ""
+              } ${index === currentStep ? style.current : ""} ${
+                index % 8 < 4 ? style.blue : style.black
+              }`}
               onClick={() => toggleKickStep(index)}
             ></button>
           ))}
         </div>
-       
       </div>
     </div>
   );

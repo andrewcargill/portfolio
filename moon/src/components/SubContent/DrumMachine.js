@@ -22,6 +22,8 @@ const DrumMachine = () => {
   const [playing, setPlaying] = useState(false);
   const [intervalId, setIntervalId] = useState(null);
 
+  const [currentStep, setCurrentStep] = useState(null);
+
   const toggleKickStep = (index) => {
     const newKickSteps = [...kickSteps];
     newKickSteps[index] = !newKickSteps[index];
@@ -71,6 +73,7 @@ const DrumMachine = () => {
         if (synthSteps[0] && step === 0) {
           synth.play();
         }
+        setCurrentStep(step);
         step = (step + 1) % 16;
       }, 250);
       setIntervalId(id);
@@ -101,7 +104,11 @@ const DrumMachine = () => {
           {kickSteps.map((step, index) => (
             <button
               key={`kick-${index}`}
-              className={`${style.step} ${step ? style.active : ""}`}
+              className={`${style.step} ${
+                step ? style.active : ""
+              } ${index === currentStep ? style.current : ""} ${
+                index % 8 < 4 ? style.blue : style.black
+              }`}
               onClick={() => toggleKickStep(index)}
             ></button>
           ))}
@@ -111,7 +118,7 @@ const DrumMachine = () => {
           {snareSteps.map((step, index) => (
             <button
               key={`snare-${index}`}
-              className={`${style.step} ${step ? style.active : ""}`}
+              className={`${style.step} ${step ? style.active : ""} ${index % 8 < 4 ? style.blue : style.black}`}
               onClick={() => toggleSnareStep(index)}
             ></button>
           ))}
@@ -121,7 +128,7 @@ const DrumMachine = () => {
           {hihatSteps.map((step, index) => (
             <button
               key={`snare-${index}`}
-              className={`${style.step} ${step ? style.active : ""}`}
+              className={`${style.step} ${step ? style.active : ""} ${index % 8 < 4 ? style.blue : style.black}`}
               onClick={() => toggleHihatStep(index)}
             ></button>
           ))}
