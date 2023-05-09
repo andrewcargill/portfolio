@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Howl } from "howler";
 import kickSound from "../../media/audio/kick.wav";
+import kick2Sound from "../../media/audio/kick2.wav";
 import snare from "../../media/audio/snare.wav";
 import hihat from "../../media/audio/hi-hat.wav";
 import bassSound from "../../media/audio/bass1.wav";
@@ -9,6 +10,7 @@ import synthTwoSound from "../../media/audio/synth3.wav";
 import style from "../../styles/DrumMachine.module.css";
 
 const kick = new Howl({ src: [kickSound] });
+const kick2 = new Howl({ src: [kick2Sound] });
 const snareDrum = new Howl({ src: [snare] });
 const hiHat = new Howl({ src: [hihat] });
 const bass = new Howl({ src: [bassSound] });
@@ -17,6 +19,8 @@ const synth2 = new Howl({ src: [synthTwoSound] });
 
 const DrumMachine = () => {
   const [kickSteps, setKickSteps] = useState(Array(16).fill(false));
+  const [kickSelected, setKickSelected] = useState(kick);
+
   const [snareSteps, setSnareSteps] = useState(Array(16).fill(false));
   const [hihatSteps, setHihatSteps] = useState(Array(16).fill(false));
   const [bassSteps, setBassSteps] = useState(Array(16).fill(false));
@@ -65,6 +69,10 @@ const DrumMachine = () => {
     setSynth2Steps(newSynth2Steps);
   };
 
+  const selectKickSound = (sound) => {
+    setKickSelected(sound);
+  };
+
   useEffect(() => {
     console.log("snare muted", snareMuted);
     console.log("kick drum", kickMuted);
@@ -72,7 +80,7 @@ const DrumMachine = () => {
       let step = 0;
       const id = setInterval(() => {
         if (kickSteps[step] && !kickMuted) {
-          kick.play();
+          kickSelected.play();
         }
         if (snareSteps[step] && !snareMuted) {
           snareDrum.play();
@@ -95,7 +103,7 @@ const DrumMachine = () => {
       setIntervalId(id);
       return () => clearInterval(id);
     }
-  }, [kickSteps, snareSteps, hihatSteps, 
+  }, [kickSteps, kickSelected, snareSteps, hihatSteps, 
     bassSteps, synthSteps, playing,
     kickMuted, snareMuted, hihatMuted,
     synth2Steps
@@ -134,6 +142,20 @@ const DrumMachine = () => {
               onClick={() => toggleKickStep(index)}
             ></button>
           ))}
+          <div>
+            <button
+              onClick={() => selectKickSound(kick)}
+              disabled={kickSelected === kick}
+            >
+              Kick 1
+            </button>
+            <button
+              onClick={() => selectKickSound(kick2)}
+              disabled={kickSelected === kick2}
+            >
+              Kick 2
+            </button>
+          </div>
           <button onClick={() => setKickMuted(!kickMuted)}>
             {kickMuted ? "Unmute Kick" : "Mute Kick"}
           </button>
