@@ -5,6 +5,7 @@ import snare from "../../media/audio/snare.wav";
 import hihat from "../../media/audio/hi-hat.wav";
 import bassSound from "../../media/audio/bass1.wav";
 import synthSound from "../../media/audio/synth2.wav";
+import synthTwoSound from "../../media/audio/synth3.wav";
 import style from "../../styles/DrumMachine.module.css";
 
 const kick = new Howl({ src: [kickSound] });
@@ -12,6 +13,7 @@ const snareDrum = new Howl({ src: [snare] });
 const hiHat = new Howl({ src: [hihat] });
 const bass = new Howl({ src: [bassSound] });
 const synth = new Howl({ src: [synthSound] });
+const synth2 = new Howl({ src: [synthTwoSound] });
 
 const DrumMachine = () => {
   const [kickSteps, setKickSteps] = useState(Array(16).fill(false));
@@ -19,6 +21,7 @@ const DrumMachine = () => {
   const [hihatSteps, setHihatSteps] = useState(Array(16).fill(false));
   const [bassSteps, setBassSteps] = useState(Array(16).fill(false));
   const [synthSteps, setSynthSteps] = useState(Array(16).fill(false));
+  const [synth2Steps, setSynth2Steps] = useState(Array(16).fill(false));
   const [playing, setPlaying] = useState(false);
   const [intervalId, setIntervalId] = useState(null);
   const [currentStep, setCurrentStep] = useState(null);
@@ -56,6 +59,12 @@ const DrumMachine = () => {
     setSynthSteps(newSynthSteps);
   };
 
+  const toggleSynth2Step = (index) => {
+    const newSynth2Steps = [...synth2Steps];
+    newSynth2Steps[index] = !newSynth2Steps[index];
+    setSynth2Steps(newSynth2Steps);
+  };
+
   useEffect(() => {
     console.log("snare muted", snareMuted);
     console.log("kick drum", kickMuted);
@@ -77,6 +86,9 @@ const DrumMachine = () => {
         if (synthSteps[0] && step === 0) {
           synth.play();
         }
+        if (synth2Steps[0] && step === 0) {
+          synth2.play();
+        }
         setCurrentStep(step);
         step = (step + 1) % 16;
       }, 250);
@@ -85,7 +97,8 @@ const DrumMachine = () => {
     }
   }, [kickSteps, snareSteps, hihatSteps, 
     bassSteps, synthSteps, playing,
-    kickMuted, snareMuted, hihatMuted
+    kickMuted, snareMuted, hihatMuted,
+    synth2Steps
   ]);
 
   const playSequence = () => {
@@ -177,6 +190,14 @@ const DrumMachine = () => {
               key={`synth-0`}
               className={`${style.step} ${synthSteps[0] ? style.active : ""}`}
               onClick={() => toggleSynthStep(0)}
+            ></button>
+        </div>
+        <div className="instrument">
+          <div>Synth_2</div>
+            <button
+              key={`synth2-0`}
+              className={`${style.step} ${synth2Steps[0] ? style.active : ""}`}
+              onClick={() => toggleSynth2Step(0)}
             ></button>
         </div>
       </div>
