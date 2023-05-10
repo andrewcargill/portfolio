@@ -2,10 +2,16 @@ import React, { useState, useEffect } from "react";
 import { Howl } from "howler";
 import kickSound from "../../media/audio/kick.wav";
 import kick2Sound from "../../media/audio/kick2.wav";
+
 import snare from "../../media/audio/snare.wav";
 import snare2 from "../../media/audio/snare2.wav";
+
 import hihat from "../../media/audio/hi-hat.wav";
 import hihat2 from "../../media/audio/hi-hat2.wav";
+
+import tom from "../../media/audio/tom.wav";
+import clav from "../../media/audio/clav.wav";
+
 import bassSound from "../../media/audio/bass1.wav";
 import synthSound from "../../media/audio/synth2.wav";
 import synthTwoSound from "../../media/audio/synth3.wav";
@@ -19,6 +25,10 @@ const snare2Drum = new Howl({ src: [snare2] });
 
 const hiHat = new Howl({ src: [hihat] });
 const hiHat2 = new Howl({ src: [hihat2] });
+
+const perc = new Howl({ src: [tom]});
+const perc2 = new Howl({ src: [clav]});
+
 const bass = new Howl({ src: [bassSound] });
 const synth = new Howl({ src: [synthSound] });
 const synth2 = new Howl({ src: [synthTwoSound] });
@@ -32,6 +42,9 @@ const DrumMachine = () => {
   
   const [hihatSteps, setHihatSteps] = useState(Array(16).fill(false));
   const [hihatSelected, setHihatSelected] = useState(hiHat2);
+
+  const [percSteps, setPercSteps] = useState(Array(16).fill(false));
+  const [percSelected, setPercSelected] = useState(perc);
   
   const [bassSteps, setBassSteps] = useState(Array(16).fill(false));
   const [synthSteps, setSynthSteps] = useState(Array(16).fill(false));
@@ -43,7 +56,8 @@ const DrumMachine = () => {
   
   const [kickMuted, setKickMuted] = useState(false);
   const [snareMuted, setSnareMuted] = useState(false);
-  const [hihatMuted, setHithatMuted] = useState(false);
+  const [hihatMuted, setHihatMuted] = useState(false);
+  const [percMuted, setPercMuted] = useState(false);
 
   const toggleKickStep = (index) => {
     const newKickSteps = [...kickSteps];
@@ -61,6 +75,12 @@ const DrumMachine = () => {
     const newHihatSteps = [...hihatSteps];
     newHihatSteps[index] = !newHihatSteps[index];
     setHihatSteps(newHihatSteps);
+  };
+
+  const togglePercStep = (index) => {
+    const newPercSteps = [...percSteps];
+    newPercSteps[index] = !newPercSteps[index];
+    setPercSteps(newPercSteps);
   };
 
   const toggleBassStep = (index) => {
@@ -93,9 +113,16 @@ const DrumMachine = () => {
     setHihatSelected(sound);
   };
 
+  const selectPercSound = (sound) => {
+    setPercSelected(sound);
+  };
+
   useEffect(() => {
     console.log("snare muted", snareMuted);
-    console.log("kick drum", kickMuted);
+    console.log("kick muted", kickMuted);
+    console.log("hihat muted", hihatMuted);
+    console.log("perc muted", percMuted);
+
     if (playing) {
       let step = 0;
       const id = setInterval(() => {
@@ -107,6 +134,9 @@ const DrumMachine = () => {
         }
         if (hihatSteps[step] && !hihatMuted) {
           hihatSelected.play();
+        }
+        if (percSteps[step] && !percMuted) {
+          percSelected.play();
         }
         if (bassSteps[step]) {
           bass.play();
@@ -126,7 +156,8 @@ const DrumMachine = () => {
   }, [kickSteps, kickSelected, snareSteps, hihatSteps, 
     bassSteps, synthSteps, playing,
     kickMuted, snareMuted, hihatMuted,
-    synth2Steps, snareSelected, hihatSelected
+    synth2Steps, snareSelected, hihatSelected,
+    percSelected, percMuted, percSteps
   ]);
 
   const playSequence = () => {
@@ -234,17 +265,50 @@ const DrumMachine = () => {
               onClick={() => selectHihatSound(hiHat)}
               disabled={hihatSelected === hiHat}
             >
-              Snr 1
+              HH 1
             </button>
             <button
               onClick={() => selectHihatSound(hiHat2)}
               disabled={hihatSelected === hiHat2}
             >
-              Snr 2
+              HH 2
             </button>
           </div>
-          <button onClick={() => setHithatMuted(!hihatMuted)}>
+          <button onClick={() => setHihatMuted(!hihatMuted)}>
             {hihatMuted ? "Unmute Hats" : "Mute Hats"}
+          </button>
+        </div>
+        <div className="instrument">
+          <div>Perc</div>
+          {percSteps.map((step, index) => (
+            <button
+              key={`perc-${index}`}
+              className={`${style.step} ${
+                step && !percMuted ? style.active : ""
+              } ${
+                index === currentStep && !percMuted ? style.current : ""
+              } ${
+                index % 8 < 4 ? style.blue : style.black
+              }`}
+              onClick={() => togglePercStep(index)}
+            ></button>
+          ))}
+          <div>
+            <button
+              onClick={() => selectPercSound(perc)}
+              disabled={percSelected === perc}
+            >
+              P 1
+            </button>
+            <button
+              onClick={() => selectPercSound(perc2)}
+              disabled={percSelected === perc2}
+            >
+              P 2
+            </button>
+          </div>
+          <button onClick={() => setPercMuted(!percMuted)}>
+            {percMuted ? "Unmute" : "Mute"}
           </button>
         </div>
         <div className="instrument">
