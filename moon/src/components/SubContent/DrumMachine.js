@@ -12,6 +12,13 @@ import hihat2 from "../../media/audio/hi-hat2.wav";
 import tom from "../../media/audio/tom.wav";
 import clav from "../../media/audio/clav.wav";
 
+import basshit from "../../media/audio/basshit.wav";
+import basshit2 from "../../media/audio/basshit2.wav";
+
+import stab from "../../media/audio/stab.wav";
+import stab2 from "../../media/audio/stab2.wav";
+
+
 import bassSound from "../../media/audio/bass1.wav";
 import synthSound from "../../media/audio/synth2.wav";
 import synthTwoSound from "../../media/audio/synth3.wav";
@@ -28,6 +35,12 @@ const hiHat2 = new Howl({ src: [hihat2] });
 
 const perc = new Howl({ src: [tom]});
 const perc2 = new Howl({ src: [clav]});
+
+const bassline = new Howl({ src: [basshit]});
+const bassline2 = new Howl({ src: [basshit2]});
+
+const stabline = new Howl({ src: [stab]});
+const stabline2 = new Howl({ src: [stab2]});
 
 const bass = new Howl({ src: [bassSound] });
 const synth = new Howl({ src: [synthSound] });
@@ -46,6 +59,9 @@ const DrumMachine = () => {
   const [percSteps, setPercSteps] = useState(Array(16).fill(false));
   const [percSelected, setPercSelected] = useState(perc);
   
+  const [basslineSteps, setBasslineSteps] = useState(Array(16).fill(false));
+  const [basslineSelected, setBasslineSelected] = useState(bassline);
+  
   const [bassSteps, setBassSteps] = useState(Array(16).fill(false));
   const [synthSteps, setSynthSteps] = useState(Array(16).fill(false));
   const [synth2Steps, setSynth2Steps] = useState(Array(16).fill(false));
@@ -58,6 +74,7 @@ const DrumMachine = () => {
   const [snareMuted, setSnareMuted] = useState(false);
   const [hihatMuted, setHihatMuted] = useState(false);
   const [percMuted, setPercMuted] = useState(false);
+  const [basslineMuted, setBasslineMuted] = useState(false);
 
   const toggleKickStep = (index) => {
     const newKickSteps = [...kickSteps];
@@ -81,6 +98,12 @@ const DrumMachine = () => {
     const newPercSteps = [...percSteps];
     newPercSteps[index] = !newPercSteps[index];
     setPercSteps(newPercSteps);
+  };
+
+  const toggleBasslineStep = (index) => {
+    const newBasslineSteps = [...basslineSteps];
+    newBasslineSteps[index] = !newBasslineSteps[index];
+    setBasslineSteps(newBasslineSteps);
   };
 
   const toggleBassStep = (index) => {
@@ -116,12 +139,17 @@ const DrumMachine = () => {
   const selectPercSound = (sound) => {
     setPercSelected(sound);
   };
+  
+  const selectBasslineSound = (sound) => {
+    setBasslineSelected(sound);
+  };
 
   useEffect(() => {
     console.log("snare muted", snareMuted);
     console.log("kick muted", kickMuted);
     console.log("hihat muted", hihatMuted);
     console.log("perc muted", percMuted);
+    console.log("bass muted", basslineMuted);
 
     if (playing) {
       let step = 0;
@@ -137,6 +165,9 @@ const DrumMachine = () => {
         }
         if (percSteps[step] && !percMuted) {
           percSelected.play();
+        }
+        if (basslineSteps[step] && !basslineMuted) {
+          basslineSelected.play();
         }
         if (bassSteps[step]) {
           bass.play();
@@ -157,7 +188,8 @@ const DrumMachine = () => {
     bassSteps, synthSteps, playing,
     kickMuted, snareMuted, hihatMuted,
     synth2Steps, snareSelected, hihatSelected,
-    percSelected, percMuted, percSteps
+    percSelected, percMuted, percSteps,
+    basslineSteps, basslineSelected, basslineMuted
   ]);
 
   const playSequence = () => {
@@ -198,17 +230,19 @@ const DrumMachine = () => {
               onClick={() => selectKickSound(kick)}
               disabled={kickSelected === kick}
             >
-              Kick 1
+              K1
             </button>
             <button
               onClick={() => selectKickSound(kick2)}
               disabled={kickSelected === kick2}
             >
-              Kick 2
+              K2
             </button>
           </div>
-          <button onClick={() => setKickMuted(!kickMuted)}>
-            {kickMuted ? "Unmute Kick" : "Mute Kick"}
+          <button onClick={() => setKickMuted(!kickMuted)}
+          className={kickMuted ? style.muted : style.unmuted}
+          >
+            {kickMuted ? "M" : "M"}
           </button>
         </div>
         <div className="instrument">
@@ -231,18 +265,20 @@ const DrumMachine = () => {
               onClick={() => selectSnareSound(snareDrum)}
               disabled={snareSelected === snare}
             >
-              Snr 1
+              S1
             </button>
             <button
               onClick={() => selectSnareSound(snare2Drum)}
               disabled={snareSelected === snare2}
             >
-              Snr 2
+              S2
             </button>
           </div>
           
-          <button onClick={() => setSnareMuted(!snareMuted)}>
-            {snareMuted ? "Unmute Snr" : "Mute Snr"}
+          <button onClick={() => setSnareMuted(!snareMuted)}
+          className={snareMuted ? style.muted : style.unmuted}
+          >
+            {snareMuted ? "M" : "M"}
           </button>
         </div>
         <div className="instrument">
@@ -265,18 +301,25 @@ const DrumMachine = () => {
               onClick={() => selectHihatSound(hiHat)}
               disabled={hihatSelected === hiHat}
             >
-              HH 1
+              H1
             </button>
             <button
               onClick={() => selectHihatSound(hiHat2)}
               disabled={hihatSelected === hiHat2}
             >
-              HH 2
+              H2
             </button>
           </div>
-          <button onClick={() => setHihatMuted(!hihatMuted)}>
+          <button
+  onClick={() => setHihatMuted(!hihatMuted)}
+  className={hihatMuted ? style.muted : style.unmuted}
+>
+  {hihatMuted ? "M" : "M"}
+</button>
+
+          {/* <button onClick={() => setHihatMuted(!hihatMuted)}>
             {hihatMuted ? "Unmute Hats" : "Mute Hats"}
-          </button>
+          </button> */}
         </div>
         <div className="instrument">
           <div>Perc</div>
@@ -298,17 +341,54 @@ const DrumMachine = () => {
               onClick={() => selectPercSound(perc)}
               disabled={percSelected === perc}
             >
-              P 1
+              P1
             </button>
             <button
               onClick={() => selectPercSound(perc2)}
               disabled={percSelected === perc2}
             >
-              P 2
+              P2
             </button>
           </div>
-          <button onClick={() => setPercMuted(!percMuted)}>
-            {percMuted ? "Unmute" : "Mute"}
+          <button onClick={() => setPercMuted(!percMuted)}
+          className={percMuted ? style.muted : style.unmuted}
+          >
+            {percMuted ? "M" : "M"}
+          </button>
+        </div>
+        <div className="instrument">
+          <div>Bass</div>
+          {basslineSteps.map((step, index) => (
+            <button
+              key={`bassline-${index}`}
+              className={`${style.step} ${
+                step && !basslineMuted ? style.active : ""
+              } ${
+                index === currentStep && !basslineMuted ? style.current : ""
+              } ${
+                index % 8 < 4 ? style.blue : style.black
+              }`}
+              onClick={() => toggleBasslineStep(index)}
+            ></button>
+          ))}
+          <div>
+            <button
+              onClick={() => selectBasslineSound(bassline)}
+              disabled={basslineSelected === bassline}
+            >
+              P1
+            </button>
+            <button
+              onClick={() => selectBasslineSound(bassline2)}
+              disabled={basslineSelected === bassline2}
+            >
+              P2
+            </button>
+          </div>
+          <button onClick={() => setBasslineMuted(!basslineMuted)}
+          className={basslineMuted ? style.muted : style.unmuted}
+          >
+            {basslineMuted ? "M" : "M"}
           </button>
         </div>
         <div className="instrument">

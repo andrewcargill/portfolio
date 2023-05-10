@@ -20,6 +20,26 @@
   border-radius: 50%;
 }
 
+@keyframes pulse {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.muted {
+  animation: pulse 1s infinite;
+}
+
+.unmuted {
+  background-color: green;
+}
+
 
 
 .blue {
