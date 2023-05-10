@@ -3,7 +3,9 @@ import { Howl } from "howler";
 import kickSound from "../../media/audio/kick.wav";
 import kick2Sound from "../../media/audio/kick2.wav";
 import snare from "../../media/audio/snare.wav";
+import snare2 from "../../media/audio/snare2.wav";
 import hihat from "../../media/audio/hi-hat.wav";
+import hihat2 from "../../media/audio/hi-hat2.wav";
 import bassSound from "../../media/audio/bass1.wav";
 import synthSound from "../../media/audio/synth2.wav";
 import synthTwoSound from "../../media/audio/synth3.wav";
@@ -11,8 +13,12 @@ import style from "../../styles/DrumMachine.module.css";
 
 const kick = new Howl({ src: [kickSound] });
 const kick2 = new Howl({ src: [kick2Sound] });
+
 const snareDrum = new Howl({ src: [snare] });
+const snare2Drum = new Howl({ src: [snare2] });
+
 const hiHat = new Howl({ src: [hihat] });
+const hiHat2 = new Howl({ src: [hihat2] });
 const bass = new Howl({ src: [bassSound] });
 const synth = new Howl({ src: [synthSound] });
 const synth2 = new Howl({ src: [synthTwoSound] });
@@ -22,13 +28,19 @@ const DrumMachine = () => {
   const [kickSelected, setKickSelected] = useState(kick);
 
   const [snareSteps, setSnareSteps] = useState(Array(16).fill(false));
+  const [snareSelected, setSnareSelected] = useState(snare2Drum);
+  
   const [hihatSteps, setHihatSteps] = useState(Array(16).fill(false));
+  const [hihatSelected, setHihatSelected] = useState(hiHat2);
+  
   const [bassSteps, setBassSteps] = useState(Array(16).fill(false));
   const [synthSteps, setSynthSteps] = useState(Array(16).fill(false));
   const [synth2Steps, setSynth2Steps] = useState(Array(16).fill(false));
+
   const [playing, setPlaying] = useState(false);
   const [intervalId, setIntervalId] = useState(null);
   const [currentStep, setCurrentStep] = useState(null);
+  
   const [kickMuted, setKickMuted] = useState(false);
   const [snareMuted, setSnareMuted] = useState(false);
   const [hihatMuted, setHithatMuted] = useState(false);
@@ -73,6 +85,14 @@ const DrumMachine = () => {
     setKickSelected(sound);
   };
 
+  const selectSnareSound = (sound) => {
+    setSnareSelected(sound);
+  };
+
+  const selectHihatSound = (sound) => {
+    setHihatSelected(sound);
+  };
+
   useEffect(() => {
     console.log("snare muted", snareMuted);
     console.log("kick drum", kickMuted);
@@ -83,10 +103,10 @@ const DrumMachine = () => {
           kickSelected.play();
         }
         if (snareSteps[step] && !snareMuted) {
-          snareDrum.play();
+          snareSelected.play();
         }
         if (hihatSteps[step] && !hihatMuted) {
-          hiHat.play();
+          hihatSelected.play();
         }
         if (bassSteps[step]) {
           bass.play();
@@ -106,7 +126,7 @@ const DrumMachine = () => {
   }, [kickSteps, kickSelected, snareSteps, hihatSteps, 
     bassSteps, synthSteps, playing,
     kickMuted, snareMuted, hihatMuted,
-    synth2Steps
+    synth2Steps, snareSelected, hihatSelected
   ]);
 
   const playSequence = () => {
@@ -175,6 +195,21 @@ const DrumMachine = () => {
             onClick={() => toggleSnareStep(index)}
           ></button>
           ))}
+          <div>
+            <button
+              onClick={() => selectSnareSound(snareDrum)}
+              disabled={snareSelected === snare}
+            >
+              Kick 1
+            </button>
+            <button
+              onClick={() => selectSnareSound(snare2Drum)}
+              disabled={snareSelected === snare2}
+            >
+              Kick 2
+            </button>
+          </div>
+          
           <button onClick={() => setSnareMuted(!snareMuted)}>
             {snareMuted ? "Unmute Snr" : "Mute Snr"}
           </button>
@@ -194,6 +229,7 @@ const DrumMachine = () => {
               onClick={() => toggleHihatStep(index)}
             ></button>
           ))}
+          
           <button onClick={() => setHithatMuted(!hihatMuted)}>
             {hihatMuted ? "Unmute Hats" : "Mute Hats"}
           </button>

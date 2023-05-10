@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Howl, Howler } from "howler";
 import kickSound from "../../media/audio/kick.wav";
-import kick2Sound from "../../media/audio/kick2.wav";
 import style from "../../styles/DrumMachine.module.css";
 
 const kick = new Howl({ src: [kickSound] });
-const kick2 = new Howl({ src: [kick2Sound] });
 
 const DrumMachineTwo = () => {
   const [kickSteps, setKickSteps] = useState(Array(16).fill(false));
@@ -13,9 +11,6 @@ const DrumMachineTwo = () => {
   const [intervalId, setIntervalId] = useState(null);
   const [currentStep, setCurrentStep] = useState(0);
   const [kickMuted, setKickMuted] = useState(false);
-  const [kickSelected, setKickSelected] = useState(kick);
-  const [isKickPlaying, setIsKickPlaying] = useState(false);
-
 
   const toggleKickStep = (index) => {
     const newKickSteps = [...kickSteps];
@@ -23,27 +18,21 @@ const DrumMachineTwo = () => {
     setKickSteps(newKickSteps);
   };
 
-  const selectKickSound = (sound) => {
-    setKickSelected(sound);
-  };
-
-  useEffect(() => {
-    if (playing) {
-      let step = currentStep;
-      const id = setInterval(() => {
-        if (kickSteps[step] && !kickMuted && !isKickPlaying) {
-          const soundId = kickSelected.play();
-          setIsKickPlaying(true);
-          kickSelected.once("end", () => setIsKickPlaying(false), soundId);
-        }
-        setCurrentStep(step);
+useEffect(() => {
+  if (playing) {
+    let step = currentStep;
+    const id = setInterval(() => {
+      if (kickSteps[step] && !kickMuted) {
+        kick.play();
+      }
+      setCurrentStep(step);
         step = (step + 1) % 16;
-      }, 250);
-      setIntervalId(id);
-      return () => clearInterval(id);
-    }
-  }, [kickSteps, playing, kickMuted, kickSelected, currentStep, isKickPlaying]);
-  
+    }, 250);
+    setIntervalId(id);
+    return () => clearInterval(id);
+  }
+}, [kickSteps, playing, kickMuted, currentStep]);
+
 
   const playSequence = () => {
     setPlaying(true);
@@ -78,20 +67,6 @@ const DrumMachineTwo = () => {
               onClick={() => toggleKickStep(index)}
             ></button>
           ))}
-          <div>
-            <button
-              onClick={() => selectKickSound(kick)}
-              disabled={kickSelected === kick}
-            >
-              Kick 1
-            </button>
-            <button
-              onClick={() => selectKickSound(kick2)}
-              disabled={kickSelected === kick2}
-            >
-              Kick 2
-            </button>
-          </div>
           <button onClick={() => setKickMuted(!kickMuted)}>
             {kickMuted ? "Unmute Kick" : "Mute Kick"}
           </button>
