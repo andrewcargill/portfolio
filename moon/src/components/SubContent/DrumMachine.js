@@ -19,9 +19,10 @@ import stab from "../../media/audio/stab.wav";
 import stab2 from "../../media/audio/stab2.wav";
 
 
-import bassSound from "../../media/audio/bass1.wav";
-import synthSound from "../../media/audio/synth2.wav";
-import synthTwoSound from "../../media/audio/synth3.wav";
+import bassSound from "../../media/audio/vox1.wav";
+import synthSound from "../../media/audio/jingle.wav";
+import synthTwoSound from "../../media/audio/crash.wav";
+
 import style from "../../styles/DrumMachine.module.css";
 
 const kick = new Howl({ src: [kickSound] });
@@ -39,8 +40,8 @@ const perc2 = new Howl({ src: [clav]});
 const bassline = new Howl({ src: [basshit]});
 const bassline2 = new Howl({ src: [basshit2]});
 
-const stabline = new Howl({ src: [stab]});
-const stabline2 = new Howl({ src: [stab2]});
+const fxa = new Howl({ src: [stab]});
+const fxb = new Howl({ src: [stab2]});
 
 const bass = new Howl({ src: [bassSound] });
 const synth = new Howl({ src: [synthSound] });
@@ -61,6 +62,9 @@ const DrumMachine = () => {
   
   const [basslineSteps, setBasslineSteps] = useState(Array(16).fill(false));
   const [basslineSelected, setBasslineSelected] = useState(bassline);
+
+  const [fxSteps, setFxSteps] = useState(Array(16).fill(false));
+  const [fxSelected, setFxSelected] = useState(bassline);
   
   const [bassSteps, setBassSteps] = useState(Array(16).fill(false));
   const [synthSteps, setSynthSteps] = useState(Array(16).fill(false));
@@ -75,6 +79,7 @@ const DrumMachine = () => {
   const [hihatMuted, setHihatMuted] = useState(false);
   const [percMuted, setPercMuted] = useState(false);
   const [basslineMuted, setBasslineMuted] = useState(false);
+  const [fxMuted, setFxMuted] = useState(false);
 
   const toggleKickStep = (index) => {
     const newKickSteps = [...kickSteps];
@@ -105,6 +110,12 @@ const DrumMachine = () => {
     newBasslineSteps[index] = !newBasslineSteps[index];
     setBasslineSteps(newBasslineSteps);
   };
+
+  const toggleFxStep = (index) => {
+    const newFxSteps = [...fxSteps];
+    newFxSteps[index] = !newFxSteps[index];
+    setFxSteps(newFxSteps);
+  }
 
   const toggleBassStep = (index) => {
     const newBassSteps = [...bassSteps];
@@ -144,6 +155,10 @@ const DrumMachine = () => {
     setBasslineSelected(sound);
   };
 
+  const selectFxSound = (sound) => {
+    setFxSelected(sound);
+  }
+
   useEffect(() => {
     console.log("snare muted", snareMuted);
     console.log("kick muted", kickMuted);
@@ -169,10 +184,13 @@ const DrumMachine = () => {
         if (basslineSteps[step] && !basslineMuted) {
           basslineSelected.play();
         }
+        if (fxSteps[step] && !fxMuted) {
+          fxSelected.play();
+        }
         if (bassSteps[step]) {
           bass.play();
         }
-        if (synthSteps[0] && step === 0) {
+        if (synthSteps[step] && step === 0) {
           synth.play();
         }
         if (synth2Steps[0] && step === 0) {
@@ -189,7 +207,8 @@ const DrumMachine = () => {
     kickMuted, snareMuted, hihatMuted,
     synth2Steps, snareSelected, hihatSelected,
     percSelected, percMuted, percSteps,
-    basslineSteps, basslineSelected, basslineMuted
+    basslineSteps, basslineSelected, basslineMuted,
+    fxSteps, fxSelected, fxMuted
   ]);
 
   const playSequence = () => {
@@ -376,19 +395,54 @@ const DrumMachine = () => {
               onClick={() => selectBasslineSound(bassline)}
               disabled={basslineSelected === bassline}
             >
-              P1
+              B1
             </button>
             <button
               onClick={() => selectBasslineSound(bassline2)}
               disabled={basslineSelected === bassline2}
             >
-              P2
+              B2
             </button>
           </div>
           <button onClick={() => setBasslineMuted(!basslineMuted)}
           className={basslineMuted ? style.muted : style.unmuted}
           >
             {basslineMuted ? "M" : "M"}
+          </button>
+        </div>
+        <div className="instrument">
+          <div>FX 1</div>
+          {fxSteps.map((step, index) => (
+            <button
+              key={`fx-${index}`}
+              className={`${style.step} ${
+                step && !fxMuted ? style.active : ""
+              } ${
+                index === currentStep && !fxMuted ? style.current : ""
+              } ${
+                index % 8 < 4 ? style.blue : style.black
+              }`}
+              onClick={() => toggleFxStep(index)}
+            ></button>
+          ))}
+          <div>
+            <button
+              onClick={() => selectFxSound(fxa)}
+              disabled={fxSelected === fxa}
+            >
+              X1
+            </button>
+            <button
+              onClick={() => selectFxSound(fxb)}
+              disabled={fxSelected === fxb}
+            >
+              X2
+            </button>
+          </div>
+          <button onClick={() => setFxMuted(!fxMuted)}
+          className={fxMuted ? style.muted : style.unmuted}
+          >
+            {fxMuted ? "M" : "M"}
           </button>
         </div>
         <div className="instrument">
