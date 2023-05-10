@@ -200,13 +200,13 @@ const DrumMachine = () => {
               onClick={() => selectSnareSound(snareDrum)}
               disabled={snareSelected === snare}
             >
-              Kick 1
+              Snr 1
             </button>
             <button
               onClick={() => selectSnareSound(snare2Drum)}
               disabled={snareSelected === snare2}
             >
-              Kick 2
+              Snr 2
             </button>
           </div>
           
@@ -229,7 +229,20 @@ const DrumMachine = () => {
               onClick={() => toggleHihatStep(index)}
             ></button>
           ))}
-          
+          <div>
+            <button
+              onClick={() => selectHihatSound(hiHat)}
+              disabled={hihatSelected === hiHat}
+            >
+              Snr 1
+            </button>
+            <button
+              onClick={() => selectHihatSound(hiHat2)}
+              disabled={hihatSelected === hiHat2}
+            >
+              Snr 2
+            </button>
+          </div>
           <button onClick={() => setHithatMuted(!hihatMuted)}>
             {hihatMuted ? "Unmute Hats" : "Mute Hats"}
           </button>
