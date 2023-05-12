@@ -13,16 +13,22 @@ const DrumMachineTwo = () => {
   const [kickMuted, setKickMuted] = useState(false);
 
   const toggleKickStep = (index) => {
+    console.log("kick Steps", kickSteps)
     const newKickSteps = [...kickSteps];
     newKickSteps[index] = !newKickSteps[index];
     setKickSteps(newKickSteps);
   };
 
 useEffect(() => {
+  console.log("currentStep", currentStep)
+  console.log("playing", playing)
+  console.log("kickSteps", kickSteps)
+  
   if (playing) {
     let step = currentStep;
     const id = setInterval(() => {
       if (kickSteps[step] && !kickMuted) {
+        console.log("kickplay");
         kick.play();
       }
       setCurrentStep(step);
@@ -68,7 +74,7 @@ useEffect(() => {
             ></button>
           ))}
           <button onClick={() => setKickMuted(!kickMuted)}>
-            {kickMuted ? "Unmute Kick" : "Mute Kick"}
+            {kickMuted ? "Unmute ick" : "Mute Kick"}
           </button>
         </div>
       </div>

@@ -221,7 +221,7 @@ const DrumMachine = () => {
   };
 
   return (
-    <div>
+    <div className={style.container}>
       <button onClick={playSequence} disabled={playing}>
         Play
       </button>

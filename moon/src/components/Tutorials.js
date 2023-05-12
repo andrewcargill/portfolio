@@ -60,7 +60,7 @@ function Tutorials({ navClick }) {
       <div id="half-page-container" className="slide-right">
         {/* Image Component */}
         <DrumMachine />
-        <DrumMachineTwo />
+        
       </div>
     </div>
   );
