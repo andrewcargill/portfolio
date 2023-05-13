@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { library } from "@fortawesome/fontawesome-svg-core";
+
 import { Howl } from "howler";
 import kickSound from "../../media/audio/kick.wav";
 import kick2Sound from "../../media/audio/kick2.wav";
@@ -18,12 +20,14 @@ import basshit2 from "../../media/audio/basshit2.wav";
 import stab from "../../media/audio/stab.wav";
 import stab2 from "../../media/audio/stab2.wav";
 
-
 import bassSound from "../../media/audio/vox1.wav";
 import synthSound from "../../media/audio/jingle.wav";
 import synthTwoSound from "../../media/audio/crash.wav";
 
 import style from "../../styles/DrumMachine.module.css";
+import { faPlay, faPause, faHatCowboy, faBurst, faUmbrellaBeach } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+library.add( faPlay, faPause, faHatCowboy, faBurst, faUmbrellaBeach);
 
 const kick = new Howl({ src: [kickSound] });
 const kick2 = new Howl({ src: [kick2Sound] });
@@ -34,14 +38,14 @@ const snare2Drum = new Howl({ src: [snare2] });
 const hiHat = new Howl({ src: [hihat] });
 const hiHat2 = new Howl({ src: [hihat2] });
 
-const perc = new Howl({ src: [tom]});
-const perc2 = new Howl({ src: [clav]});
+const perc = new Howl({ src: [tom] });
+const perc2 = new Howl({ src: [clav] });
 
-const bassline = new Howl({ src: [basshit]});
-const bassline2 = new Howl({ src: [basshit2]});
+const bassline = new Howl({ src: [basshit] });
+const bassline2 = new Howl({ src: [basshit2] });
 
-const fxa = new Howl({ src: [stab]});
-const fxb = new Howl({ src: [stab2]});
+const fxa = new Howl({ src: [stab] });
+const fxb = new Howl({ src: [stab2] });
 
 const bass = new Howl({ src: [bassSound] });
 const synth = new Howl({ src: [synthSound] });
@@ -53,19 +57,19 @@ const DrumMachine = () => {
 
   const [snareSteps, setSnareSteps] = useState(Array(16).fill(false));
   const [snareSelected, setSnareSelected] = useState(snare2Drum);
-  
+
   const [hihatSteps, setHihatSteps] = useState(Array(16).fill(false));
   const [hihatSelected, setHihatSelected] = useState(hiHat2);
 
   const [percSteps, setPercSteps] = useState(Array(16).fill(false));
   const [percSelected, setPercSelected] = useState(perc);
-  
+
   const [basslineSteps, setBasslineSteps] = useState(Array(16).fill(false));
   const [basslineSelected, setBasslineSelected] = useState(bassline);
 
   const [fxSteps, setFxSteps] = useState(Array(16).fill(false));
   const [fxSelected, setFxSelected] = useState(bassline);
-  
+
   const [bassSteps, setBassSteps] = useState(Array(16).fill(false));
   const [synthSteps, setSynthSteps] = useState(Array(16).fill(false));
   const [synth2Steps, setSynth2Steps] = useState(Array(16).fill(false));
@@ -73,7 +77,7 @@ const DrumMachine = () => {
   const [playing, setPlaying] = useState(false);
   const [intervalId, setIntervalId] = useState(null);
   const [currentStep, setCurrentStep] = useState(null);
-  
+
   const [kickMuted, setKickMuted] = useState(false);
   const [snareMuted, setSnareMuted] = useState(false);
   const [hihatMuted, setHihatMuted] = useState(false);
@@ -115,7 +119,7 @@ const DrumMachine = () => {
     const newFxSteps = [...fxSteps];
     newFxSteps[index] = !newFxSteps[index];
     setFxSteps(newFxSteps);
-  }
+  };
 
   const toggleBassStep = (index) => {
     const newBassSteps = [...bassSteps];
@@ -150,14 +154,14 @@ const DrumMachine = () => {
   const selectPercSound = (sound) => {
     setPercSelected(sound);
   };
-  
+
   const selectBasslineSound = (sound) => {
     setBasslineSelected(sound);
   };
 
   const selectFxSound = (sound) => {
     setFxSelected(sound);
-  }
+  };
 
   useEffect(() => {
     console.log("snare muted", snareMuted);
@@ -202,13 +206,29 @@ const DrumMachine = () => {
       setIntervalId(id);
       return () => clearInterval(id);
     }
-  }, [kickSteps, kickSelected, snareSteps, hihatSteps, 
-    bassSteps, synthSteps, playing,
-    kickMuted, snareMuted, hihatMuted,
-    synth2Steps, snareSelected, hihatSelected,
-    percSelected, percMuted, percSteps,
-    basslineSteps, basslineSelected, basslineMuted,
-    fxSteps, fxSelected, fxMuted
+  }, [
+    kickSteps,
+    kickSelected,
+    snareSteps,
+    hihatSteps,
+    bassSteps,
+    synthSteps,
+    playing,
+    kickMuted,
+    snareMuted,
+    hihatMuted,
+    synth2Steps,
+    snareSelected,
+    hihatSelected,
+    percSelected,
+    percMuted,
+    percSteps,
+    basslineSteps,
+    basslineSelected,
+    basslineMuted,
+    fxSteps,
+    fxSelected,
+    fxMuted,
   ]);
 
   const playSequence = () => {
@@ -221,253 +241,262 @@ const DrumMachine = () => {
   };
 
   return (
-    <div className={style.container}>
-      <button onClick={playSequence} disabled={playing}>
-        Play
-      </button>
-      <button onClick={stopSequence} disabled={!playing}>
-        Stop
-      </button>
-      <div className={style.instrumentLine}>
-      <div className="instrument">
-          <div>Kick</div>
-          {kickSteps.map((step, index) => (
-            <button
-              key={`kick-${index}`}
-              className={`${style.step} ${
-                step && !kickMuted ? style.active : ""
-              } ${
-                index === currentStep && !kickMuted ? style.current : ""
-              } ${
-                index % 8 < 4 ? style.blue : style.black
-              }`}
-              onClick={() => toggleKickStep(index)}
-            ></button>
-          ))}
-          <div>
-            <button
-              onClick={() => selectKickSound(kick)}
-              disabled={kickSelected === kick}
-            >
-              K1
-            </button>
-            <button
-              onClick={() => selectKickSound(kick2)}
-              disabled={kickSelected === kick2}
-            >
-              K2
-            </button>
-          </div>
-          <button onClick={() => setKickMuted(!kickMuted)}
-          className={kickMuted ? style.muted : style.unmuted}
-          >
-            {kickMuted ? "M" : "M"}
+    <div className="text-border right-margin-desktop image-container">
+      <div className={style.drumMachineContainer}>
+        <div className={style.transportButtons}>
+          <button onClick={playSequence} disabled={playing}>
+            <FontAwesomeIcon icon="fa-play" />
+          </button>
+          <button onClick={stopSequence} disabled={!playing}>
+            <FontAwesomeIcon icon="fa-pause" />
           </button>
         </div>
-        <div className="instrument">
-          <div>Snare</div>
-          {snareSteps.map((step, index) => (
-            <button
-            key={`snare-${index}`}
-            className={`${style.step} ${
-              step && !snareMuted ? style.active : ""
-            } ${
-              index === currentStep && !snareMuted ? style.current : ""
-            } ${
-              index % 8 < 4 ? style.blue : style.black
-            }`}
-            onClick={() => toggleSnareStep(index)}
-          ></button>
-          ))}
-          <div>
-            <button
-              onClick={() => selectSnareSound(snareDrum)}
-              disabled={snareSelected === snare}
-            >
-              S1
-            </button>
-            <button
-              onClick={() => selectSnareSound(snare2Drum)}
-              disabled={snareSelected === snare2}
-            >
-              S2
-            </button>
-          </div>
-          
-          <button onClick={() => setSnareMuted(!snareMuted)}
-          className={snareMuted ? style.muted : style.unmuted}
-          >
-            {snareMuted ? "M" : "M"}
-          </button>
-        </div>
-        <div className="instrument">
-          <div>Hi-hat</div>
-          {hihatSteps.map((step, index) => (
-            <button
-              key={`hihat-${index}`}
-              className={`${style.step} ${
-                step && !hihatMuted ? style.active : ""
-              } ${
-                index === currentStep && !hihatMuted ? style.current : ""
-              } ${
-                index % 8 < 4 ? style.blue : style.black
-              }`}
-              onClick={() => toggleHihatStep(index)}
-            ></button>
-          ))}
-          <div>
-            <button
-              onClick={() => selectHihatSound(hiHat)}
-              disabled={hihatSelected === hiHat}
-            >
-              H1
-            </button>
-            <button
-              onClick={() => selectHihatSound(hiHat2)}
-              disabled={hihatSelected === hiHat2}
-            >
-              H2
-            </button>
-          </div>
-          <button
-  onClick={() => setHihatMuted(!hihatMuted)}
-  className={hihatMuted ? style.muted : style.unmuted}
->
-  {hihatMuted ? "M" : "M"}
-</button>
 
-          {/* <button onClick={() => setHihatMuted(!hihatMuted)}>
-            {hihatMuted ? "Unmute Hats" : "Mute Hats"}
-          </button> */}
-        </div>
-        <div className="instrument">
-          <div>Perc</div>
-          {percSteps.map((step, index) => (
-            <button
-              key={`perc-${index}`}
-              className={`${style.step} ${
-                step && !percMuted ? style.active : ""
-              } ${
-                index === currentStep && !percMuted ? style.current : ""
-              } ${
-                index % 8 < 4 ? style.blue : style.black
-              }`}
-              onClick={() => togglePercStep(index)}
-            ></button>
-          ))}
-          <div>
-            <button
-              onClick={() => selectPercSound(perc)}
-              disabled={percSelected === perc}
+        <div className={style.instrumentLine}>
+          <div className="instrument">
+            <div>K</div>
+            {kickSteps.map((step, index) => (
+              <div
+                key={`kick-${index}`}
+                className={`${style.step} ${
+                  step && !kickMuted ? style.active : ""
+                } ${index === currentStep && !kickMuted ? style.current : ""} ${
+                  index % 8 < 4 ? style.blue : style.black
+                }`}
+                onClick={() => toggleKickStep(index)}
+              ></div>
+            ))}
+            <div
+            className={style.abButtons}
             >
-              P1
-            </button>
+              <button
+                onClick={() => selectKickSound(kick)}
+                disabled={kickSelected === kick}
+              >
+                A
+              </button>
+              <button
+                onClick={() => selectKickSound(kick2)}
+                disabled={kickSelected === kick2}
+              >
+                B
+              </button>
+            </div>
             <button
-              onClick={() => selectPercSound(perc2)}
-              disabled={percSelected === perc2}
+              onClick={() => setKickMuted(!kickMuted)}
+              className={kickMuted ? style.muted : style.unmuted}
             >
-              P2
-            </button>
-          </div>
-          <button onClick={() => setPercMuted(!percMuted)}
-          className={percMuted ? style.muted : style.unmuted}
-          >
-            {percMuted ? "M" : "M"}
-          </button>
-        </div>
-        <div className="instrument">
-          <div>Bass</div>
-          {basslineSteps.map((step, index) => (
-            <button
-              key={`bassline-${index}`}
-              className={`${style.step} ${
-                step && !basslineMuted ? style.active : ""
-              } ${
-                index === currentStep && !basslineMuted ? style.current : ""
-              } ${
-                index % 8 < 4 ? style.blue : style.black
-              }`}
-              onClick={() => toggleBasslineStep(index)}
-            ></button>
-          ))}
-          <div>
-            <button
-              onClick={() => selectBasslineSound(bassline)}
-              disabled={basslineSelected === bassline}
-            >
-              B1
-            </button>
-            <button
-              onClick={() => selectBasslineSound(bassline2)}
-              disabled={basslineSelected === bassline2}
-            >
-              B2
+              {kickMuted ? "M" : "M"}
             </button>
           </div>
-          <button onClick={() => setBasslineMuted(!basslineMuted)}
-          className={basslineMuted ? style.muted : style.unmuted}
-          >
-            {basslineMuted ? "M" : "M"}
-          </button>
-        </div>
-        <div className="instrument">
-          <div>FX 1</div>
-          {fxSteps.map((step, index) => (
-            <button
-              key={`fx-${index}`}
-              className={`${style.step} ${
-                step && !fxMuted ? style.active : ""
-              } ${
-                index === currentStep && !fxMuted ? style.current : ""
-              } ${
-                index % 8 < 4 ? style.blue : style.black
-              }`}
-              onClick={() => toggleFxStep(index)}
-            ></button>
-          ))}
-          <div>
-            <button
-              onClick={() => selectFxSound(fxa)}
-              disabled={fxSelected === fxa}
+          <div className="instrument">
+            <div>S</div>
+            {snareSteps.map((step, index) => (
+              <button
+                key={`snare-${index}`}
+                className={`${style.step} ${
+                  step && !snareMuted ? style.active : ""
+                } ${
+                  index === currentStep && !snareMuted ? style.current : ""
+                } ${index % 8 < 4 ? style.blue : style.black}`}
+                onClick={() => toggleSnareStep(index)}
+              ></button>
+            ))}
+            <div
+            className={style.abButtons}
             >
-              X1
-            </button>
+              <button
+                onClick={() => selectSnareSound(snareDrum)}
+                disabled={snareSelected === snare}
+              >
+                A
+              </button>
+              <button
+                onClick={() => selectSnareSound(snare2Drum)}
+                disabled={snareSelected === snare2}
+              >
+                B
+              </button>
+            </div>
+
             <button
-              onClick={() => selectFxSound(fxb)}
-              disabled={fxSelected === fxb}
+              onClick={() => setSnareMuted(!snareMuted)}
+              className={snareMuted ? style.muted : style.unmuted}
             >
-              X2
+              {snareMuted ? "M" : "M"}
             </button>
           </div>
-          <button onClick={() => setFxMuted(!fxMuted)}
-          className={fxMuted ? style.muted : style.unmuted}
-          >
-            {fxMuted ? "M" : "M"}
-          </button>
-        </div>
-        <div className="instrument">
-          <div>Bass</div>
+          <div className="instrument">
+            <div>H</div>
+            {hihatSteps.map((step, index) => (
+              <button
+                key={`hihat-${index}`}
+                className={`${style.step} ${
+                  step && !hihatMuted ? style.active : ""
+                } ${
+                  index === currentStep && !hihatMuted ? style.current : ""
+                } ${index % 8 < 4 ? style.blue : style.black}`}
+                onClick={() => toggleHihatStep(index)}
+              ></button>
+            ))}
+            <div
+            className={style.abButtons}
+            >
+              <button
+                onClick={() => selectHihatSound(hiHat)}
+                disabled={hihatSelected === hiHat}
+              >
+                A
+              </button>
+              <button
+                onClick={() => selectHihatSound(hiHat2)}
+                disabled={hihatSelected === hiHat2}
+              >
+                B
+              </button>
+            </div>
+            <button
+              onClick={() => setHihatMuted(!hihatMuted)}
+              className={hihatMuted ? style.muted : style.unmuted}
+            >
+              {hihatMuted ? "M" : "M"}
+            </button>
+          </div>
+          <div className="instrument">
+            <div>P</div>
+            {percSteps.map((step, index) => (
+              <button
+                key={`perc-${index}`}
+                className={`${style.step} ${
+                  step && !percMuted ? style.active : ""
+                } ${index === currentStep && !percMuted ? style.current : ""} ${
+                  index % 8 < 4 ? style.blue : style.black
+                }`}
+                onClick={() => togglePercStep(index)}
+              ></button>
+            ))}
+            <div
+            className={style.abButtons}
+            >
+              <button
+                onClick={() => selectPercSound(perc)}
+                disabled={percSelected === perc}
+              >
+                A
+              </button>
+              <button
+                onClick={() => selectPercSound(perc2)}
+                disabled={percSelected === perc2}
+              >
+                B
+              </button>
+            </div>
+            <button
+              onClick={() => setPercMuted(!percMuted)}
+              className={percMuted ? style.muted : style.unmuted}
+            >
+              {percMuted ? "M" : "M"}
+            </button>
+          </div>
+          <div className="instrument">
+            <div>B</div>
+            {basslineSteps.map((step, index) => (
+              <button
+                key={`bassline-${index}`}
+                className={`${style.step} ${
+                  step && !basslineMuted ? style.active : ""
+                } ${
+                  index === currentStep && !basslineMuted ? style.current : ""
+                } ${index % 8 < 4 ? style.blue : style.black}`}
+                onClick={() => toggleBasslineStep(index)}
+              ></button>
+            ))}
+            <div
+            className={style.abButtons}
+            >
+              <button
+                onClick={() => selectBasslineSound(bassline)}
+                disabled={basslineSelected === bassline}
+              >
+                A
+              </button>
+              <button
+                onClick={() => selectBasslineSound(bassline2)}
+                disabled={basslineSelected === bassline2}
+              >
+                B
+              </button>
+            </div>
+            <button
+              onClick={() => setBasslineMuted(!basslineMuted)}
+              className={basslineMuted ? style.muted : style.unmuted}
+            >
+              {basslineMuted ? "M" : "M"}
+            </button>
+          </div>
+          <div className="instrument">
+            <div>FX</div>
+            {fxSteps.map((step, index) => (
+              <button
+                key={`fx-${index}`}
+                className={`${style.step} ${
+                  step && !fxMuted ? style.active : ""
+                } ${index === currentStep && !fxMuted ? style.current : ""} ${
+                  index % 8 < 4 ? style.blue : style.black
+                }`}
+                onClick={() => toggleFxStep(index)}
+              ></button>
+            ))}
+            <div 
+            className={style.abButtons}
+            >
+              <button
+                onClick={() => selectFxSound(fxa)}
+                disabled={fxSelected === fxa}
+                
+              >
+                A
+              </button>
+              <button
+                onClick={() => selectFxSound(fxb)}
+                disabled={fxSelected === fxb}
+              >
+                B
+              </button>
+            </div>
+            <button
+              onClick={() => setFxMuted(!fxMuted)}
+              className={fxMuted ? style.muted : style.unmuted}
+            >
+              {fxMuted ? "M" : "M"}
+            </button>
+          </div>
+          </div>
+          <div className={style.extraSoundButtons}>    
+          <div className="instrument">
+            <div><FontAwesomeIcon icon="fa-hat-cowboy" /> </div>
             <button
               key={`bass-0`}
               className={`${style.step} ${bassSteps[0] ? style.active : ""}`}
               onClick={() => toggleBassStep(0)}
             ></button>
-        </div>
-        <div className="instrument">
-          <div>Synth</div>
+          </div>
+          <div className="instrument">
+            <div><FontAwesomeIcon icon={faBurst} /> </div>
             <button
               key={`synth-0`}
               className={`${style.step} ${synthSteps[0] ? style.active : ""}`}
               onClick={() => toggleSynthStep(0)}
             ></button>
-        </div>
-        <div className="instrument">
-          <div>Synth_2</div>
+          </div>
+          <div className="instrument">
+            <div><FontAwesomeIcon icon={faUmbrellaBeach} /></div>
             <button
               key={`synth2-0`}
               className={`${style.step} ${synth2Steps[0] ? style.active : ""}`}
               onClick={() => toggleSynth2Step(0)}
             ></button>
+          </div>
         </div>
       </div>
     </div>

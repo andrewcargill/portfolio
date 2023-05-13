@@ -3,11 +3,40 @@
   height: 50vh;
 }
 
+
+
+/* Containers*/
+
+
+
+.drumMachineContainer {
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.transportButtons{
+  background-color: red;
+  display: flex;
+} 
+
 .instrumentLine {
-  background-color: grey;
+  background-color: blue;
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.extraSoundButtons {
+  background-color: purple;
+  display: flex;
 }
 
 .instrument {
@@ -15,14 +44,16 @@
   flex-direction: column;
   align-items: center;
   margin: 10px;
+  font-size: 8px;
 }
 
 .step {
-  width: 20px;
-  height: 20px;
-  margin: 2px;
+  width: 10px;
+  height: 10px;
+  margin-bottom: 2px;
   background-color: #fff;
-  border-radius: 50%;
+  border-radius: 0;
+  border: solid black 2px;
 }
 
 @keyframes pulse {
@@ -39,12 +70,20 @@
   }
 }
 
+/* Buttons */
+
+.abButtons {
+  font-size: 10px;
+}
+
 .muted {
   animation: pulse 1s infinite;
+  font-size: 10px;
 }
 
 .unmuted {
   background-color: green;
+  font-size: 10px;
 }
 
 
