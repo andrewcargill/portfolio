@@ -17,6 +17,10 @@
   width: 100%;
 }
 
+.topControlsContainer {
+  width: 100%;
+}
+
 .transportButtons{
   background-color: red;
   display: flex;
@@ -38,6 +42,7 @@
   background-color: purple;
   display: flex;
 }
+
 
 
 .transportButton {

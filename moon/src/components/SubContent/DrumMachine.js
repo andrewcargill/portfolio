@@ -25,9 +25,15 @@ import synthSound from "../../media/audio/jingle.wav";
 import synthTwoSound from "../../media/audio/crash.wav";
 
 import style from "../../styles/DrumMachine.module.css";
-import { faPlay, faPause, faHatCowboy, faBurst, faUmbrellaBeach } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPlay,
+  faPause,
+  faHatCowboy,
+  faBurst,
+  faUmbrellaBeach,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-library.add( faPlay, faPause, faHatCowboy, faBurst, faUmbrellaBeach);
+library.add(faPlay, faPause, faHatCowboy, faBurst, faUmbrellaBeach);
 
 const kick = new Howl({ src: [kickSound] });
 const kick2 = new Howl({ src: [kick2Sound] });
@@ -191,7 +197,7 @@ const DrumMachine = () => {
         if (fxSteps[step] && !fxMuted) {
           fxSelected.play();
         }
-        if (bassSteps[step]&& step === 12) {
+        if (bassSteps[step] && step === 12) {
           bass.play();
         }
         if (synthSteps[step] && step === 0) {
@@ -235,31 +241,63 @@ const DrumMachine = () => {
     setPlaying((prevPlaying) => !prevPlaying);
   };
 
-  const stopSequence = () => {
-    setPlaying(false);
-    clearInterval(intervalId);
-  };
-
   return (
     <div className="text-border right-margin-desktop image-container">
       <div className={style.drumMachineContainer}>
+
+        <div className={style.topControlsContainer}>
+        {/* Transport */}
         <div className={style.transportButtons}>
-          <button 
-          onClick={playSequence} 
-          
-          className={style.transportButton}
-          >
-            {playing ? 
-            <FontAwesomeIcon icon="fa-pause" />
-            : 
-            <FontAwesomeIcon icon="fa-play" />
-            }
+          <button onClick={playSequence} className={style.transportButton}>
+            {playing ? (
+              <FontAwesomeIcon icon="fa-pause" />
+            ) : (
+              <FontAwesomeIcon icon="fa-play" />
+            )}
           </button>
           
         </div>
+        {/* Extra Sounds */}
+        <div className={style.extraSoundButtons}>
+          <div className="instrument">
+            <button
+              key={`bass-0`}
+              className={`${style.extraStep} ${
+                bassSteps[12] ? style.active : ""
+              }`}
+              onClick={() => toggleBassStep(12)}
+            >
+              <FontAwesomeIcon icon="fa-hat-cowboy" />
+            </button>
+          </div>
+          <div className="instrument">
+            <button
+              key={`synth-0`}
+              className={`${style.extraStep} ${
+                synthSteps[0] ? style.active : ""
+              }`}
+              onClick={() => toggleSynthStep(0)}
+            >
+              <FontAwesomeIcon icon={faBurst} />
+            </button>
+          </div>
+          <div className="instrument">
+            <button
+              key={`synth2-0`}
+              className={`${style.extraStep} ${
+                synth2Steps[5] ? style.active : ""
+              }`}
+              onClick={() => toggleSynth2Step(5)}
+            >
+              <FontAwesomeIcon icon={faUmbrellaBeach} />
+            </button>
+          </div>
+        </div>
+        </div>
 
+        {/* Main Instrument */}
         <div className={style.instrumentLine}>
-        <div className={style.instrument}>
+          <div className={style.instrument}>
             <div>K</div>
             {kickSteps.map((step, index) => (
               <div
@@ -272,9 +310,7 @@ const DrumMachine = () => {
                 onClick={() => toggleKickStep(index)}
               ></div>
             ))}
-            <div
-            className={style.abButtons}
-            >
+            <div className={style.abButtons}>
               <button
                 onClick={() => selectKickSound(kick)}
                 disabled={kickSelected === kick}
@@ -308,9 +344,7 @@ const DrumMachine = () => {
                 onClick={() => toggleSnareStep(index)}
               ></div>
             ))}
-            <div
-            className={style.abButtons}
-            >
+            <div className={style.abButtons}>
               <button
                 onClick={() => selectSnareSound(snareDrum)}
                 disabled={snareSelected === snare}
@@ -345,9 +379,7 @@ const DrumMachine = () => {
                 onClick={() => toggleHihatStep(index)}
               ></div>
             ))}
-            <div
-            className={style.abButtons}
-            >
+            <div className={style.abButtons}>
               <button
                 onClick={() => selectHihatSound(hiHat)}
                 disabled={hihatSelected === hiHat}
@@ -381,9 +413,7 @@ const DrumMachine = () => {
                 onClick={() => togglePercStep(index)}
               ></div>
             ))}
-            <div
-            className={style.abButtons}
-            >
+            <div className={style.abButtons}>
               <button
                 onClick={() => selectPercSound(perc)}
                 disabled={percSelected === perc}
@@ -417,9 +447,7 @@ const DrumMachine = () => {
                 onClick={() => toggleBasslineStep(index)}
               ></div>
             ))}
-            <div
-            className={style.abButtons}
-            >
+            <div className={style.abButtons}>
               <button
                 onClick={() => selectBasslineSound(bassline)}
                 disabled={basslineSelected === bassline}
@@ -453,13 +481,10 @@ const DrumMachine = () => {
                 onClick={() => toggleFxStep(index)}
               ></div>
             ))}
-            <div 
-            className={style.abButtons}
-            >
+            <div className={style.abButtons}>
               <button
                 onClick={() => selectFxSound(fxa)}
                 disabled={fxSelected === fxa}
-                
               >
                 A
               </button>
@@ -477,33 +502,8 @@ const DrumMachine = () => {
               {fxMuted ? "M" : "M"}
             </button>
           </div>
-          </div>
-          <div className={style.extraSoundButtons}>    
-          <div className="instrument">
-            <div> </div>
-            <button
-              key={`bass-0`}
-              className={`${style.extraStep} ${bassSteps[12] ? style.active : ""}`}
-              onClick={() => toggleBassStep(12)}
-            ><FontAwesomeIcon icon="fa-hat-cowboy" /></button>
-          </div>
-          <div className="instrument">
-            <div> </div>
-            <button
-              key={`synth-0`}
-              className={`${style.extraStep} ${synthSteps[0] ? style.active : ""}`}
-              onClick={() => toggleSynthStep(0)}
-            ><FontAwesomeIcon icon={faBurst} /></button>
-          </div>
-          <div className="instrument">
-            <div></div>
-            <button
-              key={`synth2-0`}
-              className={`${style.extraStep} ${synth2Steps[5] ? style.active : ""}`}
-              onClick={() => toggleSynth2Step(5)}
-            ><FontAwesomeIcon icon={faUmbrellaBeach} /></button>
-          </div>
         </div>
+        
       </div>
     </div>
   );
