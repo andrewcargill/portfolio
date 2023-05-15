@@ -191,13 +191,13 @@ const DrumMachine = () => {
         if (fxSteps[step] && !fxMuted) {
           fxSelected.play();
         }
-        if (bassSteps[step]) {
+        if (bassSteps[step]&& step === 12) {
           bass.play();
         }
         if (synthSteps[step] && step === 0) {
           synth.play();
         }
-        if (synth2Steps[0] && step === 0) {
+        if (synth2Steps[step] && step === 5) {
           synth2.play();
         }
         setCurrentStep(step);
@@ -232,7 +232,7 @@ const DrumMachine = () => {
   ]);
 
   const playSequence = () => {
-    setPlaying(true);
+    setPlaying((prevPlaying) => !prevPlaying);
   };
 
   const stopSequence = () => {
@@ -246,19 +246,16 @@ const DrumMachine = () => {
         <div className={style.transportButtons}>
           <button 
           onClick={playSequence} 
-          disabled={playing}
-          className={style.transportButton}
-          >
-            <FontAwesomeIcon icon="fa-play" />
-          </button>
-          <button 
-          onClick={stopSequence} 
-          disabled={!playing}
-          className={style.transportButton}
-          >
-            <FontAwesomeIcon icon="fa-pause" />
           
+          className={style.transportButton}
+          >
+            {playing ? 
+            <FontAwesomeIcon icon="fa-pause" />
+            : 
+            <FontAwesomeIcon icon="fa-play" />
+            }
           </button>
+          
         </div>
 
         <div className={style.instrumentLine}>
@@ -483,28 +480,28 @@ const DrumMachine = () => {
           </div>
           <div className={style.extraSoundButtons}>    
           <div className="instrument">
-            <div><FontAwesomeIcon icon="fa-hat-cowboy" /> </div>
+            <div> </div>
             <button
               key={`bass-0`}
-              className={`${style.step} ${bassSteps[0] ? style.active : ""}`}
-              onClick={() => toggleBassStep(0)}
-            ></button>
+              className={`${style.extraStep} ${bassSteps[12] ? style.active : ""}`}
+              onClick={() => toggleBassStep(12)}
+            ><FontAwesomeIcon icon="fa-hat-cowboy" /></button>
           </div>
           <div className="instrument">
-            <div><FontAwesomeIcon icon={faBurst} /> </div>
+            <div> </div>
             <button
               key={`synth-0`}
-              className={`${style.step} ${synthSteps[0] ? style.active : ""}`}
+              className={`${style.extraStep} ${synthSteps[0] ? style.active : ""}`}
               onClick={() => toggleSynthStep(0)}
-            ></button>
+            ><FontAwesomeIcon icon={faBurst} /></button>
           </div>
           <div className="instrument">
-            <div><FontAwesomeIcon icon={faUmbrellaBeach} /></div>
+            <div></div>
             <button
               key={`synth2-0`}
-              className={`${style.step} ${synth2Steps[0] ? style.active : ""}`}
-              onClick={() => toggleSynth2Step(0)}
-            ></button>
+              className={`${style.extraStep} ${synth2Steps[5] ? style.active : ""}`}
+              onClick={() => toggleSynth2Step(5)}
+            ><FontAwesomeIcon icon={faUmbrellaBeach} /></button>
           </div>
         </div>
       </div>

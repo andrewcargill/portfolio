@@ -40,23 +40,17 @@ useEffect(() => {
 }, [kickSteps, playing, kickMuted, currentStep]);
 
 
-  const playSequence = () => {
-    setPlaying(true);
-  };
+const playSequence = () => {
+  setPlaying((prevPlaying) => !prevPlaying);
+};
 
-  const stopSequence = () => {
-    setPlaying(false);
-    clearInterval(intervalId);
-  };
+
 
   return (
     <div>
-      <button onClick={playSequence} disabled={playing}>
-        Play
-      </button>
-      <button onClick={stopSequence} disabled={!playing}>
-        Stop
-      </button>
+      <button onClick={playSequence}>
+      {playing ? "Pause" : "Play"}
+    </button>
       <div className={style.instrumentLine}>
         <div className="instrument">
           <div>Kick</div>
