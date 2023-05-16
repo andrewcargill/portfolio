@@ -48,8 +48,14 @@ const playSequence = () => {
 
   return (
     <div>
-      <button onClick={playSequence}>
+      <button 
+      onClick={playSequence}
+      className={`${style.pushable}`}
+      
+      >
+      <span className={`${style.front} ${playing ? style.pushableActive : "" }`}>
       {playing ? "Pause" : "Play"}
+      </span>  
     </button>
       <div className={style.instrumentLine}>
         <div className="instrument">

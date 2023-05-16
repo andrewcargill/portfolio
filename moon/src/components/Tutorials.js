@@ -61,6 +61,7 @@ function Tutorials({ navClick }) {
         {/* Image Component */}
         <DrumMachine />
         
+        
       </div>
     </div>
   );

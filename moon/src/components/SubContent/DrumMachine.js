@@ -248,12 +248,14 @@ const DrumMachine = () => {
 
           {/* Transport */}
           
-            <button onClick={playSequence} className={style.drumButton}>
+            <button onClick={playSequence} className={style.pushable}>
+              < span className={`${style.front} ${playing ? style.pushableActive : "" }`}>
               {playing ? (
                 <FontAwesomeIcon icon="fa-pause" />
               ) : (
                 <FontAwesomeIcon icon="fa-play" />
               )}
+              </span>
             </button>
           
 

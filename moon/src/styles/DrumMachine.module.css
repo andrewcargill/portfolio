@@ -7,8 +7,6 @@
 
 /* Containers*/
 
-
-
 .drumMachineContainer {
   background-color: silver;
   display: flex;
@@ -134,3 +132,49 @@
 .current {
   background-color: red;
 }
+
+/* Playing with buttons */
+
+.front {
+  will-change: transform;
+  transition: transform 250ms;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  
+}
+
+.pushable:hover .front {
+  transform: translateY(4px) translateX(1.7px);
+}
+
+.pushable:active .front,
+.pushableActive {
+  transform: translateY(1px) translateX(0);
+  
+}
+
+
+.pushable {
+width: 50px;
+height: 50px;
+background: lightgray;
+border: black 3px;
+border-style: double;
+border-radius: 12px;
+padding: 0;
+cursor: pointer;
+}
+.front {
+width: 50px;
+height: 50px;
+display: block;
+padding: 10px;
+border: solid black 1px;
+border-radius: 12px;
+font-size: 15px;
+background: white;
+color: black;
+transform: translateY(3px) translateX(1.5px);
+}
+
+
+
