@@ -244,47 +244,44 @@ const DrumMachine = () => {
   return (
     <div className="text-border right-margin-desktop image-container">
       <div className={style.drumMachineContainer}>
-
         <div className={style.topControlsContainer}>
-        {/* Transport */}
-        <div className={style.transportButtons}>
-          <button onClick={playSequence} className={style.transportButton}>
-            {playing ? (
-              <FontAwesomeIcon icon="fa-pause" />
-            ) : (
-              <FontAwesomeIcon icon="fa-play" />
-            )}
-          </button>
+
+          {/* Transport */}
           
-        </div>
-        {/* Extra Sounds */}
-        <div className={style.extraSoundButtons}>
-          <div className="instrument">
+            <button onClick={playSequence} className={style.drumButton}>
+              {playing ? (
+                <FontAwesomeIcon icon="fa-pause" />
+              ) : (
+                <FontAwesomeIcon icon="fa-play" />
+              )}
+            </button>
+          
+
+          {/* Extra Sounds */}
+          <div className={style.extraFxButtonsContainer}>
             <button
               key={`bass-0`}
-              className={`${style.extraStep} ${
+              className={`${style.drumButton} ${
                 bassSteps[12] ? style.active : ""
               }`}
               onClick={() => toggleBassStep(12)}
             >
               <FontAwesomeIcon icon="fa-hat-cowboy" />
             </button>
-          </div>
-          <div className="instrument">
+
             <button
               key={`synth-0`}
-              className={`${style.extraStep} ${
+              className={`${style.drumButton} ${
                 synthSteps[0] ? style.active : ""
               }`}
               onClick={() => toggleSynthStep(0)}
             >
               <FontAwesomeIcon icon={faBurst} />
             </button>
-          </div>
-          <div className="instrument">
+
             <button
               key={`synth2-0`}
-              className={`${style.extraStep} ${
+              className={`${style.drumButton} ${
                 synth2Steps[5] ? style.active : ""
               }`}
               onClick={() => toggleSynth2Step(5)}
@@ -292,7 +289,6 @@ const DrumMachine = () => {
               <FontAwesomeIcon icon={faUmbrellaBeach} />
             </button>
           </div>
-        </div>
         </div>
 
         {/* Main Instrument */}
@@ -313,12 +309,14 @@ const DrumMachine = () => {
             <div className={style.abButtons}>
               <button
                 onClick={() => selectKickSound(kick)}
+                className={style.drumButton}
                 disabled={kickSelected === kick}
               >
                 A
               </button>
               <button
                 onClick={() => selectKickSound(kick2)}
+                className={style.drumButton}
                 disabled={kickSelected === kick2}
               >
                 B
@@ -326,7 +324,7 @@ const DrumMachine = () => {
             </div>
             <button
               onClick={() => setKickMuted(!kickMuted)}
-              className={kickMuted ? style.muted : style.unmuted}
+              className={`${style.drumButton} ${kickMuted ? style.muted : style.unmuted}`}
             >
               {kickMuted ? "M" : "M"}
             </button>
@@ -344,15 +342,17 @@ const DrumMachine = () => {
                 onClick={() => toggleSnareStep(index)}
               ></div>
             ))}
-            <div className={style.abButtons}>
+            <div className={`${style.abButtons} `}>
               <button
                 onClick={() => selectSnareSound(snareDrum)}
+                className={style.drumButton}
                 disabled={snareSelected === snare}
               >
                 A
               </button>
               <button
                 onClick={() => selectSnareSound(snare2Drum)}
+                className={style.drumButton}
                 disabled={snareSelected === snare2}
               >
                 B
@@ -361,7 +361,7 @@ const DrumMachine = () => {
 
             <button
               onClick={() => setSnareMuted(!snareMuted)}
-              className={snareMuted ? style.muted : style.unmuted}
+              className={`${style.drumButton} ${snareMuted ? style.muted : style.unmuted}`}
             >
               {snareMuted ? "M" : "M"}
             </button>
@@ -382,12 +382,14 @@ const DrumMachine = () => {
             <div className={style.abButtons}>
               <button
                 onClick={() => selectHihatSound(hiHat)}
+                className={style.drumButton}
                 disabled={hihatSelected === hiHat}
               >
                 A
               </button>
               <button
                 onClick={() => selectHihatSound(hiHat2)}
+                className={style.drumButton}
                 disabled={hihatSelected === hiHat2}
               >
                 B
@@ -395,7 +397,7 @@ const DrumMachine = () => {
             </div>
             <button
               onClick={() => setHihatMuted(!hihatMuted)}
-              className={hihatMuted ? style.muted : style.unmuted}
+              className={`${style.drumButton} ${hihatMuted ? style.muted : style.unmuted}`}
             >
               {hihatMuted ? "M" : "M"}
             </button>
@@ -416,12 +418,14 @@ const DrumMachine = () => {
             <div className={style.abButtons}>
               <button
                 onClick={() => selectPercSound(perc)}
+                className={style.drumButton}
                 disabled={percSelected === perc}
               >
                 A
               </button>
               <button
                 onClick={() => selectPercSound(perc2)}
+                className={style.drumButton}
                 disabled={percSelected === perc2}
               >
                 B
@@ -429,7 +433,7 @@ const DrumMachine = () => {
             </div>
             <button
               onClick={() => setPercMuted(!percMuted)}
-              className={percMuted ? style.muted : style.unmuted}
+              className={`${style.drumButton} ${percMuted ? style.muted : style.unmuted}`}
             >
               {percMuted ? "M" : "M"}
             </button>
@@ -450,12 +454,14 @@ const DrumMachine = () => {
             <div className={style.abButtons}>
               <button
                 onClick={() => selectBasslineSound(bassline)}
+                className={style.drumButton}
                 disabled={basslineSelected === bassline}
               >
                 A
               </button>
               <button
                 onClick={() => selectBasslineSound(bassline2)}
+                className={style.drumButton}
                 disabled={basslineSelected === bassline2}
               >
                 B
@@ -463,7 +469,7 @@ const DrumMachine = () => {
             </div>
             <button
               onClick={() => setBasslineMuted(!basslineMuted)}
-              className={basslineMuted ? style.muted : style.unmuted}
+              className={`${style.drumButton} ${basslineMuted ? style.muted : style.unmuted}`}
             >
               {basslineMuted ? "M" : "M"}
             </button>
@@ -484,12 +490,14 @@ const DrumMachine = () => {
             <div className={style.abButtons}>
               <button
                 onClick={() => selectFxSound(fxa)}
+                className={style.drumButton}
                 disabled={fxSelected === fxa}
               >
                 A
               </button>
               <button
                 onClick={() => selectFxSound(fxb)}
+                className={style.drumButton}
                 disabled={fxSelected === fxb}
               >
                 B
@@ -497,13 +505,12 @@ const DrumMachine = () => {
             </div>
             <button
               onClick={() => setFxMuted(!fxMuted)}
-              className={fxMuted ? style.muted : style.unmuted}
+              className={`${style.drumButton} ${fxMuted ? style.muted : style.unmuted}`}
             >
               {fxMuted ? "M" : "M"}
             </button>
           </div>
         </div>
-        
       </div>
     </div>
   );

@@ -329,6 +329,7 @@ a {
 
 #logo-image {
   width: 13vw;
+  min-width: 63px;
   /* max-width: 66px; */
   border-radius: 0;
 }
