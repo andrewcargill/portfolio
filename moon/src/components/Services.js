@@ -17,6 +17,7 @@ import Image from "./SubContent/Image";
 import AutoHeaderText from "./SubContent/AutoHeaderText";
 import Learn from "./SubContent/Learn";
 import ServicesContent from "./SubContent/ServicesContent";
+import CubeGame from "./SubContent/CubeGame";
 
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
@@ -60,7 +61,7 @@ function Services({ navClick }) {
       {/* Half Page Content Container */}
       <div id="half-page-container" className="slide-right">
         {/* Image Component */}
-        <ServicesContent images={ImagePlaylist} />
+        <CubeGame />
       </div>
     </div>
   );
