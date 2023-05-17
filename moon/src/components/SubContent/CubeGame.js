@@ -68,17 +68,58 @@ const CubeGame = () => {
             }}
           >
             <div className={`${style.face} ${style.front}`}>
-              <h2>
+              
                 <span
                   className={`${style.clickable} ${
                     clickedWords.includes("Test. ") ? style.clicked : ""
                   }`}
                   onClick={() => handleWordClick("Test. ")}
                 >
-                  Test. 
+                   Test. 
                 </span>
-         
-              </h2>
+                
+                <span
+                  className={`${style.clickable} ${
+                    clickedWords.includes("Test2. ") ? style.clicked : ""
+                  }`}
+                  onClick={() => handleWordClick("Test2. ")}
+                >
+                   Test2. 
+                </span>
+                <span
+                  className={`${style.clickable} ${
+                    clickedWords.includes("Test3. ") ? style.clicked : ""
+                  }`}
+                  onClick={() => handleWordClick("Test3. ")}
+                >
+                   Test3. 
+                </span>
+                <span
+                  className={`${style.clickable} ${
+                    clickedWords.includes("Test4. ") ? style.clicked : ""
+                  }`}
+                  onClick={() => handleWordClick("Test4. ")}
+                >
+                   Test4. 
+                </span>
+                <span
+                  className={`${style.clickable} ${
+                    clickedWords.includes("Test5. ") ? style.clicked : ""
+                  }`}
+                  onClick={() => handleWordClick("Test5. ")}
+                >
+                   Test5. 
+                </span>
+                <span
+                  className={`${style.clickable} ${
+                    clickedWords.includes("Test6. ") ? style.clicked : ""
+                  }`}
+                  onClick={() => handleWordClick("Test6. ")}
+                >
+                   Test6. 
+                </span>
+                
+              
             </div>
             <div className={`${style.face} ${style.back}`}></div>
             <div className={`${style.face} ${style.top}`}></div>
