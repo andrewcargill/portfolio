@@ -14,7 +14,7 @@ import hihat2 from "../../media/audio/hi-hat2.wav";
 import tom from "../../media/audio/tom.wav";
 import clav from "../../media/audio/clav.wav";
 
-import basshit from "../../media/audio/basshit.wav";
+import basshit from "../../media/audio/ohshit.wav";
 import basshit2 from "../../media/audio/basshit2.wav";
 
 import stab from "../../media/audio/stab.wav";
@@ -22,7 +22,7 @@ import stab2 from "../../media/audio/stab2.wav";
 
 import bassSound from "../../media/audio/vox1.wav";
 import synthSound from "../../media/audio/jingle.wav";
-import synthTwoSound from "../../media/audio/crash.wav";
+import synthTwoSound from "../../media/audio/slow.wav";
 
 import style from "../../styles/DrumMachine.module.css";
 import {
@@ -31,9 +31,10 @@ import {
   faHatCowboy,
   faBurst,
   faUmbrellaBeach,
+  faSquareXmark
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-library.add(faPlay, faPause, faHatCowboy, faBurst, faUmbrellaBeach);
+library.add(faPlay, faPause, faHatCowboy, faBurst, faUmbrellaBeach, faSquareXmark);
 
 const kick = new Howl({ src: [kickSound] });
 const kick2 = new Howl({ src: [kick2Sound] });
@@ -58,23 +59,65 @@ const synth = new Howl({ src: [synthSound] });
 const synth2 = new Howl({ src: [synthTwoSound] });
 
 const DrumMachine = () => {
-  const [kickSteps, setKickSteps] = useState(Array(16).fill(false));
-  const [kickSelected, setKickSelected] = useState(kick);
+  const [kickSteps, setKickSteps] = useState(
+    [
+      true, false, false, false,
+      false, false, false, false,
+      false, true, false, false,
+      true, false, true, false,
+    ]
+    );
+  const [kickSelected, setKickSelected] = useState(kick2);
 
-  const [snareSteps, setSnareSteps] = useState(Array(16).fill(false));
+  const [snareSteps, setSnareSteps] = useState(
+    [
+      false, false, true, false,
+      false, false, true, false,
+      true, false, true, true,
+      false, false, true, false, 
+    ]
+  );
   const [snareSelected, setSnareSelected] = useState(snare2Drum);
 
-  const [hihatSteps, setHihatSteps] = useState(Array(16).fill(false));
+  const [hihatSteps, setHihatSteps] = useState(
+    [
+      false, true, false, true,
+      false, true, false, true,
+      false, true, false, true,
+      false, true, false, false,
+    ]
+  );
   const [hihatSelected, setHihatSelected] = useState(hiHat2);
 
-  const [percSteps, setPercSteps] = useState(Array(16).fill(false));
-  const [percSelected, setPercSelected] = useState(perc);
+  const [percSteps, setPercSteps] = useState(
+    [
+      false, false, false, false,
+      false, false, false, false,
+      false, false, false, true,
+      true, false, false, false,
+    ]
+  );
+  const [percSelected, setPercSelected] = useState(perc2);
 
-  const [basslineSteps, setBasslineSteps] = useState(Array(16).fill(false));
+  const [basslineSteps, setBasslineSteps] = useState(
+    [
+      false, false, false, false,
+      true, false, true, false,
+      false, false, false, false,
+      true, true, true, false,
+    ]
+  );
   const [basslineSelected, setBasslineSelected] = useState(bassline2);
 
-  const [fxSteps, setFxSteps] = useState(Array(16).fill(false));
-  const [fxSelected, setFxSelected] = useState(fxb);
+  const [fxSteps, setFxSteps] = useState(
+    [
+      true, false, true, true,
+      false, false, false, false,
+      false, false, true, true,
+      false, false, false, false,
+    ]
+  );
+  const [fxSelected, setFxSelected] = useState(fxa);
 
   const [bassSteps, setBassSteps] = useState(Array(16).fill(false));
   const [synthSteps, setSynthSteps] = useState(Array(16).fill(false));
@@ -169,6 +212,15 @@ const DrumMachine = () => {
     setFxSelected(sound);
   };
 
+  const resetSteps = () => {
+    setKickSteps(Array(16).fill(false));
+    setSnareSteps(Array(16).fill(false));
+    setHihatSteps(Array(16).fill(false));
+    setPercSteps(Array(16).fill(false));
+    setBasslineSteps(Array(16).fill(false));
+    setFxSteps(Array(16).fill(false));
+  };
+
   useEffect(() => {
     console.log("snare muted", snareMuted);
     console.log("kick muted", kickMuted);
@@ -255,8 +307,9 @@ const DrumMachine = () => {
               ) : (
                 <FontAwesomeIcon icon="fa-play" />
               )}
-            
             </button>
+
+            
           </div>
 
           <div className={style.drumLogo}>
@@ -293,6 +346,10 @@ const DrumMachine = () => {
               onClick={() => toggleSynth2Step(5)}
             >
               <FontAwesomeIcon icon={faUmbrellaBeach} />
+            </button>
+            {/* Reset Button */}
+            <button onClick={resetSteps} className={style.resetButton}>
+              <FontAwesomeIcon icon={faSquareXmark} />
             </button>
           </div>
         </div>

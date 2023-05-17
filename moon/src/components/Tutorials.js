@@ -62,6 +62,7 @@ function Tutorials({ navClick }) {
         <DrumMachine />
         
         
+        
       </div>
     </div>
   );
