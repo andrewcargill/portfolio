@@ -14,16 +14,18 @@
   align-items: center;
   width: 100%;
   height: auto;
-  padding-top: 20px;
+  padding-top: 6px;
 
 }
 
 .topControlsContainer {
+  background-color: pink;
   width: 100%;
-  height: 30px; /* Sets button height*/
+  padding: 3px;
+  height: 45px; /* Sets button height*/
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .instrumentLine {
@@ -38,17 +40,35 @@
 
 }
 
+.transportContainer {
+  padding: 3px;
+  border-radius: 10px;
+  display: flex;
+  width: 20%; /* Sets all button width */
+  justify-content: start;
+}
+
 .extraFxButtonsContainer {
+  padding: 3px;
+  border-radius: 10px;
   display: flex;
   width: 40%; /* Sets all button width */
   justify-content: space-around;
   
 }
 
+.drumLogo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
 
-.transportButton {
-  font-size: 15px;
-  width: 50px;
+.drumName {
+  font-family: 'Rajdhani', sans-serif;
+  color: black;
+  font-size: 25px;
 }
 
 .drumButton {
@@ -56,11 +76,24 @@
   max-width: 35px;
   height: 100%;
   margin-bottom: 2px;
+  color: black;
   background-color: #fff;
   border-radius: 10px;
   font-size: 13px;
   border: solid black 2px;
 }
+
+.drumButton:disabled {
+  background-color: lightcyan;
+  color: black;
+  font-weight: 800px;
+}
+
+.transportButton {
+  width: 12vw;
+  max-width: 55px;
+}
+
 
 /* Step Sequencer */
 
@@ -110,7 +143,7 @@
 }
 
 .unmuted {
-  background-color: green;
+  background-color: lightgreen;
   
 }
 
@@ -137,34 +170,47 @@
 
 .front {
   will-change: transform;
-  transition: transform 250ms;
+  transition: transform 150ms;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   
 }
 
 .pushable:hover .front {
-  transform: translateY(4px) translateX(1.7px);
+  transform: translateY(2px);
 }
 
 .pushable:active .front,
 .pushableActive {
-  transform: translateY(1px) translateX(0);
+  transform: translateY(1px);
   
 }
 
 
 .pushable {
-width: 50px;
-height: 50px;
-background: lightgray;
-border: black 3px;
-border-style: double;
-border-radius: 12px;
+width: 10vw;
+max-width: 35px;
+height:100%;
+background: black;
+border: none;
+
+border-radius: 10px;
 padding: 0;
 cursor: pointer;
 }
 .front {
-width: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 10vw; /* sets button width */
+  max-width: 35px;
+  height: 100%;
+  margin-bottom: 2px;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 13px;
+  border: solid black 2px;
+/* width: 50px;
 height: 50px;
 display: block;
 padding: 10px;
@@ -172,8 +218,8 @@ border: solid black 1px;
 border-radius: 12px;
 font-size: 15px;
 background: white;
-color: black;
-transform: translateY(3px) translateX(1.5px);
+color: black; */
+transform: translateY(2px) ;
 }
 
 

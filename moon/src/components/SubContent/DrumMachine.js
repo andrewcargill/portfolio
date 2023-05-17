@@ -71,10 +71,10 @@ const DrumMachine = () => {
   const [percSelected, setPercSelected] = useState(perc);
 
   const [basslineSteps, setBasslineSteps] = useState(Array(16).fill(false));
-  const [basslineSelected, setBasslineSelected] = useState(bassline);
+  const [basslineSelected, setBasslineSelected] = useState(bassline2);
 
   const [fxSteps, setFxSteps] = useState(Array(16).fill(false));
-  const [fxSelected, setFxSelected] = useState(bassline);
+  const [fxSelected, setFxSelected] = useState(fxb);
 
   const [bassSteps, setBassSteps] = useState(Array(16).fill(false));
   const [synthSteps, setSynthSteps] = useState(Array(16).fill(false));
@@ -247,17 +247,21 @@ const DrumMachine = () => {
         <div className={style.topControlsContainer}>
 
           {/* Transport */}
-          
-            <button onClick={playSequence} className={style.pushable}>
-              < span className={`${style.front} ${playing ? style.pushableActive : "" }`}>
+          <div className={style.transportContainer}>
+            <button onClick={playSequence} className={`${style.drumButton} ${style.transportButton}`}>
+             
               {playing ? (
                 <FontAwesomeIcon icon="fa-pause" />
               ) : (
                 <FontAwesomeIcon icon="fa-play" />
               )}
-              </span>
+            
             </button>
-          
+          </div>
+
+          <div className={style.drumLogo}>
+            <div className={style.drumName}>DR-01</div>
+          </div>
 
           {/* Extra Sounds */}
           <div className={style.extraFxButtonsContainer}>
@@ -312,8 +316,8 @@ const DrumMachine = () => {
               <button
                 onClick={() => selectKickSound(kick)}
                 className={style.drumButton}
-                disabled={kickSelected === kick}
-              >
+                disabled={kickSelected === kick}>
+                  
                 A
               </button>
               <button
@@ -348,14 +352,14 @@ const DrumMachine = () => {
               <button
                 onClick={() => selectSnareSound(snareDrum)}
                 className={style.drumButton}
-                disabled={snareSelected === snare}
+                disabled={snareSelected === snareDrum}
               >
                 A
               </button>
               <button
                 onClick={() => selectSnareSound(snare2Drum)}
                 className={style.drumButton}
-                disabled={snareSelected === snare2}
+                disabled={snareSelected === snare2Drum}
               >
                 B
               </button>
