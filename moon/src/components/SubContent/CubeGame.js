@@ -49,7 +49,7 @@ const CubeGame = () => {
   };
 
   const frontwords = [
-    { word: "Test. ", ref: "Test ", onClick: handleWordClick },
+    { word: "Work. ", ref: "Test ", onClick: handleWordClick },
     { word: "Test2. ", ref: "Test2 ", onClick: handleWordClick },
     { word: "Apple. ", ref: "Apple ", onClick: handleWordClick },
     { word: "Cleo. ", ref: "Cleo ", onClick: handleWordClick },
