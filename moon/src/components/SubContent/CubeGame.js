@@ -75,6 +75,7 @@ const CubeGame = () => {
           <div
             id={style.cube}
             onMouseDown={handleCubeMouseDown}
+            onTouchStart={handleCubeMouseDown}
             style={{
               transform: `rotateX(${cubeRotationX}deg) rotateY(${cubeRotationY}deg)`,
             }}
