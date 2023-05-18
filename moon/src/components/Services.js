@@ -18,6 +18,7 @@ import AutoHeaderText from "./SubContent/AutoHeaderText";
 import Learn from "./SubContent/Learn";
 import ServicesContent from "./SubContent/ServicesContent";
 import CubeGame from "./SubContent/CubeGame";
+import Square from "./SubContent/Square";
 
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
@@ -61,7 +62,7 @@ function Services({ navClick }) {
       {/* Half Page Content Container */}
       <div id="half-page-container" className="slide-right">
         {/* Image Component */}
-        <CubeGame />
+        <Square />
       </div>
     </div>
   );

@@ -1,0 +1,24 @@
+.square {
+    background-color: brown;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    touch-action: none;
+  }
+  
+  .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: red;
+    cursor: grab;
+  }
+  
+  .circle:active {
+    cursor: grabbing;
+  }
+  
