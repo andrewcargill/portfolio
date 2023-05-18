@@ -48,6 +48,18 @@ const CubeGame = () => {
     }
   };
 
+  const frontwords = [
+    { word: "Test. ", ref: "Test ", onClick: handleWordClick },
+    { word: "Test2. ", ref: "Test2 ", onClick: handleWordClick },
+    { word: "Apple. ", ref: "Apple ", onClick: handleWordClick },
+    { word: "Cleo. ", ref: "Cleo ", onClick: handleWordClick },
+    { word: "Music. ", ref: "Music ", onClick: handleWordClick },
+    { word: "Sail. ", ref: "Sail ", onClick: handleWordClick },
+    { word: "Izzie. ", ref: "Izzie ", onClick: handleWordClick },
+    { word: "Farm. ", ref: "Farm ", onClick: handleWordClick },
+    // Add more words as needed
+  ];
+
   return (
     <div className="text-border right-margin-desktop image-container">
       <div className={style.page}>
@@ -68,56 +80,18 @@ const CubeGame = () => {
             }}
           >
             <div className={`${style.face} ${style.front}`}>
-              
-                <span
-                  className={`${style.clickable} ${
-                    clickedWords.includes("Test. ") ? style.clicked : ""
-                  }`}
-                  onClick={() => handleWordClick("Test. ")}
-                >
-                   Test. 
-                </span>
-                
-                <span
-                  className={`${style.clickable} ${
-                    clickedWords.includes("Test2. ") ? style.clicked : ""
-                  }`}
-                  onClick={() => handleWordClick("Test2. ")}
-                >
-                   Test2. 
-                </span>
-                <span
-                  className={`${style.clickable} ${
-                    clickedWords.includes("Test3. ") ? style.clicked : ""
-                  }`}
-                  onClick={() => handleWordClick("Test3. ")}
-                >
-                   Test3. 
-                </span>
-                <span
-                  className={`${style.clickable} ${
-                    clickedWords.includes("Test4. ") ? style.clicked : ""
-                  }`}
-                  onClick={() => handleWordClick("Test4. ")}
-                >
-                   Test4. 
-                </span>
-                <span
-                  className={`${style.clickable} ${
-                    clickedWords.includes("Test5. ") ? style.clicked : ""
-                  }`}
-                  onClick={() => handleWordClick("Test5. ")}
-                >
-                   Test5. 
-                </span>
-                <span
-                  className={`${style.clickable} ${
-                    clickedWords.includes("Test6. ") ? style.clicked : ""
-                  }`}
-                  onClick={() => handleWordClick("Test6. ")}
-                >
-                   Test6. 
-                </span>
+
+            {frontwords.map(({ word, ref, onClick }) => (
+              <span
+                key={ref}
+                className={`${style.clickable} ${
+                  Array.from(clickedWords).includes(ref) ? style.clicked : ""
+                }`}
+                onClick={() => onClick(ref)}
+              >
+                {word}
+              </span>
+            ))}
                 
               
             </div>
@@ -131,10 +105,7 @@ const CubeGame = () => {
             <div className={`${style.face} ${style.right}`}></div>
           </div>
         </div>
-       
       </div>
-
-      
     </div>
   );
 };

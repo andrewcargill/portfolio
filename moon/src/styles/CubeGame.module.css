@@ -29,6 +29,7 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
+    font-family: 'Rubik Mono One';
     font-size: 20px;  /* FONT SIZE */
     text-transform: uppercase;
 }
@@ -40,7 +41,13 @@
   transform-style: preserve-3d;
   transform: rotateX(30deg) rotateY(30deg);
   transition: transform 1s ease-in-out;
+  color: black;
   cursor: grab;
+  touch-action: auto;
+  -webkit-overflow-scrolling: touch;
+  font-family: 'Saira', sans-serif;
+  font-weight: 400;
+  font-size: 10px; /* FONT SIZE */
 }
 #cube:active {
   cursor: grabbing;
@@ -55,7 +62,7 @@
   flex-wrap: wrap;
   border-radius: 5px;
   opacity: 0.9;
-  font-size: 20px; /* FONT SIZE */
+  
 }
 #cube .front {
   transform: translateZ(80px);
