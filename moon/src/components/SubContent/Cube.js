@@ -3,6 +3,7 @@ import style from "../../styles/Cube.module.css";
 
 const Cube = () => {
   const [cubeRotation, setCubeRotation] = useState({ x: 0, y: 0 });
+  const [clickedWords, setClickedWords] = useState([]);
   const cubeRef = useRef(null);
   const touchStartRef = useRef(null);
 
@@ -55,8 +56,38 @@ const Cube = () => {
     setCubeRotation({ x: offsetY, y: offsetX });
   };
 
+  const handleWordClick = (word) => {
+    if (clickedWords.includes(word)) {
+      setClickedWords((prevClickedWords) =>
+        prevClickedWords.filter((clickedWord) => clickedWord !== word)
+      );
+    } else {
+      setClickedWords((prevClickedWords) => [...prevClickedWords, word]);
+    }
+  };
+
+  const frontwords = [
+    { word: "Work. ", ref: "Test ", onClick: handleWordClick },
+    { word: "Test2. ", ref: "Test2 ", onClick: handleWordClick },
+    { word: "Apple. ", ref: "Apple ", onClick: handleWordClick },
+    { word: "Cleo. ", ref: "Cleo ", onClick: handleWordClick },
+    { word: "Music. ", ref: "Music ", onClick: handleWordClick },
+    { word: "Sail. ", ref: "Sail ", onClick: handleWordClick },
+    { word: "Izzie. ", ref: "Izzie ", onClick: handleWordClick },
+    { word: "Farm. ", ref: "Farm ", onClick: handleWordClick },
+    // Add more words as needed
+  ];
+
+
   return (
     <div className="text-border right-margin-desktop image-container">
+        <div className={style.page}>
+        {/* Clicked words */}
+        <div className={style.clickedWords}>
+      {clickedWords.map((word) => (
+          <span key={word}>{word}</span>
+        ))}
+        </div>
     <div
       className={style.cubeContainer}
       onMouseDown={handleMouseDown}
@@ -70,13 +101,28 @@ const Cube = () => {
           transform: `rotateX(${cubeRotation.x}deg) rotateY(${cubeRotation.y}deg)`,
         }}
       >
-        <div className={`${style.face} ${style.front}`}>Front</div>
+        {/* FRONT FACE */}
+        <div className={`${style.face} ${style.front}`}>
+        {frontwords.map(({ word, ref, onClick }) => (
+              <span
+                key={ref}
+                className={`${style.clickable} ${
+                  Array.from(clickedWords).includes(ref) ? style.clicked : ""
+                }`}
+                onClick={() => onClick(ref)}
+              >
+                {word}
+              </span>
+            ))}
+        </div>
+        {/* BACK FACE */}
         <div className={`${style.face} ${style.back}`}>Back</div>
         <div className={`${style.face} ${style.top}`}>Top</div>
         <div className={`${style.face} ${style.bottom}`}>Bottom</div>
         <div className={`${style.face} ${style.left}`}>Left</div>
         <div className={`${style.face} ${style.right}`}>Right</div>
       </div>
+    </div>
     </div>
     </div>
   );
