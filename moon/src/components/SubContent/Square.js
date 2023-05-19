@@ -3,8 +3,11 @@ import style from "../../styles/Square.module.css";
 
 const Square = () => {
   const [circlePosition, setCirclePosition] = useState({ x: 55, y: 55 });
+  const [isDragging, setIsDragging] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
   const circleRef = useRef(null);
   const touchStartRef = useRef(null);
+  const offset = isDragging ? 140 : 0; // Adjust the offset value as needed
 
   const handleMouseDown = (event) => {
     event.preventDefault();
@@ -17,6 +20,7 @@ const Square = () => {
     document.addEventListener("mouseup", handleMouseUp);
 
     setCirclePosition({ x: offsetX, y: offsetY });
+    setIsClicked(false);
   };
 
   const handleMouseMove = (event) => {
@@ -26,13 +30,16 @@ const Square = () => {
     const offsetY = clientY - squareRect.top;
 
     if (offsetX >= 0 && offsetX <= squareRect.width && offsetY >= 0 && offsetY <= squareRect.height) {
-      setCirclePosition({ x: offsetX, y: offsetY });
+      if (isDragging) {
+        setCirclePosition({ x: offsetX, y: offsetY });
+      }
     }
   };
 
   const handleMouseUp = () => {
     document.removeEventListener("mousemove", handleMouseMove);
     document.removeEventListener("mouseup", handleMouseUp);
+    setIsDragging(false);
   };
 
   const handleTouchStart = (event) => {
@@ -44,6 +51,7 @@ const Square = () => {
     const offsetY = clientY - squareRect.top;
 
     touchStartRef.current = { offsetX, offsetY };
+    setIsClicked(false);
   };
 
   const handleTouchMove = (event) => {
@@ -55,19 +63,27 @@ const Square = () => {
     const offsetY = clientY - squareRect.top;
 
     if (offsetX >= 0 && offsetX <= squareRect.width && offsetY >= 0 && offsetY <= squareRect.height) {
-      setCirclePosition({ x: offsetX, y: offsetY });
+      if (isDragging) {
+        setCirclePosition({ x: offsetX, y: offsetY });
+      }
     }
+  };
+
+  const handleCircleClick = () => {
+    setIsDragging(true);
+    setIsClicked(true);
   };
 
   return (
     <div className={style.square} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
       <div
-        className={style.circle}
+        className={`${style.circle} ${isDragging ? style.dragging : ""} ${isClicked ? style.clicked : ""}`}
         ref={circleRef}
-        style={{ transform: `translate(${circlePosition.x - 20}px, ${circlePosition.y - 20}px)` }}
+        style={{ transform: `translate(${circlePosition.x - offset}px, ${circlePosition.y - offset}px)` }}
         onMouseDown={handleMouseDown}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
+        onClick={handleCircleClick}
       />
     </div>
   );
