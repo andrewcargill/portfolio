@@ -63,7 +63,7 @@ function Services({ navClick }) {
       {/* Half Page Content Container */}
       <div id="half-page-container" className="slide-right">
         {/* Image Component */}
-        <Square />
+        <Cube />
       </div>
     </div>
   );

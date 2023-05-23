@@ -1,98 +1,99 @@
 .cubeContainer {
-    width: 100%;
-    height: 100%;
-    perspective: 800px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    touch-action: none;
-  }
-  
-  .cube {
-    position: relative;
-    width: 160px;
-    height: 160px;
-    transform-style: preserve-3d;
-    transition: transform 0.3s ease-in-out;
-    font-family: 'Saira', sans-serif;
+  width: 100%;
+  height: 100%;
+  perspective: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  touch-action: none;
+}
+
+.cube {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-in-out;
+  font-family: "Saira", sans-serif;
   font-weight: 400;
   font-size: 20px; /* FONT SIZE */
-  }
-  
-  .face {
-    position: absolute;
+  background-color: rgba(255, 255, 255, 0.0);
+}
+
+.face {
+  position: absolute;
   width: 160px;
   height: 160px;
   border: 2px solid black;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.7);
+  
   border-radius: 5px;
-  opacity: 0.9;
-  
-  }
-  
-  .front {
-    transform: translateZ(80px);
-    background-color: white;
-  }
-  
-  .back {
-    transform: translateZ(-80px) rotateY(180deg);
-    background-color: white;
-  }
-  
-  .top {
-    transform: rotateX(90deg) translateZ(80px);
-    background-color: white;
-  }
-  
-  .bottom {
-    transform: rotateX(-90deg) translateZ(80px);
-    background-color: white;
-  }
-  
-  .left {
-    transform: rotateY(-90deg) translateZ(80px);
-    background-color: black;
-    color: white;
-  }
-  
-  .right {
-    transform: rotateY(90deg) translateZ(80px);
-    background-color: purple;
-  }
+}
 
-  /* Copied from cube game*/
-  .page {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    background-color: white;
-    font-size: 60px;
-  }
+.front {
+  transform: translateZ(80px);
 
-  .clickedWords {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    font-family: 'Rubik Mono One';
-    font-size: 20px;  /* FONT SIZE */
-    text-transform: uppercase;
+}
+
+.back {
+  transform: translateZ(-80px) rotateY(180deg);
+  
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(80px);
+ 
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(80px);
+ 
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(80px);
+  background-color: black;
+  color: white;
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(80px);
+  background-color: purple;
+}
+
+/* Copied from cube game*/
+.page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: white;
+  font-size: 60px;
+  color: black;
+  
+}
+
+.clickedWords {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  font-family: "Rubik Mono One";
+  font-size: 20px; /* FONT SIZE */
+  text-transform: uppercase;
 }
 
 .clickable {
-    cursor: pointer;
-    color: black;
-  }
-  
-  .clicked {
-      opacity: 0.2;
-    
-  }
-  
+  cursor: pointer;
+  color: black;
+}
+
+.clicked {
+  opacity: 0.2;
+}
