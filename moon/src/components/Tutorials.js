@@ -57,7 +57,7 @@ function Tutorials({ navClick }) {
       </div>
 
       {/* Half Page Content Container */}
-      <div id="half-page-container" className="slide-right">
+      <div id="half-page-container-size-to-content" className="slide-right">
         {/* Image Component */}
         <DrumMachine />
         
