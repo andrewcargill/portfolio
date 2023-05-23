@@ -61,7 +61,8 @@
 
 .right {
   transform: rotateY(90deg) translateZ(80px);
-  background-color: purple;
+  background-color: black;
+  color: white;
 }
 
 /* Copied from cube game*/
@@ -71,7 +72,7 @@
   display: flex;
   align-content: center;
   justify-content: center;
-  background-color: white;
+  background-color: palevioletred;
   font-size: 60px;
   color: black;
   
