@@ -76,25 +76,61 @@ const Cube = () => {
   };
 
   const frontwords = [
-    { word: "Work. ", ref: "Test ", onClick: handleWordClick },
-    { word: "Test2. ", ref: "Test2 ", onClick: handleWordClick },
-    { word: "Apple. ", ref: "Apple ", onClick: handleWordClick },
-    { word: "Cleo. ", ref: "Cleo ", onClick: handleWordClick },
-    { word: "Music. ", ref: "Music ", onClick: handleWordClick },
-    { word: "Sail. ", ref: "Sail ", onClick: handleWordClick },
-    { word: "Izzie. ", ref: "Izzie ", onClick: handleWordClick },
-    { word: "Farm. ", ref: "Farm ", onClick: handleWordClick },
+    { word: "Wealth. ", ref: "Wealth ", onClick: handleWordClick },
+    { word: "Happiness. ", ref: "Happiness ", onClick: handleWordClick },
+    { word: "Invest. ", ref: "Invest ", onClick: handleWordClick },
+    { word: "Impulse. ", ref: "Impulse ", onClick: handleWordClick },
+    { word: "Adventure. ", ref: "Adventure ", onClick: handleWordClick },
+    { word: "Stable. ", ref: "Stable ", onClick: handleWordClick },
+    { word: "Now. ", ref: "Now ", onClick: handleWordClick },
+    
     
   ];
 
   const backwords = [
-    { word: "Monday. ", ref: "Monday ", onClick: handleWordClick },
-    { word: "Tuesday. ", ref: "Tuesday ", onClick: handleWordClick },
-    { word: "Wednesday. ", ref: "Wednesday ", onClick: handleWordClick },
-    { word: "Thursday. ", ref: "Thursday ", onClick: handleWordClick },
-    { word: "Friday. ", ref: "Friday ", onClick: handleWordClick },
-    { word: "Saturday. ", ref: "Saturday ", onClick: handleWordClick },
-  
+    { word: "Enemy. ", ref: "Enemy ", onClick: handleWordClick },
+    { word: "Take. ", ref: "Take ", onClick: handleWordClick },
+    { word: "Win. ", ref: "Win ", onClick: handleWordClick },
+    { word: "Better. ", ref: "Better ", onClick: handleWordClick },
+    { word: "Prove. ", ref: "Prove ", onClick: handleWordClick },
+    { word: "Impress. ", ref: "Impress ", onClick: handleWordClick },
+    { word: "Greed. ", ref: "Greed ", onClick: handleWordClick },
+    { word: "Shame. ", ref: "Shame ", onClick: handleWordClick },
+  ];
+
+  const topwords = [
+    { word: "Empathy. ", ref: "Empathy ", onClick: handleWordClick },
+    { word: "Care. ", ref: "Care ", onClick: handleWordClick },
+    { word: "Share. ", ref: "Share ", onClick: handleWordClick },
+    { word: "Smile. ", ref: "Smile ", onClick: handleWordClick },
+    { word: "Reason. ", ref: "Reason ", onClick: handleWordClick },
+    { word: "Understand. ", ref: "Understand ", onClick: handleWordClick },
+  ];
+
+  const bottomwords = [
+    { word: "Beach. ", ref: "Beach ", onClick: handleWordClick },
+    { word: "City. ", ref: "City ", onClick: handleWordClick },
+    { word: "Nightclub. ", ref: "Nightclub ", onClick: handleWordClick },
+    { word: "Loacl bar. ", ref: "Local bar ", onClick: handleWordClick },
+    { word: "Countryside. ", ref: "Countryside ", onClick: handleWordClick },
+    { word: "Hotel. ", ref: "Hotel. ", onClick: handleWordClick },
+  ];
+
+  const leftwords = [
+    { word: "Farrari. ", ref: "Beach ", onClick: handleWordClick },
+    { word: "Vintage. ", ref: "City ", onClick: handleWordClick },
+    { word: "Uber. ", ref: "Nightclub ", onClick: handleWordClick },
+    { word: "Bike. ", ref: "Local bar ", onClick: handleWordClick },
+    { word: "Walk. ", ref: "Countryside ", onClick: handleWordClick },
+    { word: "Jog. ", ref: "Hotel. ", onClick: handleWordClick },
+  ];
+  const rightwords = [
+    { word: "The Gym. ", ref: "The Gym ", onClick: handleWordClick },
+    { word: "On the water. ", ref: "On the water ", onClick: handleWordClick },
+    { word: "Action. ", ref: "Action sport ", onClick: handleWordClick },
+    { word: "Cricket. ", ref: "Cricket ", onClick: handleWordClick },
+    { word: "Motorsport. ", ref: "Motorsport ", onClick: handleWordClick },
+    { word: "Horses. ", ref: "Horses. ", onClick: handleWordClick },
   ];
 
 
@@ -149,10 +185,61 @@ const Cube = () => {
             ))}
         </div>
         {/* TOP FACE */}
-        <div className={`${style.face} ${style.top}`}>Top</div>
-        <div className={`${style.face} ${style.bottom}`}>Bottom</div>
-        <div className={`${style.face} ${style.left}`}>Left</div>
-        <div className={`${style.face} ${style.right}`}>Right</div>
+        <div className={`${style.face} ${style.top}`}>
+        {topwords.map(({ word, ref, onClick }) => (
+              <span
+                key={ref}
+                className={`${style.clickable} ${
+                  Array.from(clickedWords).includes(ref) ? style.clicked : ""
+                }`}
+                onClick={() => onClick(ref)}
+              >
+                {word}
+              </span>
+            ))}
+        </div>
+        {/* BOTTOM FACE */}
+        <div className={`${style.face} ${style.bottom}`}>
+        {bottomwords.map(({ word, ref, onClick }) => (
+              <span
+                key={ref}
+                className={`${style.clickable} ${
+                  Array.from(clickedWords).includes(ref) ? style.clicked : ""
+                }`}
+                onClick={() => onClick(ref)}
+              >
+                {word}
+              </span>
+            ))}
+        </div>
+        {/* LEFT FACE */}
+        <div id={style.left} className={`${style.face} ${style.left}`}>
+        {leftwords.map(({ word, ref, onClick }) => (
+              <span
+                key={ref}
+                className={`${style.clickable} ${
+                  Array.from(clickedWords).includes(ref) ? style.clicked : ""
+                }`}
+                onClick={() => onClick(ref)}
+              >
+                {word}
+              </span>
+            ))}
+        </div>
+        {/* RIGHT FACE */}
+        <div className={`${style.face} ${style.right}`}>
+        {rightwords.map(({ word, ref, onClick }) => (
+              <span
+                key={ref}
+                className={`${style.clickable} ${
+                  Array.from(clickedWords).includes(ref) ? style.clicked : ""
+                }`}
+                onClick={() => onClick(ref)}
+              >
+                {word}
+              </span>
+            ))}
+        </div>
       </div>
     </div>
     </div>

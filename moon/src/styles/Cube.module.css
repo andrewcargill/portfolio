@@ -29,7 +29,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   background-color: rgba(255, 255, 255, 0.7);
-  
   border-radius: 5px;
 }
 
@@ -55,14 +54,13 @@
 
 .left {
   transform: rotateY(-90deg) translateZ(80px);
-  background-color: black;
-  color: white;
+  background-color: lightgreen;
 }
 
 .right {
   transform: rotateY(90deg) translateZ(80px);
-  background-color: black;
-  color: white;
+  background-color: lightgreen;
+  
 }
 
 /* Copied from cube game*/
@@ -90,11 +88,22 @@
   text-transform: uppercase;
 }
 
+/* Black text*/
 .clickable {
   cursor: pointer;
   color: black;
 }
 
 .clicked {
+  opacity: 0.2;
+}
+
+/* white text*/
+.clickableWhite {
+  cursor: pointer;
+  color: white;
+}
+
+.clickedWhite {
   opacity: 0.2;
 }
