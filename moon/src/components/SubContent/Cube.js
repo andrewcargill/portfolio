@@ -117,12 +117,12 @@ const Cube = () => {
   ];
 
   const leftwords = [
-    { word: "Farrari. ", ref: "Beach ", onClick: handleWordClick },
-    { word: "Vintage. ", ref: "City ", onClick: handleWordClick },
-    { word: "Uber. ", ref: "Nightclub ", onClick: handleWordClick },
-    { word: "Bike. ", ref: "Local bar ", onClick: handleWordClick },
-    { word: "Walk. ", ref: "Countryside ", onClick: handleWordClick },
-    { word: "Jog. ", ref: "Hotel. ", onClick: handleWordClick },
+    { word: "Farrari. ", ref: "Farrari ", onClick: handleWordClick },
+    { word: "Vintage. ", ref: "Vintage ", onClick: handleWordClick },
+    { word: "Uber. ", ref: "Uber ", onClick: handleWordClick },
+    { word: "Bike. ", ref: "Bike ", onClick: handleWordClick },
+    { word: "Walk. ", ref: "Walk ", onClick: handleWordClick },
+    { word: "Jog. ", ref: "Jog ", onClick: handleWordClick },
   ];
   const rightwords = [
     { word: "The Gym. ", ref: "The Gym ", onClick: handleWordClick },
@@ -130,7 +130,7 @@ const Cube = () => {
     { word: "Action. ", ref: "Action sport ", onClick: handleWordClick },
     { word: "Cricket. ", ref: "Cricket ", onClick: handleWordClick },
     { word: "Motorsport. ", ref: "Motorsport ", onClick: handleWordClick },
-    { word: "Horses. ", ref: "Horses. ", onClick: handleWordClick },
+    { word: "Horses. ", ref: "Horses ", onClick: handleWordClick },
   ];
 
 
