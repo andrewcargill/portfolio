@@ -110,13 +110,13 @@ object-fit: cover;
   
   transform: translateX(-50%);
   /* background-color: #898989; */
-  padding: 10px;
+  padding: 15px 10px 15px 10px;
   font-size: 15px;
   font-weight: 800;
   line-height: 1.2;
   text-align: left;
   width: 90%;
-  height: 6vh;
+  height: auto;
 }
 
 .border {
@@ -163,6 +163,14 @@ object-fit: cover;
   align-content: center;
 }
 
+@media screen and (min-width: 540px) {
+  .title {
+    font-size: 20px;
+    padding-left: 13px;
+  }
+}
+
+
 @media screen and (min-width: 768px) {
 
   .border {
@@ -177,8 +185,8 @@ object-fit: cover;
   }
 
   .title {
-    height: 5vh;
     font-size: 20px;
+    padding-left: 15px;
   }
 
   .thumbnailWrapper {
@@ -234,9 +242,7 @@ object-fit: cover;
     font-size: x-large;
     border-radius: var(--button-radius-small);
     top: 10%;
-    height: 6vh;
-    min-height: 50px;
-    border: black solid 4px;
+    border: black solid 3px;
   }
 
   .thumbnailWrapper {
@@ -260,6 +266,6 @@ object-fit: cover;
   }
 
   .thumbnailOverlay{
-    height: 98%;
+    height: 96%;
   }
 }

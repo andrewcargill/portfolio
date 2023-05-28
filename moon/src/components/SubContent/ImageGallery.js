@@ -13,7 +13,7 @@ function ImageGallery({ images }) {
   };
 
   return (
-    <div className={`${css.border} right-margin-desktop image-container`}>
+    <div className={`${css.border} right-margin-desktop`}>
       <div className={css.gallery}>
         {images.map((image, index) => (
           <div
