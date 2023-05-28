@@ -56,7 +56,6 @@ const Header = ({ handleOnClick }) => {
                   handleOnClick("services");
                   handleNavClick();
                 }}
-                id={CustomBtn.menuButtonHide}
                 className={`slide-right ${CustomBtn.whiteMobile}`}
               >
                 Services
@@ -90,7 +89,6 @@ const Header = ({ handleOnClick }) => {
       <div id={style.navLarge} className="header-element-right">
         <button
           onClick={() => handleOnClick("services")}
-          id={CustomBtn.hidden}
           className={`slide-down ${CustomBtn.white}`}
         >
           Services
