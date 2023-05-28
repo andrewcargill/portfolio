@@ -51,8 +51,8 @@ padding: 2%;
 }
 
 .thumbnailOverlay {
-  border: var(--footer-header-buttons);
-  border-radius: 28px;
+  /* border: var(--footer-header-buttons); */
+  border-radius: var(--image-border-radius);
   position: absolute;
   top: 0;
   left: 0;
@@ -84,14 +84,16 @@ padding: 2%;
 }
 
 .caption {
-  background-color: red;
+  background-color: transparent;
   width: 80%;
-  height: 70%;
+  height: 80%;
   font-size: 12px;
   font-weight: bold;
   text-align: center;
   margin: 5px;
   padding: 5px;
+  color: black;
+  border-radius: var(--image-border-radius);
 }
 
 .title {
@@ -136,6 +138,30 @@ padding: 2%;
   padding: var(--virticle-padding);
 }
 
+/* CONTENT FORMATTING*/
+
+.highlightContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: centre;
+  justify-content: space-around;
+}
+
+.highlightText {
+  font-size: 5vw;
+}
+
+.highlightButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
 @media screen and (min-width: 768px) {
 
   .border {
@@ -160,6 +186,14 @@ padding: 2%;
 
   .thumbnail {
     border-radius: 31px;
+  }
+
+  .highlightContainer {
+    flex-wrap: nowrap;
+  }
+
+  .highlightText {
+    font-size: 14px;
   }
 
 }
@@ -203,5 +237,13 @@ padding: 2%;
   .thumbnail {
     border-radius: 60px;
     height: 60vh;
+  }
+
+  .highlightContainer {
+    flex-wrap: wrap;
+  }
+
+  .highlightText {
+    font-size: 2vw;
   }
 }
