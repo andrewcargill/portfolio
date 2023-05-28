@@ -29,6 +29,7 @@
   font-weight: 800;
   font-size: 3.2vw;
   height: 6vh;
+  border: var(--footer-header-buttons);
 }
 
 

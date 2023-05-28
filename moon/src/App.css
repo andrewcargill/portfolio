@@ -32,7 +32,7 @@
 
   --sub-button-border: solid black 2px;
   --sub-button-border: 3px solid black;
-  --footer-header-buttons: 3px solid black;
+  --footer-header-buttons: 2px solid black;
   --headline-line-height: 1;
   --spinner-size: 80px;
   --spinner-thickness: 80px;
@@ -332,6 +332,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  
 }
 
 /*LOGO*/
@@ -339,7 +340,7 @@ a {
 #logo-image {
   width: 13vw;
   min-width: 90px;
-  /* max-width: 66px; */
+  max-width: 286px;
   border-radius: 0;
 }
 
@@ -553,6 +554,10 @@ video {
   .image-container {
     padding: 43px;
 
+  }
+
+  .header-element-left {
+    justify-content: center;
   }
 
   
