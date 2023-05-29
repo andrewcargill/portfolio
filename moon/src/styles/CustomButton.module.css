@@ -171,25 +171,45 @@ background-color: white;
 }
 
 .subContent {
-  color: white;
-  background-color: transparent;
-  border: none;
+  color: black;
+  background-color: #898989;
+  border: var(--footer-header-buttons);
   border-radius: var( --button-radius-small);
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-size: 4vw;
   padding: 10px;
-  font-size: 10vw;
   font-weight: 500;
   text-transform: uppercase;
-  width: auto;
+  width: 35vw;
   height: auto;
   transition: 0.9s;
 }
 
 .subContent:hover {
-color: black;
+background-color: white;
+}
 
+.subContentSingle {
+  color: black;
+  background-color: #898989;
+  border: var(--footer-header-buttons);
+  border-radius: var( --button-radius-small);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 4vw;
+  padding: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 60vw;
+  height: auto;
+  transition: 0.9s;
+}
+
+.subContentSingle:hover {
+background-color: white;
 }
 
 button {
@@ -234,6 +254,16 @@ button {
 
   .light {
     font-size: var(--button-font-size);
+  }
+
+  .subContent {
+    font-size: 2vw;
+    width: 16vw;
+  }
+
+  .subContentSingle {
+    font-size: 2vw;
+    width: 35vw;
   }
 }
 

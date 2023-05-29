@@ -107,7 +107,6 @@ object-fit: cover;
   top: 5%;
   left: 50%;
   text-transform: uppercase;
-  
   transform: translateX(-50%);
   /* background-color: #898989; */
   padding: 15px 10px 15px 10px;
@@ -152,7 +151,7 @@ object-fit: cover;
 }
 
 .highlightText {
-  font-size: 5vw;
+  font-size: 4vw;
   text-align: justify;
  
 }
@@ -214,7 +213,7 @@ object-fit: cover;
   }
 
   .highlightText {
-    font-size: 14px;
+    font-size: 2vw;
   }
 
 }
@@ -241,7 +240,7 @@ object-fit: cover;
   }
 
   .title {
-    font-size: x-large;
+    font-size: 2vw;
     border-radius: var(--button-radius-small);
     top: 10%;
     border: black solid 3px;
