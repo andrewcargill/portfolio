@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ImagePlaylist from "./media/images/MainImagePlaylist";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./App.css";
@@ -29,6 +30,8 @@ const Main = () => {
   const handleOnClick = (props) => {
     setMainContent(props)
   }
+
+  <ImagePlaylist handleOnClick={handleOnClick} />
 
   {/* Social media Links */}
   const handleClickSocial = (url) => {

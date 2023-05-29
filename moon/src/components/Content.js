@@ -8,7 +8,9 @@ import Services from "./Services";
 
 
 export const renderContent = (mainContent, handleOnClick) => {
-  console.log("I here you")
+  console.log("value of mainContent: ", mainContent);
+  console.log("value of handleOnClick: ", handleOnClick);
+  
   switch (mainContent) {
     case "home":
       console.log("I am in home")

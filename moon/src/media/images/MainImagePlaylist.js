@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CustomBtn from "../../styles/CustomButton.module.css";
 import css from "../../styles/Work.module.css";
-import { renderContent } from "../../components/Content";
 
 import { faCode, faSquareUpRight } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -12,32 +11,14 @@ import {
   faCodepen,
 } from "@fortawesome/free-brands-svg-icons";
 
+const handleOnClick = (prop) => {
+
+}
+
 const handleClickSocial = (url) => {
   window.open(url);
 };
 
-const handleOnClick = (mainContent) => {
-  // Custom logic based on the value of mainContent
-  switch (mainContent) {
-    case "ser":
-      // Logic for handling the "services" case
-      // For example, you can perform any necessary actions or state updates
-      // specific to the "services" case
-      console.log("Handling 'services' case");
-      break;
-
-    // Handle other cases here
-
-    default:
-      // Default case logic
-      console.log("Handling default case");
-      break;
-  }
-
-  // Call renderContent function with the updated mainContent value
-  // and handleOnClick function itself as a parameter
-  renderContent(mainContent, handleOnClick);
-};
 
 const ImagePlaylist = [
   /* DR-01 DrumMachine */
@@ -56,7 +37,7 @@ const ImagePlaylist = [
           <button
             className={`fade-in-scale ${CustomBtn.subContentSingle}`}
             onClick={() =>
-              handleOnClick("services")
+               handleClickSocial("https://instagram.com/andycargill01")
             }
           >
             <div id="buy-basket">
