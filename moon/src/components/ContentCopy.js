@@ -6,28 +6,22 @@ import About from "./About";
 import ContactPage from "./ContactPage";
 import Services from "./Services";
 
-
 export const renderContent = (mainContent, handleOnClick) => {
-  console.log("I here you")
   switch (mainContent) {
     case "home":
-      console.log("I am in home")
       return (
         <div>
           <HomeContent navClick={handleOnClick} />
         </div>
       );
     case "tuition":
-      console.log("I am in tutorials")
       return (
         <div>
           <Tutorials navClick={handleOnClick}/>
         </div>
       );
     case "services":
-      console.log("I am in services")
       return (
-        
         <div>
           <Services navClick={handleOnClick}/>
         </div>

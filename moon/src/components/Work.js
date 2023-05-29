@@ -31,7 +31,7 @@ function Work({ navClick }) {
       {/* Half Page Content Container */}
       <div id={styles.container} className="slide-right">
         {/* Image Component */}
-        <ImageGallery images={ImagePlaylist} />
+        <ImageGallery images={ImagePlaylist} navClick={navClick} />
       </div>
     </div>
   );

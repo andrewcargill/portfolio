@@ -17,11 +17,9 @@ import Image from "./SubContent/Image";
 import AutoHeaderText from "./SubContent/AutoHeaderText";
 import Learn from "./SubContent/Learn";
 
-
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
 function HomeContent({ navClick }) {
-
   return (
     <div id="main-content-container">
       {/* Header Text Container*/}
@@ -42,16 +40,13 @@ function HomeContent({ navClick }) {
       {/* Sub-Section Container Top */}
       <div id="subcontent-container-top" className="slide-left">
         {/* Contact Button Component */}
-        <ContactSubContent
-          navSubClick={navClick}
-         
-        />
+        <ContactSubContent navSubClick={navClick} />
       </div>
 
       {/* Sub-Section Container Bottom */}
       <div id="subcontent-container-bottom" className="slide-up">
         {/* Sub-Section Video Component */}
-        <Learn navSubClick={navClick}/>
+        <Learn navSubClick={navClick} />
       </div>
 
       {/* Half Page Content Container */}
