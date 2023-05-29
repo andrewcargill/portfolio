@@ -31,8 +31,6 @@ const Main = () => {
     setMainContent(props)
   }
 
-  <ImagePlaylist handleOnClick={handleOnClick} />
-
   {/* Social media Links */}
   const handleClickSocial = (url) => {
     window.open(url);
