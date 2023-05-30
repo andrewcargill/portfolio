@@ -36,7 +36,7 @@ const ImagePlaylist = [
   },
   /* The Cube */
   {
-    src: require("../images/autoText1.png"),
+    src: require("../images/cube.png"),
     alt: "Alt text for false.png",
     caption: "The Cube",
     highlight: `A fun exploration into manipluating 3D objects in React. This is taken
@@ -59,7 +59,7 @@ const ImagePlaylist = [
   },
   /* Timbe Company */
   {
-    src: require("../images/forest1.png"),
+    src: require("../images/forest.png"),
     alt: "Alt text for false.png",
     caption: "Timber Company Website",
     highlight: `A website featuring a quote request section. The user can submit
@@ -82,7 +82,7 @@ const ImagePlaylist = [
   },
   /* FASHION HOUSE */
   {
-    src: require("../images/false1.png"),
+    src: require("../images/false.png"),
     alt: "Alt text for pic.jpg",
     caption: "Fashion House Website",
     highlight: ` A one page website made using HTML & CSS. The design explores the use
