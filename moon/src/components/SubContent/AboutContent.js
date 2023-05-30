@@ -1,17 +1,25 @@
 import React, { useState, useEffect } from "react";
-import css from "../../styles/Work.module.css";
+import css from "../../styles/About.module.css";
 
 function AboutContent({ images }) {
   return (
-    <div className="text-border right-margin-desktop image-container">
-        <div>
-          <h2>This is content for the about page</h2>
-          <p>I am some information</p>
-          <p>I am some information</p>
-          <p>I am some information</p>
-          <p>I am some information</p>
+    <div id={css.page} className="text-border right-margin-desktop image-container">
+      <div className={css.page}>
+        <div className={css.container}>
+          
+        <span className={`${css.line} ${css.black}`}>.  </span>
+          <span className={css.line}> I enjoy the nature </span>
+          <span className={css.line}> I love exploring code </span>
+          <span className={`${css.line} ${css.black}`}>.  </span>
+          <span className={css.line}> I have a sawmill </span>
+          <span className={css.line}> I play the guitar </span>
+          <span className={`${css.line} ${css.black}`}>.  </span>
+          
+
+
+
         </div>
-      
+        </div>
     </div>
   );
 }

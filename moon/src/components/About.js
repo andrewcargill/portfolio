@@ -29,10 +29,9 @@ function About({ navClick }) {
       <div id="header-text-container" className="fade-in">
         {/* Auto Header Text Component */}
         <AutoHeaderText
-          text="
-          I am a
-          full-stack engineer with a background in media, art and teaching.
-          "
+          text='
+          “Great things are done by a series of small things brought together.” - Vincent Van Gogh
+          '
           maxFont="35px"
           minFont="15px"
           calFont="0.4"
