@@ -57,7 +57,7 @@ const ImagePlaylist = [
      
     ]
   },
-  /* Timbe Company */
+  /* Timber Company */
   {
     src: require("../images/forest.png"),
     alt: "Alt text for false.png",
@@ -69,13 +69,13 @@ const ImagePlaylist = [
         type: "link",
         label: "Live site",
         icon: "link",
-        url: "https://codepen.io/andyc01"
+        url: "https://timbercompany.herokuapp.com/"
       },
       {
         type: "link",
         label: "github",
         icon: "github",
-        url: "https://github.com/andrewcargill"
+        url: "https://github.com/andrewcargill/johans_eco_timber"
       }
      
     ]
@@ -92,13 +92,13 @@ const ImagePlaylist = [
         type: "link",
         label: "Live site",
         icon: "link",
-        url: "https://codepen.io/andyc01"
+        url: "https://andrewcargill.github.io/false/"
       },
       {
         type: "link",
         label: "github",
         icon: "github",
-        url: "https://github.com/andrewcargill"
+        url: "https://github.com/andrewcargill/false"
       }
      
     ]
@@ -148,13 +148,13 @@ const ImagePlaylist = [
         type: "link",
         label: "Live site",
         icon: "link",
-        url: "https://codepen.io/andyc01"
+        url: "https://harry-hangman.herokuapp.com/"
       },
       {
         type: "link",
         label: "github",
         icon: "github",
-        url: "https://github.com/andrewcargill"
+        url: "https://github.com/andrewcargill/hangman"
       }
     ]
   },
@@ -170,13 +170,13 @@ const ImagePlaylist = [
         type: "link",
         label: "Live site",
         icon: "link",
-        url: "https://codepen.io/andyc01"
+        url: "https://superherosocial.herokuapp.com/"
       },
       {
         type: "link",
         label: "github",
         icon: "github",
-        url: "https://github.com/andrewcargill"
+        url: "https://github.com/andrewcargill/superheros"
       }
     ]
   },
@@ -192,13 +192,13 @@ const ImagePlaylist = [
         type: "link",
         label: "Live site",
         icon: "link",
-        url: "https://codepen.io/andyc01"
+        url: "https://andrewcargill.github.io/music-quiz/"
       },
       {
         type: "link",
         label: "github",
         icon: "github",
-        url: "https://github.com/andrewcargill"
+        url: "https://github.com/andrewcargill/music-quiz"
       }
     ]
   },
