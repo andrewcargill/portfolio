@@ -77,11 +77,12 @@
   height: var(--spinner-thickness);
   border-radius: var(--button-radius-small);
   color: white;
-  background-color: black;
+  background-color: white;
   /* transform-origin: center center; */
   animation: spin 1s linear 0s 2 forwards;
-  opacity: 1;
+  opacity: 0;
 }
+
 
 /* .spinner::before {
   transform: rotate(45deg);
@@ -403,7 +404,7 @@ a {
 
 .image-container-learn {
   height: 100%;
-  width: var(--learn-image-size);
+  width: auto;
   align-items: center;
   display: flex;
 }

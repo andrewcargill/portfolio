@@ -21,9 +21,9 @@ function Image({ images }) {
         </div>
         </div>
         <div>
-        <div className="spinner"> 
+        <div id="clear-spinner" className="spinner"> 
         </div>
-        <div className="spinner"> 
+        <div className="spinner">
         </div>
         </div>
       </div>

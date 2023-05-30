@@ -1,9 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import ImagePlaylist from "../media/images/MainImagePlaylist";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import video from "../media/video/advert.mp4";
+
 import {
   faArrowDown,
   faCheckSquare,
@@ -13,11 +12,10 @@ import {
 
 import { faCodepen } from "@fortawesome/free-brands-svg-icons";
 import ContactSubContent from "./SubContent/ContactSubContent";
-import Image from "./SubContent/Image";
 import AutoHeaderText from "./SubContent/AutoHeaderText";
 import Learn from "./SubContent/Learn";
-import DrumMachine from "./SubContent/DrumMachine";
-import DrumMachineTwo from "./SubContent/DrumMachineTwo";
+
+import TutorialsContent from "./SubContent/TutorialsContent";
 
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
@@ -31,7 +29,7 @@ function Tutorials({ navClick }) {
         {/* Auto Header Text Component */}
         <AutoHeaderText
           text="
-          I'm currently teaching students aged 6-15 years. Scratch and Web-Design.
+          I will be sharing my teaching files here.
           "
           maxFont="35px"
           minFont="15px"
@@ -59,7 +57,7 @@ function Tutorials({ navClick }) {
       {/* Half Page Content Container */}
       <div id="half-page-container-size-to-content" className="slide-right">
         {/* Image Component */}
-        <DrumMachine />
+        <TutorialsContent />
         
         
         
