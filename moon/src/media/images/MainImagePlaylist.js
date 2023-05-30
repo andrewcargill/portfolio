@@ -59,7 +59,7 @@ const ImagePlaylist = [
   },
   /* Timber Company */
   {
-    src: require("../images/forest.png"),
+    src: require("../images/timberLogo.png"),
     alt: "Alt text for false.png",
     caption: "Timber Company Website",
     highlight: `A website featuring a quote request section. The user can submit
@@ -82,7 +82,7 @@ const ImagePlaylist = [
   },
   /* FASHION HOUSE */
   {
-    src: require("../images/false.png"),
+    src: require("../images/fasletest.png"),
     alt: "Alt text for pic.jpg",
     caption: "Fashion House Website",
     highlight: ` A one page website made using HTML & CSS. The design explores the use
@@ -105,7 +105,7 @@ const ImagePlaylist = [
   },
   /* AUTO TEXT */
   {
-    src: require("../images/autoText1.png"),
+    src: require("../images/autoText.png"),
     alt: "Alt text for image001.PNG",
     caption: "Text Auto-sizing for ReactJS",
     highlight: `A react component that sizes text to fill a container. Used on this
@@ -204,7 +204,7 @@ const ImagePlaylist = [
   },
   /* HYBRID CALCULATOR */
   {
-    src: require("../images/autoText1.png"),
+    src: require("../images/hybrid3.png"),
     alt: "Alt text for image001.PNG",
     caption: "Plug-in Hybrid Journey Calculator",
     highlight: `I created the calculator that I couldn't find on the internet! Add
