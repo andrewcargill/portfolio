@@ -25,10 +25,10 @@ const ImagePlaylist = [
     highlight:" info info",
     buttons: [
       {
-        type: "page",
+        type: "link",
         label: "Demo Page",
         icon: "codepen",
-        url: "services"
+        url: "https://github.com/andrewcargill"
       },
      
     ]

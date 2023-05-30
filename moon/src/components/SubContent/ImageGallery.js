@@ -52,7 +52,11 @@ function ImageGallery({ images, navClick }) {
                       {image.buttons.length === 1 && (
                         <button
                           className={`fade-in-scale ${CustomBtn.subContentSingle}`}
-                          onClick={() => navClick(image.buttons[0].url)}
+                          onClick={() =>
+                            image.buttons[0].type === "link"
+                              ? handleClickSocial(image.buttons[0].url)
+                              : navClick(image.buttons[0].url)
+                          }
                         >
                           <div id="buy-basket">
                             {/* Button Icon */}
@@ -79,16 +83,16 @@ function ImageGallery({ images, navClick }) {
                             onClick={() => navClick(image.buttons[0].url)}
                           >
                             <div id="buy-basket">
-                               {/* Button Icon */}
-                            {image.buttons[0].icon === "github" && (
-                              <FontAwesomeIcon icon={faGithubSquare} />
-                            )}
-                            {image.buttons[0].icon === "codepen" && (
-                              <FontAwesomeIcon icon={faCodepen} />
-                            )}
-                            {image.buttons[0].icon === "link" && (
-                              <FontAwesomeIcon icon={faSquareUpRight} />
-                            )}
+                              {/* Button Icon */}
+                              {image.buttons[0].icon === "github" && (
+                                <FontAwesomeIcon icon={faGithubSquare} />
+                              )}
+                              {image.buttons[0].icon === "codepen" && (
+                                <FontAwesomeIcon icon={faCodepen} />
+                              )}
+                              {image.buttons[0].icon === "link" && (
+                                <FontAwesomeIcon icon={faSquareUpRight} />
+                              )}
                               {/* Button Label */}
                               {image.buttons[0].label}
                             </div>
@@ -100,16 +104,16 @@ function ImageGallery({ images, navClick }) {
                             }
                           >
                             <div id="buy-basket">
-                               {/* Button Icon */}
-                            {image.buttons[1].icon === "github" && (
-                              <FontAwesomeIcon icon={faGithubSquare} />
-                            )}
-                            {image.buttons[1].icon === "codepen" && (
-                              <FontAwesomeIcon icon={faCodepen} />
-                            )}
-                            {image.buttons[1].icon === "link" && (
-                              <FontAwesomeIcon icon={faSquareUpRight} />
-                            )}
+                              {/* Button Icon */}
+                              {image.buttons[1].icon === "github" && (
+                                <FontAwesomeIcon icon={faGithubSquare} />
+                              )}
+                              {image.buttons[1].icon === "codepen" && (
+                                <FontAwesomeIcon icon={faCodepen} />
+                              )}
+                              {image.buttons[1].icon === "link" && (
+                                <FontAwesomeIcon icon={faSquareUpRight} />
+                              )}
                               {/* Button Label */}
                               {image.buttons[1].label}
                             </div>
