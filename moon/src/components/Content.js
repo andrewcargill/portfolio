@@ -5,6 +5,8 @@ import Work from "./Work";
 import About from "./About";
 import ContactPage from "./ContactPage";
 import Services from "./Services";
+import CubePage from "./CubePage";
+import DrumMachinePage from "./DrumMachinePage";
 
 
 export const renderContent = (mainContent, handleOnClick) => {
@@ -50,6 +52,18 @@ export const renderContent = (mainContent, handleOnClick) => {
       return (
         <div>
           <ContactPage navClick={handleOnClick}/>
+        </div>
+      );
+    case "cube":
+      return (
+        <div>
+          <CubePage navClick={handleOnClick}/>
+        </div>
+      );
+    case "drum":
+      return (
+        <div>
+          <DrumMachinePage navClick={handleOnClick}/>
         </div>
       );
     default:

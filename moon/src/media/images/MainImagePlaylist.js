@@ -29,7 +29,7 @@ const ImagePlaylist = [
         type: "page",
         label: "project",
         icon: "code",
-        url: "tuition"
+        url: "drum"
       },
      
     ]
@@ -46,7 +46,7 @@ const ImagePlaylist = [
         type: "page",
         label: "Demo",
         icon: "code",
-        url: "services"
+        url: "cube"
       },
       {
         type: "link",
