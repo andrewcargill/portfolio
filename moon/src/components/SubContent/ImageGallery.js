@@ -47,9 +47,10 @@ function ImageGallery({ images, navClick }) {
                     <div className={css.highlightText}>{image.highlight}</div>
                     {/* Button Container */}
 
-                    <div className={css.highlightButtonContainer}>
+                    
                       {/* Single button */}
                       {image.buttons.length === 1 && (
+                        <div className={css.highlightButtonContainer}>
                         <button
                           className={`fade-in-scale ${CustomBtn.subContentSingle}`}
                           onClick={() =>
@@ -70,17 +71,22 @@ function ImageGallery({ images, navClick }) {
                               <FontAwesomeIcon icon={faSquareUpRight} />
                             )}
                             {/* Button Label */}
-                            {image.buttons[0].label}
+                            {' ' + image.buttons[0].label}
                           </div>
                         </button>
+                        </div>
                       )}
 
                       {/* Multiple buttons */}
                       {image.buttons.length === 2 && (
-                        <div>
+                        <div className={css.highlightButtonContainer}>
                           <button
                             className={`fade-in-scale ${CustomBtn.subContent}`}
-                            onClick={() => navClick(image.buttons[0].url)}
+                            onClick={() =>
+                              image.buttons[0].type === "link"
+                              ? handleClickSocial(image.buttons[0].url)
+                              : navClick(image.buttons[0].url)
+                            }
                           >
                             <div id="buy-basket">
                               {/* Button Icon */}
@@ -94,13 +100,15 @@ function ImageGallery({ images, navClick }) {
                                 <FontAwesomeIcon icon={faSquareUpRight} />
                               )}
                               {/* Button Label */}
-                              {image.buttons[0].label}
+                              {' ' + image.buttons[0].label}
                             </div>
                           </button>
                           <button
                             className={`fade-in-scale ${CustomBtn.subContent}`}
                             onClick={() =>
-                              handleClickSocial(image.buttons[1].url)
+                              image.buttons[1].type === "link"
+                              ? handleClickSocial(image.buttons[1].url)
+                              : navClick(image.buttons[1].url)
                             }
                           >
                             <div id="buy-basket">
@@ -115,12 +123,12 @@ function ImageGallery({ images, navClick }) {
                                 <FontAwesomeIcon icon={faSquareUpRight} />
                               )}
                               {/* Button Label */}
-                              {image.buttons[1].label}
+                              {' ' + image.buttons[1].label}
                             </div>
                           </button>
                         </div>
                       )}
-                    </div>
+                    
                   </div>
                 </div>
 

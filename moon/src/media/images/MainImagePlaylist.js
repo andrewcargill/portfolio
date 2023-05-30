@@ -25,10 +25,10 @@ const ImagePlaylist = [
     highlight:" info info",
     buttons: [
       {
-        type: "link",
-        label: "Demo Page",
-        icon: "codepen",
-        url: "https://github.com/andrewcargill"
+        type: "page",
+        label: "Demo",
+        icon: "link",
+        url: "services"
       },
      
     ]
@@ -46,10 +46,10 @@ const ImagePlaylist = [
         url: "tuition"
       },
       {
-        type: "page",
-        label: "testing",
-        icon: "link",
-        url: "http:www.google.com"
+        type: "link",
+        label: "codepen",
+        icon: "codepen",
+        url: "https://codepen.io/andyc01"
       }
      
     ]
