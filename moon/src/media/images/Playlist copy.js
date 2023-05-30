@@ -92,13 +92,10 @@ const ImagePlaylist = [
     src: require("../images/forest1.png"),
     alt: "Alt text for false.png",
     caption: "Timber Company Website",
-    highlight: (
-      <div className={css.highlightContainer}>
-        <div className={css.highlightText}>
-          A website featuring a quote request section. The user can submit
-          information and recieve a quote. Custom API and frontend.
-        </div>
-        <div className={css.highlightButtonContainer}>
+    highlight: `A website featuring a quote request section. The user can submit
+          information and recieve a quote. Custom API and frontend.`,
+          
+       
           {/* Button 1 */}
           <button
             className={`fade-in-scale ${CustomBtn.subContent}`}

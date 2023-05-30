@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import css from "../../styles/Work.module.css";
-import { faCode, faSquareUpRight } from "@fortawesome/free-solid-svg-icons";
+import { faCode, faSquareUpRight, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import {
   faInstagramSquare,
   faLinkedin,
@@ -70,6 +70,9 @@ function ImageGallery({ images, navClick }) {
                             {image.buttons[0].icon === "link" && (
                               <FontAwesomeIcon icon={faSquareUpRight} />
                             )}
+                            {image.buttons[0].icon === "code" && (
+                              <FontAwesomeIcon icon={faLaptopCode} />
+                            )}
                             {/* Button Label */}
                             {' ' + image.buttons[0].label}
                           </div>
@@ -99,6 +102,9 @@ function ImageGallery({ images, navClick }) {
                               {image.buttons[0].icon === "link" && (
                                 <FontAwesomeIcon icon={faSquareUpRight} />
                               )}
+                              {image.buttons[0].icon === "code" && (
+                              <FontAwesomeIcon icon={faLaptopCode} />
+                            )}
                               {/* Button Label */}
                               {' ' + image.buttons[0].label}
                             </div>
@@ -122,6 +128,9 @@ function ImageGallery({ images, navClick }) {
                               {image.buttons[1].icon === "link" && (
                                 <FontAwesomeIcon icon={faSquareUpRight} />
                               )}
+                              {image.buttons[1].icon === "code" && (
+                              <FontAwesomeIcon icon={faLaptopCode} />
+                            )}
                               {/* Button Label */}
                               {' ' + image.buttons[1].label}
                             </div>
