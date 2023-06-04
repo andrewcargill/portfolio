@@ -48,8 +48,6 @@ img {
 
 #text {
 
-  
- 
 }
 
 #left {
@@ -83,7 +81,7 @@ img {
 
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1080px) {
 
   .border {
     margin: 0;

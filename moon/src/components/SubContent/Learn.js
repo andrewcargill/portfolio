@@ -26,7 +26,7 @@ function Learn(props) {
               minFont="30px"
               containerId={styles.left}
               textId={styles.text}
-              calFont="0.5"
+              calFont="0.45"
               lineSpacing="1"
             />
           </div>
