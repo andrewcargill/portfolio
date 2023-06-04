@@ -22,13 +22,14 @@ img {
   object-fit: contain;
 }
 
-#left {
+.leftContainer {
   width: 50%;
   display: flex;
+  
   flex-direction: column;
   justify-content: space-around;
   align-content: center;
-  flex-wrap: wrap;
+  height: 100%;
 }
 
 .helpButton {
@@ -37,6 +38,7 @@ img {
   background-color: white;
   color: black;
   transition: 0.9s;
+  height: 100%;
 }
 
 .helpButton:hover {
@@ -45,10 +47,28 @@ img {
 }
 
 #text {
+
+  
+ 
+}
+
+#left {
   /* font-size: var(--sub-text-more); */
   text-align: justify;
   width: 100%;
-  height: 30%;
+  height: 40%;
+ 
+  color: black;
+
+ 
+  
+}
+
+.buttonContainer {
+  
+  height: 40%;
+  flex-basis: auto;
+  flex-grow: 1;
 }
 
 @media screen and (min-width: 768px) {

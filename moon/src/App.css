@@ -13,8 +13,8 @@
   --image-border-radius: 10px;
   --long-button-radius: 10px;
 
-  --sub-section-container-height: 0;
-  --sub-section-container-min-height: 130px;
+  --sub-section-container-height: 20vw;
+  --sub-section-container-min-height: 120px;
 
 
   --half-page-container-height: 45vh;
@@ -28,7 +28,7 @@
 
   --learn-image-size: 5em;
 
-  --tutor-button-height: 2.3em;
+  --tutor-button-height: 2em;
 
   --sub-button-border: solid black 2px;
   --sub-button-border: 3px solid black;
