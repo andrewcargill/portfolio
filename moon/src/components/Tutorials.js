@@ -29,7 +29,7 @@ function Tutorials({ navClick }) {
         {/* Auto Header Text Component */}
         <AutoHeaderText
           text="
-          I will be sharing my teaching files here.
+          This page is under contruction.
           "
           maxFont="35px"
           minFont="15px"

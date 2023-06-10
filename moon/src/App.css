@@ -699,6 +699,10 @@ video {
     display: flex;
   }
 
+  .contact-button {
+    height: 50%;
+  }
+
 }
 
 @media screen and (min-width: 1080px) {

@@ -272,14 +272,17 @@ button {
     width: 32%;
     margin: 2%;
     /* height: 3vw; */
-    height: 5vw;
-    max-height: 55px;
+    /* height: 5vw;
+    max-height: 55px; */
+    height: 100%;
   }
 
   .light {
+    width: 100%;
     /* font-size: 2.4vh; */
-    min-height: 70px;
-    height: 1vh;
+    /* min-height: 70px;
+    height: 1vh; */
+    height: 100%;
   }
 
   .crazy {
