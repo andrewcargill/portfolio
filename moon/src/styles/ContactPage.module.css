@@ -19,12 +19,14 @@
 /* Containers for main content and image*/
 .border {
     width: 100%;
-    background-color: #d3d3d3;
+    /* background-color: #d3d3d3; */
     border-radius: 20px;
     margin: 1% 0 1% 0;
     font-size: 20px;
     overflow: auto;
+    text-transform: uppercase;
 }
+
 
 
 .halfPageContainer1 {

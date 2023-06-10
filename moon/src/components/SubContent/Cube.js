@@ -135,7 +135,7 @@ const Cube = () => {
 
 
   return (
-    <div className="text-border right-margin-desktop image-container">
+    <div id={style.mainContainer} className="text-border right-margin-desktop image-container">
         <div className={style.page}>
         {/* Clicked words */}
         <div className={style.clickedWords}>

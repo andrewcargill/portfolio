@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../../styles/Image.css";
 
-function Image({ images }) {
+function Image({ images, navSubClick}) {
+  console.log("images props:", navSubClick);
   const [index, setIndex] = useState(0);
   
   useEffect(() => {
@@ -10,9 +11,14 @@ function Image({ images }) {
     }, 12000);
     return () => clearInterval(interval);
   }, [images.length]);
+
+  const handleClick = () => {
+    console.log("clicked!");
+    navSubClick("work");
+  };
   
   return (
-    <div className="text-border right-margin-desktop image-container">
+    <div className="text-border right-margin-desktop image-container" onClick={handleClick}>
       <div className="spinner-container">
         <div>
         <div className="spinner"> 

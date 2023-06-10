@@ -52,7 +52,7 @@ function HomeContent({ navClick }) {
       {/* Half Page Content Container */}
       <div id="half-page-container" className="slide-right">
         {/* Image Component */}
-        <Image images={ImagePlaylist} />
+        <Image images={ImagePlaylist} navSubClick={navClick} />
       </div>
     </div>
   );
