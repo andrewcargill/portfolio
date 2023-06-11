@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "My portfolio website",
-  "homepage": "https://andrewcargill01.com/",
+  "homepage": "https://andrewcargill.github.io",
   "scripts": {
     "start": "cd moon && npm start",
     "build": "cd moon && npm run build",
