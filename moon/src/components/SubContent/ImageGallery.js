@@ -2,11 +2,19 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import css from "../../styles/Work.module.css";
 import {
+  faCrosshairs,
+  faServer,
   faCode,
   faSquareUpRight,
   faLaptopCode,
 } from "@fortawesome/free-solid-svg-icons";
 import {
+  faBootstrap,
+  faCss3Alt,
+  faHtml5,
+  faPython,
+  faJsSquare,
+  faReact,
   faInstagramSquare,
   faLinkedin,
   faGithubSquare,
@@ -34,29 +42,26 @@ function ImageGallery({ images, navClick }) {
 
   return (
     <div className={`${css.border} right-margin-desktop`}>
-      
-
       {/* Gallery */}
       <div className={css.gallery}>
-
         {/* Text Component Container */}
-      <div id={css.autoTextContainer} className={css.thumbnailWrapper}>
-        {/* Text Component */}
-        <div id={css.headerTextContainer}>
-          <AutoHeaderText
-            text="
+        <div id={css.autoTextContainer} className={css.thumbnailWrapper}>
+          {/* Text Component */}
+          <div id={css.headerTextContainer}>
+            <AutoHeaderText
+              text="
           Welcome to my Portfolio. Take a look around.
           "
-            maxFont="60px"
-            minFont="15px"
-            calFont="0.49"
-            lineSpacing="1"
-            containerId={css.autoTextContainer}
-            textId={css.headerTextContainer}
-            // calFont="1.2vh"
-          />
+              maxFont="60px"
+              minFont="15px"
+              calFont="0.49"
+              lineSpacing="1"
+              containerId={css.autoTextContainer}
+              textId={css.headerTextContainer}
+              // calFont="1.2vh"
+            />
+          </div>
         </div>
-      </div>
 
         {/* Gallery mapping */}
         {images.map((image, index) => (
@@ -74,6 +79,50 @@ function ImageGallery({ images, navClick }) {
                   <div className={css.highlightContainer}>
                     {/*  Hightlight container*/}
                     <div className={css.highlightText}>{image.highlight}</div>
+
+                    {/* Icon Container */}
+                    <div className={css.devIconContainer}>
+                      <span class={css.tooltip}>
+                        <FontAwesomeIcon icon={faBootstrap} />
+                        <span class={css.tooltipText}>Bootstrap</span>
+                      </span>
+
+                      <span class={css.tooltip}>
+                        <FontAwesomeIcon icon={faCss3Alt} />
+                        <span class={css.tooltipText}>CSS</span>
+                      </span>
+
+                      <span class={css.tooltip}>
+                        <FontAwesomeIcon icon={faHtml5} />
+                        <span class={css.tooltipText}>HTML5</span>
+                      </span>
+
+                      <span class={css.tooltip}>
+                        <FontAwesomeIcon icon={faReact} />
+                        <span class={css.tooltipText}>React</span>
+                      </span>
+
+                      <span class={css.tooltip}>
+                        <FontAwesomeIcon icon={faPython} />
+                        <span class={css.tooltipText}>Python</span>
+                      </span>
+
+                      <span class={css.tooltip}>
+                        <FontAwesomeIcon icon={faJsSquare} />
+                        <span class={css.tooltipText}>Javascript</span>
+                      </span>
+
+                      <span class={css.tooltip}>
+                        <FontAwesomeIcon icon={faServer} />
+                        <span class={css.tooltipText}>Django</span>
+                      </span>
+
+                      <span class={css.tooltip}>
+                        <FontAwesomeIcon icon={faCrosshairs} />
+                        <span class={css.tooltipText}>UX Design</span>
+                      </span>
+                    </div>
+
                     {/* Button Container */}
 
                     {/* Single button */}
