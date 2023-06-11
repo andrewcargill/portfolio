@@ -40,6 +40,18 @@ function ImageGallery({ images, navClick }) {
     window.open(url);
   };
 
+  const iconsMap = {
+    CSS: faCss3Alt,
+    bootstrap: faBootstrap,
+    HTML5: faHtml5,
+    react: faReact,
+    python: faPython,
+    javascript: faJsSquare,
+    django: faServer,
+    "UX-Design": faCrosshairs,
+
+  };
+
   return (
     <div className={`${css.border} right-margin-desktop`}>
       {/* Gallery */}
@@ -81,48 +93,15 @@ function ImageGallery({ images, navClick }) {
                     <div className={css.highlightText}>{image.highlight}</div>
 
                     {/* Icon Container */}
+                  
                     <div className={css.devIconContainer}>
-                      <span class={css.tooltip}>
-                        <FontAwesomeIcon icon={faBootstrap} />
-                        <span class={css.tooltipText}>Bootstrap</span>
-                      </span>
-
-                      <span class={css.tooltip}>
-                        <FontAwesomeIcon icon={faCss3Alt} />
-                        <span class={css.tooltipText}>CSS</span>
-                      </span>
-
-                      <span class={css.tooltip}>
-                        <FontAwesomeIcon icon={faHtml5} />
-                        <span class={css.tooltipText}>HTML5</span>
-                      </span>
-
-                      <span class={css.tooltip}>
-                        <FontAwesomeIcon icon={faReact} />
-                        <span class={css.tooltipText}>React</span>
-                      </span>
-
-                      <span class={css.tooltip}>
-                        <FontAwesomeIcon icon={faPython} />
-                        <span class={css.tooltipText}>Python</span>
-                      </span>
-
-                      <span class={css.tooltip}>
-                        <FontAwesomeIcon icon={faJsSquare} />
-                        <span class={css.tooltipText}>Javascript</span>
-                      </span>
-
-                      <span class={css.tooltip}>
-                        <FontAwesomeIcon icon={faServer} />
-                        <span class={css.tooltipText}>Django</span>
-                      </span>
-
-                      <span class={css.tooltip}>
-                        <FontAwesomeIcon icon={faCrosshairs} />
-                        <span class={css.tooltipText}>UX Design</span>
-                      </span>
+                      {image.devIcons.map((icon) => (
+                        <span className={css.tooltip} key={icon}>
+                          <FontAwesomeIcon icon={iconsMap[icon]} />
+                          <span className={css.tooltipText}>{icon}</span>
+                        </span>
+                      ))}
                     </div>
-
                     {/* Button Container */}
 
                     {/* Single button */}

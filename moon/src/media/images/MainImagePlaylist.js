@@ -24,6 +24,7 @@ const ImagePlaylist = [
     caption: "DR-01",
     highlight: `A custom drum machine. Exploring how to trigger sounds on the web!
     Built from my head and not tutorials. Uses Javascript.`,
+    devIcons: ["javascript", "react", "CSS", "HTML5"],
     buttons: [
       {
         type: "page",
@@ -31,8 +32,8 @@ const ImagePlaylist = [
         icon: "code",
         url: "drum"
       },
-     
     ]
+
   },
   /* The Cube */
   {
@@ -41,6 +42,7 @@ const ImagePlaylist = [
     caption: "The Cube",
     highlight: `A fun exploration into manipluating 3D objects in React. This is taken
     from a cube game I made in CodePen.`,
+    devIcons: ["javascript", "react", "CSS", "HTML5"],
     buttons: [
       {
         type: "page",
@@ -64,6 +66,7 @@ const ImagePlaylist = [
     caption: "Timber Company Website",
     highlight: `A website featuring a quote request section. The user can submit
           information and recieve a quote. Custom API and frontend.`,
+          devIcons: ["python", "javascript", "CSS", "HTML5", "bootstrap", "django", "UX-Design"],
     buttons: [
       {
         type: "link",
@@ -77,7 +80,6 @@ const ImagePlaylist = [
         icon: "github",
         url: "https://github.com/andrewcargill/johans_eco_timber"
       }
-     
     ]
   },
   /* FASHION HOUSE */
@@ -87,6 +89,7 @@ const ImagePlaylist = [
     caption: "Fashion House Website",
     highlight: ` A one page website made using HTML & CSS. The design explores the use
     of positive and negative space.`,
+    devIcons: ["CSS", "HTML5"],
     buttons: [
       {
         type: "link",
@@ -110,6 +113,7 @@ const ImagePlaylist = [
     caption: "Text Auto-sizing for ReactJS",
     highlight: `A react component that sizes text to fill a container. Used on this
     website for all headline text.`,
+    devIcons: ["javascript", "react"],
     buttons: [
       {
         type: "page",
@@ -127,6 +131,7 @@ const ImagePlaylist = [
     alt: "Alt text for image001.PNG",
     caption: "Scratch Teaching Aids",
     highlight: `A repository of teaching aids and templates.`,
+    devIcons: ["CSS", "HTML5"],
     buttons: [
       {
         type: "link",
@@ -143,6 +148,7 @@ const ImagePlaylist = [
     caption: "Pure Python Hangman",
     highlight: `Coding for the console is fun! The limitations brings out the
     creativity in another way. This is a pure Python experience.`,
+    devIcons: ["python"],
     buttons: [
       {
         type: "link",
@@ -165,6 +171,7 @@ const ImagePlaylist = [
     caption: "SuperHero Chat",
     highlight: `A react world with a custom Django API. Created as part of my studies
     in 2023.`,
+    devIcons: ["javascript", "react", "CSS", "HTML5", "python", "django", "UX-Design"],
     buttons: [
       {
         type: "link",
@@ -187,6 +194,7 @@ const ImagePlaylist = [
     caption: "Javascript Music Quiz",
     highlight: `A Javascript game runs custom code to deliver an educational game for
     music students.`,
+    devIcons: ["javascript", "CSS", "HTML5"],
     buttons: [
       {
         type: "link",
@@ -209,6 +217,7 @@ const ImagePlaylist = [
     caption: "Plug-in Hybrid Journey Calculator",
     highlight: `I created the calculator that I couldn't find on the internet! Add
     your journey details and find out how much you save.`,
+    devIcons: ["javascript", "CSS", "HTML5"],
     buttons: [
       {
         type: "link",
