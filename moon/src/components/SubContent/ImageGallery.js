@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import css from "../../styles/Work.module.css";
-import { faCode, faSquareUpRight, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCode,
+  faSquareUpRight,
+  faLaptopCode,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faInstagramSquare,
   faLinkedin,
@@ -11,6 +15,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import CustomBtn from "../../styles/CustomButton.module.css";
+import AutoHeaderText from "./AutoHeaderText";
 
 function ImageGallery({ images, navClick }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -29,7 +34,31 @@ function ImageGallery({ images, navClick }) {
 
   return (
     <div className={`${css.border} right-margin-desktop`}>
+      
+
+      {/* Gallery */}
       <div className={css.gallery}>
+
+        {/* Text Component Container */}
+      <div id={css.autoTextContainer} className={css.thumbnailWrapper}>
+        {/* Text Component */}
+        <div id={css.headerTextContainer}>
+          <AutoHeaderText
+            text="
+          Welcome to my Portfolio. Take a look around.
+          "
+            maxFont="60px"
+            minFont="15px"
+            calFont="0.49"
+            lineSpacing="1"
+            containerId={css.autoTextContainer}
+            textId={css.headerTextContainer}
+            // calFont="1.2vh"
+          />
+        </div>
+      </div>
+
+        {/* Gallery mapping */}
         {images.map((image, index) => (
           <div
             key={index}
@@ -47,10 +76,9 @@ function ImageGallery({ images, navClick }) {
                     <div className={css.highlightText}>{image.highlight}</div>
                     {/* Button Container */}
 
-                    
-                      {/* Single button */}
-                      {image.buttons.length === 1 && (
-                        <div className={css.highlightButtonContainer}>
+                    {/* Single button */}
+                    {image.buttons.length === 1 && (
+                      <div className={css.highlightButtonContainer}>
                         <button
                           className={`fade-in-scale ${CustomBtn.subContentSingle}`}
                           onClick={() =>
@@ -74,70 +102,69 @@ function ImageGallery({ images, navClick }) {
                               <FontAwesomeIcon icon={faLaptopCode} />
                             )}
                             {/* Button Label */}
-                            {' ' + image.buttons[0].label}
+                            {" " + image.buttons[0].label}
                           </div>
                         </button>
-                        </div>
-                      )}
+                      </div>
+                    )}
 
-                      {/* Multiple buttons */}
-                      {image.buttons.length === 2 && (
-                        <div className={css.highlightButtonContainer}>
-                          <button
-                            className={`fade-in-scale ${CustomBtn.subContent}`}
-                            onClick={() =>
-                              image.buttons[0].type === "link"
+                    {/* Multiple buttons */}
+                    {image.buttons.length === 2 && (
+                      <div className={css.highlightButtonContainer}>
+                        <button
+                          className={`fade-in-scale ${CustomBtn.subContent}`}
+                          onClick={() =>
+                            image.buttons[0].type === "link"
                               ? handleClickSocial(image.buttons[0].url)
                               : navClick(image.buttons[0].url)
-                            }
-                          >
-                            <div id="buy-basket">
-                              {/* Button Icon */}
-                              {image.buttons[0].icon === "github" && (
-                                <FontAwesomeIcon icon={faGithubSquare} />
-                              )}
-                              {image.buttons[0].icon === "codepen" && (
-                                <FontAwesomeIcon icon={faCodepen} />
-                              )}
-                              {image.buttons[0].icon === "link" && (
-                                <FontAwesomeIcon icon={faSquareUpRight} />
-                              )}
-                              {image.buttons[0].icon === "code" && (
+                          }
+                        >
+                          <div id="buy-basket">
+                            {/* Button Icon */}
+                            {image.buttons[0].icon === "github" && (
+                              <FontAwesomeIcon icon={faGithubSquare} />
+                            )}
+                            {image.buttons[0].icon === "codepen" && (
+                              <FontAwesomeIcon icon={faCodepen} />
+                            )}
+                            {image.buttons[0].icon === "link" && (
+                              <FontAwesomeIcon icon={faSquareUpRight} />
+                            )}
+                            {image.buttons[0].icon === "code" && (
                               <FontAwesomeIcon icon={faLaptopCode} />
                             )}
-                              {/* Button Label */}
-                              {' ' + image.buttons[0].label}
-                            </div>
-                          </button>
-                          <button
-                            className={`fade-in-scale ${CustomBtn.subContent}`}
-                            onClick={() =>
-                              image.buttons[1].type === "link"
+                            {/* Button Label */}
+                            {" " + image.buttons[0].label}
+                          </div>
+                        </button>
+                        <button
+                          className={`fade-in-scale ${CustomBtn.subContent}`}
+                          onClick={() =>
+                            image.buttons[1].type === "link"
                               ? handleClickSocial(image.buttons[1].url)
                               : navClick(image.buttons[1].url)
-                            }
-                          >
-                            <div id="buy-basket">
-                              {/* Button Icon */}
-                              {image.buttons[1].icon === "github" && (
-                                <FontAwesomeIcon icon={faGithubSquare} />
-                              )}
-                              {image.buttons[1].icon === "codepen" && (
-                                <FontAwesomeIcon icon={faCodepen} />
-                              )}
-                              {image.buttons[1].icon === "link" && (
-                                <FontAwesomeIcon icon={faSquareUpRight} />
-                              )}
-                              {image.buttons[1].icon === "code" && (
+                          }
+                        >
+                          <div id="buy-basket">
+                            {/* Button Icon */}
+                            {image.buttons[1].icon === "github" && (
+                              <FontAwesomeIcon icon={faGithubSquare} />
+                            )}
+                            {image.buttons[1].icon === "codepen" && (
+                              <FontAwesomeIcon icon={faCodepen} />
+                            )}
+                            {image.buttons[1].icon === "link" && (
+                              <FontAwesomeIcon icon={faSquareUpRight} />
+                            )}
+                            {image.buttons[1].icon === "code" && (
                               <FontAwesomeIcon icon={faLaptopCode} />
                             )}
-                              {/* Button Label */}
-                              {' ' + image.buttons[1].label}
-                            </div>
-                          </button>
-                        </div>
-                      )}
-                    
+                            {/* Button Label */}
+                            {" " + image.buttons[1].label}
+                          </div>
+                        </button>
+                      </div>
+                    )}
                   </div>
                 </div>
 

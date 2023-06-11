@@ -17,37 +17,19 @@ import Image from "./SubContent/Image";
 import AutoHeaderText from "./SubContent/AutoHeaderText";
 import Learn from "./SubContent/Learn";
 import ImageGallery from "./SubContent/ImageGallery";
-import styles from "../styles/Work.module.css"
-
+import styles from "../styles/Work.module.css";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
 function Work({ navClick }) {
-
   return (
     <div id={styles.mainContentContainer}>
-      <div id={styles.headerContainer} >
-        {/* Text Component */}
-        <div id={styles.headerTextContainer}>
-        <AutoHeaderText
-          text="
-          Welcome to my Portfolio. Take a look around.
-          "
-          maxFont="60px"
-          minFont="15px"
-          calFont="0.47"
-          lineSpacing="1"
-          containerId={styles.headerContainer}
-              textId={styles.headerTextContainer}
-          // calFont="1.2vh"
-        />
-      </div>
-      </div>
+      
 
       {/* Half Page Content Container */}
       <div id={styles.container} className="slide-right">
         {/* Image Component */}
-        
+
         <ImageGallery images={ImagePlaylist} navClick={navClick} />
       </div>
     </div>
