@@ -62,11 +62,12 @@ function ImageGallery({ images, navClick }) {
           <div id={css.headerTextContainer}>
             <AutoHeaderText
               text="
-          Welcome to my Portfolio. Take a look around.
+          I really enjoy exploring various aspects of programming. Here are a small selection of the projects
+          I have been working on. Take a look around.
           "
               maxFont="60px"
-              minFont="15px"
-              calFont="0.49"
+              minFont="10px"
+              calFont="0.4"
               lineSpacing="1"
               containerId={css.autoTextContainer}
               textId={css.headerTextContainer}

@@ -3,18 +3,21 @@
 }
 
 #autoTextContainer {
+  padding-top: 2%;
+  padding-left: 2%;
+  height: 200px;
   width: 100%; 
-  height: auto;
-  overflow: hidden;
-  padding-bottom: 2%;
+  overflow: visible;
   align-self: self-start;
   border-radius: 0;
 }
 
 #headerTextContainer {
-  color: red;
-  border-radius: 0;
+  overflow: visible;
+  color: black;
+  text-transform: uppercase;
 }
+
 
 #headerContainer {
   /* background-color: #d3d3d3; */
@@ -29,10 +32,7 @@
   margin-bottom: 10px;
 }
 
-#headerTextContainer {
-  color: black;
-  text-transform: uppercase;
-}
+
 
 #mainContentContainer {
   display: flex;
@@ -155,7 +155,6 @@ object-fit: cover;
   width: 100%;
   /* background-color: #d3d3d3 !important; */
   background-color: transparent;
-  border-radius: 20px;
   margin: 1% 0 1% 0;
   font-size: 20px;
   overflow: auto;
@@ -208,7 +207,7 @@ object-fit: cover;
 .tooltip .tooltipText {
   visibility: hidden;
   position: absolute;
-  bottom: 100%;
+  bottom: 70%;
   left: 50%;
   transform: translateX(-50%);
   padding: 5px;
@@ -237,6 +236,15 @@ object-fit: cover;
     font-size: 20px;
     padding-left: 13px;
   }
+
+  .devIconContainer {
+    font-size: 30px;
+  }
+
+  .tooltip .tooltipText {
+    bottom: 80%;
+    font-size: 12px;
+  }
 }
 
 
@@ -262,14 +270,13 @@ object-fit: cover;
     width: 49%; 
     height: auto;
     overflow: hidden;
+    margin-top: 10px;
     padding-bottom: 10px;
   }  
 
   #autoTextContainer {
     width: 49%; 
-    height: 30vh;
     overflow: hidden;
-    padding-bottom: 10px;
   }
 
   .thumbnailOverlay {
@@ -289,6 +296,24 @@ object-fit: cover;
 
   .highlightText {
     font-size: 2vw;
+  }
+
+  .devIconContainer {
+    font-size: 30px;
+  }
+
+  .tooltip .tooltipText {
+    bottom: 70%;
+    font-size: 10px;
+  }
+
+  #autoTextContainer {
+    padding-top: 10px;
+    padding-left: 5px;
+    width: 49%; 
+    min-height: 12vw;
+    height: 22vh;
+    padding-bottom: 10px;
   }
 
 }
@@ -343,5 +368,36 @@ object-fit: cover;
 
   .thumbnailOverlay{
     height: 98%;
+  }
+
+  #autoTextContainer {
+    padding-left: 20px;
+    padding-top: 20px;
+    width: 49%; 
+    min-height: 30vw;
+    height: 22vh;
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 2400px) {
+  #autoTextContainer {
+    width: 49%; 
+    min-height: 12vw;
+    height: 57vh;
+    padding-bottom: 10px;
+  }
+
+  .highlightText {
+    font-size: 3vh;
+  }
+
+  .devIconContainer {
+    font-size: 35px;
+  }
+
+  .tooltip .tooltipText {
+    bottom: 70%;
+    font-size: 15px;
   }
 }
