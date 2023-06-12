@@ -22,8 +22,10 @@ const ImagePlaylist = [
     src: require("../images/dr01.png"),
     alt: "Alt text for false.png",
     caption: "DR-01",
-    highlight: `A custom drum machine. Exploring how to trigger sounds on the web!
-    Built from my head and not tutorials. Uses Javascript.`,
+    highlight: `With my musical background a drum machine was a great project to explore. This 
+    was created without the use of any tutorials. The link below takes you to the current version of the project.`,
+    // highlight: `A custom drum machine. Exploring how to trigger sounds on the web!
+    // Built from my head and not tutorials. Uses Javascript.`,
     devIcons: ["javascript", "react", "CSS", "HTML5"],
     buttons: [
       {
@@ -40,8 +42,9 @@ const ImagePlaylist = [
     src: require("../images/cube.png"),
     alt: "Alt text for false.png",
     caption: "The Cube",
-    highlight: `A fun exploration into manipluating 3D objects in React. This is taken
-    from a cube game I made in CodePen.`,
+    highlight: `A fun exploration into manipluating 3D objects. Below you can see both the React and CodePen versions of the project.`,
+    // highlight: `A fun exploration into manipluating 3D objects in React. This is taken
+    // from a cube game I made in CodePen.`,
     devIcons: ["javascript", "react", "CSS", "HTML5"],
     buttons: [
       {
@@ -64,8 +67,9 @@ const ImagePlaylist = [
     src: require("../images/timberLogo.png"),
     alt: "Alt text for false.png",
     caption: "Timber Company Website",
-    highlight: `A website featuring a quote request section. The user can submit
-          information and recieve a quote. Custom API and frontend.`,
+    highlight: `A full-stack project with a custom build backend with customer login and online quoting system.`,
+    // highlight: `A website featuring a quote request section. The user can submit
+    //       information and recieve a quote. Custom API and frontend.`,
           devIcons: ["python", "javascript", "CSS", "HTML5", "bootstrap", "django", "UX-Design"],
     buttons: [
       {
@@ -87,9 +91,10 @@ const ImagePlaylist = [
     src: require("../images/fasletest.png"),
     alt: "Alt text for pic.jpg",
     caption: "Fashion House Website",
-    highlight: ` A one page website made using HTML & CSS. The design explores the use
-    of positive and negative space.`,
-    devIcons: ["CSS", "HTML5"],
+    highlight: `This website explores UX Design and the use of positive and negative space. Features creative use of PNG files and enbedded media.`,
+    // highlight: ` A one page website made using HTML & CSS. The design explores the use
+    // of positive and negative space.`,
+    devIcons: ["UX-Design", "CSS", "HTML5"],
     buttons: [
       {
         type: "link",
@@ -111,8 +116,8 @@ const ImagePlaylist = [
     src: require("../images/autoText.png"),
     alt: "Alt text for image001.PNG",
     caption: "Text Auto-sizing for ReactJS",
-    highlight: `A react component that sizes text to fill a container. Used on this
-    website for all headline text.`,
+    highlight: `A react component that sizes text to fill a container. Great for responsive design and used across this
+    website.`,
     devIcons: ["javascript", "react"],
     buttons: [
       {
@@ -130,7 +135,7 @@ const ImagePlaylist = [
     src: require("../images/scratch2.png"),
     alt: "Alt text for image001.PNG",
     caption: "Scratch Teaching Aids",
-    highlight: `A repository of teaching aids and templates.`,
+    highlight: `I have been teaching students coding using Scratch and will be publishing a repository soon.`,
     devIcons: ["CSS", "HTML5"],
     buttons: [
       {
@@ -147,7 +152,7 @@ const ImagePlaylist = [
     alt: "Alt text for false.png",
     caption: "Pure Python Hangman",
     highlight: `Coding for the console is fun! The limitations brings out the
-    creativity in another way. This is a pure Python experience.`,
+    creativity in another way. This Hang Man game is a pure Python experience.`,
     devIcons: ["python"],
     buttons: [
       {
@@ -169,8 +174,8 @@ const ImagePlaylist = [
     src: require("../images/superhero2.png"),
     alt: "Alt text for pic.jpg",
     caption: "SuperHero Chat",
-    highlight: `A react world with a custom Django API. Created as part of my studies
-    in 2023.`,
+    highlight: `Full-Stack project with custom front and back ends. Created as part of my studies
+    at the Code Institute in 2023.`,
     devIcons: ["javascript", "react", "CSS", "HTML5", "python", "django", "UX-Design"],
     buttons: [
       {
@@ -192,8 +197,8 @@ const ImagePlaylist = [
     src: require("../images/quiz1.png"),
     alt: "Alt text for image001.PNG",
     caption: "Javascript Music Quiz",
-    highlight: `A Javascript game runs custom code to deliver an educational game for
-    music students.`,
+    highlight: `An educational game for
+    music students which presents random questions and tracks the students progress.`,
     devIcons: ["javascript", "CSS", "HTML5"],
     buttons: [
       {
@@ -215,7 +220,7 @@ const ImagePlaylist = [
     src: require("../images/hybrid3.png"),
     alt: "Alt text for image001.PNG",
     caption: "Plug-in Hybrid Journey Calculator",
-    highlight: `I created the calculator that I couldn't find on the internet! Add
+    highlight: `I created the calculator that I couldn't find on the internet. Add
     your journey details and find out how much you save.`,
     devIcons: ["javascript", "CSS", "HTML5"],
     buttons: [
