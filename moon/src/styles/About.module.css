@@ -2,10 +2,25 @@
 #page {
     background-color: white;
     position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.infoReveal {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    height: 100px;
+    text-align: center;
+    font-size: 12px;
+    
 }
 
 .container {
-    
+
     width: 140px;
     height: 180px;
     display: flex;
@@ -63,6 +78,10 @@
         font-size: 24px;
         border-radius: 10px;
         padding: 4px 0 4px 20px;
+    }
+
+    .infoReveal {
+        font-size: 17px;
     }
 }
 
