@@ -22,8 +22,7 @@ const ImagePlaylist = [
     src: require("../images/dr01.png"),
     alt: "Alt text for false.png",
     caption: "DR-01",
-    highlight: `With my musical background a drum machine was a great project to explore. This 
-    was created without the use of any tutorials. The link below takes you to the current version of the project.`,
+    highlight: `This is a 16-step, 8 voice programmable drum-machine. The link below takes you to the current version of the project.`,
     // highlight: `A custom drum machine. Exploring how to trigger sounds on the web!
     // Built from my head and not tutorials. Uses Javascript.`,
     devIcons: ["javascript", "react", "CSS", "HTML5"],
@@ -197,7 +196,7 @@ const ImagePlaylist = [
     src: require("../images/quiz1.png"),
     alt: "Alt text for image001.PNG",
     caption: "Javascript Music Quiz",
-    highlight: `An educational game for
+    highlight: `An educational 'True or False ' game for
     music students which presents random questions and tracks the students progress.`,
     devIcons: ["javascript", "CSS", "HTML5"],
     buttons: [
