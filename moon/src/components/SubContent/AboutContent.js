@@ -4,7 +4,7 @@ import css from "../../styles/About.module.css";
 const spanTexts = {
   span1: "I studied Full Stack Engineering at The Code Institute.",
   span2: "I come from the UK and have a farm in the North of Sweden.",
-  span3: "I have a background in Audio Engineering and music production.",
+  span3: "I have a background in Audio Engineering and music production. Programming is like the music world... but with a no horizon!",
   span4: "I really enjoy teaching and learning from others.",
   span5: "I have a passion for forestry and sustainable wood production.",
   span6: "Creating music and art is a strong interest I have had for many years.",
