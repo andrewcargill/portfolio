@@ -7,6 +7,7 @@ import {
   faGithubSquare,
   faSpotify,
   faCodepen,
+  faSquareWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = ({ handleClickSocial }) => {
@@ -40,13 +41,14 @@ const Footer = ({ handleClickSocial }) => {
       {/* Button 3 */}
       <button
         className={`fade-in-scale ${CustomBtn.footer}`}
-        onClick={() => handleClickSocial("https://spotify.com")}
+        onClick={() => handleClickSocial("https://api.whatsapp.com/send?phone=+46761494455&text=Hello%20Andy,%20I%20was%20looking%20at%20your%20site%20and...")}
       >
+
         <div id="buy-basket">
-          <FontAwesomeIcon icon={faSpotify} />
+          <FontAwesomeIcon icon={faSquareWhatsapp} />
         </div>
 
-        <div className={CustomBtn.footerLabel}> Spotify</div>
+        <div className={CustomBtn.footerLabel}> WhatsApp</div>
       </button>
       {/* Button 4 */}
       <button
