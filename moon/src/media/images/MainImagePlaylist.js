@@ -17,14 +17,36 @@ const handleClickSocial = (url) => {
 
 
 const ImagePlaylist = [
-  /* DR-01 DrumMachine */
+  /* Sawmill Go */
+  {
+    src: require("../images/sawmill_go.jpg"),
+    alt: "Image of sawmill go website",
+    caption: "Sawmill Go!",
+    highlight: `A productivity tool for sawmill owners with transparent forestry feature. Custom Django API and ReactJS Frontend. Utilizes MaterialUI for styling.`,
+    devIcons: ["javascript", "react", "CSS", "HTML5", "django", "python", "UX-Design"],
+    buttons: [
+      {
+        type: "link",
+        label: "website",
+        icon: "link",
+        url: "https://andrewcargill.github.io/sawmill_go/"
+      },
+      {
+        type: "link",
+        label: "github",
+        icon: "github",
+        url: "https://github.com/andrewcargill/sawmill_go/tree/main/mill"
+      }
+    ]
+
+  },
+  
+  /* DrumMachine */
   {
     src: require("../images/dr01.png"),
     alt: "Alt text for false.png",
     caption: "DR-01",
     highlight: `This is a 16-step, 8 voice programmable drum-machine. The link below takes you to the current version of the project.`,
-    // highlight: `A custom drum machine. Exploring how to trigger sounds on the web!
-    // Built from my head and not tutorials. Uses Javascript.`,
     devIcons: ["javascript", "react", "CSS", "HTML5"],
     buttons: [
       {
@@ -33,6 +55,7 @@ const ImagePlaylist = [
         icon: "code",
         url: "drum"
       },
+     
     ]
 
   },
@@ -42,8 +65,7 @@ const ImagePlaylist = [
     alt: "Alt text for false.png",
     caption: "The Cube",
     highlight: `A fun exploration into manipluating 3D objects. Below you can see both the React and CodePen versions of the project.`,
-    // highlight: `A fun exploration into manipluating 3D objects in React. This is taken
-    // from a cube game I made in CodePen.`,
+
     devIcons: ["javascript", "react", "CSS", "HTML5"],
     buttons: [
       {
@@ -110,13 +132,31 @@ const ImagePlaylist = [
      
     ]
   },
+  /* This Site */
+  {
+    src: require("../images/andycargill01.jpg"),
+    alt: "Image for andycargill.com",
+    caption: "andycargill01",
+    highlight: `A react frontend created using only custom CSS and JS code (No Bootstrap etc). I am exploring styling for XL viewports and flexbox containers.`,
+    devIcons: ["javascript", "react", "CSS", "HTML5", "UX-Design"],
+    buttons: [
+      {
+        type: "page",
+        label: "homepage",
+        icon: "link",
+        url: "drum"
+      },
+     
+    ]
+
+  },
   /* AUTO TEXT */
   {
     src: require("../images/autoText.png"),
     alt: "Alt text for image001.PNG",
     caption: "Text Auto-sizing for ReactJS",
     highlight: `A react component that sizes text to fill a container. Great for responsive design and used across this
-    website.`,
+    website. An interactive demo is coming soon!`,
     devIcons: ["javascript", "react"],
     buttons: [
       {
@@ -141,7 +181,7 @@ const ImagePlaylist = [
         type: "link",
         label: "Scratch",
         icon: "link",
-        url: "https://codepen.io/andyc01"
+        url: "https://scratch.mit.edu/users/andrewcargill01/"
       },
     ]
   },

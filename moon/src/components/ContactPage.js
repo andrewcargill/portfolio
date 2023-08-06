@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/ContactPage.module.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import phone from "../media/images/phone.png";
+import phone from "../media/images/phone.jpg";
 
 
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -37,7 +37,7 @@ function ContactPage({ navClick }) {
          
         <AutoHeaderText 
              text="
-            You can reach me via my social media below.
+            You can reach me via my social media below or call +44 761494455
              "
              containerId={styles.contactText}
              textId={styles.text}
