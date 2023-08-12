@@ -10,6 +10,7 @@ import HomeContent from "./components/HomeContent";
 import Work from "./components/Work";
 import About from "./components/About";
 import Tutorials from "./components/Tutorials";
+import Main from "./Main";
 import ContactPage from "./components/ContactPage";
 
 
@@ -24,6 +25,7 @@ function App() {
           <Header />
           <Routes>
             <Route path='/' element={<HomeContent />} />
+            <Route path='/main' element={<Main />} />
             <Route path='/portfolio' element={<Work />} />
             <Route path='/about' element={<About />} />
             <Route path='/tutorials' element={<Tutorials />} />

@@ -2,13 +2,20 @@ import React from "react";
 import styles from "../../styles/Learn.module.css";
 import image from "../../media/images/tutorials_thumbnail.png";
 import AutoHeaderText from "./AutoHeaderText";
+import { useNavigate } from 'react-router-dom';
 
 function Learn(props) {
   console.log("Learn props:", props.navSubClick);
 
-  const navClick = (value) => {
-    props.navSubClick(value);
-  };
+  // const navClick = (value) => {
+  //   props.navSubClick(value);
+  // };
+
+  const navigate = useNavigate();
+
+  const handleNavClick = (page) => {
+    navigate(page);
+  }
 
   return (
     <div className={styles.border}>
@@ -35,7 +42,7 @@ function Learn(props) {
         <div className={styles.buttonContainer}>
           <button
             className={styles.helpButton}
-            onClick={() => navClick("tuition")}
+            onClick={() => handleNavClick("/tutorials")}
           >
             Boom!
           </button>
