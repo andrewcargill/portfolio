@@ -17,6 +17,9 @@ const Header = ({ handleOnClick }) => {
   const handleNavClick = (page) => {
     setIsMenuOpen(false);
     navigate(page);
+    const menuButton = document.getElementById(style.menuButton);
+    menuButton.style.display = "block";
+
   }
 
 
