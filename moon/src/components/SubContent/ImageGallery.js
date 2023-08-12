@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import css from "../../styles/Work.module.css";
+import { useNavigate } from 'react-router-dom';
 import {
   faCrosshairs,
   faServer,
@@ -25,8 +26,10 @@ import {
 import CustomBtn from "../../styles/CustomButton.module.css";
 import AutoHeaderText from "./AutoHeaderText";
 
-function ImageGallery({ images, navClick }) {
+function ImageGallery({ images }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const navigate = useNavigate();
 
   const handleMouseEnter = (index) => {
     setHoveredIndex(index);
@@ -39,6 +42,12 @@ function ImageGallery({ images, navClick }) {
   const handleClickSocial = (url) => {
     window.open(url);
   };
+
+  const navClick = (page) => {
+    navigate(page);
+  };
+
+
 
   const iconsMap = {
     CSS: faCss3Alt,

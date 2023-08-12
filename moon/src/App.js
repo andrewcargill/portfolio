@@ -12,6 +12,8 @@ import About from "./components/About";
 import Tutorials from "./components/Tutorials";
 import Main from "./Main";
 import ContactPage from "./components/ContactPage";
+import DrumMachinePage from "./components/DrumMachinePage";
+import CubePage from "./components/CubePage";
 
 
 
@@ -30,6 +32,8 @@ function App() {
             <Route path='/about' element={<About />} />
             <Route path='/tutorials' element={<Tutorials />} />
             <Route path='/contact' element={<ContactPage />} />
+            <Route path='/drum' element={<DrumMachinePage />} />
+            <Route path='/cube' element={<CubePage />} />
           </Routes>
           <Footer />
         </Router>

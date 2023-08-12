@@ -53,7 +53,7 @@ const ImagePlaylist = [
         type: "page",
         label: "project",
         icon: "code",
-        url: "drum"
+        url: "/drum"
       },
      
     ]
@@ -72,7 +72,7 @@ const ImagePlaylist = [
         type: "page",
         label: "Demo",
         icon: "code",
-        url: "cube"
+        url: "/cube"
       },
       {
         type: "link",
@@ -144,7 +144,7 @@ const ImagePlaylist = [
         type: "page",
         label: "homepage",
         icon: "link",
-        url: "drum"
+        url: "/"
       },
      
     ]
@@ -163,7 +163,7 @@ const ImagePlaylist = [
         type: "page",
         label: "home page",
         icon: "link",
-        url: "home"
+        url: "/"
       },
       
      
