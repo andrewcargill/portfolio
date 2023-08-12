@@ -22,7 +22,7 @@ const ImagePlaylist = [
     src: require("../images/sawmill_go.jpg"),
     alt: "Image of sawmill go website",
     caption: "Sawmill Go!",
-    highlight: `A productivity tool for sawmill owners with transparent forestry feature. Custom Django API and ReactJS Frontend. Utilizes MaterialUI for styling.`,
+    highlight: `A productivity tool for sawmill owners with transparent forestry feature. Custom Django API and ReactJS Frontend.`,
     devIcons: ["javascript", "react", "CSS", "HTML5", "django", "python", "UX-Design"],
     buttons: [
       {
