@@ -5,7 +5,6 @@ import {
   faInstagramSquare,
   faLinkedin,
   faGithubSquare,
-  faSpotify,
   faCodepen,
   faSquareWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";

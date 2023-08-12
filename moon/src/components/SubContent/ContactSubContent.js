@@ -8,7 +8,6 @@ import {
   faCheckSquare,
   faCoffee,
   faCartShopping,
-  faPrescriptionBottleMedical,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AutoHeaderText from "./AutoHeaderText";
@@ -16,17 +15,11 @@ library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping);
 
 
 function ContactSubContent(props) {
-  console.log('contact props:', props.navSubClick)
-
   const navigate = useNavigate();
 
   const handleNavClick = (page) => {
     navigate(page);
   }
-
-  // const navClick = (value) => {
-  //   props.navSubClick(value);
-  // };
 
   return (
     <div className="text-border-buy left-margin-desktop box-shadow">

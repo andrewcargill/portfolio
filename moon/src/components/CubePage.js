@@ -1,9 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import ImagePlaylist from "../media/images/MainImagePlaylist";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import video from "../media/video/advert.mp4";
 import {
   faArrowDown,
   faCheckSquare,
@@ -13,12 +11,8 @@ import {
 
 import { faCodepen } from "@fortawesome/free-brands-svg-icons";
 import ContactSubContent from "./SubContent/ContactSubContent";
-import Image from "./SubContent/Image";
 import AutoHeaderText from "./SubContent/AutoHeaderText";
 import Learn from "./SubContent/Learn";
-import ServicesContent from "./SubContent/ServicesContent";
-import CubeGame from "./SubContent/CubeGame";
-import Square from "./SubContent/Square";
 import Cube from "./SubContent/Cube";
 
 

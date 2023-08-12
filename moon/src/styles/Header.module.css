@@ -1,75 +1,72 @@
-
 #navMobile {
-    display: flex;
-    justify-content: start;
-    /* position: fixed;
-    top: 17px;
-    right: 2%; */
-    flex-direction: column;
-    align-items: flex-end;
-    z-index: 99;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 99;
 }
- 
+
 #navLarge {
-    display: none;
+  display: none;
 }
 
 .dropdownMenu {
-    background-color: green;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menuButton {
+  background-color: red;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  padding: 10px;
+  height: 50%;
+}
+
+.menuList {
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+
+  #navMobile {
+    display: none;
   }
 
-  .menuButton {
-    background-color: red;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    padding: 10px;
-    height: 50%;
-  }
-  
-  .menuList {
-    background-color: pink;
+  #navLarge {
     display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-    margin: 0;
   }
-  
+
+  .menu-button {
+    display: block;
+  }
+
+  .menu-list {
+    display: none;
+  }
+
   .menu-list li {
-    margin: 10px 0;
+    margin: 5px 0;
   }
-  
-  @media (min-width: 768px) {
 
-    #navMobile {
-      display: none;
-    }
-    
-    #navLarge {
-     display: flex;
-    }
-
-
-    .menu-button {
-      display: block;
-    }
-    .menu-list {
-      display: none;
-    }
-    .menu-list li {
-      margin: 5px 0;
-    }
-    .menu-list li button {
-      color: #333;
-      text-decoration: none;
-      font-size: 14px;
-    }
+  .menu-list li button {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
   }
-  
+}

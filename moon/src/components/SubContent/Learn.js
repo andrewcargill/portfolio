@@ -4,13 +4,7 @@ import image from "../../media/images/tutorials_thumbnail.png";
 import AutoHeaderText from "./AutoHeaderText";
 import { useNavigate } from 'react-router-dom';
 
-function Learn(props) {
-  console.log("Learn props:", props.navSubClick);
-
-  // const navClick = (value) => {
-  //   props.navSubClick(value);
-  // };
-
+function Learn() {
   const navigate = useNavigate();
 
   const handleNavClick = (page) => {
@@ -19,11 +13,11 @@ function Learn(props) {
 
   return (
     <div className={styles.border}>
-      {/* <div className={styles.thumb}> */}
+
       <div className="image-container-learn">
         <img src={image} alt="" />
       </div>
-      {/* </div> */}
+
       <div className={styles.leftContainer}>
         <div id={styles.left}>
           <div id={styles.text}>

@@ -4,7 +4,6 @@ import logo from "../media/images/01_sqaure.png";
 import style from "../styles/Header.module.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faBars, faCompass, faX } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from 'react-router-dom';
 
 library.add(faBars, faCompass, faX);
@@ -22,19 +21,11 @@ const Header = ({ handleOnClick }) => {
 
   }
 
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     const menuButton = document.getElementById(style.menuButton);
     menuButton.style.display = isMenuOpen ? "flex" : "none";
   };
-
-  // const handleNavClick = () => {
-  //   setIsMenuOpen(false);
-  //   const menuButton = document.getElementById(style.menuButton);
-  //   menuButton.style.display = "block";
-  // };
-
 
   return (
     <div id="header">
@@ -65,7 +56,7 @@ const Header = ({ handleOnClick }) => {
             <div id={style.dropDownItems}>
               <button
                 onClick={() => {
-           
+
                   handleNavClick("/");
                 }}
                 id={CustomBtn.menuButtonHide}
@@ -76,7 +67,7 @@ const Header = ({ handleOnClick }) => {
 
               <button
                 onClick={() => {
-               
+
                   handleNavClick("/portfolio");
                 }}
                 className={`slide-right ${CustomBtn.whiteMobile}`}
@@ -86,7 +77,7 @@ const Header = ({ handleOnClick }) => {
 
               <button
                 onClick={() => {
-         
+
                   handleNavClick("/about");
                 }}
                 className={`slide-right ${CustomBtn.whiteMobile}`}

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function AutoHeaderText({
   text,
@@ -25,23 +24,11 @@ function AutoHeaderText({
       let RawFontSize = Math.sqrt(containerArea / textLength) * 2.5;
       let newFontSize = 0;
       newFontSize = RawFontSize * calFont;
-      console.log(`
-Container dimensions:
-height: ${containerHeight}px
-width: ${containerWidth}px
-area: ${containerHeight * containerWidth}px
-
-Text dimensions:
-length: ${textLength}
-line spacing: ${lineSpacing}px
-
-
-newFontSize: ${newFontSize}
-`);
+     
       setFontSize(newFontSize);
     };
     window.addEventListener("resize", handleResize);
-    handleResize(); // call once initially to set the font size
+    handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, [containerId, textId, fontSize, lineSpacing]);
 

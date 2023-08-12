@@ -3,8 +3,6 @@ import styles from "../styles/ContactPage.module.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import phone from "../media/images/phone.jpg";
-
-
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faArrowDown,
@@ -18,7 +16,7 @@ import AutoHeaderText from "./SubContent/AutoHeaderText";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
-function ContactPage({ navClick }) {
+function ContactPage() {
   return (
     <div id={styles.mainContentContainer}>
       {/* Header Text Container */}

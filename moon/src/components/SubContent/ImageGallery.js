@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import {
   faCrosshairs,
   faServer,
-  faCode,
   faSquareUpRight,
   faLaptopCode,
 } from "@fortawesome/free-solid-svg-icons";
@@ -16,10 +15,7 @@ import {
   faPython,
   faJsSquare,
   faReact,
-  faInstagramSquare,
-  faLinkedin,
   faGithubSquare,
-  faSpotify,
   faCodepen,
 } from "@fortawesome/free-brands-svg-icons";
 

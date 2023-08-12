@@ -6,7 +6,7 @@
   padding-top: 2%;
   padding-left: 2%;
   height: 200px;
-  width: 100%; 
+  width: 100%;
   overflow: visible;
   align-self: self-start;
   border-radius: 0;
@@ -20,7 +20,6 @@
 
 
 #headerContainer {
-  /* background-color: #d3d3d3; */
   width: 100%;
   height: 20vh;
   padding: 1%;
@@ -32,8 +31,6 @@
   margin-bottom: 10px;
 }
 
-
-
 #mainContentContainer {
   display: flex;
   font-weight: 500;
@@ -43,18 +40,11 @@
   height: auto;
 }
 
-/* p {
-    color: black;
-    border-radius: 6px;
-    font-size: 3vw;
-} */
-
 .img {
   width: 100%;
   height: 100%;
-
 }
-  
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -64,28 +54,27 @@
 }
 
 .thumbnailWrapper {
-  width: 100%; 
+  width: 100%;
   height: auto;
   overflow: hidden;
   padding-bottom: 2%;
-}  
+}
 
 .thumbnail {
   border-radius: 28px;
-  width: 100%; 
-height: 100%;
-object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-  
+
 .thumbnailWrapper {
-  
+
   position: relative;
   overflow: hidden;
 
 }
 
 .thumbnailOverlay {
-  /* border: var(--footer-header-buttons); */
   border-radius: 28px;
   position: absolute;
   top: 0;
@@ -112,6 +101,7 @@ object-fit: cover;
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -141,7 +131,6 @@ object-fit: cover;
   left: 50%;
   text-transform: uppercase;
   transform: translateX(-50%);
-  /* background-color: #898989; */
   padding: 15px 10px 15px 10px;
   font-size: 15px;
   font-weight: 800;
@@ -153,7 +142,6 @@ object-fit: cover;
 
 .border {
   width: 100%;
-  /* background-color: #d3d3d3 !important; */
   background-color: transparent;
   margin: 1% 0 1% 0;
   font-size: 20px;
@@ -171,7 +159,6 @@ object-fit: cover;
 }
 
 /* CONTENT FORMATTING*/
-
 .highlightContainer {
   width: 100%;
   height: 100%;
@@ -185,7 +172,7 @@ object-fit: cover;
 .highlightText {
   font-size: 4vw;
   text-align: justify;
- 
+
 }
 
 .devIconContainer {
@@ -211,8 +198,6 @@ object-fit: cover;
   left: 50%;
   transform: translateX(-50%);
   padding: 5px;
-  /* background-color: #000; */
-
   color: black;
   white-space: nowrap;
   font-size: 10px;
@@ -221,7 +206,6 @@ object-fit: cover;
 .tooltip:hover .tooltipText {
   visibility: visible;
 }
-
 
 .highlightButtonContainer {
   display: flex;
@@ -267,22 +251,21 @@ object-fit: cover;
   }
 
   .thumbnailWrapper {
-    width: 49%; 
+    width: 49%;
     height: auto;
     overflow: hidden;
     margin-top: 10px;
     padding-bottom: 10px;
-  }  
+  }
 
   #autoTextContainer {
-    width: 49%; 
+    width: 49%;
     overflow: hidden;
   }
 
   .thumbnailOverlay {
     border-radius: 31px;
     height: 97%;
-    /* border: var(--footer-header-buttons); */
   }
 
   .thumbnail {
@@ -310,7 +293,7 @@ object-fit: cover;
   #autoTextContainer {
     padding-top: 10px;
     padding-left: 5px;
-    width: 49%; 
+    width: 49%;
     min-height: 12vw;
     height: 22vh;
     padding-bottom: 10px;
@@ -321,7 +304,6 @@ object-fit: cover;
 @media screen and (min-width: 1024px) {
 
   #mainContentContainer {
-    /* background-color: violet; */
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
@@ -330,7 +312,6 @@ object-fit: cover;
   }
 
   .thumbnailOverlay {
-    /* border: var(--footer-header-buttons); */
     border-radius: 60px;
   }
 
@@ -347,11 +328,10 @@ object-fit: cover;
   }
 
   .thumbnailWrapper {
-    width: 49%; 
+    width: 49%;
     height: auto;
-    /* overflow: hidden; */
     padding-bottom: 20px;
-  }  
+  }
 
   .thumbnail {
     border-radius: 60px;
@@ -366,14 +346,14 @@ object-fit: cover;
     font-size: 2vw;
   }
 
-  .thumbnailOverlay{
+  .thumbnailOverlay {
     height: 98%;
   }
 
   #autoTextContainer {
     padding-left: 20px;
     padding-top: 20px;
-    width: 49%; 
+    width: 49%;
     min-height: 30vw;
     height: 22vh;
     padding-bottom: 10px;
@@ -382,7 +362,7 @@ object-fit: cover;
 
 @media screen and (min-width: 2400px) {
   #autoTextContainer {
-    width: 49%; 
+    width: 49%;
     min-height: 12vw;
     height: 57vh;
     padding-bottom: 10px;

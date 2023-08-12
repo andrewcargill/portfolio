@@ -8,7 +8,6 @@
   font-size: 60px;
 }
 
-
 #container {
   position: relative;
   width: 80%;
@@ -20,8 +19,6 @@
 
 }
 
-
-
 .clickedWords {
     position: absolute;
     top: 0;
@@ -30,7 +27,7 @@
     height: 100%;
     pointer-events: none;
     font-family: 'Rubik Mono One';
-    font-size: 20px;  /* FONT SIZE */
+    font-size: 20px;
     text-transform: uppercase;
 }
 
@@ -49,9 +46,11 @@
   font-weight: 400;
   font-size: 10px; /* FONT SIZE */
 }
+
 #cube:active {
   cursor: grabbing;
 }
+
 #cube .face {
   position: absolute;
   width: 160px;
@@ -61,37 +60,44 @@
   flex-direction: row;
   flex-wrap: wrap;
   border-radius: 5px;
-  opacity: 0.9;
-  
+  opacity: 0.9; 
 }
+
 #cube .front {
   transform: translateZ(80px);
   background-color: white;
 }
+
 #cube .back {
   transform: translateZ(-80px) rotateY(180deg);
   background-color: white;
 }
+
 #cube .top {
   transform: rotateX(90deg) translateZ(80px);
   background-color: white;
 }
+
 #cube .bottom {
   transform: rotateX(-90deg) translateZ(80px);
   background-color: white;
 }
+
 #cube .left {
   transform: rotateY(-90deg) translateZ(80px);
   background-color: black;
   color: white;
 }
+
 #left {
   color: white;
 }
+
 #cube .right {
   transform: rotateY(90deg) translateZ(80px);
   background-color: purple;
 }
+
 #sphere {
   position: absolute;
   width: 100px;
@@ -101,6 +107,7 @@
   transition: transform 1s ease-in-out;
   cursor: grab;
 }
+
 #sphere:active {
   cursor: grabbing;
 }
@@ -112,7 +119,6 @@
 
 .clicked {
     opacity: 0.2;
-  
 }
 
 @media screen and (min-width: 768px) {
@@ -131,15 +137,19 @@
   #cube .front {
     transform: translateZ(150px);
   }
+
   #cube .back {
     transform: translateZ(-150px) rotateY(180deg);
   }
+
   #cube .top {
     transform: rotateX(90deg) translateZ(150px);
   }
+
   #cube .bottom {
     transform: rotateX(-90deg) translateZ(150px);
   }
+  
   #cube .left {
     transform: rotateY(-90deg) translateZ(150px);
   }

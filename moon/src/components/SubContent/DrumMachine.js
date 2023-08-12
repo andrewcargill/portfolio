@@ -222,11 +222,6 @@ const DrumMachine = () => {
   };
 
   useEffect(() => {
-    console.log("snare muted", snareMuted);
-    console.log("kick muted", kickMuted);
-    console.log("hihat muted", hihatMuted);
-    console.log("perc muted", percMuted);
-    console.log("bass muted", basslineMuted);
 
     if (playing) {
       let step = 0;
