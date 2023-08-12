@@ -27,7 +27,7 @@ function HomeContent({ navClick }) {
         {/* Auto Header Text Component */}
         <AutoHeaderText
           text="
-          Welcome to my world where creativity and full stack engineering collide. 2
+          Welcome to my world where creativity and full stack engineering collide.
           "
           maxFont="35px"
           minFont="15px"
