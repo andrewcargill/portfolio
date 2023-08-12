@@ -5,11 +5,20 @@ import style from "../styles/Header.module.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faBars, faCompass, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from 'react-router-dom';
 
 library.add(faBars, faCompass, faX);
 
 const Header = ({ handleOnClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleNavClick = (page) => {
+    setIsMenuOpen(false);
+    navigate(page);
+  }
+
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -17,11 +26,11 @@ const Header = ({ handleOnClick }) => {
     menuButton.style.display = isMenuOpen ? "flex" : "none";
   };
 
-  const handleNavClick = () => {
-    setIsMenuOpen(false);
-    const menuButton = document.getElementById(style.menuButton);
-    menuButton.style.display = "block";
-  };
+  // const handleNavClick = () => {
+  //   setIsMenuOpen(false);
+  //   const menuButton = document.getElementById(style.menuButton);
+  //   menuButton.style.display = "block";
+  // };
 
 
   return (
@@ -30,7 +39,7 @@ const Header = ({ handleOnClick }) => {
         {/* Logo */}
         <img
           type="button"
-          onClick={() => handleOnClick("home")}
+          onClick={() => handleNavClick("/")}
           id="logo-image"
           src={logo}
           alt=""
@@ -53,8 +62,8 @@ const Header = ({ handleOnClick }) => {
             <div id={style.dropDownItems}>
               <button
                 onClick={() => {
-                  handleOnClick("services");
-                  handleNavClick();
+           
+                  handleNavClick("/");
                 }}
                 id={CustomBtn.menuButtonHide}
                 className={`slide-right ${CustomBtn.whiteMobile}`}
@@ -64,8 +73,8 @@ const Header = ({ handleOnClick }) => {
 
               <button
                 onClick={() => {
-                  handleOnClick("work");
-                  handleNavClick();
+               
+                  handleNavClick("/portfolio");
                 }}
                 className={`slide-right ${CustomBtn.whiteMobile}`}
               >
@@ -74,8 +83,8 @@ const Header = ({ handleOnClick }) => {
 
               <button
                 onClick={() => {
-                  handleOnClick("about");
-                  handleNavClick();
+         
+                  handleNavClick("/about");
                 }}
                 className={`slide-right ${CustomBtn.whiteMobile}`}
               >
@@ -89,20 +98,20 @@ const Header = ({ handleOnClick }) => {
       {/* Tablet & desktop menu */}
       <div id={style.navLarge} className="header-element-right">
         <button
-          onClick={() => handleOnClick("services")}
+          onClick={() => handleNavClick("/services")}
           id={CustomBtn.hidden}
           className={`slide-down ${CustomBtn.white}`}
         >
           Services
         </button>
         <button
-          onClick={() => handleOnClick("work")}
+          onClick={() => handleNavClick("/portfolio")}
           className={`slide-down ${CustomBtn.white}`}
         >
           Portfolio
         </button>
         <button
-          onClick={() => handleOnClick("about")}
+          onClick={() => handleNavClick("/about")}
           className={`slide-right ${CustomBtn.white}`}
         >
           About
