@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ImagePlaylist from "./media/images/MainImagePlaylist";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./App.css";
