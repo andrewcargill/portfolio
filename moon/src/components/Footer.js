@@ -9,7 +9,18 @@ import {
   faSquareWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 
-const Footer = ({ handleClickSocial }) => {
+const Footer = ( ) => {
+
+  function handleClickSocial(url) {
+    if (typeof url !== 'string' || url.trim() === '') {
+      console.error('Invalid URL');
+      return;
+    }
+  
+    // Open a new tab with the provided URL
+    window.open(url, '_blank');
+  }
+
   return (
     <div id="footer">
       {/* Button 1 */}
