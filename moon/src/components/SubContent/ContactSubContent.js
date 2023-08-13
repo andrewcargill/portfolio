@@ -1,8 +1,8 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import "../../App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import CustomBtn from "../../styles/CustomButton.module.css";
-import { useNavigate } from 'react-router-dom';
 import {
   faArrowDown,
   faCheckSquare,

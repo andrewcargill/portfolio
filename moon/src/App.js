@@ -1,9 +1,9 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route }
+  from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route }
-  from 'react-router-dom';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomeContent from "./components/HomeContent";
@@ -23,7 +23,7 @@ function App() {
     <div className="App">
       <div id="main">
 
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <Header />
           <Routes>
             <Route path='/' element={<HomeContent />} />

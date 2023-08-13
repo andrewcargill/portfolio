@@ -1,10 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import CustomBtn from "../styles/CustomButton.module.css";
 import logo from "../media/images/01_sqaure.png";
 import style from "../styles/Header.module.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faBars, faCompass, faX } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from 'react-router-dom';
 
 library.add(faBars, faCompass, faX);
 

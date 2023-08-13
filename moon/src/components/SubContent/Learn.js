@@ -1,8 +1,8 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import styles from "../../styles/Learn.module.css";
 import image from "../../media/images/tutorials_thumbnail.png";
 import AutoHeaderText from "./AutoHeaderText";
-import { useNavigate } from 'react-router-dom';
 
 function Learn() {
   const navigate = useNavigate();
