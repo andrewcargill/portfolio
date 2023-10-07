@@ -88,7 +88,7 @@ const ImagePlaylist = [
   {
     src: require("../images/dr01.png"),
     alt: "Alt text for false.png",
-    caption: "DR-01",
+    caption: "Online Drum Machine",
     highlight: `This is a 16-step, 8 voice programmable drum-machine. The link below takes you to the current version of the project.`,
     devIcons: ["javascript", "react", "CSS", "HTML5"],
     buttons: [
