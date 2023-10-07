@@ -17,6 +17,31 @@ const handleClickSocial = (url) => {
 
 
 const ImagePlaylist = [
+  /* ShowJump Timer */
+  {
+    src: require("../images/showJump.jpg"),
+    alt: "Image of sawmill go website",
+    caption: "Show Jumping Timer",
+    highlight: `Fully functioning competiton timer and results generator. 
+    
+     Developed using TypeScript and React, with the integration of React's Global State API.`,
+    devIcons: ["javascript", "react", "CSS", "HTML5", "UX-Design"],
+    buttons: [
+      {
+        type: "link",
+        label: "website",
+        icon: "link",
+        url: "https://andrewcargill.github.io/sawmill_go/"
+      },
+      {
+        type: "link",
+        label: "github",
+        icon: "github",
+        url: "https://github.com/andrewcargill/sawmill_go/tree/main/mill"
+      }
+    ]
+
+  },
   /* Sawmill Go */
   {
     src: require("../images/sawmill_go.jpg"),
