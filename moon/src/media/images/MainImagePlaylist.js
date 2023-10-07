@@ -17,6 +17,24 @@ const handleClickSocial = (url) => {
 
 
 const ImagePlaylist = [
+    /* This Site */
+    {
+      src: require("../images/01.jpg"),
+      alt: "Image for andycargill.com",
+      caption: "andycargill01",
+      highlight: `A react frontend created using only custom CSS and JS code (No Bootstrap etc). I am exploring styling for XL viewports and flexbox containers.`,
+      devIcons: ["javascript", "react", "CSS", "HTML5", "UX-Design"],
+      buttons: [
+        {
+          type: "page",
+          label: "homepage",
+          icon: "link",
+          url: "/"
+        },
+       
+      ]
+  
+    },
   /* ShowJump Timer */
   {
     src: require("../images/showJump.jpg"),
@@ -44,7 +62,7 @@ const ImagePlaylist = [
   },
   /* Sawmill Go */
   {
-    src: require("../images/sawmill_go.jpg"),
+    src: require("../images/sawmillGo.jpg"),
     alt: "Image of sawmill go website",
     caption: "Sawmill Go!",
     highlight: `A productivity tool for sawmill owners with transparent forestry feature. Custom Django API and ReactJS Frontend.`,
@@ -157,24 +175,7 @@ const ImagePlaylist = [
      
     ]
   },
-  /* This Site */
-  {
-    src: require("../images/andycargill01.jpg"),
-    alt: "Image for andycargill.com",
-    caption: "andycargill01",
-    highlight: `A react frontend created using only custom CSS and JS code (No Bootstrap etc). I am exploring styling for XL viewports and flexbox containers.`,
-    devIcons: ["javascript", "react", "CSS", "HTML5", "UX-Design"],
-    buttons: [
-      {
-        type: "page",
-        label: "homepage",
-        icon: "link",
-        url: "/"
-      },
-     
-    ]
 
-  },
   /* AUTO TEXT */
   {
     src: require("../images/autoText.png"),
