@@ -34,6 +34,7 @@ import {
   faSquareXmark
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button } from "bootstrap";
 library.add(faPlay, faPause, faHatCowboy, faBurst, faUmbrellaBeach, faSquareXmark);
 
 const kick = new Howl({ src: [kickSound] });
@@ -296,15 +297,12 @@ const DrumMachine = () => {
           {/* Transport */}
           <div className={style.transportContainer}>
             <button onClick={playSequence} className={`${style.drumButton} ${style.transportButton}`}>
-             
               {playing ? (
                 <FontAwesomeIcon icon="fa-pause" />
               ) : (
                 <FontAwesomeIcon icon="fa-play" />
               )}
             </button>
-
-            
           </div>
 
           <div className={style.drumLogo}>
