@@ -49,13 +49,13 @@ const ImagePlaylist = [
         type: "link",
         label: "website",
         icon: "link",
-        url: "https://andrewcargill.github.io/sawmill_go/"
+        url: "https://andrewcargill.github.io/typescript_react/"
       },
       {
         type: "link",
         label: "github",
         icon: "github",
-        url: "https://github.com/andrewcargill/sawmill_go/tree/main/mill"
+        url: "https://github.com/andrewcargill/typescript_react"
       }
     ]
 
