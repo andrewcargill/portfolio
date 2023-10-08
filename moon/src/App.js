@@ -15,9 +15,6 @@ import ContactPage from "./components/ContactPage";
 import DrumMachinePage from "./components/DrumMachinePage";
 import CubePage from "./components/CubePage";
 
-
-
-
 function App() {
   return (
     <div className="App">
