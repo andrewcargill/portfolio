@@ -20,7 +20,7 @@ function App() {
     <div className="App">
       <div id="main">
 
-        <Router basename={process.env.PUBLIC_URL}>
+        {/* <Router basename={process.env.PUBLIC_URL}> */}
           <Header />
           <Routes>
             <Route path='/' element={<HomeContent />} />
@@ -33,7 +33,7 @@ function App() {
             <Route path='/cube' element={<CubePage />} />
           </Routes>
           <Footer />
-        </Router>
+        {/* </Router> */}
       </div>
       
       </div>
