@@ -22,8 +22,8 @@ function Learn() {
         <div id={styles.left}>
           <div id={styles.text}>
             <AutoHeaderText
-              text="HTML | CSS | Javascript | Scratch"
-              maxFont="8px"
+              text="Interactive Learning"
+              maxFont="6px"
               minFont="30px"
               containerId={styles.left}
               textId={styles.text}
