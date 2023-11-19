@@ -94,7 +94,7 @@ function AutoTextPage({ navClick }) {
             </div>
             <div>
             <input
-              type="text"
+              type="textfield"
               id="textInput"
               value={inputText}
               onChange={handleInputChange}
@@ -113,14 +113,14 @@ function AutoTextPage({ navClick }) {
           </div>
 
           <div>
-          fontsize: {fontSize}
+          fontsize: {fontSize}vw
           </div>
           <div>
 
-          containerHeight: {containerHeight}
+          containerHeight: {containerHeight}px
           </div>
           <div>
-          containerWidth: {containerWidth}
+          containerWidth: {containerWidth}px
           </div>
 
           {/* TEXT INPUT FIELD HERE */}
