@@ -24,7 +24,7 @@ function AutoTextPage({ navClick }) {
   const [fontSize, setFontSize] = useState(1.8);
   const [containerHeight, setContainerHeight] = useState(0);
   const [containerWidth, setContainerWidth] = useState(0);
-  const [inputText, setInputText] = useState("Autotext tracks the containers dimensions and sets the font size.");
+  const [inputText, setInputText] = useState("AutoHeader tracks the containers dimensions and sets the font size.");
   const [calFont, setCalFont] = useState(0.4);
 
   const handleFontSizeChange = (newFontSize) => {
@@ -87,11 +87,12 @@ function AutoTextPage({ navClick }) {
       <div id="half-page-container-size-to-content" className="slide-right">
         {/* Image Component */}
         <div id={css.comingSoon} className="text-border right-margin-desktop image-container">
-
-          AutoText Demo
-
+          <h2>AutoHeader Demo</h2>
+      
           <div>
             <label htmlFor="textInput">Text: </label>
+            </div>
+            <div>
             <input
               type="text"
               id="textInput"
@@ -101,6 +102,8 @@ function AutoTextPage({ navClick }) {
           </div>
           <div>
             <label htmlFor="calFont">Ratio: </label>
+            </div>
+            <div>
             <input
               type="number"
               id="calFont"
@@ -109,11 +112,16 @@ function AutoTextPage({ navClick }) {
             />
           </div>
 
-
+          <div>
           fontsize: {fontSize}
+          </div>
+          <div>
 
           containerHeight: {containerHeight}
+          </div>
+          <div>
           containerWidth: {containerWidth}
+          </div>
 
           {/* TEXT INPUT FIELD HERE */}
 
