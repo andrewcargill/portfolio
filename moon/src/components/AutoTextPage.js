@@ -24,6 +24,8 @@ function AutoTextPage({ navClick }) {
   const [fontSize, setFontSize] = useState(1.8);
   const [containerHeight, setContainerHeight] = useState(0);
   const [containerWidth, setContainerWidth] = useState(0);
+  const [inputText, setInputText] = useState("Autotext tracks the containers dimensions and sets the font size.");
+  const [calFont, setCalFont] = useState(0.4);
 
   const handleFontSizeChange = (newFontSize) => {
     const roundedFontSize = parseFloat(newFontSize.toFixed(4));
@@ -38,19 +40,25 @@ function AutoTextPage({ navClick }) {
     setContainerWidth(newContainerWidth);
   };
 
+  const handleInputChange = (e) => {
+    setInputText(e.target.value);
+  };
+
+  const handleCalFontChange = (e) => {    
+    setCalFont(e.target.value);
+  };
+
+
   return (
     <div id="main-content-container">
       {/* Header Text Container*/}
       <div id="header-text-container" className="fade-in">
         {/* Auto Header Text Component */}
         <AutoHeaderTextDemo
-          text="
-          Version one of a drum machine! Written in Javascript and using 'Howler'
-          for sound sync.
-          "
+          text={inputText}
           maxFont="35px"
           minFont="15px"
-          calFont="0.4"
+          calFont={calFont}
           lineSpacing="1"
           onFontSizeChange={handleFontSizeChange}
           onContainerHeightChange={handleContainerHeightChange}
@@ -82,12 +90,32 @@ function AutoTextPage({ navClick }) {
 
           AutoText Demo
 
+          <div>
+            <label htmlFor="textInput">Text: </label>
+            <input
+              type="text"
+              id="textInput"
+              value={inputText}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="calFont">Ratio: </label>
+            <input
+              type="number"
+              id="calFont"
+              value={calFont}
+              onChange={handleCalFontChange}
+            />
+          </div>
+
 
           fontsize: {fontSize}
 
-
           containerHeight: {containerHeight}
           containerWidth: {containerWidth}
+
+          {/* TEXT INPUT FIELD HERE */}
 
 
         </div>

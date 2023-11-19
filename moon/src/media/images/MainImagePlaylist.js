@@ -189,7 +189,7 @@ const ImagePlaylist = [
         type: "page",
         label: "home page",
         icon: "link",
-        url: "/"
+        url: "/autotext"
       },
       
      
