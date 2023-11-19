@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function AutoHeaderText({
+function AutoHeaderTextDemo({
   text,
   maxFont,
   minFont,
@@ -8,6 +8,7 @@ function AutoHeaderText({
   containerId,
   textId,
   lineSpacing,
+  onFontSizeChange
 }) {
   const [fontSize, setFontSize] = useState(1.8); // initial font size in vw units
 
@@ -26,12 +27,13 @@ function AutoHeaderText({
       newFontSize = RawFontSize * calFont;
       console.log(newFontSize);
       setFontSize(newFontSize);
-      
+      onFontSizeChange(newFontSize);
+
     };
     window.addEventListener("resize", handleResize);
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
-  }, [containerId, textId, fontSize, lineSpacing]);
+  }, [containerId, textId, fontSize, lineSpacing, onFontSizeChange]);
 
   return (
     <div>
@@ -47,7 +49,7 @@ function AutoHeaderText({
   );
 }
 
-AutoHeaderText.defaultProps = {
+AutoHeaderTextDemo.defaultProps = {
   containerId: "header-text-container",
   textId: "header-text-container-text",
   lineSpacing: 1.2,
@@ -56,4 +58,4 @@ AutoHeaderText.defaultProps = {
   calFont: 1,
 };
 
-export default AutoHeaderText;
+export default AutoHeaderTextDemo;

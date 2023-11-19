@@ -14,6 +14,7 @@ import Main from "./Main";
 import ContactPage from "./components/ContactPage";
 import DrumMachinePage from "./components/DrumMachinePage";
 import CubePage from "./components/CubePage";
+import AutoTextPage from "./components/AutoTextPage";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path='/tutorials' element={<Tutorials />} />
             <Route path='/contact' element={<ContactPage />} />
             <Route path='/drum' element={<DrumMachinePage />} />
+            <Route path='/autotext' element={<AutoTextPage />} />
             <Route path='/cube' element={<CubePage />} />
           </Routes>
           <Footer />
