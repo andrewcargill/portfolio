@@ -35,7 +35,7 @@ function ContactPage() {
          
         <AutoHeaderText 
              text="
-            You can reach me via my social media below or call +44 761494455
+            You can reach me via my social media below or call +46 761494455
              "
              containerId={styles.contactText}
              textId={styles.text}

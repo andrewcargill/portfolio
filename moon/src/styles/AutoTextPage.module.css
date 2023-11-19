@@ -4,6 +4,46 @@
     flex-direction: column;
 }
 
-#textInputContainer {
+.aboutText {
+    
+    color: black;
     width: 80%;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    font-size: smaller;
+    text-align: justify;
+}
+
+.subAboutText {
+    margin-top: 10px;
+}
+
+
+.dataContainer {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+    width: 60%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #898989;
+    color: white;
+    border-radius: 20px;
+    font-size: smaller;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    background-color: #898989;
+    color: white;
+    border-radius: 20px;
+    font-size: smaller;
 }

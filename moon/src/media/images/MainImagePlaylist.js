@@ -35,6 +35,23 @@ const ImagePlaylist = [
       ]
   
     },
+      /* AUTO TEXT */
+  {
+    src: require("../images/autoText.png"),
+    alt: "Alt text for image001.PNG",
+    caption: "Text Auto-sizing for ReactJS",
+    highlight: `A react component that sizes text to fill a container. Great for responsive design and used across this
+    website. Try out the interactive demo!`,
+    devIcons: ["javascript", "react"],
+    buttons: [
+      {
+        type: "page",
+        label: "demo page",
+        icon: "link",
+        url: "/autotext"
+      },
+    ]
+  },
   /* ShowJump Timer */
   {
     src: require("../images/showJump.jpg"),
@@ -175,42 +192,7 @@ const ImagePlaylist = [
      
     ]
   },
-
-  /* AUTO TEXT */
-  {
-    src: require("../images/autoText.png"),
-    alt: "Alt text for image001.PNG",
-    caption: "Text Auto-sizing for ReactJS",
-    highlight: `A react component that sizes text to fill a container. Great for responsive design and used across this
-    website. An interactive demo is coming soon!`,
-    devIcons: ["javascript", "react"],
-    buttons: [
-      {
-        type: "page",
-        label: "home page",
-        icon: "link",
-        url: "/autotext"
-      },
-      
-     
-    ]
-  },
-  /* Scratch */
-  {
-    src: require("../images/scratch2.png"),
-    alt: "Alt text for image001.PNG",
-    caption: "Scratch Teaching Aids",
-    highlight: `I have been teaching students coding using Scratch and will be publishing a repository soon.`,
-    devIcons: ["CSS", "HTML5"],
-    buttons: [
-      {
-        type: "link",
-        label: "Scratch",
-        icon: "link",
-        url: "https://scratch.mit.edu/users/andrewcargill01/"
-      },
-    ]
-  },
+  
   /* PYTHON HANGMAN */
   {
     src: require("../images/hangman1.png"),
@@ -296,6 +278,23 @@ const ImagePlaylist = [
         url: "https://codepen.io/andyc01"
       },
      
+    ]
+  },
+
+  /* Scratch */
+  {
+    src: require("../images/scratch2.png"),
+    alt: "Alt text for image001.PNG",
+    caption: "Scratch Teaching Aids",
+    highlight: `I have been teaching students coding using Scratch and will be publishing a repository soon.`,
+    devIcons: ["CSS", "HTML5"],
+    buttons: [
+      {
+        type: "link",
+        label: "Scratch",
+        icon: "link",
+        url: "https://scratch.mit.edu/users/andrewcargill01/"
+      },
     ]
   },
   

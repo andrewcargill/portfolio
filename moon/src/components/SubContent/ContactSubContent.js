@@ -36,12 +36,12 @@ function ContactSubContent(props) {
       <div id="buy-tagline">
         
         <AutoHeaderText 
-        text="Website design and production"
+        text="Website design, coding & UX/UI design."
         maxFont="10px"
         minFont="10px"
         containerId="buy-tagline"
         textId="contact-text"
-        calFont="0.45"
+        calFont="0.4"
         lineSpacing="1"
         />
        

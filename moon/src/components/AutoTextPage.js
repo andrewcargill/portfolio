@@ -44,7 +44,7 @@ function AutoTextPage({ navClick }) {
     setInputText(e.target.value);
   };
 
-  const handleCalFontChange = (e) => {    
+  const handleCalFontChange = (e) => {
     setCalFont(e.target.value);
   };
 
@@ -87,40 +87,60 @@ function AutoTextPage({ navClick }) {
       <div id="half-page-container-size-to-content" className="slide-right">
         {/* Image Component */}
         <div id={css.comingSoon} className="text-border right-margin-desktop image-container">
-          <h2>AutoHeader Demo</h2>
-      
-          <div>
-            <label htmlFor="textInput">Text: </label>
+
+
+          <div className={css.aboutText}>
+            <div>
+              AutoHeader is a React component that tracks the dimensions of its container
+              and sets the font size of the text inside accordingly.
+
+              It is useful for responsive design.
+            </div>
+            <div className={css.subAboutText}>
+              If you resize the window, the text will resize to fit the container.
+            </div>
+          </div>
+          <div className={css.dataContainer}>
+            <div>
+              <h3> try it out!</h3>
+            </div>
+            <div className={css.inputs}>
+              <div>
+                <label htmlFor="textInput"> Text: </label>
+              </div>
+              <div>
+                <input
+                  type="textfield"
+                  id="textInput"
+                  className={css.textInput}
+                  value={inputText}
+                  onChange={handleInputChange}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="calFont">Ratio: </label>
+              </div>
+              <div>
+                <input
+                  type="number"
+                  id="calFont"
+                  value={calFont}
+                  onChange={handleCalFontChange}
+                />
+              </div>
+            </div>
+
+            <div>
+              fontSize: {fontSize}vw
             </div>
             <div>
-            <input
-              type="textfield"
-              id="textInput"
-              value={inputText}
-              onChange={handleInputChange}
-            />
-          </div>
-          <div>
-            <label htmlFor="calFont">Ratio: </label>
+
+              containerHeight: {containerHeight}px
             </div>
             <div>
-            <input
-              type="number"
-              id="calFont"
-              value={calFont}
-              onChange={handleCalFontChange}
-            />
-          </div>
-
-          <div>
-          fontsize: {fontSize}vw
-          </div>
-          <div>
-
-          containerHeight: {containerHeight}px
-          </div>
-          <div>
-          containerWidth: {containerWidth}px
+              containerWidth: {containerWidth}px
+            </div>
           </div>
 
           {/* TEXT INPUT FIELD HERE */}
