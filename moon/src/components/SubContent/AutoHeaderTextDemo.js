@@ -8,9 +8,14 @@ function AutoHeaderTextDemo({
   containerId,
   textId,
   lineSpacing,
-  onFontSizeChange
+  onFontSizeChange,
+  onContainerHeightChange,
+  onContainerWidthChange,
 }) {
+
   const [fontSize, setFontSize] = useState(1.8); // initial font size in vw units
+  const [containerHeight, setContainerHeight] = useState(0);
+  const [containerWidth, setContainerWidth] = useState(0);
 
   useEffect(() => {
     // adjust font size on window resize
@@ -27,7 +32,10 @@ function AutoHeaderTextDemo({
       newFontSize = RawFontSize * calFont;
       console.log(newFontSize);
       setFontSize(newFontSize);
+      setContainerHeight(containerHeight);
       onFontSizeChange(newFontSize);
+      onContainerHeightChange(containerHeight);
+      onContainerWidthChange(containerWidth);
 
     };
     window.addEventListener("resize", handleResize);

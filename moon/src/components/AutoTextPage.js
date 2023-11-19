@@ -11,7 +11,6 @@ import {
 
 import { faCodepen } from "@fortawesome/free-brands-svg-icons";
 import ContactSubContent from "./SubContent/ContactSubContent";
-import AutoHeaderText from "./SubContent/AutoHeaderText";
 import Learn from "./SubContent/Learn";
 import css from "../styles/AutoTextPage.module.css"
 import AutoHeaderTextDemo from "./SubContent/AutoHeaderTextDemo";
@@ -22,11 +21,22 @@ library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
 function AutoTextPage({ navClick }) {
 
-    const [fontSize, setFontSize] = useState(1.8);
-  
-    const handleFontSizeChange = (newFontSize) => {
-      setFontSize(newFontSize);
-    };
+  const [fontSize, setFontSize] = useState(1.8);
+  const [containerHeight, setContainerHeight] = useState(0);
+  const [containerWidth, setContainerWidth] = useState(0);
+
+  const handleFontSizeChange = (newFontSize) => {
+    const roundedFontSize = parseFloat(newFontSize.toFixed(4));
+    setFontSize(roundedFontSize);
+  };
+
+  const handleContainerHeightChange = (newContainerHeight) => {
+    setContainerHeight(newContainerHeight);
+  };
+
+  const handleContainerWidthChange = (newContainerWidth) => {
+    setContainerWidth(newContainerWidth);
+  };
 
   return (
     <div id="main-content-container">
@@ -43,8 +53,10 @@ function AutoTextPage({ navClick }) {
           calFont="0.4"
           lineSpacing="1"
           onFontSizeChange={handleFontSizeChange}
+          onContainerHeightChange={handleContainerHeightChange}
+          onContainerWidthChange={handleContainerWidthChange}
 
-          // calFont="1.2vh"
+        // calFont="1.2vh"
         />
       </div>
 
@@ -60,22 +72,28 @@ function AutoTextPage({ navClick }) {
       {/* Sub-Section Container Bottom */}
       <div id="subcontent-container-bottom" className="slide-up">
         {/* Sub-Section Video Component */}
-        <Learn navSubClick={navClick}/>
+        <Learn navSubClick={navClick} />
       </div>
 
       {/* Half Page Content Container */}
       <div id="half-page-container-size-to-content" className="slide-right">
         {/* Image Component */}
         <div id={css.comingSoon} className="text-border right-margin-desktop image-container">
-      
-        AutoText Demo
 
-        {fontSize}
-    
-    </div>
-        
-        
-        
+          AutoText Demo
+
+
+          fontsize: {fontSize}
+
+
+          containerHeight: {containerHeight}
+          containerWidth: {containerWidth}
+
+
+        </div>
+
+
+
       </div>
     </div>
   );
