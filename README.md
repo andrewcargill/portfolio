@@ -73,33 +73,40 @@ Here is an example of how the component is rendered:
 I crafted my portfolio gallery to elegantly present the desired information to users while maintaining simplicity for future expansion. The gallery component references a playlist containing all the data to be showcased on the portfolio page. Below is an example entry:
 
 ```jsx
-{
-  src: require("../images/sawmillGo.jpg"),
-  alt: "Image of sawmill go website",
-  caption: "Sawmill Go!",
-  highlight: "A productivity tool for sawmill owners with transparent forestry feature. Custom Django API and ReactJS Frontend.",
-  devIcons: ["javascript", "react", "CSS", "HTML5", "django", "python", "UX-Design"],
-  buttons: [
-    {
-      type: "link",
-      label: "website",
-      icon: "link",
-      url: "https://andrewcargill.github.io/sawmill_go/"
-    },
-    {
-      type: "link",
-      label: "github",
-      icon: "github",
-      url: "https://github.com/andrewcargill/sawmill_go/tree/main/mill"
-    }
-  ]
-}
+    /* AUTO TEXT */
+  {
+    src: require("../images/autoText.png"),
+    alt: "Alt text for image001.PNG",
+    caption: "Text Auto-sizing for ReactJS",
+    highlight: `A react component that sizes text to fill a container. Great for responsive design 
+                and used across this website. Try out the interactive demo!`,
+    devIcons: ["javascript", "react"],
+    buttons: [
+      {
+        type: "page",
+        label: "demo page",
+        icon: "link",
+        url: "/autotext"
+      },
+      {
+        type: "link",
+        label: "ReadMe",
+        icon: "github",
+        url: "https://github.com/andrewcargill/portfolio/blob/main/README.md#auto-sizing"
+      },
+    ]
+  },
 
 ```
 
 
 
-### Auto-sizing header text component
-information about it here
+## Browser Drum Machine  <a id="drum"></a>
+Even before delving into the world of coding, I harbored a desire to create something musical. With newfound knowledge in JavaScript and ReactJS, I sought a challenge. The result: a 16-step voice sequencer that truly put my skills to the test.
 
-### Navigation
+This coding endeavor commenced during the early days of ChatGPT's availability. Recognizing AI as the future of coding, I embraced the collaboration—melding human creativity with AI prowess to give life to my musical ideas.
+
+Purposefully steering clear of tutorials or replicating existing projects, I reveled in the creative and expressive nature of coding. ChatGPT provided the knowledge and resources that empowered me to transform unique concepts into reality. 
+
+### Elements
+

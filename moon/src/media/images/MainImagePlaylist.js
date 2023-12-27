@@ -26,10 +26,17 @@ const ImagePlaylist = [
       devIcons: ["javascript", "react", "CSS", "HTML5", "UX-Design"],
       buttons: [
         {
-          type: "page",
-          label: "homepage",
-          icon: "link",
-          url: "/"
+          type: "link",
+          label: "Github",
+          icon: "github",
+          url: "https://github.com/andrewcargill/portfolio/blob/main/README.md#home"
+        },
+       
+        {
+          type: "link",
+          label: "code",
+          icon: "github",
+          url: "https://github.com/andrewcargill/portfolio/blob/main/README.md#portfolio"
         },
        
       ]
@@ -46,9 +53,15 @@ const ImagePlaylist = [
     buttons: [
       {
         type: "page",
-        label: "demo page",
-        icon: "link",
+        label: "demo",
+        icon: "code",
         url: "/autotext"
+      },
+      {
+        type: "link",
+        label: "github",
+        icon: "github",
+        url: "https://github.com/andrewcargill/portfolio/blob/main/README.md#auto-sizing"
       },
     ]
   },
@@ -64,8 +77,8 @@ const ImagePlaylist = [
     buttons: [
       {
         type: "link",
-        label: "website",
-        icon: "link",
+        label: "app",
+        icon: "code",
         url: "https://andrewcargill.github.io/typescript_react/"
       },
       {
@@ -111,9 +124,15 @@ const ImagePlaylist = [
     buttons: [
       {
         type: "page",
-        label: "project",
+        label: "demo",
         icon: "code",
         url: "/drum"
+      },
+      {
+        type: "link",
+        label: "gibhub",
+        icon: "github",
+        url: "https://github.com/andrewcargill/portfolio/blob/main/README.md#drum"
       },
      
     ]
