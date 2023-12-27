@@ -20,7 +20,7 @@ In conceptualizing the primary design of the site, I drew inspiration from the s
 
 
 # Custom Code and Bespoke Modules
-## Dynamic Text Auto-Sizing Component
+## Dynamic Text Auto-Sizing Component<a id="specific-section"></a>
 
 In my pursuit of creating visually impactful page headers, I developed a tailored component designed to optimize space utilization. This innovative component dynamically adjusts the font size of the text based on the dimensions of its container. This approach has proven to be immensely beneficial for achieving a polished and effective responsive design.
 
