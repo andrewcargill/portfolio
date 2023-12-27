@@ -94,7 +94,7 @@ function AutoTextPage({ navClick }) {
               AutoHeader is a React component that tracks the dimensions of its container
               and sets the font size of the text inside accordingly.
 
-              It is useful for responsive design.
+              I have found it useful for responsive design.
             </div>
             <div className={css.subAboutText}>
               If you resize the window, the text will resize to fit the container.
@@ -130,7 +130,8 @@ function AutoTextPage({ navClick }) {
                 />
               </div>
             </div>
-
+            <div className={css.liveData}>
+           
             <div>
               fontSize: {fontSize}vw
             </div>
@@ -141,7 +142,9 @@ function AutoTextPage({ navClick }) {
             <div>
               containerWidth: {containerWidth}px
             </div>
+            </div>
           </div>
+
 
           {/* TEXT INPUT FIELD HERE */}
 
