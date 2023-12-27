@@ -76,6 +76,7 @@
   border-radius: 10px;
   font-size: 13px;
   border: solid black 2px;
+  cursor: pointer;
 }
 
 .drumButton:disabled {

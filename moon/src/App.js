@@ -15,6 +15,7 @@ import ContactPage from "./components/ContactPage";
 import DrumMachinePage from "./components/DrumMachinePage";
 import CubePage from "./components/CubePage";
 import AutoTextPage from "./components/AutoTextPage";
+import Services from "./components/Services";
 
 function App() {
   return (

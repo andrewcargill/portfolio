@@ -57,12 +57,12 @@ const Header = ({ handleOnClick }) => {
               <button
                 onClick={() => {
 
-                  handleNavClick("/");
+                  handleNavClick("/drum");
                 }}
-                id={CustomBtn.menuButtonHide}
+                // id={CustomBtn.menuButtonHide}
                 className={`slide-right ${CustomBtn.whiteMobile}`}
               >
-                Services
+                dr-01
               </button>
 
               <button
@@ -92,11 +92,11 @@ const Header = ({ handleOnClick }) => {
       {/* Tablet & desktop menu */}
       <div id={style.navLarge} className="header-element-right">
         <button
-          onClick={() => handleNavClick("/services")}
-          id={CustomBtn.hidden}
+          onClick={() => handleNavClick("/drum")}
+          // id={CustomBtn.hidden}
           className={`slide-down ${CustomBtn.white}`}
         >
-          Services
+          dr-01
         </button>
         <button
           onClick={() => handleNavClick("/portfolio")}
