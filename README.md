@@ -1,4 +1,4 @@
-# Professional Portfolio<a id="home"></a>
+# andycargill01.com<a id="home"></a>
 
 Greetings! Welcome to my professional portfolio, meticulously crafted to showcase my coding projects and demonstrate my expertise in web development. I initiated this endeavor upon successfully completing my studies at the esteemed Code Institute, with the intention of providing a comprehensive overview of my capabilities to potential employers and clients.
 
@@ -68,8 +68,10 @@ Here is an example of how the component is rendered:
         />
       </div>
 ```
+### Links
+[Link to demo page](https://andycargill01.com/#/autotext)
 
-## Portfolio gallery <a id="portfolio"></a>
+## Portfolio Gallery <a id="portfolio"></a>
 I crafted my portfolio gallery to elegantly present the desired information to users while maintaining simplicity for future expansion. The gallery component references a playlist containing all the data to be showcased on the portfolio page. Below is an example entry:
 
 ```jsx
@@ -105,7 +107,11 @@ The component is rendered with the 'playlist' and internal page naviagation (nav
    <ImageGallery images={ImagePlaylist} navClick={navClick} />
 ```
 
+### Links
+
 [Link to ImageGallery.js](https://github.com/andrewcargill/portfolio/blob/main/moon/src/components/SubContent/ImageGallery.js)
+
+[Link to Portfolio live page](https://andycargill01.com/#/drum)
 
 
 
@@ -164,6 +170,12 @@ useEffect(() => {
 ### Known Issue: Playback Delay
 
 There is a brief delay in the sequence playback when a state is updated. Currently, I am actively addressing and troubleshooting this issue.
+
+### Links
+[Link to Drum Machine](https://andycargill01.com/#/drum)
+
+[Link to Howler](https://www.npmjs.com/package/react-howler)
+
 
 
 
