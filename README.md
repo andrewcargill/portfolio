@@ -99,6 +99,14 @@ I crafted my portfolio gallery to elegantly present the desired information to u
 
 ```
 
+The component is rendered with the 'playlist' and internal page naviagation (navClick) being passed into the ImageGallery component.
+
+```jsx
+   <ImageGallery images={ImagePlaylist} navClick={navClick} />
+```
+
+[Link to ImageGallery.js](https://github.com/andrewcargill/portfolio/blob/main/moon/src/components/SubContent/ImageGallery.js)
+
 
 
 ## Browser Drum Machine  <a id="drum"></a>
@@ -152,7 +160,10 @@ useEffect(() => {
     return () => clearInterval(id);
   }
 }, [kickSteps, kickMuted]);
-````
+```
+### Known Issue: Playback Delay
+
+There is a brief delay in the sequence playback when a state is updated. Currently, I am actively addressing and troubleshooting this issue.
 
 
 
