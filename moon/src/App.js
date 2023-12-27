@@ -15,6 +15,7 @@ import ContactPage from "./components/ContactPage";
 import DrumMachinePage from "./components/DrumMachinePage";
 import CubePage from "./components/CubePage";
 import AutoTextPage from "./components/AutoTextPage";
+import DrumMachineKick from "./components/DrumMachineKick";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path='/tutorials' element={<Tutorials />} />
             <Route path='/contact' element={<ContactPage />} />
             <Route path='/drum' element={<DrumMachinePage />} />
+            <Route path='/kick' element={<DrumMachineKick />} />
             <Route path='/autotext' element={<AutoTextPage />} />
             <Route path='/cube' element={<CubePage />} />
           </Routes>
