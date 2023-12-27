@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
 import { Howl } from "howler";
@@ -135,8 +135,6 @@ const DrumMachine = () => {
   const [basslineMuted, setBasslineMuted] = useState(false);
   const [fxMuted, setFxMuted] = useState(false);
 
-  const prevStepRef = useRef(null);
-
   const toggleKickStep = (index) => {
     const newKickSteps = [...kickSteps];
     newKickSteps[index] = !newKickSteps[index];
@@ -224,14 +222,10 @@ const DrumMachine = () => {
     setFxSteps(Array(16).fill(false));
   };
 
-
- 
-
   useEffect(() => {
+
     if (playing) {
-      let step = currentStep;
-  
-      // Clear any existing interval before setting a new one
+      let step = 0;
       const id = setInterval(() => {
         if (kickSteps[step] && !kickMuted) {
           kickSelected.play();
@@ -260,16 +254,9 @@ const DrumMachine = () => {
         if (synth2Steps[step] && step === 5) {
           synth2.play();
         }
-
-        // Update the previous step ref
-        prevStepRef.current = step;
-        
-        // Increment the step for the next iteration
         setCurrentStep(step);
         step = (step + 1) % 16;
       }, 250);
-  
-      // Clear the interval when the component unmounts or when relevant state changes
       setIntervalId(id);
       return () => clearInterval(id);
     }
@@ -296,9 +283,8 @@ const DrumMachine = () => {
     fxSteps,
     fxSelected,
     fxMuted,
-    currentStep,
   ]);
-  
+
   const playSequence = () => {
     setPlaying((prevPlaying) => !prevPlaying);
   };
