@@ -182,7 +182,7 @@ const ImagePlaylist = [
         type: "link",
         label: "github",
         icon: "github",
-        url: "https://github.com/andrewcargill/johans_eco_timber"
+        url: "https://github.com/andrewcargill/johans_eco_timber/blob/main/README.md"
       }
     ]
   },
