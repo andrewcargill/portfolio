@@ -63,8 +63,6 @@ function AutoTextPage({ navClick }) {
           onFontSizeChange={handleFontSizeChange}
           onContainerHeightChange={handleContainerHeightChange}
           onContainerWidthChange={handleContainerWidthChange}
-
-        // calFont="1.2vh"
         />
       </div>
 

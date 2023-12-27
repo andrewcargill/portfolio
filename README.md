@@ -50,34 +50,53 @@ Experience the fluidity of this feature by resizing the window – the text seam
   }, [containerId, textId, fontSize, lineSpacing]);
 ```
 
+Here is an example of how the component is rendered:
+
+```jsx
+ <div id="main-content-container">
+      {/* Header Text Container*/}
+      <div id="header-text-container" className="fade-in">
+        {/* Auto Header Text Component */}
+        <AutoHeaderText
+          text="
+          Here I am exploring 3D coding with HTML, CSS & JS. Spin the cube and display words.
+          "
+          maxFont="35px"
+          minFont="15px"
+          calFont="0.4"
+          lineSpacing="1"
+        />
+      </div>
+```
+
 ## Portfolio gallery 
-I designed my portfolio gallery to both display the information I wanted to users along with being simple to expand. The component references a playlist which contains all the data to be rendered within the portfolio page. Below is an example of a field. 
+I crafted my portfolio gallery to elegantly present the desired information to users while maintaining simplicity for future expansion. The gallery component references a playlist containing all the data to be showcased on the portfolio page. Below is an example entry:
 
-´´´jsx
- {
-    src: require("../images/sawmillGo.jpg"),
-    alt: "Image of sawmill go website",
-    caption: "Sawmill Go!",
-    highlight: `A productivity tool for sawmill owners with transparent forestry feature. Custom Django API and ReactJS Frontend.`,
-    devIcons: ["javascript", "react", "CSS", "HTML5", "django", "python", "UX-Design"],
-    buttons: [
-      {
-        type: "link",
-        label: "website",
-        icon: "link",
-        url: "https://andrewcargill.github.io/sawmill_go/"
-      },
-      {
-        type: "link",
-        label: "github",
-        icon: "github",
-        url: "https://github.com/andrewcargill/sawmill_go/tree/main/mill"
-      }
-    ]
+```jsx
+{
+  src: require("../images/sawmillGo.jpg"),
+  alt: "Image of sawmill go website",
+  caption: "Sawmill Go!",
+  highlight: "A productivity tool for sawmill owners with transparent forestry feature. Custom Django API and ReactJS Frontend.",
+  devIcons: ["javascript", "react", "CSS", "HTML5", "django", "python", "UX-Design"],
+  buttons: [
+    {
+      type: "link",
+      label: "website",
+      icon: "link",
+      url: "https://andrewcargill.github.io/sawmill_go/"
+    },
+    {
+      type: "link",
+      label: "github",
+      icon: "github",
+      url: "https://github.com/andrewcargill/sawmill_go/tree/main/mill"
+    }
+  ]
+}
 
-  },
-  ´´´
-  
+```
+
 
 
 ### Auto-sizing header text component
