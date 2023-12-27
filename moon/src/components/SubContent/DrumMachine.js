@@ -232,9 +232,6 @@ const DrumMachine = () => {
       let step = currentStep;
 
       // Clear any existing interval before setting a new one
-    clearInterval(intervalId);
-  
-      // Clear any existing interval before setting a new one
       const id = setInterval(() => {
         if (kickSteps[step] && !kickMuted) {
           kickSelected.play();
@@ -264,16 +261,15 @@ const DrumMachine = () => {
           synth2.play();
         }
 
-        // Update the previous step ref
-        prevStepRef.current = step;
         
         // Increment the step for the next iteration
-        setCurrentStep(step);
+       
         step = (step + 1) % 16;
+        setCurrentStep(step);
       }, 250);
   
       // Clear the interval when the component unmounts or when relevant state changes
-      setIntervalId(id);
+
       return () => clearInterval(id);
     }
   }, [
