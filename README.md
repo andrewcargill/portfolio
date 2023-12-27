@@ -102,11 +102,57 @@ I crafted my portfolio gallery to elegantly present the desired information to u
 
 
 ## Browser Drum Machine  <a id="drum"></a>
-Even before delving into the world of coding, I harbored a desire to create something musical. With newfound knowledge in JavaScript and ReactJS, I sought a challenge. The result: a 16-step voice sequencer that truly put my skills to the test.
+Even before delving into the world of coding, I harbored a desire to create something musical. With newfound knowledge in JavaScript and ReactJS, I sought a challenge. The result: a 16-step / 8 voice sequencer that truly put my skills to the test.
 
 This coding endeavor commenced during the early days of ChatGPT's availability. Recognizing AI as the future of coding, I embraced the collaboration—melding human creativity with AI prowess to give life to my musical ideas.
 
 Purposefully steering clear of tutorials or replicating existing projects, I reveled in the creative and expressive nature of coding. ChatGPT provided the knowledge and resources that empowered me to transform unique concepts into reality. 
 
-### Elements
+### Howler
+I use howler as the main audio engine to sync the sounds. The code below is an example of how the kick drum sound is coded.
+```jsx
+// Import Howler for audio management
+import { Howl } from "howler";
+import kickSound from "../../media/audio/kick.wav";
+import kick2Sound from "../../media/audio/kick2.wav";
+
+// Initialize Howl instances for different sounds
+const kick = new Howl({ src: [kickSound] });
+const kick2 = new Howl({ src: [kick2Sound] });
+
+// Set up the initial kick drum sequence
+const [kickSteps, setKickSteps] = useState(
+  [true, false, false, false, false, false, false, false, false, true, false, false, true, false, true, false]
+);
+
+// Toggle individual steps in the kick drum sequence
+const toggleKickStep = (index) => {
+  const newKickSteps = [...kickSteps];
+  newKickSteps[index] = !newKickSteps[index];
+  setKickSteps(newKickSteps);
+};
+
+// Handle audio playback based on the kick drum sequence
+useEffect(() => {
+  if (playing) {
+    let step = currentStep;
+
+    // Clear any existing interval before setting a new one
+    const id = setInterval(() => {
+      if (kickSteps[step] && !kickMuted) {
+        kick.play();
+      }
+
+      // Increment the step for the next iteration
+      step = (step + 1) % 16;
+      setCurrentStep(step);
+    }, 250);
+
+    // Clear the interval when the component unmounts or when relevant state changes
+    return () => clearInterval(id);
+  }
+}, [kickSteps, kickMuted]);
+````
+
+
 
