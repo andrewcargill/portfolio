@@ -125,8 +125,6 @@
   cursor: pointer;
 }
 
-
-
 @keyframes pulse {
   0% {
     background-color: transparent;

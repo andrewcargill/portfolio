@@ -7,7 +7,6 @@ import ContactPage from "./ContactPage";
 import Services from "./Services";
 import CubePage from "./CubePage";
 import DrumMachinePage from "./DrumMachinePage";
-import DrumMachineKick from "./DrumMachineKick";
 
 
 export const renderContent = (mainContent, handleOnClick) => {
@@ -65,12 +64,6 @@ export const renderContent = (mainContent, handleOnClick) => {
       return (
         <div>
           <DrumMachinePage navClick={handleOnClick}/>
-        </div>
-      );
-    case "kick":
-      return (
-        <div>
-          <DrumMachineKick navClick={handleOnClick}/>
         </div>
       );
     default:
