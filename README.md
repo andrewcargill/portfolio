@@ -1,4 +1,4 @@
-# Professional Portfolio
+# Professional Portfolio<a id="home"></a>
 
 Greetings! Welcome to my professional portfolio, meticulously crafted to showcase my coding projects and demonstrate my expertise in web development. I initiated this endeavor upon successfully completing my studies at the esteemed Code Institute, with the intention of providing a comprehensive overview of my capabilities to potential employers and clients.
 
@@ -20,7 +20,7 @@ In conceptualizing the primary design of the site, I drew inspiration from the s
 
 
 # Custom Code and Bespoke Modules
-## Dynamic Text Auto-Sizing Component<a id="specific-section"></a>
+## Dynamic Text Auto-Sizing Component<a id="auto-sizing"></a>
 
 In my pursuit of creating visually impactful page headers, I developed a tailored component designed to optimize space utilization. This innovative component dynamically adjusts the font size of the text based on the dimensions of its container. This approach has proven to be immensely beneficial for achieving a polished and effective responsive design.
 
@@ -69,7 +69,7 @@ Here is an example of how the component is rendered:
       </div>
 ```
 
-## Portfolio gallery 
+## Portfolio gallery <a id="portfolio"></a>
 I crafted my portfolio gallery to elegantly present the desired information to users while maintaining simplicity for future expansion. The gallery component references a playlist containing all the data to be showcased on the portfolio page. Below is an example entry:
 
 ```jsx
