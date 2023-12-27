@@ -261,15 +261,12 @@ const DrumMachine = () => {
           synth2.play();
         }
 
-        
         // Increment the step for the next iteration
-       
         step = (step + 1) % 16;
         setCurrentStep(step);
       }, 250);
   
       // Clear the interval when the component unmounts or when relevant state changes
-
       return () => clearInterval(id);
     }
   }, [
