@@ -206,7 +206,7 @@ const ImagePlaylist = [
         type: "link",
         label: "github",
         icon: "github",
-        url: "https://github.com/andrewcargill/false"
+        url: "https://github.com/andrewcargill/false/blob/main/README.md"
       }
      
     ]
@@ -231,7 +231,7 @@ const ImagePlaylist = [
         type: "link",
         label: "github",
         icon: "github",
-        url: "https://github.com/andrewcargill/hangman"
+        url: "https://github.com/andrewcargill/hangman/blob/main/README.md"
       }
     ]
   },
@@ -254,7 +254,7 @@ const ImagePlaylist = [
         type: "link",
         label: "github",
         icon: "github",
-        url: "https://github.com/andrewcargill/superheros"
+        url: "https://github.com/andrewcargill/superheros/blob/main/README.md"
       }
     ]
   },
@@ -277,7 +277,7 @@ const ImagePlaylist = [
         type: "link",
         label: "github",
         icon: "github",
-        url: "https://github.com/andrewcargill/music-quiz"
+        url: "https://github.com/andrewcargill/music-quiz/blob/main/README.md"
       }
     ]
   },
