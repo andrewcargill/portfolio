@@ -230,6 +230,9 @@ const DrumMachine = () => {
   useEffect(() => {
     if (playing) {
       let step = currentStep;
+
+      // Clear any existing interval before setting a new one
+    clearInterval(intervalId);
   
       // Clear any existing interval before setting a new one
       const id = setInterval(() => {
