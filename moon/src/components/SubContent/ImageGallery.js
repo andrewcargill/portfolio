@@ -67,7 +67,7 @@ function ImageGallery({ images }) {
           <div id={css.headerTextContainer}>
             <AutoHeaderText
               text="
-          I really enjoy exploring various aspects of programming. Here are a small selection of the projects
+          I really enjoy exploring all aspects of programming. Here are a small selection of the projects
           I have been working on. Take a look around.
           "
               maxFont="60px"

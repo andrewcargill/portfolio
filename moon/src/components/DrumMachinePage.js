@@ -27,8 +27,7 @@ function DrumMachinePage({ navClick }) {
         {/* Auto Header Text Component */}
         <AutoHeaderText
           text="
-          Version one of a drum machine! Written in Javascript and using 'Howler'
-          for sound sync.
+          Explores triggering and sequencing audio in ReactJS. This drum machine uses the Howler audio engine.
           "
           maxFont="35px"
           minFont="15px"
