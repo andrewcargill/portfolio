@@ -17,7 +17,7 @@ import AutoHeaderText from "./SubContent/AutoHeaderText";
 import Learn from "./SubContent/Learn";
 import { Howl, Howler } from "howler";
 import kick from "../media/audio/background.wav";
-import buttonSound from "../media/audio/scratchButtonLow.mp3";
+import buttonSound from "../media/audio/buttonGlitch1.mp3";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
@@ -48,7 +48,7 @@ function HomeContent({ navClick }) {
   const buttonHover = () => {
     backgroundMusic = new Howl({
       src: [buttonSoundURL],
-      volume: 0.1,
+      volume: 0.3,
       loop: false, // Disable Howler.js loop feature
    
     });
