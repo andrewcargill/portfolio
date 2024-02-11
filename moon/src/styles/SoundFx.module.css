@@ -14,11 +14,13 @@
 }
 
 .outterbox1 {
-    background-color: aqua;
+    background-color: black;
+    border-radius: 5px 0 0 5px;
 }
 
 .outterbox2 {
-    background-color: palevioletred;
+    background-color: black;
+    border-radius: 0 5px 5px 0;
 }
 
 .outterbox3 {

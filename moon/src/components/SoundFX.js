@@ -27,7 +27,12 @@ library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
 function Soundfx({ navClick }) {
   const [sounds, setSounds] = useState([]);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted1, setIsMuted1] = useState(false);
+  const [isMuted2, setIsMuted2] = useState(false);
+  const [isMuted3, setIsMuted3] = useState(false);
+  const [isMuted4, setIsMuted4] = useState(false);
+  const [isMuted5, setIsMuted5] = useState(false);
+  const [isMuted6, setIsMuted6] = useState(false);
 
   const toggleSounds = () => {
     if (sounds.length === 0) {
@@ -52,11 +57,56 @@ function Soundfx({ navClick }) {
     }
   };
 
+  const toggleMuteSound1 = (mute) => {
+    if (sounds.length > 0) {
+      if (isMuted1 !== mute) {
+        sounds[0].mute(mute);
+        setIsMuted1(mute);
+      }
+    }
+  };
+
   const toggleMuteSound2 = (mute) => {
     if (sounds.length > 0) {
-      if (isMuted !== mute) {
+      if (isMuted2 !== mute) {
         sounds[1].mute(mute);
-        setIsMuted(mute);
+        setIsMuted2(mute);
+      }
+    }
+  };
+
+  const toggleMuteSound3 = (mute) => {
+    if (sounds.length > 0) {
+      if (isMuted3 !== mute) {
+        sounds[2].mute(mute);
+        setIsMuted3(mute);
+      }
+    }
+  };
+
+  const toggleMuteSound4 = (mute) => {
+    if (sounds.length > 0) {
+      if (isMuted4 !== mute) {
+        sounds[3].mute(mute);
+        setIsMuted4(mute);
+      }
+    }
+  };
+
+  const toggleMuteSound5 = (mute) => {
+    if (sounds.length > 0) {
+      if (isMuted5 !== mute) {
+        sounds[4].mute(mute);
+        setIsMuted5(mute);
+      }
+    }
+  };
+
+  const toggleMuteSound6 = (mute) => {
+    if (sounds.length > 0) {
+      if (isMuted6 !== mute) {
+        sounds[5].mute(mute);
+        setIsMuted6(mute);
       }
     }
   };
@@ -64,7 +114,7 @@ function Soundfx({ navClick }) {
 
   return (
     <div id="main-content-container">
-      <button onClick={toggleSounds}>{sounds.length === 0 ? 'STOP' : 'START'}</button>
+      <button onClick={toggleSounds}>{sounds.length === 0 ? 'GO' : 'STOP'}</button>
       <div className={css.border}>
        
       {/* outterbox 1 */}
@@ -75,24 +125,41 @@ function Soundfx({ navClick }) {
       
         <div 
           id={css.box1}
-          className={css.box}>
+          className={css.box}
+          onMouseEnter={() => toggleMuteSound3(true)}
+          onMouseLeave={() => toggleMuteSound3(false)}>
+          
         </div>
         <div 
           id={css.box2}
-          className={css.box}>
+          className={css.box}
+           onMouseEnter={() => toggleMuteSound4(true)}
+           onMouseLeave={() => toggleMuteSound4(false)}>
+
         </div>
       </div>
 
-      <div className={css.outterbox2}>
-        <div 
-          id={css.box3}
-          className={css.box}>
+      <div
+          className={css.outterbox2}
+          onMouseEnter={() => toggleMuteSound1(true)}
+          onMouseLeave={() => toggleMuteSound1(false)}>
+
+          <div 
+            id={css.box3} 
+            className={css.box}
+            onMouseEnter={() => toggleMuteSound5(true)}
+            onMouseLeave={() => toggleMuteSound5(false)}>
+           
+
+            </div>
+          <div 
+          id={css.box4} 
+          className={css.box}
+          onMouseEnter={() => toggleMuteSound6(true)}
+          onMouseLeave={() => toggleMuteSound6(false)}>
+
+          </div>
         </div>
-        <div 
-          id={css.box4}
-          className={css.box}>
-        </div>
-      </div>
 
       </div>
 
