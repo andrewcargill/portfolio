@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import ImagePlaylist from "../media/images/MainImagePlaylist";
@@ -15,50 +15,15 @@ import ContactSubContent from "./SubContent/ContactSubContent";
 import Image from "./SubContent/Image";
 import AutoHeaderText from "./SubContent/AutoHeaderText";
 import Learn from "./SubContent/Learn";
-import { Howl, Howler } from "howler";
-import kick from "../media/audio/background.wav";
-import buttonSound from "../media/audio/buttonGlitch1.mp3";
 
 library.add(faArrowDown, faCheckSquare, faCoffee, faCartShopping, faCodepen);
 
-const backgroundMusicURL = kick;
-const buttonSoundURL = buttonSound;
 
 
 function HomeContent({ navClick }) {
  
-  let backgroundMusic;
-
- 
-
-
-  const playBackgroundMusic = () => {
-    backgroundMusic = new Howl({
-      src: [backgroundMusicURL],
-      volume: 0.2,
-      loop: true, // Disable Howler.js loop feature
-      // onend: function() {
-      //   // When the audio ends, restart it immediately
-      //   backgroundMusic.play();
-      // },
-    });
-    backgroundMusic.play();
-  };
-
-  const buttonHover = () => {
-    backgroundMusic = new Howl({
-      src: [buttonSoundURL],
-      volume: 0.3,
-      loop: false, // Disable Howler.js loop feature
-   
-    });
-    backgroundMusic.play();
-  };
-
   return (
     <div id="main-content-container">
-       <button onMouseEnter={playBackgroundMusic}>Play Background Music</button>
-       <button onMouseEnter={buttonHover}>button</button>
       {/* Header Text Container*/}
       <div id="header-text-container" className="fade-in">
         {/* Auto Header Text Component */}

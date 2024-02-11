@@ -15,7 +15,9 @@ import ContactPage from "./components/ContactPage";
 import DrumMachinePage from "./components/DrumMachinePage";
 import CubePage from "./components/CubePage";
 import AutoTextPage from "./components/AutoTextPage";
-import Services from "./components/Services";
+import Soundfx from "./components/SoundFX";
+
+
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
             <Route path='/drum' element={<DrumMachinePage />} />
             <Route path='/autotext' element={<AutoTextPage />} />
             <Route path='/cube' element={<CubePage />} />
+            <Route path='/x' element={<Soundfx />} />
+     
           </Routes>
           <Footer />
         {/* </Router> */}

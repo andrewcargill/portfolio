@@ -7,6 +7,8 @@ import ContactPage from "./ContactPage";
 import Services from "./Services";
 import CubePage from "./CubePage";
 import DrumMachinePage from "./DrumMachinePage";
+import Soundfx from "./SoundFX";
+
 
 
 export const renderContent = (mainContent, handleOnClick) => {
@@ -64,6 +66,12 @@ export const renderContent = (mainContent, handleOnClick) => {
       return (
         <div>
           <DrumMachinePage navClick={handleOnClick}/>
+        </div>
+      );
+    case "x":
+      return (
+        <div>
+          <Soundfx navClick={handleOnClick}/>
         </div>
       );
     default:
