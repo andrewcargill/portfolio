@@ -15,24 +15,36 @@
 
 .outterbox1 {
     background-color: black;
-    border-radius: 5px 0 0 5px;
+
 }
 
 .outterbox2 {
     background-color: black;
-    border-radius: 0 5px 5px 0;
+
 }
 
-.outterbox3 {
-    background-color: khaki;
-}
 
 .border {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     background-color: #fff;
     width: 500px;
     min-height: 400px;
     margin: 20px;
+}
+
+.box5 {
+    background-color: black;
+    width: 40px;
+    height: 230px;
+    border-radius: 0 5px 5px 0;
+}
+
+.box5Top {
+    background-color: black;
+    width: 40px;
+    height: 230px;
+    border-radius: 5px 0 0 5px;
 }

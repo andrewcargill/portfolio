@@ -14,9 +14,10 @@ import { Howl, Howler } from "howler";
 import outterbox1 from "../media/soundfx/kick1.wav";
 import outterbox2 from "../media/soundfx/kick2.wav";
 import box1 from "../media/soundfx/fx1.wav";
-import box2 from "../media/soundfx/fx2.wav";
+import box2 from "../media/soundfx/hats.wav";
 import box3 from "../media/soundfx/bass1.wav";
 import box4 from "../media/soundfx/bass2.wav";
+import box5 from "../media/soundfx/fx2.wav";
 
 import css from "../styles/SoundFx.module.css";
 
@@ -33,6 +34,7 @@ function Soundfx({ navClick }) {
   const [isMuted4, setIsMuted4] = useState(false);
   const [isMuted5, setIsMuted5] = useState(false);
   const [isMuted6, setIsMuted6] = useState(false);
+  const [isMuted7, setIsMuted7] = useState(false);
 
   const toggleSounds = () => {
     if (sounds.length === 0) {
@@ -42,6 +44,7 @@ function Soundfx({ navClick }) {
       const sound4 = new Howl({ src: [box2], loop: true });
       const sound5 = new Howl({ src: [box3], loop: true });
       const sound6 = new Howl({ src: [box4], loop: true });
+      const sound7 = new Howl({ src: [box5], loop: true });
 
       sound1.play();
       sound2.play();
@@ -49,8 +52,9 @@ function Soundfx({ navClick }) {
       sound4.play();
       sound5.play();
       sound6.play();
+      sound7.play();
 
-      setSounds([sound1, sound2, sound3, sound4, sound5, sound6]);
+      setSounds([sound1, sound2, sound3, sound4, sound5, sound6, sound7]);
     } else {
       sounds.forEach(sound => sound.stop());
       setSounds([]);
@@ -111,11 +115,26 @@ function Soundfx({ navClick }) {
     }
   };
 
+  const toggleMuteSound7 = () => {
+    if (sounds.length > 0) {
+      const newMuteState = !isMuted7; // Toggle the current mute state
+    sounds[6].mute(newMuteState); // Mute or unmute sound1 based on the new state
+    setIsMuted7(newMuteState); // Update the state variable
+ 
+      
+    }
+  };
+
 
   return (
     <div id="main-content-container">
       <button onClick={toggleSounds}>{sounds.length === 0 ? 'GO' : 'STOP'}</button>
       <div className={css.border}>
+
+      <div className={css.box5Top}
+      onMouseEnter={toggleMuteSound7}
+      >
+      </div>
        
       {/* outterbox 1 */}
       <div 
@@ -160,9 +179,12 @@ function Soundfx({ navClick }) {
 
           </div>
         </div>
-
+        <div className={css.box5}
+      onMouseEnter={toggleMuteSound7}
+     >
       </div>
-
+      </div>
+      
     </div>
   );
 }
