@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faArrowDown, faCheckSquare, faCoffee, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { faCodepen } from "@fortawesome/free-brands-svg-icons";
-import { Player, start, getContext, rampTo, Distortion } from "tone";
+import { Player, start, getContext, rampTo } from "tone";
 import drum from "../../media/soundfx/kick2.wav";
 import bass from "../../media/soundfx/bass2.wav";
 import css from "../../styles/SoundFxExperiments.module.css";
@@ -16,9 +16,6 @@ function SoundfxTone({ navClick }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [drumPlayer, setDrumPlayer] = useState(null);
   const [bassPlayer, setBassPlayer] = useState(null);
-
-  const [distortion, setDistortion] = useState(null);
-  const [distortionAmount, setDistortionAmount] = useState(0);
 
   useEffect(() => {
     // Ensure that Tone.js context is started after a user action
@@ -38,9 +35,6 @@ function SoundfxTone({ navClick }) {
       // Load the bass audio file
       await bassPlayer.load(bassURL);
 
-      const distortion = new Distortion().toDestination();
-      setDistortion(distortion);
-
       // Set player states
       setDrumPlayer(drumPlayer);
       setBassPlayer(bassPlayer);
@@ -54,14 +48,10 @@ function SoundfxTone({ navClick }) {
       // Start playing the drum and bass sounds
       drumPlayer.loop = true;
       bassPlayer.loop = true;
-      drumPlayer.connect(distortion); 
-      bassPlayer.connect(distortion);
-      distortion.wet.value = distortionAmount;
       drumPlayer.start();
       drumPlayer.volume.value = -Infinity;
       bassPlayer.start();
       bassPlayer.volume.value = -Infinity;
-     
 
       setIsPlaying(true);
     } else {
@@ -113,14 +103,6 @@ function SoundfxTone({ navClick }) {
   
   };
 
-  const handleDistortionChange = (e) => {
-    const value = parseFloat(e.target.value);
-    setDistortionAmount(value);
-    if (distortion) {
-      distortion.wet.value = value; // Update distortion amount
-    }
-  };
-
   return (
     <div id="main-content-container">
       <div className={css.box}></div>
@@ -144,10 +126,7 @@ function SoundfxTone({ navClick }) {
         Unmute bass and drums
       </button>
       <div className="slidecontainer">
-        <input
-         onMouseEnter={unmuteAll}
-         onMouseLeave={() => muteAll()}
-        type="range" min="0" max="1" step="0.01" value={distortionAmount} onChange={handleDistortionChange} className="slider" id="distortionRange" />
+        <input type="range" min="1" max="100" value="50" className="slider" id="myRange" />
       </div>
     </div>
   );
