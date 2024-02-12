@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import * as Tone from 'tone';
 import audio from '../../media/soundfx/kick2.wav';
-import css from "../../styles/SoundFxExperiments.module.css";
+import css from '../../styles/SoundFxExperiments.module.css';
 
 function SoundFxToneTwo() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -22,10 +22,12 @@ function SoundFxToneTwo() {
       const player = new Tone.Player({
         url: audio, // Replace with the path to your audio file
         loop: true // Loop the audio playback
-      }).toDestination();
+      })
 
-      // Set player state
-      setPlayer(player);
+      const distortion = new Tone.Distortion(
+        1
+        ).toDestination();
+      player.connect(distortion);
     };
 
     loadAudio();
@@ -61,13 +63,13 @@ function SoundFxToneTwo() {
     <div>
       <button onClick={togglePlayback}>{isPlaying ? 'Stop' : 'Play'}</button>
       <input
+        className={css.verticalSlider}
         type="range"
         min="0"
         max="1"
         step="0.01"
         value={volume}
         onChange={handleVolumeChange}
-        className={css.verticalSlider} // Add class for styling
       />
       <button onClick={toggleMute}>{isMuted ? 'Unmute' : 'Mute'}</button>
     </div>

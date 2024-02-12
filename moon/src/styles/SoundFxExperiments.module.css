@@ -3,5 +3,9 @@
     appearance: slider-vertical; /* Webkit-specific appearance for vertical slider */
     width: 10px; /* Set width of the slider */
     height: 150px; /* Set height of the slider */
+    margin: 15px;
   }
   
+  .signalMeter {
+    margin-top: 10px; /* Add some margin to separate from the volume fader */
+  }
