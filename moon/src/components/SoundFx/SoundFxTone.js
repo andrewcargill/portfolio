@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faArrowDown, faCheckSquare, faCoffee, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { faCodepen } from "@fortawesome/free-brands-svg-icons";
-import { Player, start, getContext, rampTo, Distortion } from "tone";
+import { Player, start, getContext, rampTo, Distortion, Chebyshev } from "tone";
 import drum from "../../media/soundfx/kick2.wav";
 import bass from "../../media/soundfx/bass2.wav";
 import css from "../../styles/SoundFxExperiments.module.css";
@@ -38,7 +38,7 @@ function SoundfxTone({ navClick }) {
       // Load the bass audio file
       await bassPlayer.load(bassURL);
 
-      const distortion = new Distortion().toDestination();
+      const distortion = new Distortion(0.8).toDestination();
       setDistortion(distortion);
 
       // Set player states
@@ -129,19 +129,19 @@ function SoundfxTone({ navClick }) {
         onMouseEnter={() => muteDrums(true)}
         onMouseLeave={() => muteAll()}
       >
-        Mute Drums on hover
+        ONLY BASS
       </button>
       <button
         onMouseEnter={() => muteBass(true)}
         onMouseLeave={() => muteAll()}
       >
-        Mute Bass on hover
+        ONLY DRUMS
       </button>
       <button
         onMouseEnter={unmuteAll}
         onMouseLeave={() => muteAll()}
       >
-        Unmute bass and drums
+        BASS & DRUMS
       </button>
       <div className="slidecontainer">
         <input
