@@ -38,7 +38,10 @@ function SoundfxTone({ navClick }) {
       // Load the bass audio file
       await bassPlayer.load(bassURL);
 
-      const distortion = new Distortion(0.8).toDestination();
+      const distortion = new Distortion({
+        distortion: 1,
+        oversample: '2x'
+      }).toDestination();
       setDistortion(distortion);
 
       // Set player states

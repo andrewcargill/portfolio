@@ -17,6 +17,7 @@ import CubePage from "./components/CubePage";
 import AutoTextPage from "./components/AutoTextPage";
 import Soundfx from "./components/SoundFX";
 import SoundfxTone from "./components/SoundFx/SoundFxTone";
+import SoundfxToneTwo from "./components/SoundFx/SoundFxToneTwo";
 
 
 
@@ -39,6 +40,7 @@ function App() {
             <Route path='/cube' element={<CubePage />} />
             <Route path='/x' element={<Soundfx />} />
             <Route path='/tone' element={<SoundfxTone />} />
+            <Route path='/tone2' element={<SoundfxToneTwo />} />
      
           </Routes>
           <Footer />
