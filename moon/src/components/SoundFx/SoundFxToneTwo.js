@@ -24,9 +24,10 @@ function SoundFxToneTwo() {
         loop: true // Loop the audio playback
       })
 
-      const distortion = new Tone.Distortion(
-        1
-        ).toDestination();
+      const distortion = new Tone.Distortion({
+        distortion : 0.4 ,
+        oversample : "2x"
+        }).toDestination();
       player.connect(distortion);
     };
 
