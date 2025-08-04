@@ -19,9 +19,9 @@ const handleClickSocial = (url) => {
 const ImagePlaylist = [
       /* SmartDesk */
     {
-      src: require("../images/01.jpg"),
+      src: require("../images/smartdesk.png"),
       alt: "Image for smartdesk.se",
-      caption: "SmartDesk AI Grading",
+      caption: "SmartDesk",
       highlight: 'An AI grading tool for teachers. Built with React and Firebase, featuring Stripe payments and tiered plans.',
       devIcons: ["openai", "react", "firebase", "HTML5", "UX-Design"],
       buttons: [
@@ -35,7 +35,7 @@ const ImagePlaylist = [
     },
     /* Sawmill Go v2 */
     {
-      src: require("../images/01.jpg"),
+      src: require("../images/sawmillnew.png"),
       alt: "Image for sawmillgo.com",
       caption: "Sawmill Go",
       highlight: 'A productivity tool for sawmill owners & creators with transparent forestry feature. Firebase backend, ReactJS Frontend and Google Maps API.',
@@ -57,7 +57,7 @@ const ImagePlaylist = [
     },
     /* Neves.nu */
     {
-      src: require("../images/01.jpg"),
+      src: require("../images/neves.png"),
       alt: "Image for neves.nu",
       caption: "Neves.nu",
       highlight: 'A modern React website for a Swedish company. Built with mobile-first design, smooth animations, and hosted on Firebase.',
