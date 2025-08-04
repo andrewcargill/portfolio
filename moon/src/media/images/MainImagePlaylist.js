@@ -17,30 +17,59 @@ const handleClickSocial = (url) => {
 
 
 const ImagePlaylist = [
-      /* This Site */
+      /* SmartDesk */
     {
       src: require("../images/01.jpg"),
       alt: "Image for smartdesk.se",
       caption: "SmartDesk AI Grading",
-      highlight: `A website that uses AI to grade student work. Built with ReactJS, Google Cloud, Firebase, and the OpenAI API. It features Stripe integration, tiered membership options, and a user-friendly interface.`,
-      devIcons: ["javascript", "react", "firebase", "HTML5", "UX-Design"],
+      highlight: 'An AI grading tool for teachers. Built with React and Firebase, featuring Stripe payments and tiered plans.',
+      devIcons: ["openai", "react", "firebase", "HTML5", "UX-Design"],
       buttons: [
-        {
+       {
+        type: "link",
+        label: "website",
+        icon: "link",
+        url: "https://smartdesk.se"
+      },
+      ]
+    },
+    /* Sawmill Go v2 */
+    {
+      src: require("../images/01.jpg"),
+      alt: "Image for sawmillgo.com",
+      caption: "Sawmill Go",
+      highlight: 'A productivity tool for sawmill owners & creators with transparent forestry feature. Firebase backend, ReactJS Frontend and Google Maps API.',
+      devIcons: ["CSS", "react", "firebase", "HTML5", "UX-Design"],
+      buttons: [
+       {
+        type: "link",
+        label: "website",
+        icon: "link",
+        url: "https://sawmillgo.com"
+      },
+         {
           type: "link",
           label: "Github",
           icon: "github",
-          url: "https://github.com/andrewcargill/portfolio/blob/main/README.md#home"
+          url: "https://github.com/andrewcargill/sawmillgo"
         },
-       
-        {
-          type: "link",
-          label: "code",
-          icon: "github",
-          url: "https://github.com/andrewcargill/portfolio/blob/main/README.md#portfolio"
-        },
-       
       ]
-  
+    },
+    /* Neves.nu */
+    {
+      src: require("../images/01.jpg"),
+      alt: "Image for neves.nu",
+      caption: "Neves.nu",
+      highlight: 'A modern React website for a Swedish company. Built with mobile-first design, smooth animations, and hosted on Firebase.',
+      devIcons: ["CSS", "react", "firebase", "HTML5", "UX-Design"],
+      buttons: [
+       {
+        type: "link",
+        label: "website",
+        icon: "link",
+        url: "https://neves.nu"
+      },
+      ]
     },
     /* This Site */
     {
@@ -115,12 +144,12 @@ const ImagePlaylist = [
     ]
 
   },
-  /* Sawmill Go */
+  /* Sawmill Go (v1) */
   {
     src: require("../images/sawmillGo.jpg"),
     alt: "Image of sawmill go website",
-    caption: "Sawmill Go!",
-    highlight: `A productivity tool for sawmill owners with transparent forestry feature. Custom Django API and ReactJS Frontend.`,
+    caption: "Sawmill Go (Prototype)",
+    highlight: `Exploring a productivity tool for sawmill owners with transparent forestry feature. Custom Django API and ReactJS Frontend.`,
     devIcons: ["javascript", "react", "CSS", "HTML5", "django", "python", "UX-Design"],
     buttons: [
       {

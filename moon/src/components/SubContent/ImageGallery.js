@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import css from "../../styles/Work.module.css";
 import {
@@ -19,6 +19,8 @@ import {
   faCodepen,
   faGoogle,
 } from "@fortawesome/free-brands-svg-icons";
+
+import { SiOpenai } from "react-icons/si";
 
 import CustomBtn from "../../styles/CustomButton.module.css";
 import AutoHeaderText from "./AutoHeaderText";
@@ -44,8 +46,6 @@ function ImageGallery({ images }) {
     navigate(page);
   };
 
-
-
   const iconsMap = {
     CSS: faCss3Alt,
     bootstrap: faBootstrap,
@@ -56,6 +56,7 @@ function ImageGallery({ images }) {
     django: faServer,
     "UX-Design": faCrosshairs,
     firebase: faGoogle,
+    openai: SiOpenai,
   };
 
   return (
@@ -100,11 +101,23 @@ function ImageGallery({ images }) {
                     <div className={css.highlightText}>{image.highlight}</div>
 
                     {/* Icon Container */}
-                  
+
                     <div className={css.devIconContainer}>
                       {image.devIcons.map((icon) => (
                         <span className={css.tooltip} key={icon}>
-                          <FontAwesomeIcon icon={iconsMap[icon]} />
+                          {/* <FontAwesomeIcon icon={iconsMap[icon]} /> */}
+                          {typeof iconsMap[icon] === "function" ? (
+                        React.createElement(iconsMap[icon], {
+    size: 28,
+    style: {
+      verticalAlign: "middle", // 👈 shifts it up a bit
+      position: "relative",
+      top: "-3px", // fine-tune as needed (try -1 to -2px)
+    },
+  })
+                          ) : (
+                            <FontAwesomeIcon icon={iconsMap[icon]} />
+                          )}
                           <span className={css.tooltipText}>{icon}</span>
                         </span>
                       ))}
