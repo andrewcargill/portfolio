@@ -17,6 +17,7 @@ import {
   faReact,
   faGithubSquare,
   faCodepen,
+  faGoogle,
 } from "@fortawesome/free-brands-svg-icons";
 
 import CustomBtn from "../../styles/CustomButton.module.css";
@@ -54,7 +55,7 @@ function ImageGallery({ images }) {
     javascript: faJsSquare,
     django: faServer,
     "UX-Design": faCrosshairs,
-
+    firebase: faGoogle,
   };
 
   return (

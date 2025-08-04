@@ -17,6 +17,31 @@ const handleClickSocial = (url) => {
 
 
 const ImagePlaylist = [
+      /* This Site */
+    {
+      src: require("../images/01.jpg"),
+      alt: "Image for smartdesk.se",
+      caption: "SmartDesk AI Grading",
+      highlight: `A website that uses AI to grade student work. Built with ReactJS, Google Cloud, Firebase, and the OpenAI API. It features Stripe integration, tiered membership options, and a user-friendly interface.`,
+      devIcons: ["javascript", "react", "firebase", "HTML5", "UX-Design"],
+      buttons: [
+        {
+          type: "link",
+          label: "Github",
+          icon: "github",
+          url: "https://github.com/andrewcargill/portfolio/blob/main/README.md#home"
+        },
+       
+        {
+          type: "link",
+          label: "code",
+          icon: "github",
+          url: "https://github.com/andrewcargill/portfolio/blob/main/README.md#portfolio"
+        },
+       
+      ]
+  
+    },
     /* This Site */
     {
       src: require("../images/01.jpg"),
