@@ -56,7 +56,7 @@ function ImageGallery({ images }) {
     django: faServer,
     "UX-Design": faCrosshairs,
     firebase: faGoogle,
-    openai: SiOpenai,
+    openAI: SiOpenai,
   };
 
   return (

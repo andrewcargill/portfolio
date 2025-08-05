@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "../../styles/Image.css";
+import { useNavigate } from "react-router-dom";
 
-function Image({ images, navSubClick}) {
+function Image({ images }) {
   const [index, setIndex] = useState(0);
+    const navigate = useNavigate();
   
   useEffect(() => {
     const interval = setInterval(() => {
@@ -12,11 +14,11 @@ function Image({ images, navSubClick}) {
   }, [images.length]);
 
   const handleClick = () => {
-    navSubClick("work");
+    navigate("/portfolio");
   };
   
   return (
-    <div className="text-border right-margin-desktop image-container" onClick={handleClick}>
+    <div className="text-border right-margin-desktop image-container" onClick={handleClick} style={{ cursor: 'pointer' }}>
       <div className="spinner-container">
         <div>
         <div className="spinner"> 

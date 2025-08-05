@@ -23,7 +23,7 @@ const ImagePlaylist = [
       alt: "Image for smartdesk.se",
       caption: "SmartDesk",
       highlight: 'An AI grading tool for teachers. Built with React and Firebase, featuring Stripe payments and tiered plans.',
-      devIcons: ["openai", "react", "firebase", "HTML5", "UX-Design"],
+      devIcons: ["openAI", "react", "firebase", "HTML5", "UX-Design"],
       buttons: [
        {
         type: "link",
@@ -55,47 +55,7 @@ const ImagePlaylist = [
         },
       ]
     },
-    /* Neves.nu */
-    {
-      src: require("../images/neves.png"),
-      alt: "Image for neves.nu",
-      caption: "Neves.nu",
-      highlight: 'A modern React website for a Swedish company. Built with mobile-first design, smooth animations, and hosted on Firebase.',
-      devIcons: ["CSS", "react", "firebase", "HTML5", "UX-Design"],
-      buttons: [
-       {
-        type: "link",
-        label: "website",
-        icon: "link",
-        url: "https://neves.nu"
-      },
-      ]
-    },
-    /* This Site */
-    {
-      src: require("../images/01.jpg"),
-      alt: "Image for andycargill.com",
-      caption: "andycargill01",
-      highlight: `A react frontend created using only custom CSS and JS code (No Bootstrap etc). I am exploring styling for XL viewports and flexbox containers.`,
-      devIcons: ["javascript", "react", "CSS", "HTML5", "UX-Design"],
-      buttons: [
-        {
-          type: "link",
-          label: "Github",
-          icon: "github",
-          url: "https://github.com/andrewcargill/portfolio/blob/main/README.md#home"
-        },
-       
-        {
-          type: "link",
-          label: "code",
-          icon: "github",
-          url: "https://github.com/andrewcargill/portfolio/blob/main/README.md#portfolio"
-        },
-       
-      ]
-  
-    },
+   
       /* AUTO TEXT */
   {
     src: require("../images/autoText.png"),
@@ -119,54 +79,7 @@ const ImagePlaylist = [
       },
     ]
   },
-  /* ShowJump Timer */
-  {
-    src: require("../images/showJump.jpg"),
-    alt: "Image of sawmill go website",
-    caption: "Show Jumping Timer",
-    highlight: `Fully functioning competiton timer and results generator. 
-    
-     Developed using TypeScript and React, with the integration of React's Global State API.`,
-    devIcons: ["javascript", "react", "CSS", "HTML5", "UX-Design"],
-    buttons: [
-      {
-        type: "link",
-        label: "app",
-        icon: "code",
-        url: "https://andrewcargill.github.io/typescript_react/"
-      },
-      {
-        type: "link",
-        label: "github",
-        icon: "github",
-        url: "https://github.com/andrewcargill/typescript_react"
-      }
-    ]
-
-  },
-  /* Sawmill Go (v1) */
-  {
-    src: require("../images/sawmillGo.jpg"),
-    alt: "Image of sawmill go website",
-    caption: "Sawmill Go (Prototype)",
-    highlight: `Exploring a productivity tool for sawmill owners with transparent forestry feature. Custom Django API and ReactJS Frontend.`,
-    devIcons: ["javascript", "react", "CSS", "HTML5", "django", "python", "UX-Design"],
-    buttons: [
-      {
-        type: "link",
-        label: "website",
-        icon: "link",
-        url: "https://andrewcargill.github.io/sawmill_go/"
-      },
-      {
-        type: "link",
-        label: "github",
-        icon: "github",
-        url: "https://github.com/andrewcargill/sawmill_go/tree/main/mill"
-      }
-    ]
-
-  },
+ 
   
   /* DrumMachine */
   {
@@ -216,30 +129,7 @@ const ImagePlaylist = [
      
     ]
   },
-  /* Timber Company */
-  {
-    src: require("../images/timberLogo.png"),
-    alt: "Alt text for false.png",
-    caption: "Timber Company Website",
-    highlight: `A full-stack project with a custom build backend with customer login and online quoting system.`,
-    // highlight: `A website featuring a quote request section. The user can submit
-    //       information and recieve a quote. Custom API and frontend.`,
-          devIcons: ["python", "javascript", "CSS", "HTML5", "bootstrap", "django", "UX-Design"],
-    buttons: [
-      {
-        type: "link",
-        label: "Live site",
-        icon: "link",
-        url: "https://timbercompany.herokuapp.com/"
-      },
-      {
-        type: "link",
-        label: "github",
-        icon: "github",
-        url: "https://github.com/andrewcargill/johans_eco_timber/blob/main/README.md"
-      }
-    ]
-  },
+  
   /* FASHION HOUSE */
   {
     src: require("../images/fasletest.png"),
@@ -265,6 +155,23 @@ const ImagePlaylist = [
      
     ]
   },
+
+   /* Neves.nu */
+    {
+      src: require("../images/neves.png"),
+      alt: "Image for neves.nu",
+      caption: "Neves.nu",
+      highlight: 'A modern React website for a Swedish company. Built with mobile-first design, smooth animations, and hosted on Firebase.',
+      devIcons: ["CSS", "react", "firebase", "HTML5", "UX-Design"],
+      buttons: [
+       {
+        type: "link",
+        label: "website",
+        icon: "link",
+        url: "https://neves.nu"
+      },
+      ]
+    },
   
   /* PYTHON HANGMAN */
   {
@@ -312,6 +219,81 @@ const ImagePlaylist = [
       }
     ]
   },
+   /* This Site */
+    {
+      src: require("../images/01.jpg"),
+      alt: "Image for andycargill.com",
+      caption: "andycargill01",
+      highlight: `A react frontend created using only custom CSS and JS code (No Bootstrap etc). I am exploring styling for XL viewports and flexbox containers.`,
+      devIcons: ["javascript", "react", "CSS", "HTML5", "UX-Design"],
+      buttons: [
+        {
+          type: "link",
+          label: "Github",
+          icon: "github",
+          url: "https://github.com/andrewcargill/portfolio/blob/main/README.md#home"
+        },
+       
+        {
+          type: "link",
+          label: "code",
+          icon: "github",
+          url: "https://github.com/andrewcargill/portfolio/blob/main/README.md#portfolio"
+        },
+       
+      ]
+  
+    },
+     /* ShowJump Timer */
+  {
+    src: require("../images/showJump.jpg"),
+    alt: "Image of sawmill go website",
+    caption: "Show Jumping Timer",
+    highlight: `Fully functioning competiton timer and results generator. 
+    
+     Developed using TypeScript and React, with the integration of React's Global State API.`,
+    devIcons: ["javascript", "react", "CSS", "HTML5", "UX-Design"],
+    buttons: [
+      {
+        type: "link",
+        label: "app",
+        icon: "code",
+        url: "https://andrewcargill.github.io/typescript_react/"
+      },
+      {
+        type: "link",
+        label: "github",
+        icon: "github",
+        url: "https://github.com/andrewcargill/typescript_react"
+      }
+    ]
+
+  },
+  /* Timber Company */
+  {
+    src: require("../images/timberLogo.png"),
+    alt: "Alt text for false.png",
+    caption: "Timber Company Website",
+    highlight: `A full-stack project with a custom build backend with customer login and online quoting system.`,
+    // highlight: `A website featuring a quote request section. The user can submit
+    //       information and recieve a quote. Custom API and frontend.`,
+          devIcons: ["python", "javascript", "CSS", "HTML5", "bootstrap", "django", "UX-Design"],
+    buttons: [
+      {
+        type: "link",
+        label: "Live site",
+        icon: "link",
+        url: "https://timbercompany.herokuapp.com/"
+      },
+      {
+        type: "link",
+        label: "github",
+        icon: "github",
+        url: "https://github.com/andrewcargill/johans_eco_timber/blob/main/README.md"
+      }
+    ]
+  },
+  
   /* MUSIC QUIZ */
   {
     src: require("../images/quiz1.png"),
@@ -369,6 +351,29 @@ const ImagePlaylist = [
         url: "https://scratch.mit.edu/users/andrewcargill01/"
       },
     ]
+  },
+  /* Sawmill Go (v1) */
+  {
+    src: require("../images/sawmillGo.jpg"),
+    alt: "Image of sawmill go website",
+    caption: "Sawmill Go (Prototype)",
+    highlight: `Exploring a productivity tool for sawmill owners with transparent forestry feature. Custom Django API and ReactJS Frontend.`,
+    devIcons: ["javascript", "react", "CSS", "HTML5", "django", "python", "UX-Design"],
+    buttons: [
+      {
+        type: "link",
+        label: "website",
+        icon: "link",
+        url: "https://andrewcargill.github.io/sawmill_go/"
+      },
+      {
+        type: "link",
+        label: "github",
+        icon: "github",
+        url: "https://github.com/andrewcargill/sawmill_go/tree/main/mill"
+      }
+    ]
+
   },
   
 ];

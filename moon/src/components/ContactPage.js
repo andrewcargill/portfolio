@@ -35,8 +35,11 @@ function ContactPage() {
          
         <AutoHeaderText 
              text="
-            You can reach me via my social media below or call +46 761494455
+           I'm always open to new opportunities. Feel free to reach out via the links below.
              "
+            //  text="
+            // You can reach me via my social media below or call +46 761494455
+            //  "
              containerId={styles.contactText}
              textId={styles.text}
              maxFont="25px"

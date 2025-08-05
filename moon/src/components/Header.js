@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import CustomBtn from "../styles/CustomButton.module.css";
 import logo from "../media/images/01_sqaure.png";
 import style from "../styles/Header.module.css";
@@ -12,6 +12,9 @@ const Header = ({ handleOnClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
 
   const handleNavClick = (page) => {
     setIsMenuOpen(false);
@@ -94,19 +97,19 @@ const Header = ({ handleOnClick }) => {
         <button
           onClick={() => handleNavClick("/drum")}
           // id={CustomBtn.hidden}
-          className={`slide-down ${CustomBtn.white}`}
+          className={`slide-down ${CustomBtn.white} ${isActive('/drum') ? CustomBtn.whiteActive : '' }`}
         >
           dr-01
         </button>
         <button
           onClick={() => handleNavClick("/portfolio")}
-          className={`slide-down ${CustomBtn.white}`}
+          className={`slide-down ${CustomBtn.white} ${isActive('/portfolio') ? CustomBtn.whiteActive : '' }`}
         >
           Portfolio
         </button>
         <button
           onClick={() => handleNavClick("/about")}
-          className={`slide-right ${CustomBtn.white}`}
+          className={`slide-right ${CustomBtn.white} ${isActive('/about') ? CustomBtn.whiteActive : '' }`}
         >
           About
         </button>

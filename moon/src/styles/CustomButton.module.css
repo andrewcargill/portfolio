@@ -66,6 +66,12 @@ background-color: black;
 transition: 0.5s;
 }
 
+.whiteActive {
+color: white;
+background-color: black;
+transition: 0.5s;
+}
+
 .whiteMobile {
   color: black;
   background-color: #898989;
