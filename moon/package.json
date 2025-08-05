@@ -2,7 +2,7 @@
   "name": "moon",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://andrewcargill.github.io",
+  "homepage": "https://andrewcargill.github.io/portfolio",
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@testing-library/jest-dom": "^5.16.5",
